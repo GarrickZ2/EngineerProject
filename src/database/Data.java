@@ -1,0 +1,103 @@
+/**
+ * @version Iteration1
+ * @author ZixuanZhang
+ * @content Create all the attributes and getters, setters
+ * @Todo
+ */
+
+
+package database;
+
+import java.io.*;
+import java.util.ArrayList;
+
+import database.information.Cuisine;
+import database.information.Membership;
+import database.information.Order;
+
+public class Data {
+    private String userAddr = "data/membership.csv";
+    private String orderAddr = "";
+    private String menuAddr = "";
+
+    private String contents = "";
+    //readers
+    public MemberList loadUserInfo(){
+        ArrayList<Membership> memberships = new ArrayList<Membership>();
+        File file = new File(userAddr);
+        try{
+            BufferedReader reader = new BufferedReader(new FileReader(file));
+            while ((contents = reader.readLine())!=null){
+                String[] attributes = contents.split(",");
+                Membership membership = new Membership(attributes[0],attributes[1],attributes[2],attributes[3],
+                        attributes[4], Integer.parseInt(attributes[5]));
+                memberships.add(membership);
+            }
+            reader.close();
+        } catch (Exception e) {
+            System.out.println("The necessary file has been broken, please re-install.");
+            System.exit(-1);
+        }
+        return new MemberList(memberships);
+    }
+
+    public OrderList loadOrderInfo(){
+        ArrayList<Order> orders = new ArrayList<Order>();
+        File file = new File(orderAddr);
+        try{
+            BufferedReader reader = new BufferedReader(new FileReader(file));
+            while ((contents = reader.readLine())!=null){
+                String[] attributes = contents.split(",");
+                Cuisine cuisine = new Cuisine(attributes[2], attributes[3], attributes[4], Boolean.parseBoolean(attributes[5]),
+                        Boolean.parseBoolean(attributes[6]), Boolean.parseBoolean(attributes[7]), Integer.parseInt(attributes[8]),
+                        Integer.parseInt(attributes[9]), Integer.parseInt(attributes[10]), Integer.parseInt(attributes[11]), Integer.parseInt(attributes[12]));
+                Order order = new Order(attributes[0], attributes[1], cuisine, Integer.parseInt(attributes[3]),
+                        attributes[4], Double.parseDouble(attributes[5]), attributes[6]);
+                orders.add(order);
+            }
+            reader.close();
+        } catch (Exception e) {
+            System.out.println("The necessary file has been broken, please re-install.");
+            System.exit(-1);
+        }
+        return new OrderList(orders);
+    }
+
+    public void loadMenuInfo(){
+
+    }
+
+    //writers
+    void saveUserInfo(MemberList memberList){
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(userAddr));
+            for(Membership membership:memberList.getMsl()){
+                writer.write(String.valueOf(membership));
+                writer.newLine();
+            }
+            writer.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void saveOrderInfo(OrderList orderList){
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(userAddr));
+            for(Order order:orderList.getOrders()){
+                System.out.println(order);
+                writer.write(String.valueOf(order));
+                writer.newLine();
+            }
+            writer.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void saveMenuInfo(){
+
+    }
+
+
+}

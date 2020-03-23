@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="weblaf-core-1.2.12">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/resource/jar/weblaf-core-1.2.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/resource/jar/weblaf-ui-1.2.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/resource/jar/jericho-html-3.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/resource/jar/rsyntaxtextarea-2.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/resource/jar/slf4j-api-1.7.27.jar!/" />
+      <root url="jar://$PROJECT_DIR$/resource/jar/slf4j-simple-1.7.27.jar!/" />
+      <root url="jar://$PROJECT_DIR$/resource/jar/svg-salamander-1.1.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/resource/jar/java-image-scaling-0.8.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/resource/jar/hamcrest-core-1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/resource/jar/xstream-1.4.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/resource/jar/junit-4.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/resource/jar/weblaf-demo-1.2.12.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
