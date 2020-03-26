@@ -9,17 +9,22 @@ import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.awt.*;
 
 
+/**
+ * @author Zixuan Zhang
+ * @version iteration1
+ */
 public class Test {
     public static void main(String[] args) throws ClassNotFoundException, UnsupportedLookAndFeelException, InstantiationException, IllegalAccessException {
         UIManager.setLookAndFeel ( NimbusLookAndFeel.class.getCanonicalName () );
         WebLookAndFeel.initializeManagers ();
-        JFrame j = new JFrame();
-        JPanel p = new JPanel(new StatusBarLayout());
-        JLabel label = new JLabel("Happy!");
-        JProgressBar bar = new JProgressBar(SwingConstants.HORIZONTAL, 20, 100);
-        p.add(label);
-        p.add(bar);
-        j.getContentPane().add(p);
-        j.setVisible(true);
+
+        JFrame jFrame = new JFrame();
+        Compulsory compulsory = new Compulsory(new BorderLayout());
+        jFrame.getContentPane().add(compulsory);
+
+        jFrame.setTitle("Test Function");
+        jFrame.setBounds(400,400,400,400);
+        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jFrame.setVisible(true);
     }
 }

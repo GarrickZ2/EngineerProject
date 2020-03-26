@@ -3,6 +3,9 @@ package gui;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * @author Zixuan Zhang
+ */
 public class Index extends JPanel {
     JPanel up;
     JPanel mid;

@@ -25,6 +25,7 @@ public class Main extends JFrame {
     public static void main(String[] args) throws ClassNotFoundException, UnsupportedLookAndFeelException, InstantiationException, IllegalAccessException {
         UIManager.setLookAndFeel ( NimbusLookAndFeel.class.getCanonicalName () );
         WebLookAndFeel.initializeManagers ();
+
         Main m = new Main();
     }
 }
