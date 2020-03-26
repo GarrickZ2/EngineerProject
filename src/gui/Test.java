@@ -2,7 +2,7 @@ package gui;
 
 import com.alee.extended.statusbar.StatusBarLayout;
 import com.alee.laf.WebLookAndFeel;
-import gui.order.Compulsory;
+import gui.order.Selective;
 
 import javax.swing.*;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
@@ -19,8 +19,8 @@ public class Test {
         WebLookAndFeel.initializeManagers ();
 
         JFrame jFrame = new JFrame();
-        Compulsory compulsory = new Compulsory(new BorderLayout());
-        jFrame.getContentPane().add(compulsory);
+        Selective selective = new Selective(new BorderLayout());
+        jFrame.getContentPane().add(selective);
 
         jFrame.setTitle("Test Function");
         jFrame.setBounds(400,400,400,400);
