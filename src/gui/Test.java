@@ -1,6 +1,5 @@
 package gui;
 
-import com.alee.extended.statusbar.StatusBarLayout;
 import com.alee.laf.WebLookAndFeel;
 import gui.order.Selective;
 
