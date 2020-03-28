@@ -1,6 +1,7 @@
 package gui.order;
 
 import com.alee.laf.WebLookAndFeel;
+import database.information.Order;
 
 import javax.swing.*;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
@@ -11,7 +12,7 @@ import java.awt.event.ActionListener;
 /**
  * @author Zixuan Zhang
  */
-public class Order extends JPanel implements ActionListener {
+public class OrderGUI extends JPanel implements ActionListener {
 
     Compulsory compulsory;
     Selective selective;
@@ -27,7 +28,7 @@ public class Order extends JPanel implements ActionListener {
     JButton last;
 
 
-    public Order(LayoutManager layoutManager){
+    public OrderGUI(LayoutManager layoutManager){
         super(layoutManager);
         compulsory = new Compulsory(new BorderLayout());
         selective = new Selective(new BorderLayout());
@@ -63,7 +64,7 @@ public class Order extends JPanel implements ActionListener {
 
         JFrame test = new JFrame("Test");
 
-        Order order = new Order(new BorderLayout());
+        OrderGUI order = new OrderGUI(new BorderLayout());
         test.add(order);
 
         test.setBounds(400,400,400,400);
@@ -75,10 +76,8 @@ public class Order extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         JButton b = (JButton)e.getSource();
         if(b.equals(next)){
-            System.out.println("Next");
             card.next(middle);
         } else if(b.equals(last)) {
-            System.out.println("Last");
             card.previous(middle);
         }
 
