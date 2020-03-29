@@ -36,6 +36,7 @@ public class MemberList {
 		if(telephone == null) {
 			return false;
 		}
+		// Todo Some problem with this pattern character
 		final Pattern pat = Pattern.compile("^[1][3578][0-9]{9}$");
 		Matcher mat = pat.matcher(telephone);	
 		return mat.find();					
@@ -86,11 +87,11 @@ public class MemberList {
 					msl.add(ms);
 					return ms.getMembershipId();
 				}else {
-					String lastID = msl.get(msl.size()-1).getMembershipId();
+					String lastId = msl.get(msl.size()-1).getMembershipId();
 					
 					//The digital part of new ID is the latest ID plus 1 
-					String alaphPart = lastID.substring(0,1);
-					String numPart= lastID.substring(1,lastID.length());
+					String alaphPart = lastId.substring(0,1);
+					String numPart= lastId.substring(1,lastId.length());
 					int y;
 					y = Integer.parseInt(numPart);
 					String temp = String.valueOf(y+1);
@@ -102,7 +103,7 @@ public class MemberList {
 						while(true) {
 							if(temp.length()!=numPart.length()) {
 								temp = "0"+temp;
-							}else break;
+							}else{ break;}
 						}
 						
 						//Generate the new ID
@@ -125,7 +126,7 @@ public class MemberList {
 	public boolean deleteMember(String id) {
 		
 		for(Membership ms :msl) {
-			if(ms.getMembershipId()==id) {
+			if(ms.getMembershipId().equals(id)) {
 				msl.remove(ms);
 				return true;
 			}
@@ -141,8 +142,9 @@ public class MemberList {
 			keywords = str;
 		}
 		for(Membership temp: msl) {
-			if(temp.getMembershipId()==keywords||temp.getTelephone()==keywords||temp.geteMail()==keywords) 
-			return true;
+			if(temp.getMembershipId().equals(keywords) || temp.getTelephone().equals(keywords) || temp.geteMail().equals(keywords)) {
+				return true;
+			}
 		}
 		return false;
 	}
@@ -151,7 +153,8 @@ public class MemberList {
 		Data data = new Data();
 		data.saveUserInfo(this);
 	}
-	
+
+
 	public static void main(String[] s) {
 		MemberList list = new MemberList();
 		Membership m = new Membership("M0001","Tian", "Huang", "15500043370", null,0);
