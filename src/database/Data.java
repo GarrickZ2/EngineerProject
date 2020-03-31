@@ -11,9 +11,7 @@ package database;
 import java.io.*;
 import java.util.ArrayList;
 
-import database.information.Cuisine;
-import database.information.Membership;
-import database.information.Order;
+import database.information.*;
 
 public class Data {
     private final String userAddr = "data/membership.csv";
@@ -68,7 +66,7 @@ public class Data {
     }
 
     //writers
-    void saveUserInfo(MemberList memberList){
+    public void saveUserInfo(MemberList memberList){
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(userAddr));
             for(Membership membership:memberList.getMsl()){

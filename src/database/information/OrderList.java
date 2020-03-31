@@ -1,15 +1,13 @@
-package database;
+package database.information;
 
-import database.information.Cuisine;
-import database.information.Order;
+import database.OrderData;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 /**
  * @author Zixuan Zhang
  */
-public class OrderList {
+public class OrderList extends DataType{
     public ArrayList<Order> getOrders() {
         return orders;
     }
@@ -31,8 +29,8 @@ public class OrderList {
     }
 
     public void save(){
-        Data date = new Data();
-        date.saveOrderInfo(this);
+        OrderData orderData = new OrderData();
+        orderData.saveInfo(this);
     }
 
 

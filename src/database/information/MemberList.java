@@ -1,17 +1,17 @@
-package database;
+package database.information;
 
-import database.information.Membership;
+import database.Data;
+import database.UserData;
 
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/*
- * @version 1.2
+/**
  * @author Huang
+ * @version 1.2
  */
-
-public class MemberList {
+public class MemberList extends DataType{
 
 	private ArrayList<Membership> msl;
 
@@ -150,8 +150,8 @@ public class MemberList {
 	}
 	public void save(){
 		System.out.println(this);
-		Data data = new Data();
-		data.saveUserInfo(this);
+		UserData userData = new UserData();
+		userData.saveInfo(this);
 	}
 
 

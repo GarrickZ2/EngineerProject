@@ -1,6 +1,8 @@
 package database.information;
 
-public class Menu {
+import database.MenuData;
+
+public class Menu extends DataType{
     private double noodle;
     private double nori;
     private double egg;
@@ -95,5 +97,11 @@ public class Menu {
 
     public void setChashuAvailable(boolean chashuAvailable) {
         this.chashuAvailable = chashuAvailable;
+    }
+
+
+    public void save(){
+        MenuData menuData = new MenuData();
+        menuData.saveInfo(this);
     }
 }

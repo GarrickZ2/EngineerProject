@@ -1,9 +1,8 @@
 package gui.membership;
 
 
-import com.alee.demo.api.example.PreviewPanel;
-import database.Data;
-import database.MemberList;
+import database.UserData;
+import database.information.MemberList;
 import database.information.Membership;
 
 import javax.swing.*;
@@ -100,19 +99,22 @@ public class CreatePanel extends JPanel implements ActionListener {
         if("".equals(lNameContent)) {
             lNameContent=null;
         }
-        if("".equals(fNameContent))
+        if("".equals(fNameContent)) {
             fNameContent=null;
-        if("".equals(phone))
+        }
+        if("".equals(phone)) {
             phone=null;
-        if("".equals(emailContent))
+        }
+        if("".equals(emailContent)) {
             emailContent=null;
+        }
         System.out.println(lNameContent);
         System.out.println(fNameContent);
         System.out.println(phone);
         System.out.println(emailContent);
         Membership m = new Membership("M0001","Tian", "Huang", "15500043370", null,0);
-        Data data = new Data();
-        MemberList memberlist = data.loadUserInfo();
+        UserData userData = new UserData();
+        MemberList memberlist = userData.loadInfo();
         String response = memberlist.createMember(fNameContent, lNameContent, phone, emailContent);
         switch (response) {
             case "Error type 01: Null message input, name is empty or both telephone and e-mail are null":
