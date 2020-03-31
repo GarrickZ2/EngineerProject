@@ -49,7 +49,7 @@ public class Membership {
 	}
 	public Membership() {
 	}
-	public Membership(String membershipID,String firstName,String lastName,String telephone,String eMail,int stamps) {
+	public Membership(String membershipID, String firstName, String lastName, String telephone, String eMail, int stamps) {
 		this.membershipId = membershipID;
 		this.firstName = firstName;
 		this.lastName = lastName;

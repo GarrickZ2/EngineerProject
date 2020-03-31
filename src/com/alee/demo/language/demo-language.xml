@@ -818,7 +818,7 @@
                         <value lang="ru">Пример таб контента{br}(кликните для передачи фокуса)</value>
                     </record>
                     <record key="tooltip">
-                        <value lang="en">Tab at index %s and name "%s"</value>
+                        <value lang="en">Tab at memberIndex %s and name "%s"</value>
                         <value lang="ru">Таб с индексом %s и именем "%s"</value>
                     </record>
                 </Dictionary>
@@ -2453,7 +2453,7 @@
                             <value lang="ru">С тултипами</value>
                         </record>
                         <record key="cell">
-                            <value lang="en">List cell at index %s and value "%s"</value>
+                            <value lang="en">List cell at memberIndex %s and value "%s"</value>
                             <value lang="ru">Ячейка с индексом %s и значением "%s"</value>
                         </record>
                     </Dictionary>
@@ -2571,7 +2571,7 @@
                             <value lang="ru">С тултипами</value>
                         </record>
                         <record key="header">
-                            <value lang="en">Header column at index %s with name "%s"</value>
+                            <value lang="en">Header column at memberIndex %s with name "%s"</value>
                             <value lang="ru">Заголовок колонки с индексом %s и именем "%s"</value>
                         </record>
                         <record key="cell">

@@ -2,14 +2,19 @@ package gui.membership;
 
 
 import com.alee.demo.api.example.PreviewPanel;
+import database.Data;
+import database.MemberList;
+import database.information.Membership;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * @author Zixuan Zhang
  */
-public class CreatePanel extends JPanel{
+public class CreatePanel extends JPanel implements ActionListener {
     JButton back;
 
     JPanel fNamePanel;
@@ -74,6 +79,7 @@ public class CreatePanel extends JPanel{
         //bellow zone
         bellow = new JPanel(new BorderLayout());
         commit = new JButton("Commit");
+        commit.addActionListener(this);
         bellow.add(commit);
 
 //        summon
@@ -82,10 +88,50 @@ public class CreatePanel extends JPanel{
         main.add(up, BorderLayout.NORTH);
         main.add(mid, BorderLayout.CENTER);
         main.add(bellow, BorderLayout.SOUTH);
-//        this.add(up);
-//        this.add(mid);
-//        this.add(bellow);
         this.add(main);
     }
 
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        String lNameContent=lNameText.getText();
+        String fNameContent=fNameText.getText();
+        String phone=telText.getText();
+        String emailContent = emailText.getText();
+        if("".equals(lNameContent)) {
+            lNameContent=null;
+        }
+        if("".equals(fNameContent))
+            fNameContent=null;
+        if("".equals(phone))
+            phone=null;
+        if("".equals(emailContent))
+            emailContent=null;
+        System.out.println(lNameContent);
+        System.out.println(fNameContent);
+        System.out.println(phone);
+        System.out.println(emailContent);
+        Membership m = new Membership("M0001","Tian", "Huang", "15500043370", null,0);
+        Data data = new Data();
+        MemberList memberlist = data.loadUserInfo();
+        String response = memberlist.createMember(fNameContent, lNameContent, phone, emailContent);
+        switch (response) {
+            case "Error type 01: Null message input, name is empty or both telephone and e-mail are null":
+                JOptionPane.showMessageDialog(this, "Null message input, name is empty or both telephone and e-mail are null", "Warning", JOptionPane.WARNING_MESSAGE);
+                break;
+            case "Error type 02: Invalid format of telephone or e-mail address":
+                JOptionPane.showMessageDialog(this, "Invalid format of telephone or e-mail address", "Warning", JOptionPane.WARNING_MESSAGE);
+                break;
+            case "Error type 03: Telephone or E-mail address has been already used":
+                JOptionPane.showMessageDialog(this, "Telephone or E-mail address has been already used", "Warning", JOptionPane.WARNING_MESSAGE);
+                break;
+            default:
+                JOptionPane.showMessageDialog(this, "Create Successfully, Your ID number is " + response + ". Please remember it!", "Success", JOptionPane.INFORMATION_MESSAGE);
+                memberlist.save();
+                break;
+        }
+        lNameText.setText("");
+        fNameText.setText("");
+        telText.setText("");
+        emailText.setText("");
+    }
 }

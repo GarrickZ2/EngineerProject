@@ -16,9 +16,9 @@ import database.information.Membership;
 import database.information.Order;
 
 public class Data {
-    private String userAddr = "data/membership.csv";
-    private String orderAddr = "";
-    private String menuAddr = "";
+    private final String userAddr = "data/membership.csv";
+    private final String orderAddr = "data/order.csv";
+    private final String menuAddr = "data/menu.csv";
 
     private String contents = "";
     //readers
