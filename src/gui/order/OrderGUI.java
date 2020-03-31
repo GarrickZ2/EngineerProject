@@ -1,7 +1,6 @@
 package gui.order;
 
 import com.alee.laf.WebLookAndFeel;
-import database.information.Order;
 
 import javax.swing.*;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
@@ -16,7 +15,7 @@ public class OrderGUI extends JPanel implements ActionListener {
 
     Compulsory compulsory;
     Selective selective;
-
+    Bill bill;
 
     CardLayout card;
     JPanel middle;
@@ -32,11 +31,13 @@ public class OrderGUI extends JPanel implements ActionListener {
         super(layoutManager);
         compulsory = new Compulsory(new BorderLayout());
         selective = new Selective(new BorderLayout());
+        bill = new Bill();
 
         card = new CardLayout();
         middle = new JPanel(card);
         middle.add(compulsory);
         middle.add(selective);
+        middle.add(bill);
 
         title = new JLabel("Welcome to Order!!!");
 
