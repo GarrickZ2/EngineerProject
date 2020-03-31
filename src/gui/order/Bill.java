@@ -3,11 +3,14 @@ package gui.order;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * @author 44724
+ */
 public class Bill extends JPanel {
 
     ImageIcon img = new ImageIcon("resource/img/1.jpg");
 
-    public JPanel Guidance(){
+    public JPanel guidance(){
 
         JLabel lb0, lb1, lb2, lb3, lb4;
         JPanel jp = new JPanel(new GridLayout(6,1));
@@ -27,7 +30,7 @@ public class Bill extends JPanel {
         return jp;
     }
 
-    public JPanel ItemList(){
+    public JPanel itemList(){
 
         JLabel lb0, lb1, lb2, lb3;
         JPanel jp = new JPanel(new GridLayout(1,4));
@@ -47,7 +50,7 @@ public class Bill extends JPanel {
         return jp;
     }
 
-    public JPanel GeneralButton(String str){
+    public JPanel generalButton(String str){
 
         ButtonGroup method;
         JLabel suggest = new JLabel();
@@ -85,15 +88,16 @@ public class Bill extends JPanel {
         JPanel topPanel = new JPanel(new GridLayout(2,1));
         JPanel bottomPanel = new JPanel(new GridLayout(3,1));
 
-        topPanel.add(this.Guidance());
-        topPanel.add(ItemList());
+        topPanel.add(this.guidance());
+        topPanel.add(itemList());
 
-        bottomPanel.add(this.GeneralButton("Repast"));
-        bottomPanel.add(this.GeneralButton("Paying"));
+        bottomPanel.add(this.generalButton("Repast"));
+        bottomPanel.add(this.generalButton("Paying"));
 
         this.add(topPanel, BorderLayout.NORTH);
         this.add(bottomPanel,BorderLayout.SOUTH);
         this.setBorder(BorderFactory.createEtchedBorder());
     }
+
 
 }
