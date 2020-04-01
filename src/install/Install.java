@@ -46,7 +46,9 @@ public class Install {
 				f.mkdirs();
 				System.out.println("Folder "+dirname.get(i)+" create Success.");
 			}
-			else return;
+			else {
+				return;
+			}
 		}
 	}
 	
@@ -55,9 +57,11 @@ public class Install {
 		for(int i=0;i<filename.size();i++) {
 			try {
 				File f = new File(filename.get(i));
-				if(f.createNewFile())
+				if(f.createNewFile()) {
 					System.out.println("File "+filename.get(i)+" create Success.");
-				else System.out.println("File Exist.");
+				} else {
+					System.out.println("File Exist.");
+				}
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
