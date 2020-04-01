@@ -1,5 +1,7 @@
 package database.information;
 
+import database.MenuData;
+
 public class Cuisine {
     private String soupType;
     private String noodleType;

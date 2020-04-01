@@ -34,6 +34,7 @@ public class Order {
     private Cuisine cuisine;
     //0 represents eating indoor, 1 represents eating outdoor
     private int eatType;
+    private double eatMoney;
 
     private String membershipID;
     private double amountMoney;
@@ -101,4 +102,5 @@ public class Order {
         return orderID + "," + date + "," + cuisine + "," + eatType + "," + membershipID + "," + amountMoney + "," +
                 amountMoney + "," + billID;
     }
+
 }

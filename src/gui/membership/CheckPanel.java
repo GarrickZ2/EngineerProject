@@ -1,5 +1,7 @@
 package gui.membership;
 
+import database.information.Membership;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -21,6 +23,8 @@ public class CheckPanel extends JPanel {
     JPanel bellow;
 
     JPanel main;
+
+    Membership membership;
 
     public CheckPanel(LayoutManager layoutManager){
         up = new JPanel(new BorderLayout());
