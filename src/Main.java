@@ -48,6 +48,6 @@ public class Main extends JFrame {
         UIManager.setLookAndFeel ( NimbusLookAndFeel.class.getCanonicalName () );
         WebLookAndFeel.initializeManagers ();
 
-        Main m = new Main();
+        new Main();
     }
 }
