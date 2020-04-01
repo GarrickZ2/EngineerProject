@@ -2,6 +2,9 @@ package database.information;
 
 import database.MenuData;
 
+/**
+ * @author Zixuan Zhang
+ */
 public class Menu extends DataType{
     private double noodle;
     private double nori;
@@ -14,17 +17,19 @@ public class Menu extends DataType{
     private boolean shootAvailable;
     private boolean chashuAvailable;
 
-    public Menu(double noodle, double nori, double egg, double shoot, double chashu,
-                boolean noriAvailable, boolean eggAvailable, boolean shootAvailable, boolean chashuAvailable) {
-        this.noodle = noodle;
-        this.nori = nori;
-        this.egg = egg;
-        this.shoot = shoot;
-        this.chashu = chashu;
-        this.noriAvailable = noriAvailable;
-        this.eggAvailable = eggAvailable;
-        this.shootAvailable = shootAvailable;
-        this.chashuAvailable = chashuAvailable;
+    public Menu(){}
+
+    public Menu(double noodle, double nori, boolean noriAvailable, double egg, boolean eggAvailable,
+                double shoot, boolean shootAvailable, double chashu, boolean chashuAvailable) {
+        this.setNoodle(noodle);
+        this.setNori(nori);
+        this.setEgg(egg);
+        this.setShoot(shoot);
+        this.setChashu(chashu);
+        this.setNoriAvailable(noriAvailable);
+        this.setEggAvailable(eggAvailable);
+        this.setShootAvailable(shootAvailable);
+        this.setChashuAvailable(chashuAvailable);
     }
 
     public double getNoodle() {

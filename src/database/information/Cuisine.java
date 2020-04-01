@@ -17,20 +17,6 @@ public class Cuisine {
     private int extraShoot;
     private int extraChashu;
 
-    /**
-     *
-     * @param soupType
-     * @param noodleType
-     * @param onionType
-     * @param nori
-     * @param chashu
-     * @param egg
-     * @param spiciness
-     * @param extraNori
-     * @param extraEgg
-     * @param extraShoot
-     * @param extraChashu
-     */
     public Cuisine(String soupType, String noodleType, String onionType, boolean nori, boolean chashu, boolean egg,
                    int spiciness, int extraNori, int extraEgg, int extraShoot, int extraChashu) {
         this.soupType = soupType;

@@ -205,9 +205,6 @@ public class Compulsory extends JPanel {
         section2.setBorder(BorderFactory.createEtchedBorder());
         section3.setBorder(BorderFactory.createEtchedBorder());
 
-        //Todo: Change it with a PS picture
-        title = new JLabel("Welcome to Order!");
-        this.add(title);
         this.add(section1);
         this.add(section2);
         this.add(section3);

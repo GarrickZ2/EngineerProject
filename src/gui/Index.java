@@ -10,9 +10,10 @@ public class Index extends JPanel {
     JPanel up;
     JPanel mid;
     JPanel down;
-    JButton manage;
-    JButton dinner;
-    JButton membership;
+
+    public JButton manage;
+    public JButton dinner;
+    public JButton membership;
 
     JLabel title;
     JLabel copyright;

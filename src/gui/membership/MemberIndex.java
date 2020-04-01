@@ -1,6 +1,9 @@
 package gui.membership;
 
 import com.alee.laf.WebLookAndFeel;
+import database.UserData;
+import database.information.MemberList;
+import database.information.Membership;
 
 import javax.swing.*;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
@@ -11,7 +14,7 @@ import java.awt.event.ActionListener;
 /**
  * @author Zixuan Zhang
  */
-public class MemberIndex extends JPanel {
+public class MemberIndex extends JPanel{
 
     CardLayout card;
     JPanel main;
@@ -33,34 +36,39 @@ public class MemberIndex extends JPanel {
         main.add(checkPanel, "check");
         this.add(main);
         //select
-        selectPanel.become.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                card.show(main, "create");
-            }
-        });
+        selectPanel.become.addActionListener(e -> card.show(main, "create"));
         selectPanel.check.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                card.show(main, "check");
+                String number = JOptionPane.showInputDialog("Please Input Your VIP Number");
+                if ("".equals(number)){
+                    return;
+                }
+                UserData userData = new UserData();
+                MemberList memberList = userData.loadInfo();
+                memberList.queryMember(number);
+                if(memberList.queryMember(number)) {
+                    for(Membership ms : memberList.getMsl()) {
+                        if(ms.getMembershipId().equals(number)) {
+                            checkPanel.name.setText(ms.getLastName() + " " + ms.getLastName());
+                            checkPanel.tel.setText(ms.getTelephone());
+                            checkPanel.email.setText(ms.geteMail());
+                            checkPanel.coupon.setText("" + ms.getStamps());
+                            card.show(main, "check");
+                            return;
+                        }
+                    }
+                }
+                JOptionPane.showMessageDialog(null, "Doesn't exist this account!");
             }
         });
 
 
         //return
-        createPanel.back.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                card.show(main, "first");
-            }
-        });
-        checkPanel.back.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                card.show(main, "first");
-            }
-        });
+        createPanel.back.addActionListener(e -> card.show(main, "first"));
+        checkPanel.back.addActionListener(e -> card.show(main, "first"));
     }
+
 
     public static void main(String[] args) throws Exception{
         UIManager.setLookAndFeel ( NimbusLookAndFeel.class.getCanonicalName () );

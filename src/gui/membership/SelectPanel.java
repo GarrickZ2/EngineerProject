@@ -1,14 +1,18 @@
 package gui.membership;
 
-import gui.order.Selective;
+import database.UserData;
+import database.information.MemberList;
+import database.information.Membership;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * @author Zixuan Zhang
  */
-public class SelectPanel extends JPanel{
+public class SelectPanel extends JPanel implements ActionListener {
 
     JButton become;
     JButton check;
@@ -20,8 +24,14 @@ public class SelectPanel extends JPanel{
 
         main = new JPanel(new GridLayout(1,2));
         main.add(check);
+        check.addActionListener(this);
         main.add(become);
 
         this.add(main);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
     }
 }

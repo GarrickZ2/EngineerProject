@@ -13,11 +13,15 @@ import java.awt.event.ActionListener;
  */
 public class OrderGUI extends JPanel implements ActionListener {
 
+    public JButton back;
+
     Compulsory compulsory;
     Selective selective;
     Bill bill;
 
     CardLayout card;
+
+    JPanel up;
     JPanel middle;
     JPanel below;
 
@@ -39,7 +43,11 @@ public class OrderGUI extends JPanel implements ActionListener {
         middle.add(selective);
         middle.add(bill);
 
+        up = new JPanel(new BorderLayout());
+        back = new JButton("Return");
         title = new JLabel("Welcome to Order!!!");
+        up.add(back, BorderLayout.WEST);
+        up.add(title, BorderLayout.CENTER);
 
         next = new JButton("Next");
         next.addActionListener(this);
@@ -52,7 +60,7 @@ public class OrderGUI extends JPanel implements ActionListener {
         below.add(next, BorderLayout.EAST);
 
 
-        this.add(title, BorderLayout.NORTH);
+        this.add(up, BorderLayout.NORTH);
         this.add(middle, BorderLayout.CENTER);
         this.add(below, BorderLayout.SOUTH);
 

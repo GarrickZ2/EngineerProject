@@ -10,6 +10,7 @@ public class Selective extends JPanel {
     JPanel main;
 
     //nori
+    int noriCount = 0;
     JPanel noriPanel;
     JCheckBox noriCheck;
     JLabel noriLabel;
@@ -18,6 +19,7 @@ public class Selective extends JPanel {
     JLabel noriNumber;
     JButton noriPlus;
     //egg
+    int eggCount = 0;
     JPanel eggPanel;
     JCheckBox eggCheck;
     JLabel eggLabel;
@@ -26,6 +28,7 @@ public class Selective extends JPanel {
     JLabel eggNumber;
     JButton eggPlus;
     //shoot
+    int shootCount = 0;
     JPanel shootPanel;
     JCheckBox shootCheck;
     JLabel shootLabel;
@@ -34,6 +37,7 @@ public class Selective extends JPanel {
     JLabel shootNumber;
     JButton shootPlus;
     //chashu
+    int chashuCount = 0;
     JPanel chashuPanel;
     JCheckBox chashuCheck;
     JLabel chashuLabel;
@@ -50,7 +54,7 @@ public class Selective extends JPanel {
         noriLabel = new JLabel("Extra Nori");
         noriPrice = new JLabel("$ 1 each");
         noriMinus = new JButton("-");
-        noriNumber = new JLabel("0");
+        noriNumber = new JLabel("" + noriCount);
         noriPlus = new JButton("+");
 
         noriPanel = new JPanel(new GridLayout(1,6));
@@ -61,6 +65,8 @@ public class Selective extends JPanel {
         noriPanel.add(noriNumber);
         noriPanel.add(noriPlus);
         noriPanel.setBorder(BorderFactory.createEtchedBorder());
+
+
         //egg
         eggCheck = new JCheckBox();
         eggLabel = new JLabel("Extra Eggs");
