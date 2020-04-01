@@ -1,44 +1,47 @@
 package install;
 
-import java.io.File;
-import java.io.IOException;
+import org.junit.Test;
+
+import java.io.*;
 import java.util.ArrayList;
 
-/*
- * @version 1.3
- * We can choose install mode
- * 
+/**
+ * @author Huang
+ * @version 1.2
  */
-
-
 public class Install {
 	
 	public static final String root = "data";
-	ArrayList<String> dirname = new ArrayList<String>(); //Store folder names
-	ArrayList<String> filename = new ArrayList<String>(); //Store file names
+	ArrayList<String> dirname = new ArrayList<String>();
+	ArrayList<String> filename = new ArrayList<String>();
 	
-	public void Default_folder() { //Add default folder names into list "dirname"
+	public void Default_folder() {
+
 		dirname.add(root);
 		dirname.add(root+"\\recipients");
 		dirname.add(root+"\\dataprocess");
 	}
 	
-	public void Default_file() { //Add default file names into list "filename"
+	public void Default_file() {
+
 		filename.add(root+"\\menu.csv");
 		filename.add(root+"\\order.csv");
 		filename.add(root+"\\membership.csv");
 		filename.add(root+"\\recipients\\recdata.csv");
 	}
 	
-	public void Add_new_dir(String s) { //For future use when need to add new folder (Undetermined)
+	public void Add_new_dir(String s) {
+
 		filename.add(s);
 	}
 	
-	public void Add_new_file(String s) { //For future use when need to add new file (Undetermined)
+	public void Add_new_file(String s) {
+
 		filename.add(s);
 	}
 	
-	public void Folder_generation() { //Generate the folders if they are not exist, else it will do nothing
+	public void Folder_generation() {
+
 		this.Default_folder();
 		for(int i=0;i<dirname.size();i++) {
 			File f = new File(dirname.get(i));
@@ -52,7 +55,8 @@ public class Install {
 		}
 	}
 	
-	public void File_generation() { //Generate the files if they are not exist, else it will throw exception 
+	public void File_generation() {
+
 		this.Default_file();
 		for(int i=0;i<filename.size();i++) {
 			try {
@@ -67,14 +71,13 @@ public class Install {
 			}
 		}
 	}
-	
-	
-	public void Dir_generation() { //Must control the folders are created before files
+
+	public void Dir_generation() {
 		this.Folder_generation();
 		this.File_generation();
 	}
 
-	public static void uninstall(String dir) { //Uninstall all the file
+	public static void uninstall(String dir) {
 		File f = new File(dir);
 		File[] files;
 		if(f.exists()) {
@@ -87,25 +90,51 @@ public class Install {
 			f.delete();	
 		}
 	}
+
+	public static void generalDefaultMenu(){
+		try {
+			File csv = new File("data/menu.csv");
+			BufferedWriter bw = new BufferedWriter(new FileWriter(csv, true));
+			bw.write("9.0");
+			bw.newLine();
+			bw.write("1.0" + "," + "true" );
+			bw.newLine();
+			bw.write("1.0" + "," + "true" );
+			bw.newLine();
+			bw.write("1.0" + "," + "true" );
+			bw.newLine();
+			bw.write("2.0" + "," + "true" );
+			bw.newLine();
+			bw.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 	
-	public Install(int i) {
-		if(i==0) { //Repair, install missing files
+	public Install(int mode) {
+		//Repair, install missing files
+		if(mode == 0) {
 			this.Dir_generation();
 			System.out.println("Repair success");
 		}
 		else {
-			if(i==-1) { //Uninstall
+			//Uninstall
+			if(mode == -1) {
 				uninstall(root);
 				System.out.println("Uninstall success");
 			}
-		else { //Forced reinstall, default install mode
-			uninstall(root);
-			this.Dir_generation();
-			System.out.println("Install success");
-		}
+			//Forced reinstall, default install mode
+			else {
+				uninstall(root);
+				this.Dir_generation();
+				generalDefaultMenu();
+				System.out.println("Install success");
+			}
 		}
 	}
-	
+
 	public static void main(String[] args) {
 		if(args.length == 0) {
 			Install is = new Install(1);
@@ -113,11 +142,11 @@ public class Install {
 		}
 		switch (args[0]) {
 			case "repair": {
-				Install is = new Install(1);
+				Install is = new Install(0);
 				break;
 			}
 			case "force": {
-				Install is = new Install(2);
+				Install is = new Install(1);
 				break;
 			}
 			case "uninstall": {
@@ -128,7 +157,6 @@ public class Install {
 				System.out.println("Doesn't have this instruction. Please select from 'repair', 'force' and 'uninstall'");
 				break;
 		}
-		
 	}
 
 }

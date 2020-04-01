@@ -1,7 +1,11 @@
 package database.information;
 
-import database.MenuData;
-
+/**
+ * @author Huang
+ * @version 1.0
+ * @author Zixuan Zhang
+ * @version 1.1
+ */
 public class Cuisine {
     private String soupType;
     private String noodleType;

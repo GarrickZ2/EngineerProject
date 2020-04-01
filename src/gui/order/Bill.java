@@ -4,7 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * @author 44724
+ * @author Huang
+ * @version 1.0
  */
 public class Bill extends JPanel {
 

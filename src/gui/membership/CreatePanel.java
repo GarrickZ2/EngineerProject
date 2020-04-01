@@ -128,7 +128,7 @@ public class CreatePanel extends JPanel implements ActionListener {
                 break;
             default:
                 JOptionPane.showMessageDialog(this, "Create Successfully, Your ID number is " + response + ". Please remember it!", "Success", JOptionPane.INFORMATION_MESSAGE);
-                memberlist.save();
+                memberlist.saveMembershipCsv();
                 break;
         }
         lNameText.setText("");

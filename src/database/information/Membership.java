@@ -1,5 +1,9 @@
 package database.information;
 
+/**
+ * @author Huang
+ * @version 1.0
+ */
 public class Membership {
 	private String membershipId;
 	private String firstName;
