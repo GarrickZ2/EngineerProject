@@ -11,5 +11,6 @@
     <orderEntry type="library" name="R Skeletons" level="application" />
     <orderEntry type="library" name="weblaf-core-1.2.12" level="project" />
     <orderEntry type="library" name="MigLayout" level="project" />
+    <orderEntry type="library" name="JGoodies Forms" level="project" />
   </component>
 </module>

@@ -1,5 +1,6 @@
 package gui.order;
 
+import backups.Bill;
 import com.alee.laf.WebLookAndFeel;
 
 import javax.swing.*;
