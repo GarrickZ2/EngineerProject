@@ -17,6 +17,7 @@ public class Data {
     private final String userAddr = "data/membership.csv";
     private final String orderAddr = "data/order.csv";
     private final String menuAddr = "data/menu.csv";
+    private final String receiptAddr = "data/receipt.txt";
 
     private String contents = "";
     //readers
@@ -97,5 +98,14 @@ public class Data {
 
     }
 
-
+    public void saveReceipt(){
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(receiptAddr));
+            Cuisine receipt = new Cuisine("Shio", "Soft", "No please", false, true, false,5,0,2,1,3);
+            writer.write(receipt.printReceipt());
+            writer.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

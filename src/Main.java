@@ -1,4 +1,5 @@
 import com.alee.laf.WebLookAndFeel;
+import database.Data;
 import gui.Index;
 import gui.management.ManageIndex;
 import gui.membership.MemberIndex;
@@ -70,5 +71,8 @@ public class Main extends JFrame {
         WebLookAndFeel.initializeManagers ();
 
         new Main();
+
+        Data data = new Data();
+        data.saveReceipt();
     }
 }
