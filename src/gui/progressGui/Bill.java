@@ -1,19 +1,19 @@
-package gui.order;
+/*
+ * Created by JFormDesigner on Thu Apr 02 09:28:22 GMT+08:00 2020
+ */
 
-import com.jgoodies.forms.factories.Borders;
-import org.junit.Test;
+package gui.progressGui;
 
-import javax.swing.*;
-import javax.swing.border.CompoundBorder;
-import javax.swing.border.EtchedBorder;
-import javax.swing.border.TitledBorder;
 import java.awt.*;
+import javax.swing.*;
+import javax.swing.border.*;
+import com.jgoodies.forms.factories.*;
+
 
 
 /**
- * @author Huang
+ * @author Brainrain
  */
-
 public class Bill extends JPanel {
     public Bill() {
         initComponents();
@@ -90,8 +90,8 @@ public class Bill extends JPanel {
         tail_cardChangePanel = new JPanel();
         tail_cardChange_return = new JButton();
         tail_cardChange_settleBill = new JButton();
-        tail_tButtonGroup_payingMethod = new ButtonGroup();
-        tail_tButtonGroup_diningMethod = new ButtonGroup();
+        ButtonGroup tail_tButtonGroup_payingMethod = new ButtonGroup();
+        ButtonGroup tail_tButtonGroup_diningMethod = new ButtonGroup();
 
 
         //======== this ========
@@ -539,7 +539,5 @@ public class Bill extends JPanel {
     private JPanel tail_cardChangePanel;
     private JButton tail_cardChange_return;
     private JButton tail_cardChange_settleBill;
-    private ButtonGroup tail_tButtonGroup_payingMethod;
-    private ButtonGroup tail_tButtonGroup_diningMethod;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }
