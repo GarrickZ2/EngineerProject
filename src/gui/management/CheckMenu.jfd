@@ -1,0 +1,298 @@
+JFDML JFormDesigner: "6.0.6.2.195" Java: "11.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+			"$columnSpecs": "0, 57, 416, 107"
+			"$hGap": 5
+			"$vGap": 5
+			"$alignTop": true
+			"$alignLeft": true
+			"$rowSpecs": "0, 122, 16, 103, 0"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "back"
+				"text": "Return"
+				auxiliary() {
+					"JavaCodeGenerator.variableModifiers": 1
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "title"
+				"text": "Check Your Menu"
+				"horizontalAlignment": 0
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 7, false )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 2
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+				"columns": 4
+				"rows": 3
+				"hgap": 3
+				"vgap": 3
+			} ) {
+				name: "comPanel"
+				"border": new javax.swing.border.TitledBorder( "Compulsory" )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "soupTypeLabel"
+					"text": "Soup Type"
+					"font": new com.jformdesigner.model.SwingDerivedFont( null, 131073, 2, false )
+					"foreground": &Color0 new java.awt.Color( 255, 255, 255, 255 )
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "soup1"
+					"text": "Tonkotsu"
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "soup2"
+					"text": "Shoyu"
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "soup3"
+					"text": "Shio"
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "noodleTypeLabel"
+					"text": "Noodle Type"
+					"font": &Font0 new java.awt.Font( "Microsoft YaHei UI", 1, 12 )
+					"foreground": #Color0
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "noodle1"
+					"text": "Soft"
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "noodle2"
+					"text": "Medium"
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "noodle3"
+					"text": "Firm"
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "onionTypeLabel"
+					"text": "Spring Onion"
+					"font": #Font0
+					"foreground": #Color0
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "onion1"
+					"text": "No Please"
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "onion2"
+					"text": "Just a little"
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "onion3"
+					"text": "A lot!"
+					"horizontalAlignment": 0
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 2
+				"gridy": 1
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+				"columns": 6
+			} ) {
+				name: "spicePanel"
+				"border": new javax.swing.border.TitledBorder( "" )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "spiceTypeLabel"
+					"text": "Spiceness"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 1, 14 )
+					"foreground": new java.awt.Color( 255, 255, 255, 255 )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "spice1"
+					"text": "1"
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "spice2"
+					"text": "2"
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "spice3"
+					"text": "3"
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "spice4"
+					"text": "4"
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "spice5"
+					"text": "5"
+					"horizontalAlignment": 0
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 2
+				"gridy": 2
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+				"columns": 3
+				"rows": 6
+				"hgap": 2
+				"vgap": 2
+			} ) {
+				name: "extraPanel"
+				"border": new javax.swing.border.TitledBorder( "Extra" )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "name"
+					"text": "Name"
+					"foreground": &Color1 new java.awt.Color( 255, 255, 255, 255 )
+					"font": &Font1 new java.awt.Font( "Microsoft YaHei UI", 1, 14 )
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "price"
+					"text": "Price"
+					"foreground": #Color1
+					"font": #Font1
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "isAvailable"
+					"text": "IsAvailable"
+					"foreground": #Color1
+					"font": #Font1
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "noodles"
+					"text": "Noodles"
+					"foreground": #Color1
+					"font": #Font1
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "noodlePrice"
+					"text": "$9.9"
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "noodleAvailable"
+					"text": "Available"
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "nori"
+					"text": "Nori"
+					"foreground": #Color1
+					"font": #Font1
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "noriPrice"
+					"text": "$1.0"
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "noriAvailable"
+					"text": "Available"
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "egg"
+					"text": "Egg"
+					"foreground": #Color1
+					"font": #Font1
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "eggPrice"
+					"text": "$1.0"
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "eggAvailable"
+					"text": "Available"
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "shoot"
+					"text": "Shoot"
+					"foreground": #Color1
+					"font": #Font1
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "shootPrice"
+					"text": "$1.0"
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "shootAvailable"
+					"text": "Available"
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "chashu"
+					"text": "Chashu"
+					"foreground": #Color1
+					"font": #Font1
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "chashuPrice"
+					"text": "$1.0"
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "chashuAvailable"
+					"text": "Available"
+					"horizontalAlignment": 0
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 2
+				"gridy": 3
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+				"columns": 3
+			} ) {
+				name: "changePanel"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+					"axis": 0
+				} ) {
+					name: "box1"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "change"
+					"text": "Change Menu"
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+					"axis": 0
+				} ) {
+					name: "box2"
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 2
+				"gridy": 4
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 570, 390 )
+		} )
+	}
+}

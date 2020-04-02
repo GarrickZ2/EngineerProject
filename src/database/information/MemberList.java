@@ -162,7 +162,7 @@ public class MemberList extends DataType {
 	public boolean deleteMember(String id) {
 		fileChanged = true;
 		for(Membership ms :msl) {
-			if(ms.getMembershipId()==id) {
+			if(ms.getMembershipId().equals(id)) {
 				msl.remove(ms);
 				return true;
 			}
@@ -171,10 +171,7 @@ public class MemberList extends DataType {
 	}
 
 	public boolean queryMember(String str) {
-		if(this.getMember(str).getMembershipId()!=null){
-			return true;
-		}
-		return false;
+		return this.getMember(str).getMembershipId() != null;
 	}
 
 	public Membership getMember(String str){
@@ -185,7 +182,7 @@ public class MemberList extends DataType {
 			keywords = str;
 		}
 		for(Membership temp: msl) {
-			if(temp.getMembershipId()==keywords||temp.getTelephone()==keywords||temp.geteMail()==keywords) {
+			if(temp.getMembershipId().equals(keywords) || temp.getTelephone().equals(keywords) || temp.geteMail().equals(keywords)) {
 				return temp;
 			}
 		}

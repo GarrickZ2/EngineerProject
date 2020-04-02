@@ -19,7 +19,7 @@ public class MemberIndex extends JPanel{
     CardLayout card;
     JPanel main;
 
-    SelectPanel selectPanel;
+    public SelectPanel selectPanel;
     CreatePanel createPanel;
     CheckPanel checkPanel;
     ChangeInfo changeInfo;
@@ -40,29 +40,27 @@ public class MemberIndex extends JPanel{
         this.add(main);
         //select
         selectPanel.become.addActionListener(e -> card.show(main, "create"));
+        //CHECK
         selectPanel.check.addActionListener(e -> {
-            String number = JOptionPane.showInputDialog("Please Input Your VIP Number");
-            if (number == null){
-                return;
-            }
-            UserData userData = new UserData();
-            MemberList memberList = userData.loadInfo();
-            memberList.queryMember(number);
-            if(memberList.queryMember(number)) {
-                for(Membership ms : memberList.getMsl()) {
-                    if(ms.getMembershipId().equals(number)) {
-                        checkPanel.membership = ms;
-                        checkPanel.name.setText("Name: " + checkPanel.membership.getLastName() + " "
-                                + checkPanel.membership.getLastName());
-                        checkPanel.tel.setText("Telephone: " + checkPanel.membership.getTelephone());
-                        checkPanel.email.setText("Email:" + checkPanel.membership.geteMail());
-                        checkPanel.coupon.setText("Stamps:" + checkPanel.membership.getStamps());
-                        card.show(main, "check");
-                        return;
-                    }
+            while (true) {
+                String number = JOptionPane.showInputDialog("Please Input Your VIP Number");
+                if (number == null) {
+                    return;
                 }
+                UserData userData = new UserData();
+                MemberList memberList = userData.loadInfo();
+                if (memberList.queryMember(number)) {
+                    checkPanel.membership = memberList.getMember(number);
+                    checkPanel.name.setText("Name: " + checkPanel.membership.getLastName() + " "
+                            + checkPanel.membership.getLastName());
+                    checkPanel.tel.setText("Telephone: " + checkPanel.membership.getTelephone());
+                    checkPanel.email.setText("Email:" + checkPanel.membership.geteMail());
+                    checkPanel.coupon.setText("Stamps:" + checkPanel.membership.getStamps());
+                    card.show(main, "check");
+                    return;
+                }
+                JOptionPane.showMessageDialog(null, "Doesn't exist this account!");
             }
-            JOptionPane.showMessageDialog(null, "Doesn't exist this account!");
         });
 
 

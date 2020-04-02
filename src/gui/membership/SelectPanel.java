@@ -12,26 +12,23 @@ import java.awt.event.ActionListener;
 /**
  * @author Zixuan Zhang
  */
-public class SelectPanel extends JPanel implements ActionListener {
+public class SelectPanel extends JPanel {
 
     JButton become;
     JButton check;
+    public JButton back;
     JPanel main;
 
     public SelectPanel(LayoutManager layoutManager){
+        back = new JButton("Return");
         check = new JButton("I'm the VIP");
         become = new JButton("I want to become VIP");
 
-        main = new JPanel(new GridLayout(1,2));
+        main = new JPanel(new GridLayout(3,1));
+        main.add(back);
         main.add(check);
-        check.addActionListener(this);
         main.add(become);
 
         this.add(main);
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-
     }
 }
