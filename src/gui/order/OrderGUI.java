@@ -13,6 +13,8 @@ import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Enumeration;
 
 /**
@@ -21,6 +23,8 @@ import java.util.Enumeration;
 public class OrderGUI extends JPanel{
 
     public JButton back;
+
+    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     Compulsory compulsory;
     Select selective;
@@ -65,7 +69,12 @@ public class OrderGUI extends JPanel{
             System.out.println(cuisine.toString());
 
             //todo payment.serialNumber
+
+            //payment.serialNumber.setText();
+            //order.setOrderID("");
             //todo time
+            payment.time.setText(dateFormat.format(new Date()));
+            //order.setDate(new Date);
             //todo membershipNumber
 
             payment.soup.setText(cuisine.getSoupType());
