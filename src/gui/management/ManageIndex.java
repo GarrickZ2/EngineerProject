@@ -35,31 +35,7 @@ public class ManageIndex extends JPanel {
         main.add(changeMenu, "change");
 
         manageSelect.checkMenu.addActionListener(e -> {
-            checkMenu.noodlePrice.setText("$" + menu.getNoodle());
-            checkMenu.noriPrice.setText("$" + menu.getNori());
-            checkMenu.eggPrice.setText("$" + menu.getEgg());
-            checkMenu.chashuPrice.setText("$" + menu.getChashu());
-            checkMenu.shootPrice.setText("$" + menu.getChashu());
-            if(menu.isNoriAvailable()){
-                checkMenu.noriAvailable.setText("Available");
-            }else {
-                checkMenu.noriAvailable.setText("Unavailable");
-            }
-            if(menu.isChashuAvailable()){
-                checkMenu.chashuAvailable.setText("Available");
-            }else {
-                checkMenu.chashuAvailable.setText("Unavailable");
-            }
-            if(menu.isShootAvailable()){
-                checkMenu.shootAvailable.setText("Available");
-            }else {
-                checkMenu.shootAvailable.setText("Unavailable");
-            }
-            if(menu.isEggAvailable()){
-                checkMenu.eggAvailable.setText("Available");
-            }else {
-                checkMenu.eggAvailable.setText("Unavailable");
-            }
+            setChangeMenu();
             card.show(main, "check");
         });
 

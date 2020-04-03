@@ -2,6 +2,7 @@ package gui.order;
 
 
 import com.alee.laf.WebLookAndFeel;
+import database.information.Cuisine;
 import database.information.Order;
 
 import javax.swing.*;
@@ -13,38 +14,41 @@ import java.awt.event.ActionListener;
 /**
  * @author Zixuan Zhang
  */
-public class OrderGUI extends JPanel implements ActionListener {
+public class OrderGUI extends JPanel{
 
     public JButton back;
 
     Compulsory compulsory;
-    Selective selective;
+    Select selective;
     Bill bill;
 
     CardLayout card;
 
     JPanel up;
     JPanel middle;
-    JPanel below;
 
     JLabel title;
-
-    JButton next;
-    JButton last;
-
     Order order;
+    Cuisine cuisine;
 
     public OrderGUI(LayoutManager layoutManager){
         super(layoutManager);
         compulsory = new Compulsory(new BorderLayout());
-        selective = new Selective(new BorderLayout());
+        selective = new Select();
         bill = new Bill();
 
         card = new CardLayout();
         middle = new JPanel(card);
-        middle.add(compulsory);
-        middle.add(selective);
-        middle.add(bill);
+        middle.add(compulsory, "compulsory");
+        middle.add(selective, "selective");
+        middle.add(bill, "bill");
+
+        selective.last.addActionListener(e -> card.show(middle, "compulsory"));
+        selective.next.addActionListener(e -> {
+            // set the value of cuisine.
+            //cuisine = new Cuisine();
+            card.show(middle, "bill");
+        });
 
         up = new JPanel(new BorderLayout());
         back = new JButton("Return");
@@ -52,22 +56,10 @@ public class OrderGUI extends JPanel implements ActionListener {
         up.add(back, BorderLayout.WEST);
         up.add(title, BorderLayout.CENTER);
 
-        next = new JButton("Next");
-        next.addActionListener(this);
-
-        last = new JButton("Last");
-        last.addActionListener(this);
-
-        below = new JPanel(new BorderLayout());
-        below.add(last, BorderLayout.WEST);
-        below.add(next, BorderLayout.EAST);
-
 
         this.add(up, BorderLayout.NORTH);
         this.add(middle, BorderLayout.CENTER);
-        this.add(below, BorderLayout.SOUTH);
 
-//        bill.
 
     }
 
@@ -84,16 +76,5 @@ public class OrderGUI extends JPanel implements ActionListener {
         test.setBounds(400,400,400,400);
         test.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         test.setVisible(true);
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        JButton b = (JButton)e.getSource();
-        if(b.equals(next)){
-            card.next(middle);
-        } else if(b.equals(last)) {
-            card.previous(middle);
-        }
-
     }
 }
