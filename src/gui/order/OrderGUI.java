@@ -2,14 +2,20 @@ package gui.order;
 
 
 import com.alee.laf.WebLookAndFeel;
+import database.MenuData;
 import database.information.Cuisine;
+import database.information.Menu;
 import database.information.Order;
+import org.junit.Test;
 
 import javax.swing.*;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Enumeration;
 
 /**
  * @author Zixuan Zhang
@@ -18,9 +24,11 @@ public class OrderGUI extends JPanel{
 
     public JButton back;
 
+    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
     Compulsory compulsory;
     Select selective;
-    Bill bill;
+    public Payment payment;
 
     CardLayout card;
 
@@ -30,24 +38,97 @@ public class OrderGUI extends JPanel{
     JLabel title;
     Order order;
     Cuisine cuisine;
+    MenuData menuData;
+    Menu menu;
+
 
     public OrderGUI(LayoutManager layoutManager){
         super(layoutManager);
-        compulsory = new Compulsory(new BorderLayout());
+        compulsory = new Compulsory();
         selective = new Select();
-        bill = new Bill();
+        payment = new Payment();
+        menuData = new MenuData();
+        menu = menuData.loadInfo();
 
         card = new CardLayout();
         middle = new JPanel(card);
         middle.add(compulsory, "compulsory");
         middle.add(selective, "selective");
-        middle.add(bill, "bill");
+        middle.add(payment, "payment");
 
+
+        compulsory.nextButton.addActionListener(e -> card.show(middle,"selective"));
         selective.last.addActionListener(e -> card.show(middle, "compulsory"));
         selective.next.addActionListener(e -> {
             // set the value of cuisine.
-            //cuisine = new Cuisine();
-            card.show(middle, "bill");
+            cuisine = new Cuisine(getSelectedText(compulsory.soupGroup),getSelectedText(compulsory.noodleGroup),
+                    getSelectedText(compulsory.onionGroup),getSelectedBoolean(getSelectedText(compulsory.noriGroup)),
+                    getSelectedBoolean(getSelectedText(compulsory.chashuGroup)),getSelectedBoolean(getSelectedText(compulsory.eggGroup)),
+                    Integer.parseInt(getSelectedText(compulsory.spiceGroup)),(int)selective.noriNumber.getValue(),
+                    (int)selective.eggNumber.getValue(), (int)selective.shootNumber.getValue(),(int)selective.chashuNumber.getValue());
+            System.out.println(cuisine.toString());
+
+            //todo payment.serialNumber
+
+            //payment.serialNumber.setText();
+            //order.setOrderID("");
+            //todo time
+            payment.time.setText(dateFormat.format(new Date()));
+            //order.setDate(new Date);
+            //todo membershipNumber
+
+            payment.soup.setText(cuisine.getSoupType());
+            payment.noodlePrice.setText("￡"+menu.getNoodle());
+            payment.noodle.setText(cuisine.getNoodleType());
+            payment.onion.setText(cuisine.getOnionType());
+            payment.onion.setText(""+cuisine.getSpiciness());
+            if(cuisine.isNori()){
+                payment.nori.setText("Yes");
+            }else{
+                payment.nori.setText("No");
+            }
+
+            if(cuisine.isEgg()){
+                payment.egg.setText("Yes");
+            }else{
+                payment.egg.setText("No");
+            }
+
+            //todo boolean shoot & isShoot()
+            payment.shoot.setText("No");
+
+
+            if(cuisine.isChashu()){
+                payment.chashu.setText("Yes");
+            }else{
+                payment.chashu.setText("No");
+            }
+
+            payment.extraNori.setText(""+cuisine.getExtraNori());
+            payment.noriPrice.setText("￡"+menu.getNori()*cuisine.getExtraNori());
+
+            payment.extraEgg.setText(""+cuisine.getExtraEgg());
+            payment.eggPrice.setText("￡"+menu.getEgg()*cuisine.getExtraEgg());
+
+            payment.extraShoot.setText(""+cuisine.getExtraShoot());
+            payment.shootPrice.setText("￡"+menu.getShoot()*cuisine.getExtraShoot());
+
+            payment.extraChashu.setText(""+cuisine.getExtraChashu());
+            payment.chashuPrice.setText("￡"+menu.getChashu()*cuisine.getExtraChashu());
+
+            if(getSelectedText(payment.diningMethod) == "Take away"){
+                payment.totalPrice.setText("￡"+(cuisine.calculate()+1));
+            }else{
+                payment.totalPrice.setText("￡"+cuisine.calculate());
+            }
+
+            card.show(middle, "payment");
+        });
+        payment.returnButton.addActionListener(e ->{
+            card.show(middle,"compulsory");
+        });
+        payment.settleButton.addActionListener(e ->{
+            card.show(middle,"compulsory");
         });
 
         up = new JPanel(new BorderLayout());
@@ -63,6 +144,30 @@ public class OrderGUI extends JPanel{
 
     }
 
+    public static String getSelectedText(ButtonGroup buttonGroup){
+        Enumeration<AbstractButton> buttons = buttonGroup.getElements();
+        while (buttons.hasMoreElements()) {
+            AbstractButton btn = buttons.nextElement();
+            if(btn.isSelected()){
+                return btn.getText();
+            }
+        }
+        return "Error nothing has been selected";
+    }
+
+    public static boolean getSelectedBoolean(String str){
+        if(str == "Yes"){
+            return true;
+        }
+        else if(str == "No"){
+            return false;
+        }
+        else{
+            Exception exception = new Exception("Error value");
+            return false;
+        }
+    }
+
 
     public static void main(String[] args) throws Exception{
         UIManager.setLookAndFeel ( NimbusLookAndFeel.class.getCanonicalName () );
@@ -73,7 +178,8 @@ public class OrderGUI extends JPanel{
         OrderGUI order = new OrderGUI(new BorderLayout());
         test.add(order);
 
-        test.setBounds(400,400,400,400);
+
+        test.pack();
         test.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         test.setVisible(true);
     }

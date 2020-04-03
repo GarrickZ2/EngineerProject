@@ -1,0 +1,366 @@
+JFDML JFormDesigner: "6.0.6.2.195" Java: "11.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+			"$columnSpecs": "50, 476, 50"
+			"$rowSpecs": "50, 120, 120, 40, 10, 40, 10"
+			"$hGap": 5
+			"$vGap": 5
+			"$alignLeft": true
+			"$alignTop": true
+		} ) {
+			name: "this"
+			"border": new javax.swing.border.TitledBorder( "Required Option" )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+				"columns": 4
+				"rows": 3
+			} ) {
+				name: "section1"
+				"border": &EtchedBorder0 new javax.swing.border.EtchedBorder( 1, null, null )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "soupLabel"
+					"text": "Soup:"
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "soup1"
+					"text": "Tonkotsu"
+					"$buttonGroup": new FormReference( "soupGroup" )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "soup2"
+					"text": "Shoyu"
+					"$buttonGroup": new FormReference( "soupGroup" )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "soup3"
+					"text": "Shio"
+					"$buttonGroup": new FormReference( "soupGroup" )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "noodleLabel"
+					"text": "Noodle:"
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "noode1"
+					"text": "Soft"
+					"$buttonGroup": new FormReference( "noodleGroup" )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "noode2"
+					"text": "Medium"
+					"$buttonGroup": new FormReference( "noodleGroup" )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "noode3"
+					"text": "Firm"
+					"$buttonGroup": new FormReference( "noodleGroup" )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "onionLabel"
+					"text": "Spring Onion:"
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "onion1"
+					"text": "No please"
+					"$buttonGroup": new FormReference( "onionGroup" )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "onion2"
+					"text": "Just a little"
+					"$buttonGroup": new FormReference( "onionGroup" )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "onion3"
+					"text": "A lot"
+					"$buttonGroup": new FormReference( "onionGroup" )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+				"gridy": 1
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+				"columns": 4
+				"rows": 3
+			} ) {
+				name: "section2"
+				"border": #EtchedBorder0
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "noriLabel"
+					"text": "Nori:"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+					"axis": 0
+				} ) {
+					name: "emptyBox0"
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "nori1"
+					"text": "Yes"
+					"$buttonGroup": new FormReference( "noriGroup" )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "nori2"
+					"text": "No"
+					"$buttonGroup": new FormReference( "noriGroup" )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "chashuLabel"
+					"text": "Chashu:"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+					"axis": 0
+				} ) {
+					name: "emptyBox1"
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "chashu1"
+					"text": "Yes"
+					"$buttonGroup": new FormReference( "chashuGroup" )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "chashu2"
+					"text": "No"
+					"$buttonGroup": new FormReference( "chashuGroup" )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "eggLabel"
+					"text": "Boiled egg:"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+					"axis": 0
+				} ) {
+					name: "emptyBox2"
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "egg1"
+					"text": "Yes"
+					"$buttonGroup": new FormReference( "eggGroup" )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "egg2"
+					"text": "No"
+					"$buttonGroup": new FormReference( "eggGroup" )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+				"gridy": 2
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+				"columns": 6
+			} ) {
+				name: "section3"
+				"border": #EtchedBorder0
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "spiceLabel"
+					"text": "Spiciness:"
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "spice0"
+					"text": "0"
+					"$buttonGroup": new FormReference( "spiceGroup" )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "spice1"
+					"text": "1"
+					"$buttonGroup": new FormReference( "spiceGroup" )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "spice2"
+					"text": "2"
+					"$buttonGroup": new FormReference( "spiceGroup" )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "spice3"
+					"text": "3"
+					"$buttonGroup": new FormReference( "spiceGroup" )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "spice4"
+					"text": "4"
+					"$buttonGroup": new FormReference( "spiceGroup" )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "spice5"
+					"text": "5"
+					"$buttonGroup": new FormReference( "spiceGroup" )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+				"gridy": 3
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+				"columns": 6
+			} ) {
+				name: "section4"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "resetButton"
+					"text": "Reset"
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+					"axis": 0
+				} ) {
+					name: "emptyBox3"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+					"axis": 0
+				} ) {
+					name: "emptyBox4"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+					"axis": 0
+				} ) {
+					name: "emptyBox5"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+					"axis": 0
+				} ) {
+					name: "emptyBox6"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "nextButton"
+					"text": "Next"
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 5
+				"gridx": 1
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 635, 420 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "soupGroup"
+			auxiliary() {
+				"JavaCodeGenerator.variableModifiers": 1
+				"JavaCodeGenerator.variableLocal": false
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 436 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "noodleGroup"
+			auxiliary() {
+				"JavaCodeGenerator.variableModifiers": 1
+				"JavaCodeGenerator.variableLocal": false
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 497 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "onionGroup"
+			auxiliary() {
+				"JavaCodeGenerator.variableModifiers": 1
+				"JavaCodeGenerator.variableLocal": false
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 558 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "noriGroup"
+			auxiliary() {
+				"JavaCodeGenerator.variableModifiers": 1
+				"JavaCodeGenerator.variableLocal": false
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 619 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "chashuGroup"
+			auxiliary() {
+				"JavaCodeGenerator.variableModifiers": 1
+				"JavaCodeGenerator.variableLocal": false
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 680 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "eggGroup"
+			auxiliary() {
+				"JavaCodeGenerator.variableModifiers": 1
+				"JavaCodeGenerator.variableLocal": false
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 741 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "spiceGroup"
+			auxiliary() {
+				"JavaCodeGenerator.variableModifiers": 1
+				"JavaCodeGenerator.variableLocal": false
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 802 )
+		} )
+	}
+}

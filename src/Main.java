@@ -57,12 +57,17 @@ public class Main extends JFrame {
 
 
         orderGui.back.addActionListener(e -> card.show(content, "index"));
+        //todo Page after finishing payment
+        orderGui.payment.settleButton.addActionListener(e -> card.show(content, "index"));
         memberIndex.selectPanel.back.addActionListener(e -> card.show(content, "index"));
         manageIndex.manageSelect.back.addActionListener(e -> card.show(content, "index"));
+
         this.add(content);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setSize(400,400);
-        this.setLocation(400, 400);
+        this.pack();
+
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation((dim.width - this.getWidth()) / 2, (dim.height - this.getHeight()) / 3);
         this.setVisible(true);
     }
 

@@ -13,7 +13,7 @@ public class AlertWindow extends JFrame {
     }
     public AlertWindow(String alertContent) throws InterruptedException {
 
-        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+
         JLabel label = new JLabel();
         label.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 14));
         label.setSize(350,0);
@@ -22,7 +22,10 @@ public class AlertWindow extends JFrame {
         this.JlabelSetText(label,alertContent);
 
         this.pack();
+
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation((dim.width - this.getWidth()) / 2, (dim.height - this.getHeight()) / 3);
+
         this.setResizable(false);
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

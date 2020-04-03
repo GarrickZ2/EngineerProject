@@ -17,7 +17,6 @@ public class Cuisine {
     private String onionType;
 
     private boolean nori;
-
     private boolean chashu;
     private boolean egg;
 
