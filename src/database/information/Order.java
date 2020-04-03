@@ -1,55 +1,63 @@
 package database.information;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 public class Order {
 
 
     public Order(Cuisine cuisine, int eatType, String membershipId) {
         this.cuisine = cuisine;
         this.eatType = eatType;
-        this.membershipID = membershipId;
+        this.membershipId = membershipId;
     }
 
-    public Order(String orderId, Date date, Cuisine cuisine, int eatType, String membershipId,
-                 String billId) {
-        this.orderID = orderId;
+    public Order(String orderId, String date, Cuisine cuisine, int eatType, String membershipId, double amountMoney, String billId) {
+        this.orderId = orderId;
         this.date = date;
         this.cuisine = cuisine;
         this.eatType = eatType;
-        this.membershipID = membershipId;
-        this.amountMoney = cuisine.calculate() + outMoney*eatType;
-        this.billID = billId;
+        this.eatMoney = cuisine.calculate();
+        this.membershipId = membershipId;
+        this.amountMoney = amountMoney;
+        this.billId = billId;
     }
 
-    private String orderID;
-    private Date date;
+    public Order(String orderId, String date, Cuisine cuisine, int eatType, String membershipId,
+                 String billId) {
+        this.orderId = orderId;
+        this.date = date;
+        this.cuisine = cuisine;
+        this.eatType = eatType;
+        this.eatMoney = cuisine.calculate();
+        this.membershipId = membershipId;
+        this.amountMoney = eatMoney + outMoney*eatType;
+        this.billId = billId;
+    }
+
+    private String orderId;
+    private String date;
     private Cuisine cuisine;
     //0 represents eating indoor, 1 represents eating outdoor
     private int eatType;
     private double eatMoney;
 
-    private String membershipID;
+    private String membershipId;
     private double amountMoney;
-    private String billID;
-    private double outMoney = 1.0;
+    private String billId;
+    final private double outMoney = 1.0;
 
 
-    public String getOrderID() {
-        return orderID;
+    public String getOrderId() {
+        return orderId;
     }
 
-    public void setOrderID(String orderID) {
-        this.orderID = orderID;
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
@@ -69,12 +77,12 @@ public class Order {
         this.eatType = eatType;
     }
 
-    public String getMembershipID() {
-        return membershipID;
+    public String getMembershipId() {
+        return membershipId;
     }
 
-    public void setMembershipID(String membershipID) {
-        this.membershipID = membershipID;
+    public void setMembershipId(String membershipId) {
+        this.membershipId = membershipId;
     }
 
     public double getAmountMoney() {
@@ -85,18 +93,18 @@ public class Order {
         this.amountMoney = amountMoney;
     }
 
-    public String getBillID() {
-        return billID;
+    public String getBillId() {
+        return billId;
     }
 
-    public void setBillID(String billID) {
-        this.billID = billID;
+    public void setBillId(String billId) {
+        this.billId = billId;
     }
 
     @Override
     public String toString() {
-        return orderID + "," + date + "," + cuisine + "," + eatType + "," + membershipID + "," + amountMoney + "," +
-                amountMoney + "," + billID;
+        return orderId + "," + date + "," + cuisine + "," + eatType + "," + membershipId + "," + amountMoney + "," +
+                amountMoney + "," + billId;
     }
 
 }

@@ -2,6 +2,7 @@ package database.information;
 
 import database.MenuData;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -149,8 +150,9 @@ public class Cuisine {
     }
 
     public String printReceipt(){
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd kk:mm:ss");
         Cuisine a = new Cuisine("Shio", "Soft", "No please", true, false, false,5,0,2,1,3);
-        Order order = new Order("123", new Date(), a, 1, "123", "212");
+        Order order = new Order("123", format.format(new Date()), a, 1, "123", "212");
 
         String type =this.soupType + "," + this.noodleType + "," + this.onionType;
         if(this.nori){
@@ -166,10 +168,10 @@ public class Cuisine {
 
         return "\t\t\t\t            --Receipt--\r\n"+
                 "\r\n" +
-                "账单号：" + order.getBillID() + "\r\n"  +
+                "账单号：" + order.getBillId() + "\r\n"  +
                 "开单时间：" + order.getDate() +"\r\n"+
                 "结账时间：" + order.getDate() +"\r\n"+
-                "会员编号："+ order.getMembershipID() + "\r\n"+
+                "会员编号："+ order.getMembershipId() + "\r\n"+
                 "---------------------------------------------------------------------------\r\n"+
                 "Menu \t\t\t\t\t\t\t                        数量 \t 单价\t  金额\r\n"+
                 "Noddles("+ type + ")  \t         1\t     9.9\t  9.9\r\n"+

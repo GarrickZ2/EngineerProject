@@ -28,11 +28,12 @@ public class OrderList extends DataType{
 
     public void createOrder(Cuisine cuisine, int eatType, String membershipId){
         Date date = new Date();
-        SimpleDateFormat format = new SimpleDateFormat("yyyyMMddkkmm");
+        SimpleDateFormat format = new SimpleDateFormat("yyyyMMddkkmmss");
         String billId = format.format(date);
         int temp = Integer.parseInt(billId);
         String orderId = Integer.toHexString(temp);
-        Order order = new Order(orderId, date, cuisine, eatType, membershipId, billId);
+        format = new SimpleDateFormat("yyyy-MM-dd kk:mm:ss");
+        Order order = new Order(orderId, format.format(date), cuisine, eatType, membershipId, billId);
         orders.add(order);
     }
 
