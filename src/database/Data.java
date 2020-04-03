@@ -50,6 +50,7 @@ public class Data {
                 Cuisine cuisine = new Cuisine(attributes[2], attributes[3], attributes[4], Boolean.parseBoolean(attributes[5]),
                         Boolean.parseBoolean(attributes[6]), Boolean.parseBoolean(attributes[7]), Integer.parseInt(attributes[8]),
                         Integer.parseInt(attributes[9]), Integer.parseInt(attributes[10]), Integer.parseInt(attributes[11]), Integer.parseInt(attributes[12]));
+                //todo problems occurred with below code
                 Order order = new Order(attributes[0], attributes[1], cuisine, Integer.parseInt(attributes[3]),
                         attributes[4], Double.parseDouble(attributes[5]), attributes[6]);
                 orders.add(order);

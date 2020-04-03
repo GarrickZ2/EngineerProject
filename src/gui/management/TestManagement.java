@@ -1,7 +1,6 @@
 package gui.management;
 
 import com.alee.laf.WebLookAndFeel;
-import gui.order.Bill;
 
 import javax.swing.*;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;

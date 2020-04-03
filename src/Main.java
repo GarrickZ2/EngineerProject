@@ -57,8 +57,11 @@ public class Main extends JFrame {
 
 
         orderGui.back.addActionListener(e -> card.show(content, "index"));
+        //todo Page after finishing payment
+        orderGui.payment.settleButton.addActionListener(e -> card.show(content, "index"));
         memberIndex.selectPanel.back.addActionListener(e -> card.show(content, "index"));
         manageIndex.manageSelect.back.addActionListener(e -> card.show(content, "index"));
+
         this.add(content);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.pack();

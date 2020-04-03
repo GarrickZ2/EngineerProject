@@ -41,7 +41,6 @@ public class Compulsory extends JPanel {
         nori2 = new JToggleButton();
         chashuLabel = new JLabel();
         emptyBox1 = new JPanel();
-        panel5 = new JPanel();
         chashu1 = new JToggleButton();
         chashu2 = new JToggleButton();
         eggLabel = new JLabel();
@@ -63,6 +62,13 @@ public class Compulsory extends JPanel {
         emptyBox5 = new JPanel();
         emptyBox6 = new JPanel();
         nextButton = new JButton();
+        soupGroup = new ButtonGroup();
+        noodleGroup = new ButtonGroup();
+        onionGroup = new ButtonGroup();
+        noriGroup = new ButtonGroup();
+        chashuGroup = new ButtonGroup();
+        eggGroup = new ButtonGroup();
+        spiceGroup = new ButtonGroup();
 
         //======== this ========
         setBorder(new TitledBorder("Required Option"));
@@ -159,12 +165,6 @@ public class Compulsory extends JPanel {
             //======== emptyBox1 ========
             {
                 emptyBox1.setLayout(new BoxLayout(emptyBox1, BoxLayout.X_AXIS));
-
-                //======== panel5 ========
-                {
-                    panel5.setLayout(new BoxLayout(panel5, BoxLayout.X_AXIS));
-                }
-                emptyBox1.add(panel5);
             }
             section2.add(emptyBox1);
 
@@ -276,40 +276,33 @@ public class Compulsory extends JPanel {
             new Insets(0, 0, 5, 5), 0, 0));
 
         //---- soupGroup ----
-        ButtonGroup soupGroup = new ButtonGroup();
         soupGroup.add(soup1);
         soupGroup.add(soup2);
         soupGroup.add(soup3);
 
         //---- noodleGroup ----
-        ButtonGroup noodleGroup = new ButtonGroup();
         noodleGroup.add(noode1);
         noodleGroup.add(noode2);
         noodleGroup.add(noode3);
 
         //---- onionGroup ----
-        ButtonGroup onionGroup = new ButtonGroup();
         onionGroup.add(onion1);
         onionGroup.add(onion2);
         onionGroup.add(onion3);
 
         //---- noriGroup ----
-        ButtonGroup noriGroup = new ButtonGroup();
         noriGroup.add(nori1);
         noriGroup.add(nori2);
 
         //---- chashuGroup ----
-        ButtonGroup chashuGroup = new ButtonGroup();
         chashuGroup.add(chashu1);
         chashuGroup.add(chashu2);
 
         //---- eggGroup ----
-        ButtonGroup eggGroup = new ButtonGroup();
         eggGroup.add(egg1);
         eggGroup.add(egg2);
 
         //---- spiceGroup ----
-        ButtonGroup spiceGroup = new ButtonGroup();
         spiceGroup.add(spice0);
         spiceGroup.add(spice1);
         spiceGroup.add(spice2);
@@ -322,46 +315,52 @@ public class Compulsory extends JPanel {
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
     private JPanel section1;
     private JLabel soupLabel;
-    private JToggleButton soup1;
-    private JToggleButton soup2;
-    private JToggleButton soup3;
+    public JToggleButton soup1;
+    public JToggleButton soup2;
+    public JToggleButton soup3;
     private JLabel noodleLabel;
-    private JToggleButton noode1;
-    private JToggleButton noode2;
-    private JToggleButton noode3;
+    public JToggleButton noode1;
+    public JToggleButton noode2;
+    public JToggleButton noode3;
     private JLabel onionLabel;
-    private JToggleButton onion1;
-    private JToggleButton onion2;
-    private JToggleButton onion3;
+    public JToggleButton onion1;
+    public JToggleButton onion2;
+    public JToggleButton onion3;
     private JPanel section2;
     private JLabel noriLabel;
     private JPanel emptyBox0;
-    private JToggleButton nori1;
-    private JToggleButton nori2;
+    public JToggleButton nori1;
+    public JToggleButton nori2;
     private JLabel chashuLabel;
     private JPanel emptyBox1;
-    private JPanel panel5;
-    private JToggleButton chashu1;
-    private JToggleButton chashu2;
+    public JToggleButton chashu1;
+    public JToggleButton chashu2;
     private JLabel eggLabel;
     private JPanel emptyBox2;
-    private JToggleButton egg1;
-    private JToggleButton egg2;
+    public JToggleButton egg1;
+    public JToggleButton egg2;
     private JPanel section3;
     private JLabel spiceLabel;
-    private JToggleButton spice0;
-    private JToggleButton spice1;
-    private JToggleButton spice2;
-    private JToggleButton spice3;
-    private JToggleButton spice4;
-    private JToggleButton spice5;
+    public JToggleButton spice0;
+    public JToggleButton spice1;
+    public JToggleButton spice2;
+    public JToggleButton spice3;
+    public JToggleButton spice4;
+    public JToggleButton spice5;
     private JPanel section4;
-    private JButton resetButton;
+    public JButton resetButton;
     private JPanel emptyBox3;
     private JPanel emptyBox4;
     private JPanel emptyBox5;
     private JPanel emptyBox6;
-    private JButton nextButton;
+    public JButton nextButton;
+    public ButtonGroup soupGroup;
+    public ButtonGroup noodleGroup;
+    public ButtonGroup onionGroup;
+    public ButtonGroup noriGroup;
+    public ButtonGroup chashuGroup;
+    public ButtonGroup eggGroup;
+    public ButtonGroup spiceGroup;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 
 

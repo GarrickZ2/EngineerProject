@@ -2,49 +2,125 @@ package gui.order;
 
 
 import com.alee.laf.WebLookAndFeel;
+import database.MenuData;
+import database.information.Cuisine;
+import database.information.Menu;
 import database.information.Order;
+import org.junit.Test;
 
 import javax.swing.*;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Enumeration;
 
 /**
  * @author Zixuan Zhang
  */
-public class OrderGUI extends JPanel implements ActionListener {
+public class OrderGUI extends JPanel{
 
     public JButton back;
 
     Compulsory compulsory;
-    Selective selective;
-    Bill bill;
+    Select selective;
+    public Payment payment;
 
     CardLayout card;
 
     JPanel up;
     JPanel middle;
-    JPanel below;
 
     JLabel title;
-
-    JButton next;
-    JButton last;
-
     Order order;
+    Cuisine cuisine;
+    MenuData menuData;
+    Menu menu;
+
 
     public OrderGUI(LayoutManager layoutManager){
         super(layoutManager);
         compulsory = new Compulsory();
-        selective = new Selective(new BorderLayout());
-        bill = new Bill();
+        selective = new Select();
+        payment = new Payment();
+        menuData = new MenuData();
+        menu = menuData.loadInfo();
 
         card = new CardLayout();
         middle = new JPanel(card);
-        middle.add(compulsory);
-        middle.add(selective);
-        middle.add(bill);
+        middle.add(compulsory, "compulsory");
+        middle.add(selective, "selective");
+        middle.add(payment, "payment");
+
+
+        compulsory.nextButton.addActionListener(e -> card.show(middle,"selective"));
+        selective.last.addActionListener(e -> card.show(middle, "compulsory"));
+        selective.next.addActionListener(e -> {
+            // set the value of cuisine.
+            cuisine = new Cuisine(getSelectedText(compulsory.soupGroup),getSelectedText(compulsory.noodleGroup),
+                    getSelectedText(compulsory.onionGroup),getSelectedBoolean(getSelectedText(compulsory.noriGroup)),
+                    getSelectedBoolean(getSelectedText(compulsory.chashuGroup)),getSelectedBoolean(getSelectedText(compulsory.eggGroup)),
+                    Integer.parseInt(getSelectedText(compulsory.spiceGroup)),(int)selective.noriNumber.getValue(),
+                    (int)selective.eggNumber.getValue(), (int)selective.shootNumber.getValue(),(int)selective.chashuNumber.getValue());
+            System.out.println(cuisine.toString());
+
+            //todo payment.serialNumber
+            //todo time
+            //todo membershipNumber
+
+            payment.soup.setText(cuisine.getSoupType());
+            payment.noodlePrice.setText("￡"+menu.getNoodle());
+            payment.noodle.setText(cuisine.getNoodleType());
+            payment.onion.setText(cuisine.getOnionType());
+            payment.onion.setText(""+cuisine.getSpiciness());
+            if(cuisine.isNori()){
+                payment.nori.setText("Yes");
+            }else{
+                payment.nori.setText("No");
+            }
+
+            if(cuisine.isEgg()){
+                payment.egg.setText("Yes");
+            }else{
+                payment.egg.setText("No");
+            }
+
+            //todo boolean shoot & isShoot()
+            payment.shoot.setText("No");
+
+
+            if(cuisine.isChashu()){
+                payment.chashu.setText("Yes");
+            }else{
+                payment.chashu.setText("No");
+            }
+
+            payment.extraNori.setText(""+cuisine.getExtraNori());
+            payment.noriPrice.setText("￡"+menu.getNori()*cuisine.getExtraNori());
+
+            payment.extraEgg.setText(""+cuisine.getExtraEgg());
+            payment.eggPrice.setText("￡"+menu.getEgg()*cuisine.getExtraEgg());
+
+            payment.extraShoot.setText(""+cuisine.getExtraShoot());
+            payment.shootPrice.setText("￡"+menu.getShoot()*cuisine.getExtraShoot());
+
+            payment.extraChashu.setText(""+cuisine.getExtraChashu());
+            payment.chashuPrice.setText("￡"+menu.getChashu()*cuisine.getExtraChashu());
+
+            if(getSelectedText(payment.diningMethod) == "Take away"){
+                payment.totalPrice.setText("￡"+(cuisine.calculate()+1));
+            }else{
+                payment.totalPrice.setText("￡"+cuisine.calculate());
+            }
+
+            card.show(middle, "payment");
+        });
+        payment.returnButton.addActionListener(e ->{
+            card.show(middle,"compulsory");
+        });
+        payment.settleButton.addActionListener(e ->{
+            card.show(middle,"compulsory");
+        });
 
         up = new JPanel(new BorderLayout());
         back = new JButton("Return");
@@ -52,23 +128,35 @@ public class OrderGUI extends JPanel implements ActionListener {
         up.add(back, BorderLayout.WEST);
         up.add(title, BorderLayout.CENTER);
 
-        next = new JButton("Next");
-        next.addActionListener(this);
-
-        last = new JButton("Last");
-        last.addActionListener(this);
-
-        below = new JPanel(new BorderLayout());
-        below.add(last, BorderLayout.WEST);
-        below.add(next, BorderLayout.EAST);
-
 
         this.add(up, BorderLayout.NORTH);
         this.add(middle, BorderLayout.CENTER);
-        this.add(below, BorderLayout.SOUTH);
 
-//        bill.
 
+    }
+
+    public static String getSelectedText(ButtonGroup buttonGroup){
+        Enumeration<AbstractButton> buttons = buttonGroup.getElements();
+        while (buttons.hasMoreElements()) {
+            AbstractButton btn = buttons.nextElement();
+            if(btn.isSelected()){
+                return btn.getText();
+            }
+        }
+        return "Error nothing has been selected";
+    }
+
+    public static boolean getSelectedBoolean(String str){
+        if(str == "Yes"){
+            return true;
+        }
+        else if(str == "No"){
+            return false;
+        }
+        else{
+            Exception exception = new Exception("Error value");
+            return false;
+        }
     }
 
 
@@ -81,19 +169,9 @@ public class OrderGUI extends JPanel implements ActionListener {
         OrderGUI order = new OrderGUI(new BorderLayout());
         test.add(order);
 
-        test.setBounds(400,400,400,400);
+
+        test.pack();
         test.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         test.setVisible(true);
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        JButton b = (JButton)e.getSource();
-        if(b.equals(next)){
-            card.next(middle);
-        } else if(b.equals(last)) {
-            card.previous(middle);
-        }
-
     }
 }

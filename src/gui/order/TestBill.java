@@ -14,8 +14,8 @@ public class TestBill {
         UIManager.setLookAndFeel ( NimbusLookAndFeel.class.getCanonicalName () );
         WebLookAndFeel.initializeManagers ();
         JFrame test = new JFrame("Test");
-        Bill bill = new Bill();
-        test.add(bill);
+        Payment payment = new Payment();
+        test.add(payment);
 
         test.pack();
         test.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

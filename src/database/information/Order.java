@@ -24,6 +24,15 @@ public class Order {
         this.billID = billId;
     }
 
+    public Order(String orderID, String date, Cuisine cuisine, int eatType,
+                 String membershipID, double eatMoney, String billID) {
+
+    }
+
+    public Order(String orderID, String date, Cuisine cuisine, int eatType,
+                 String membershipID, double eatMoney, double accountMoney, String billID) {
+    }
+
     private String orderID;
     private Date date;
     private Cuisine cuisine;
@@ -35,6 +44,8 @@ public class Order {
     private double amountMoney;
     private String billID;
     private double outMoney = 1.0;
+
+
 
 
     public String getOrderID() {

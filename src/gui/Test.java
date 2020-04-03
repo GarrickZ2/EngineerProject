@@ -1,6 +1,7 @@
 package gui;
 
 import com.alee.laf.WebLookAndFeel;
+import gui.order.Select;
 
 import javax.swing.*;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
@@ -17,8 +18,8 @@ public class Test {
         WebLookAndFeel.initializeManagers ();
 
         JFrame jFrame = new JFrame();
-        Selective selective = new Selective(new BorderLayout());
-        jFrame.getContentPane().add(selective);
+        Select select = new Select();
+        jFrame.getContentPane().add(select);
 
         jFrame.setTitle("Test Function");
         jFrame.setBounds(400,400,400,400);
