@@ -187,11 +187,17 @@ new FormModel {
 					name: "noodlePrice"
 					"text": "$9.9"
 					"horizontalAlignment": 0
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "noodleAvailable"
 					"text": "Available"
 					"horizontalAlignment": 0
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "nori"
@@ -204,11 +210,17 @@ new FormModel {
 					name: "noriPrice"
 					"text": "$1.0"
 					"horizontalAlignment": 0
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "noriAvailable"
 					"text": "Available"
 					"horizontalAlignment": 0
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "egg"
@@ -221,11 +233,17 @@ new FormModel {
 					name: "eggPrice"
 					"text": "$1.0"
 					"horizontalAlignment": 0
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "eggAvailable"
 					"text": "Available"
 					"horizontalAlignment": 0
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "shoot"
@@ -238,11 +256,17 @@ new FormModel {
 					name: "shootPrice"
 					"text": "$1.0"
 					"horizontalAlignment": 0
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "shootAvailable"
 					"text": "Available"
 					"horizontalAlignment": 0
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "chashu"
@@ -255,11 +279,17 @@ new FormModel {
 					name: "chashuPrice"
 					"text": "$1.0"
 					"horizontalAlignment": 0
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "chashuAvailable"
 					"text": "Available"
 					"horizontalAlignment": 0
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
 				} )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 				"gridx": 2

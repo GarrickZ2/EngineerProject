@@ -2,6 +2,7 @@ package gui.order;
 
 import backups.Bill;
 import com.alee.laf.WebLookAndFeel;
+import database.information.Order;
 
 import javax.swing.*;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
@@ -31,6 +32,7 @@ public class OrderGUI extends JPanel implements ActionListener {
     JButton next;
     JButton last;
 
+    Order order;
 
     public OrderGUI(LayoutManager layoutManager){
         super(layoutManager);
@@ -64,6 +66,8 @@ public class OrderGUI extends JPanel implements ActionListener {
         this.add(up, BorderLayout.NORTH);
         this.add(middle, BorderLayout.CENTER);
         this.add(below, BorderLayout.SOUTH);
+
+//        bill.
 
     }
 

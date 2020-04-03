@@ -11,7 +11,7 @@ new FormModel {
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
 				"columns": 1
 			} ) {
-				name: "panel1"
+				name: "titlePanel"
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "title"
 					"text": "Change Your Menu"
@@ -43,15 +43,15 @@ new FormModel {
 					"columns": 2
 				} ) {
 					name: "noodlePricePanel"
-					auxiliary() {
-						"JavaCodeGenerator.variableModifiers": 1
-					}
 					add( new FormComponent( "javax.swing.JLabel" ) {
 						name: "noodlePriceLabel"
 						"text": "Price"
 					} )
 					add( new FormComponent( "javax.swing.JSpinner" ) {
 						name: "noodlePrice"
+						auxiliary() {
+							"JavaCodeGenerator.variableModifiers": 1
+						}
 					} )
 				} )
 				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
@@ -73,6 +73,9 @@ new FormModel {
 					} )
 					add( new FormComponent( "javax.swing.JSpinner" ) {
 						name: "noriPrice"
+						auxiliary() {
+							"JavaCodeGenerator.variableModifiers": 1
+						}
 					} )
 				} )
 				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
@@ -83,11 +86,17 @@ new FormModel {
 						name: "noriAvailable"
 						"text": "Available"
 						"$buttonGroup": new FormReference( "noriGroup" )
+						auxiliary() {
+							"JavaCodeGenerator.variableModifiers": 1
+						}
 					} )
 					add( new FormComponent( "javax.swing.JToggleButton" ) {
 						name: "noriUnavailable"
 						"text": "Unavailable"
 						"$buttonGroup": new FormReference( "noriGroup" )
+						auxiliary() {
+							"JavaCodeGenerator.variableModifiers": 1
+						}
 					} )
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
@@ -104,6 +113,9 @@ new FormModel {
 					} )
 					add( new FormComponent( "javax.swing.JSpinner" ) {
 						name: "eggPrice"
+						auxiliary() {
+							"JavaCodeGenerator.variableModifiers": 1
+						}
 					} )
 				} )
 				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
@@ -114,11 +126,17 @@ new FormModel {
 						name: "eggAvailable"
 						"text": "Available"
 						"$buttonGroup": new FormReference( "eggGroup" )
+						auxiliary() {
+							"JavaCodeGenerator.variableModifiers": 1
+						}
 					} )
 					add( new FormComponent( "javax.swing.JToggleButton" ) {
 						name: "eggUnavailable"
 						"text": "Unavailable"
 						"$buttonGroup": new FormReference( "eggGroup" )
+						auxiliary() {
+							"JavaCodeGenerator.variableModifiers": 1
+						}
 					} )
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
@@ -135,6 +153,9 @@ new FormModel {
 					} )
 					add( new FormComponent( "javax.swing.JSpinner" ) {
 						name: "shootPrice"
+						auxiliary() {
+							"JavaCodeGenerator.variableModifiers": 1
+						}
 					} )
 				} )
 				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
@@ -145,11 +166,17 @@ new FormModel {
 						name: "shootAvailable"
 						"text": "Available"
 						"$buttonGroup": new FormReference( "shootGroup" )
+						auxiliary() {
+							"JavaCodeGenerator.variableModifiers": 1
+						}
 					} )
 					add( new FormComponent( "javax.swing.JToggleButton" ) {
 						name: "shootUnavailable"
 						"text": "Unavailable"
 						"$buttonGroup": new FormReference( "shootGroup" )
+						auxiliary() {
+							"JavaCodeGenerator.variableModifiers": 1
+						}
 					} )
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
@@ -166,6 +193,9 @@ new FormModel {
 					} )
 					add( new FormComponent( "javax.swing.JSpinner" ) {
 						name: "chashuPrice"
+						auxiliary() {
+							"JavaCodeGenerator.variableModifiers": 1
+						}
 					} )
 				} )
 				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
@@ -176,11 +206,17 @@ new FormModel {
 						name: "chashuAvailable"
 						"text": "Available"
 						"$buttonGroup": new FormReference( "chashuGroup" )
+						auxiliary() {
+							"JavaCodeGenerator.variableModifiers": 1
+						}
 					} )
 					add( new FormComponent( "javax.swing.JToggleButton" ) {
 						name: "chashuUnavailable"
 						"text": "Unavailable"
 						"$buttonGroup": new FormReference( "chashuGroup" )
+						auxiliary() {
+							"JavaCodeGenerator.variableModifiers": 1
+						}
 					} )
 				} )
 			}, new FormLayoutConstraints( class java.lang.String ) {

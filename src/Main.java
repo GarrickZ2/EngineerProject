@@ -72,7 +72,7 @@ public class Main extends JFrame {
 
         new Main();
 
-        Data data = new Data();
-        data.saveReceipt();
+//        Data data = new Data();
+//        data.saveReceipt();
     }
 }

@@ -18,7 +18,7 @@ public class ChangeMenu extends JPanel {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
-        panel1 = new JPanel();
+        titlePanel = new JPanel();
         title = new JLabel();
         mid = new JPanel();
         noodleLable = new JLabel();
@@ -61,18 +61,18 @@ public class ChangeMenu extends JPanel {
         //======== this ========
         setLayout(new BorderLayout(5, 5));
 
-        //======== panel1 ========
+        //======== titlePanel ========
         {
-            panel1.setLayout(new GridLayout(1, 1));
+            titlePanel.setLayout(new GridLayout(1, 1));
 
             //---- title ----
             title.setText("Change Your Menu");
             title.setHorizontalAlignment(SwingConstants.CENTER);
             title.setForeground(new Color(238, 238, 238));
             title.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 14));
-            panel1.add(title);
+            titlePanel.add(title);
         }
-        add(panel1, BorderLayout.NORTH);
+        add(titlePanel, BorderLayout.NORTH);
 
         //======== mid ========
         {
@@ -254,42 +254,42 @@ public class ChangeMenu extends JPanel {
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-    private JPanel panel1;
+    private JPanel titlePanel;
     private JLabel title;
     private JPanel mid;
     private JLabel noodleLable;
-    public JPanel noodlePricePanel;
+    private JPanel noodlePricePanel;
     private JLabel noodlePriceLabel;
-    private JSpinner noodlePrice;
+    public JSpinner noodlePrice;
     private JPanel noodleAvailablePanel;
     private JLabel noriLable;
     private JPanel noriPricePanel;
     private JLabel noriPriceLable;
-    private JSpinner noriPrice;
+    public JSpinner noriPrice;
     private JPanel noriAvailablePanel;
-    private JToggleButton noriAvailable;
-    private JToggleButton noriUnavailable;
+    public JToggleButton noriAvailable;
+    public JToggleButton noriUnavailable;
     private JLabel eggLabel;
     private JPanel eggPricePanel;
     private JLabel eggPriceLabel;
-    private JSpinner eggPrice;
+    public JSpinner eggPrice;
     private JPanel eggAvailablePanel;
-    private JToggleButton eggAvailable;
-    private JToggleButton eggUnavailable;
+    public JToggleButton eggAvailable;
+    public JToggleButton eggUnavailable;
     private JLabel shootLabel;
     private JPanel shootPricePanel;
     private JLabel shootPriceLabel;
-    private JSpinner shootPrice;
+    public JSpinner shootPrice;
     private JPanel shootAvailablePanel;
-    private JToggleButton shootAvailable;
-    private JToggleButton shootUnavailable;
+    public JToggleButton shootAvailable;
+    public JToggleButton shootUnavailable;
     private JLabel chashuLabel;
     private JPanel chashuPricePanel;
     private JLabel chashuPriceLabel;
-    private JSpinner chashuPrice;
+    public JSpinner chashuPrice;
     private JPanel chashuAvailablePanel;
-    private JToggleButton chashuAvailable;
-    private JToggleButton chashuUnavailable;
+    public JToggleButton chashuAvailable;
+    public JToggleButton chashuUnavailable;
     private JPanel bellow;
     public JButton confirm;
     public JButton back;
