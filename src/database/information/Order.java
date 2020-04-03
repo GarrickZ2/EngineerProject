@@ -7,26 +7,21 @@ import java.util.Date;
 public class Order {
 
 
-    public Order(Cuisine cuisine, int eatType, String membershipID) {
+    public Order(Cuisine cuisine, int eatType, String membershipId) {
         this.cuisine = cuisine;
         this.eatType = eatType;
-        this.membershipID = membershipID;
+        this.membershipID = membershipId;
     }
 
-    public Order(String orderID, String date, Cuisine cuisine, int eatType, String membershipID,
-                 double amountMoney, String billID) {
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        this.orderID = orderID;
-        try {
-            this.date = format.parse(date);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+    public Order(String orderId, Date date, Cuisine cuisine, int eatType, String membershipId,
+                 String billId) {
+        this.orderID = orderId;
+        this.date = date;
         this.cuisine = cuisine;
         this.eatType = eatType;
-        this.membershipID = membershipID;
-        this.amountMoney = amountMoney;
-        this.billID = billID;
+        this.membershipID = membershipId;
+        this.amountMoney = cuisine.calculate() + outMoney*eatType;
+        this.billID = billId;
     }
 
     private String orderID;
@@ -39,6 +34,7 @@ public class Order {
     private String membershipID;
     private double amountMoney;
     private String billID;
+    private double outMoney = 1.0;
 
 
     public String getOrderID() {

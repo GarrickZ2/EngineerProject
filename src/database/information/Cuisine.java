@@ -1,5 +1,9 @@
 package database.information;
 
+import database.MenuData;
+
+import java.util.Date;
+
 /**
  * @author Huang
  * @version 1.0
@@ -146,16 +150,16 @@ public class Cuisine {
 
     public String printReceipt(){
         Cuisine a = new Cuisine("Shio", "Soft", "No please", true, false, false,5,0,2,1,3);
-        Order order = new Order("123", "12355", a, 1, "123", 21, "212");
+        Order order = new Order("123", new Date(), a, 1, "123", "212");
 
         String type =this.soupType + "," + this.noodleType + "," + this.onionType;
-        if(this.nori==true){
+        if(this.nori){
             type = type + "," + "nori";
         }
-        if(this.chashu==true){
+        if(this.chashu){
             type = type + "," + "chashu";
         }
-        if(this.egg==true){
+        if(this.egg){
             type = type + "," + "egg";
         }
         type = type + "," + this.spiciness;
@@ -182,5 +186,13 @@ public class Cuisine {
                 "============================================================================\r\n"+
                 "\t\t\t        打印时间：2022-3-14 17：05：23\r\n" +
                 "		伦敦市力王区贝克街B15号龙猫拉面 电话： 44 (0) 203 178 4861\r\n";
+    }
+
+    public double calculate(){
+        MenuData menuData = new MenuData();
+        Menu menu = menuData.loadInfo();
+
+        return getExtraChashu()*menu.getChashu() + getExtraEgg()*menu.getEgg() + getExtraNori()*menu.getNori()
+                + getExtraShoot()*menu.getShoot() + 1 * menu.getNoodle();
     }
 }
