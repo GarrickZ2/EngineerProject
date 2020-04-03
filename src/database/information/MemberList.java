@@ -125,7 +125,7 @@ public class MemberList extends DataType {
 
 				//Get the lastest membershipID
 				if(msl.size()==0) {
-					ms.setMembershipId("000000001");
+					ms.setMembershipId("00000001");
 					msl.add(ms);
 					return ms.getMembershipId();
 				}else {

@@ -22,10 +22,11 @@ public class OrderList extends DataType{
         this.orders = orders;
     }
 
-    public void createOrders(String orderId, String date, Cuisine cuisine, int eatType, String membershipId,
-                             double amountMoney, String billId){
-        Order order = new Order(orderId, date, cuisine, eatType, membershipId, amountMoney, billId);
-        orders.add(order);
+    public void createOrder(Cuisine cuisine, int eatType, String membershipId){
+        //todo generate billid, orderid, date; calculate amountmoney
+
+        //Order order = new Order(orderId, date, cuisine, eatType, membershipId, amountMoney, billId);
+        //orders.add(order);
     }
 
     public void save(){
