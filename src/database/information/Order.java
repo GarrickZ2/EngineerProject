@@ -1,7 +1,19 @@
 package database.information;
 
+
 public class Order {
 
+    private String orderId;
+    private String date;
+    private Cuisine cuisine;
+    //0 represents eat in, 1 represents take away
+    private int eatType;
+    private double eatMoney;
+
+    private String membershipId;
+    private double amountMoney;
+    private String billId;
+    final private double outMoney = 1.0;
 
     public Order(Cuisine cuisine, int eatType, String membershipId) {
         this.cuisine = cuisine;
@@ -31,18 +43,6 @@ public class Order {
         this.amountMoney = eatMoney + outMoney*eatType;
         this.billId = billId;
     }
-
-    private String orderId;
-    private String date;
-    private Cuisine cuisine;
-    //0 represents eating indoor, 1 represents eating outdoor
-    private int eatType;
-    private double eatMoney;
-
-    private String membershipId;
-    private double amountMoney;
-    private String billId;
-    final private double outMoney = 1.0;
 
 
     public String getOrderId() {

@@ -1,5 +1,6 @@
 import com.alee.laf.WebLookAndFeel;
 import database.Data;
+import database.information.Membership;
 import gui.Index;
 import gui.management.ManageIndex;
 import gui.membership.MemberIndex;
@@ -19,6 +20,8 @@ public class Main extends JFrame {
     OrderGUI orderGui;
     MemberIndex memberIndex;
     ManageIndex manageIndex;
+
+
     public Main(){
         card = new CardLayout();
         content = new JPanel(card);
@@ -33,9 +36,19 @@ public class Main extends JFrame {
         content.add(memberIndex, "membership");
         content.add(manageIndex, "manage");
 
+        //todo
+
+
         index.dinner.addActionListener(e -> card.show(content, "order"));
 
         index.membership.addActionListener(e -> card.show(content, "membership"));
+
+        memberIndex.checkPanel.back.addActionListener(e ->{
+            orderGui.membership = memberIndex.membership;
+            System.out.println("Member in order:" + orderGui.membership);
+            System.out.println("Member in index:" + memberIndex.membership);
+        });
+
 
         index.manage.addActionListener(e -> {
             while (true) {

@@ -3,9 +3,8 @@ package gui.order;
 
 import com.alee.laf.WebLookAndFeel;
 import database.MenuData;
-import database.information.Cuisine;
+import database.information.*;
 import database.information.Menu;
-import database.information.Order;
 import org.junit.Test;
 
 import javax.swing.*;
@@ -14,6 +13,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Enumeration;
 
@@ -29,6 +29,7 @@ public class OrderGUI extends JPanel{
     Compulsory compulsory;
     Select selective;
     public Payment payment;
+    public Membership membership;
 
     CardLayout card;
 
@@ -36,11 +37,13 @@ public class OrderGUI extends JPanel{
     JPanel middle;
 
     JLabel title;
+    ArrayList<Order> orders;
     Order order;
+    OrderList orderList;
     Cuisine cuisine;
     MenuData menuData;
     Menu menu;
-
+    int eatType = 0;
 
     public OrderGUI(LayoutManager layoutManager){
         super(layoutManager);
@@ -49,6 +52,8 @@ public class OrderGUI extends JPanel{
         payment = new Payment();
         menuData = new MenuData();
         menu = menuData.loadInfo();
+        orders = new ArrayList<Order>();
+        orderList = new OrderList(orders);
 
         card = new CardLayout();
         middle = new JPanel(card);
@@ -68,14 +73,16 @@ public class OrderGUI extends JPanel{
                     (int)selective.eggNumber.getValue(), (int)selective.shootNumber.getValue(),(int)selective.chashuNumber.getValue());
             System.out.println(cuisine.toString());
 
-            //todo payment.serialNumber
-
-            //payment.serialNumber.setText();
-            //order.setOrderID("");
-            //todo time
+            payment.serialNumber.setText(orderList.generateOrderId("orderId"));
             payment.time.setText(dateFormat.format(new Date()));
-            //order.setDate(new Date);
-            //todo membershipNumber
+            if((membership == null)){
+                payment.membershipNumber.setText("null");
+            }
+            else if(membership.getMembershipId() == null){
+                payment.membershipNumber.setText("null");
+            }else {
+                payment.membershipNumber.setText(membership.getMembershipId());
+            }
 
             payment.soup.setText(cuisine.getSoupType());
             payment.noodlePrice.setText("￡"+menu.getNoodle());
@@ -97,7 +104,6 @@ public class OrderGUI extends JPanel{
             //todo boolean shoot & isShoot()
             payment.shoot.setText("No");
 
-
             if(cuisine.isChashu()){
                 payment.chashu.setText("Yes");
             }else{
@@ -117,17 +123,39 @@ public class OrderGUI extends JPanel{
             payment.chashuPrice.setText("￡"+menu.getChashu()*cuisine.getExtraChashu());
 
             if(getSelectedText(payment.diningMethod) == "Take away"){
+                eatType = 1;
                 payment.totalPrice.setText("￡"+(cuisine.calculate()+1));
             }else{
                 payment.totalPrice.setText("￡"+cuisine.calculate());
             }
-
             card.show(middle, "payment");
         });
+
+        payment.takeAway.addActionListener(e ->{
+            if(payment.takeAway.isSelected()){
+                payment.totalPrice.setText("￡"+(cuisine.calculate()+1));
+            }
+        });
+        payment.eatIn.addActionListener(e ->{
+            if(payment.eatIn.isSelected()){
+                payment.totalPrice.setText("￡"+cuisine.calculate());
+            }
+        });
+
         payment.returnButton.addActionListener(e ->{
             card.show(middle,"compulsory");
         });
         payment.settleButton.addActionListener(e ->{
+
+            if((membership == null)){
+                orderList.createOrder(cuisine,eatType,"NoMembership");
+            }
+            else if(membership.getMembershipId() == null){
+                orderList.createOrder(cuisine,eatType,"NoMembership");
+            }else {
+                orderList.createOrder(cuisine,eatType,membership.getMembershipId());
+            }
+            orderList.save();
             card.show(middle,"compulsory");
         });
 
@@ -137,11 +165,8 @@ public class OrderGUI extends JPanel{
         up.add(back, BorderLayout.WEST);
         up.add(title, BorderLayout.CENTER);
 
-
         this.add(up, BorderLayout.NORTH);
         this.add(middle, BorderLayout.CENTER);
-
-
     }
 
     public static String getSelectedText(ButtonGroup buttonGroup){

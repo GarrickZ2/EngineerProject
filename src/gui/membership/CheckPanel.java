@@ -9,7 +9,7 @@ import java.awt.*;
  * @author Zixuan Zhang
  */
 public class CheckPanel extends JPanel {
-    JButton back;
+    public JButton back;
 
     JLabel name;
     JLabel tel;
@@ -24,7 +24,7 @@ public class CheckPanel extends JPanel {
 
     JPanel main;
 
-    Membership membership;
+    public Membership membership;
 
     public CheckPanel(LayoutManager layoutManager){
         up = new JPanel(new BorderLayout());
