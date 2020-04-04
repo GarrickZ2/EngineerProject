@@ -21,8 +21,9 @@ public class MemberIndex extends JPanel{
 
     public SelectPanel selectPanel;
     CreatePanel createPanel;
-    CheckPanel checkPanel;
+    public CheckPanel checkPanel;
     ChangeInfo changeInfo;
+    public Membership membership;
 
     public MemberIndex(LayoutManager layoutManager){
         card = new CardLayout();
@@ -51,6 +52,7 @@ public class MemberIndex extends JPanel{
                 MemberList memberList = userData.loadInfo();
                 if (memberList.queryMember(number)) {
                     checkPanel.membership = memberList.getMember(number);
+                    membership = memberList.getMember(number);
                     checkPanel.name.setText("Name: " + checkPanel.membership.getLastName() + " "
                             + checkPanel.membership.getLastName());
                     checkPanel.tel.setText("Telephone: " + checkPanel.membership.getTelephone());
