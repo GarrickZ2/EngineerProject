@@ -10,14 +10,29 @@ package database;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import database.information.*;
+import gui.Receipt;
 
 public class Data {
     private final String userAddr = "data/membership.csv";
     private final String orderAddr = "data/order.csv";
     private final String menuAddr = "data/menu.csv";
-    private final String receiptAddr = "data/receipt.txt";
+
+
+
+    Calendar c = Calendar.getInstance();
+    int year = c.get(Calendar.YEAR);
+    int month = c.get(Calendar.MONTH);
+    int date = c.get(Calendar.DATE);
+    int hour = c.get(Calendar.HOUR_OF_DAY);
+    int minute = c.get(Calendar.MINUTE);
+    int second = c.get(Calendar.SECOND);
+
+    String ReceiptName = String.valueOf(year) + String.valueOf(month) + String.valueOf(date) + String.valueOf(hour) + String.valueOf(minute) + String.valueOf(second);
+    private final String receiptAddr = "data/" + ReceiptName + ".txt";
+
 
     private String contents = "";
     //readers
@@ -103,6 +118,7 @@ public class Data {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(receiptAddr));
             Cuisine receipt = new Cuisine("Shio", "Soft", "No please", false, true, false,5,0,2,1,3);
+            new Receipt(receipt.printReceipt()).setVisible(true);
             writer.write(receipt.printReceipt());
             writer.close();
         } catch (Exception e) {
