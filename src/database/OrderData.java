@@ -13,10 +13,10 @@ import java.util.ArrayList;
  */
 public class OrderData extends BaseData {
     private final String addr = "data/order.csv";
+    public ArrayList<Order> orders = new ArrayList<Order>();
 
     @Override
     public OrderList loadInfo() {
-        ArrayList<Order> orders = new ArrayList<Order>();
         File file = new File(addr);
         try{
             BufferedReader reader = new BufferedReader(new FileReader(file));
@@ -27,12 +27,13 @@ public class OrderData extends BaseData {
                         Integer.parseInt(attributes[9]), Integer.parseInt(attributes[10]), Integer.parseInt(attributes[11]), Integer.parseInt(attributes[12]));
                 //todo problems occurred with below code
 
-                Order order = new Order(attributes[0], attributes[1], cuisine, Integer.parseInt(attributes[3]),
-                        attributes[4], Double.parseDouble(attributes[5]), attributes[6]);
+                Order order = new Order(attributes[0], attributes[1], cuisine, Integer.parseInt(attributes[13]),
+                        attributes[14], Double.parseDouble(attributes[16]), attributes[17]);
                 orders.add(order);
             }
             reader.close();
         } catch (Exception e) {
+            e.printStackTrace();
             System.out.println("The necessary file has been broken, please re-install.");
             System.exit(-1);
         }

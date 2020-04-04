@@ -1,6 +1,8 @@
 package database.information;
 
 import database.OrderData;
+import org.junit.Test;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -12,17 +14,23 @@ public class OrderList extends DataType{
 
     Date date;
     SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd kk:mm:ss");
+    private ArrayList<Order> orders;
+    OrderData orderData = new OrderData();
+
+    public OrderList(ArrayList<Order> orders) {
+        this.orders = orders;
+    }
+
+    public OrderList(){
+        orderData.loadInfo();
+        orders = orderData.orders;
+    }
+
     public ArrayList<Order> getOrders() {
         return orders;
     }
 
     public void setOrders(ArrayList<Order> orders) {
-        this.orders = orders;
-    }
-
-    private ArrayList<Order> orders;
-
-    public OrderList(ArrayList<Order> orders) {
         this.orders = orders;
     }
 
@@ -47,11 +55,9 @@ public class OrderList extends DataType{
         else {
             return "Error: Invalid selection.";
         }
-
     }
 
     public void save(){
-        OrderData orderData = new OrderData();
         orderData.saveInfo(this);
     }
 }

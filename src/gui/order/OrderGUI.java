@@ -26,38 +26,41 @@ import java.util.Enumeration;
  */
 public class OrderGUI extends JPanel{
 
-    public JButton back;
-
     SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+    public JButton back;
+    JPanel up;
+    JPanel middle;
+    JLabel title;
+
+    CardLayout card;
 
     Compulsory compulsory;
     Select selective;
     public Payment payment;
+
     public Membership membership;
 
-    CardLayout card;
-
-    JPanel up;
-    JPanel middle;
-
-    JLabel title;
-    ArrayList<Order> orders;
     Order order;
     OrderList orderList;
     Cuisine cuisine;
     MenuData menuData;
     Menu menu;
+
     int eatType = 0;
 
     public OrderGUI(LayoutManager layoutManager){
+
         super(layoutManager);
+
         compulsory = new Compulsory();
         selective = new Select();
         payment = new Payment();
+
         menuData = new MenuData();
         menu = menuData.loadInfo();
-        orders = new ArrayList<Order>();
-        orderList = new OrderList(orders);
+
+        orderList = new OrderList();
 
         card = new CardLayout();
         middle = new JPanel(card);
@@ -126,22 +129,19 @@ public class OrderGUI extends JPanel{
             payment.extraChashu.setText(""+cuisine.getExtraChashu());
             payment.chashuPrice.setText("￡"+menu.getChashu()*cuisine.getExtraChashu());
 
-            if(getSelectedText(payment.diningMethod) == "Take away"){
-                eatType = 1;
-                payment.totalPrice.setText("￡"+(cuisine.calculate()+1));
-            }else{
-                payment.totalPrice.setText("￡"+cuisine.calculate());
-            }
+            payment.totalPrice.setText("￡"+cuisine.calculate());
             card.show(middle, "payment");
         });
 
         payment.takeAway.addActionListener(e ->{
             if(payment.takeAway.isSelected()){
+                eatType = 1;
                 payment.totalPrice.setText("￡"+(cuisine.calculate()+1));
             }
         });
         payment.eatIn.addActionListener(e ->{
             if(payment.eatIn.isSelected()){
+                eatType = 0;
                 payment.totalPrice.setText("￡"+cuisine.calculate());
             }
         });
