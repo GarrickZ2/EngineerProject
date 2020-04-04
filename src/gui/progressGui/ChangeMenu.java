@@ -2,11 +2,11 @@
  * Created by JFormDesigner on Thu Apr 02 09:49:35 CST 2020
  */
 
-package gui.management;
+package gui.progressGui;
 
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
 import javax.swing.plaf.*;
 
 /**
@@ -15,6 +15,13 @@ import javax.swing.plaf.*;
 public class ChangeMenu extends JPanel {
     public ChangeMenu() {
         initComponents();
+    }
+
+    private void noriAvailableActionPerformed(ActionEvent e) {
+        // TODO add your code here
+        if(noriAvailable.isSelected()){
+            noriAvailable.setBackground(new Color(255, 153, 51));
+        }
     }
 
     private void initComponents() {
@@ -121,6 +128,12 @@ public class ChangeMenu extends JPanel {
 
                 //---- noriAvailable ----
                 noriAvailable.setText("Available");
+                noriAvailable.setBorder(null);
+                noriAvailable.setBorderPainted(false);
+                noriAvailable.setBackground(new Color(255, 153, 51));
+                noriAvailable.setFocusable(false);
+                noriAvailable.setFocusPainted(false);
+                noriAvailable.addActionListener(e -> noriAvailableActionPerformed(e));
                 noriAvailablePanel.add(noriAvailable);
 
                 //---- noriUnavailable ----
