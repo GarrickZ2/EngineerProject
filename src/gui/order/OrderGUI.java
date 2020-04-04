@@ -2,9 +2,11 @@ package gui.order;
 
 
 import com.alee.laf.WebLookAndFeel;
+import database.Data;
 import database.MenuData;
 import database.information.*;
 import database.information.Menu;
+import gui.Receipt;
 import org.junit.Test;
 
 import javax.swing.*;
@@ -12,6 +14,8 @@ import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -156,6 +160,9 @@ public class OrderGUI extends JPanel{
                 orderList.createOrder(cuisine,eatType,membership.getMembershipId());
             }
             orderList.save();
+            new Receipt(cuisine.printReceipt()).setVisible(true);
+//            BufferedWriter writer = new BufferedWriter(new FileWriter(receiptAddr));
+//            writer.close();
             card.show(middle,"compulsory");
         });
 

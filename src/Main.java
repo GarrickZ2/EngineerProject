@@ -89,8 +89,5 @@ public class Main extends JFrame {
         WebLookAndFeel.initializeManagers ();
 
         new Main();
-
-        Data data = new Data();
-        data.saveReceipt();
     }
 }

@@ -38,10 +38,10 @@ public class OrderList extends DataType{
         SimpleDateFormat format = new SimpleDateFormat("yyyyMMddkkmmss");
         String billId = format.format(date);
         long temp = Long.parseLong(billId);
-        if(select == "orderId"){
+        if("orderId".equals(select)){
             return Long.toHexString(temp);
         }
-        if(select == "billId"){
+        if("billId".equals(select)){
             return billId;
         }
         else {

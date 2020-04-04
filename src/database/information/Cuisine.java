@@ -180,14 +180,16 @@ public class Cuisine {
                 "+Chashu\t\t\t\t\t\t\t                         " + this.extraChashu + "       2.0\t  " + (2.0*this.extraChashu) + "\r\n"+
                 "----------------------------------------------------------------------------\r\n"+
                 "\r\n"+
-                "合计\t\t\t\t\t\t\t                " + (1+this.extraNori+this.extraEgg+this.extraShoot+this.extraChashu ) + "     \t\t     "+ (9.9+1.0*this.extraNori+1.0*this.extraEgg+1.0*this.extraShoot+2.0*this.extraChashu) +"\r\n"+
+                "合计\t\t\t\t\t\t\t                " + (1+this.extraNori+this.extraEgg+this.extraShoot+this.extraChashu ) + "     \t\t     " + calculate() +"\r\n"+
                 "\r\n"+
-                "银行卡支付\t\t\t\t\t\t\t\t                         "+(9.9+1.0*this.extraNori+1.0*this.extraEgg+1.0*this.extraShoot+2.0*this.extraChashu)+"\r\n"+
+                "银行卡支付\t\t\t\t\t\t\t\t                         " + calculate() + "\r\n"+
                 "\r\n"+
                 "============================================================================\r\n"+
                 "\t\t\t        打印时间：" + order.getDate() +"\r\n" +
                 "		伦敦市力王区贝克街B15号龙猫拉面 电话： 44 (0) 203 178 4861\r\n";
     }
+
+
 
     public double calculate(){
         MenuData menuData = new MenuData();
