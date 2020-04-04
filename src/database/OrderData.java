@@ -46,7 +46,7 @@ public class OrderData extends BaseData {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(addr));
             for(Order order:orderList.getOrders()){
-                System.out.println(order);
+                //System.out.println(order);
                 writer.write(String.valueOf(order));
                 writer.newLine();
             }

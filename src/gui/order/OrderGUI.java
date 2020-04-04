@@ -6,7 +6,7 @@ import database.Data;
 import database.MenuData;
 import database.information.*;
 import database.information.Menu;
-import gui.Receipt;
+
 import org.junit.Test;
 
 import javax.swing.*;
@@ -47,7 +47,10 @@ public class OrderGUI extends JPanel{
     MenuData menuData;
     Menu menu;
 
+    Receipt receipt;
+
     int eatType = 0;
+    String payingMethod;
 
     public OrderGUI(LayoutManager layoutManager){
 
@@ -67,6 +70,8 @@ public class OrderGUI extends JPanel{
         middle.add(compulsory, "compulsory");
         middle.add(selective, "selective");
         middle.add(payment, "payment");
+
+
 
 
         compulsory.nextButton.addActionListener(e -> card.show(middle,"selective"));
@@ -145,6 +150,16 @@ public class OrderGUI extends JPanel{
                 payment.totalPrice.setText("￡"+cuisine.calculate());
             }
         });
+        payment.cash.addActionListener(e ->{
+            if(payment.cash.isSelected()){
+                payingMethod = "Cash";
+            }
+        });
+        payment.visa.addActionListener(e ->{
+            if(payment.visa.isSelected()){
+                payingMethod = "Visa";
+            }
+        });
 
         payment.returnButton.addActionListener(e ->{
             card.show(middle,"compulsory");
@@ -160,9 +175,12 @@ public class OrderGUI extends JPanel{
                 orderList.createOrder(cuisine,eatType,membership.getMembershipId());
             }
             orderList.save();
-            new Receipt(cuisine.printReceipt()).setVisible(true);
-//            BufferedWriter writer = new BufferedWriter(new FileWriter(receiptAddr));
-//            writer.close();
+            order = orderList.getOrders().get(orderList.getOrders().size()-1);
+            receipt = new Receipt(order);
+            receipt.payingMethod = this.payingMethod;
+
+            System.out.println(receipt.generateReceipt(true));
+
             card.show(middle,"compulsory");
         });
 
