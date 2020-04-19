@@ -20,99 +20,106 @@ public class OrderMenu extends JPanel {
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         panelBoard = new JPanel();
-        panel1 = new JPanel();
-        panel29 = new JPanel();
-        label28 = new JLabel();
-        panel2 = new JPanel();
-        panel3 = new JPanel();
-        panel5 = new JPanel();
-        panel4 = new JPanel();
-        panel6 = new JPanel();
-        panel7 = new JPanel();
-        panel8 = new JPanel();
-        panel9 = new JPanel();
-        label1 = new JLabel();
-        toggleButton1 = new JToggleButton();
-        toggleButton2 = new JToggleButton();
-        toggleButton3 = new JToggleButton();
-        label2 = new JLabel();
-        toggleButton4 = new JToggleButton();
-        toggleButton5 = new JToggleButton();
-        toggleButton6 = new JToggleButton();
-        label3 = new JLabel();
-        toggleButton7 = new JToggleButton();
-        toggleButton8 = new JToggleButton();
-        toggleButton9 = new JToggleButton();
-        panel10 = new JPanel();
-        label4 = new JLabel();
-        panel14 = new JPanel();
-        toggleButton10 = new JToggleButton();
-        toggleButton11 = new JToggleButton();
-        label5 = new JLabel();
-        panel13 = new JPanel();
-        toggleButton13 = new JToggleButton();
-        toggleButton14 = new JToggleButton();
-        label6 = new JLabel();
-        panel12 = new JPanel();
-        toggleButton16 = new JToggleButton();
-        toggleButton17 = new JToggleButton();
-        panel11 = new JPanel();
-        label7 = new JLabel();
-        toggleButton19 = new JToggleButton();
-        toggleButton20 = new JToggleButton();
-        toggleButton21 = new JToggleButton();
-        toggleButton22 = new JToggleButton();
-        toggleButton23 = new JToggleButton();
-        toggleButton24 = new JToggleButton();
-        panel17 = new JPanel();
-        panel19 = new JPanel();
-        panel20 = new JPanel();
-        panel21 = new JPanel();
-        panel22 = new JPanel();
-        panel23 = new JPanel();
-        panel24 = new JPanel();
-        label8 = new JLabel();
-        label9 = new JLabel();
-        label10 = new JLabel();
-        spinner1 = new JSpinner();
-        label11 = new JLabel();
-        label12 = new JLabel();
-        label13 = new JLabel();
-        spinner2 = new JSpinner();
-        label14 = new JLabel();
-        label15 = new JLabel();
-        label16 = new JLabel();
-        spinner3 = new JSpinner();
-        label17 = new JLabel();
-        label18 = new JLabel();
-        label19 = new JLabel();
-        spinner4 = new JSpinner();
-        panel25 = new JPanel();
-        panel27 = new JPanel();
-        label22 = new JLabel();
-        label23 = new JLabel();
-        label24 = new JLabel();
-        label25 = new JLabel();
-        label26 = new JLabel();
-        label27 = new JLabel();
-        panel28 = new JPanel();
-        label31 = new JLabel();
-        label32 = new JLabel();
-        label33 = new JLabel();
-        panel30 = new JPanel();
-        panel36 = new JPanel();
-        label34 = new JLabel();
-        label30 = new JLabel();
-        label29 = new JLabel();
-        panel33 = new JPanel();
-        panel38 = new JPanel();
-        panel34 = new JPanel();
-        button1 = new JButton();
-        panel35 = new JPanel();
-        panel15 = new JPanel();
-        panel16 = new JPanel();
-        panel18 = new JPanel();
-        panel26 = new JPanel();
+        title = new JPanel();
+        title_innerPanel = new JPanel();
+        logo = new JLabel();
+        body = new JPanel();
+        requiredPanel = new JPanel();
+        emptyBox0 = new JPanel();
+        emptyBox1 = new JPanel();
+        emptyBox2 = new JPanel();
+        emptyBox3 = new JPanel();
+        required_innerPanel = new JPanel();
+        noodlePanel = new JPanel();
+        label_soup = new JLabel();
+        soup1 = new JToggleButton();
+        soup2 = new JToggleButton();
+        soup3 = new JToggleButton();
+        label_noodle = new JLabel();
+        noodle1 = new JToggleButton();
+        noodle2 = new JToggleButton();
+        noodle3 = new JToggleButton();
+        label_onion = new JLabel();
+        onion1 = new JToggleButton();
+        onion2 = new JToggleButton();
+        onion3 = new JToggleButton();
+        additionalPanel = new JPanel();
+        label_nori = new JLabel();
+        emptyBox4 = new JPanel();
+        nori1 = new JToggleButton();
+        nori2 = new JToggleButton();
+        label_chashu = new JLabel();
+        emptyBox5 = new JPanel();
+        chashu1 = new JToggleButton();
+        chashu2 = new JToggleButton();
+        label_egg = new JLabel();
+        emptyBox6 = new JPanel();
+        egg1 = new JToggleButton();
+        egg2 = new JToggleButton();
+        spicinessPanel = new JPanel();
+        label_spiciness = new JLabel();
+        spice0 = new JToggleButton();
+        spice1 = new JToggleButton();
+        spice2 = new JToggleButton();
+        spice3 = new JToggleButton();
+        spice4 = new JToggleButton();
+        spice5 = new JToggleButton();
+        optionalPanel = new JPanel();
+        emptyBox7 = new JPanel();
+        emptyBox8 = new JPanel();
+        emptyBox9 = new JPanel();
+        emptyBox10 = new JPanel();
+        optional_innerPanel = new JPanel();
+        dishPanel = new JPanel();
+        label_right_nori = new JLabel();
+        noriAvailable = new JLabel();
+        noriPrice = new JLabel();
+        noriNumber = new JSpinner();
+        label_right_chashu = new JLabel();
+        chashuAvailable = new JLabel();
+        chashuPrice = new JLabel();
+        chashuNumber = new JSpinner();
+        label_right_egg = new JLabel();
+        eggAvailable = new JLabel();
+        eggPrice = new JLabel();
+        eggNumber = new JSpinner();
+        label_right_shoot = new JLabel();
+        shootAvailable = new JLabel();
+        shootPrice = new JLabel();
+        shootNumber = new JSpinner();
+        pricePanel = new JPanel();
+        price_topPanel = new JPanel();
+        label_required = new JLabel();
+        label_pound0 = new JLabel();
+        noodlePrice = new JLabel();
+        label_optional = new JLabel();
+        label_pound1 = new JLabel();
+        extraPrice = new JLabel();
+        price_bottomPanel = new JPanel();
+        label_totalPrice = new JLabel();
+        label_pound2 = new JLabel();
+        totalPrice = new JLabel();
+        bottomPanel = new JPanel();
+        storeinfoPanel = new JPanel();
+        storeName = new JLabel();
+        storeAddress = new JLabel();
+        storeTelphone = new JLabel();
+        nextPanel = new JPanel();
+        emptyBox15 = new JPanel();
+        emptyBox16 = new JPanel();
+        settleButton = new JButton();
+        emptyBox17 = new JPanel();
+        emptyBox11 = new JPanel();
+        emptyBox12 = new JPanel();
+        emptyBox13 = new JPanel();
+        emptyBox14 = new JPanel();
+        buttonGroup1 = new ButtonGroup();
+        buttonGroup2 = new ButtonGroup();
+        buttonGroup3 = new ButtonGroup();
+        buttonGroup4 = new ButtonGroup();
+        buttonGroup5 = new ButtonGroup();
+        buttonGroup6 = new ButtonGroup();
+        buttonGroup7 = new ButtonGroup();
 
         //======== this ========
         setLayout(new BorderLayout());
@@ -129,15 +136,15 @@ public class OrderMenu extends JPanel {
                 "[445,fill]" +
                 "[75,fill]"));
 
-            //======== panel1 ========
+            //======== title ========
             {
-                panel1.setBackground(new Color(248, 193, 84));
-                panel1.setLayout(new BoxLayout(panel1, BoxLayout.X_AXIS));
+                title.setBackground(new Color(248, 193, 84));
+                title.setLayout(new BoxLayout(title, BoxLayout.X_AXIS));
 
-                //======== panel29 ========
+                //======== title_innerPanel ========
                 {
-                    panel29.setBackground(new Color(248, 193, 84));
-                    panel29.setLayout(new MigLayout(
+                    title_innerPanel.setBackground(new Color(248, 193, 84));
+                    title_innerPanel.setLayout(new MigLayout(
                         "insets 0,hidemode 3",
                         // columns
                         "[fill]" +
@@ -146,18 +153,18 @@ public class OrderMenu extends JPanel {
                         // rows
                         "[grow,fill]"));
 
-                    //---- label28 ----
-                    label28.setIcon(new ImageIcon(getClass().getResource("/img/titleLogo.png")));
-                    panel29.add(label28, "cell 1 0");
+                    //---- logo ----
+                    logo.setIcon(new ImageIcon(getClass().getResource("/img/titleLogo.png")));
+                    title_innerPanel.add(logo, "cell 1 0");
                 }
-                panel1.add(panel29);
+                title.add(title_innerPanel);
             }
-            panelBoard.add(panel1, "cell 0 0");
+            panelBoard.add(title, "cell 0 0");
 
-            //======== panel2 ========
+            //======== body ========
             {
-                panel2.setBackground(Color.white);
-                panel2.setLayout(new MigLayout(
+                body.setBackground(Color.white);
+                body.setLayout(new MigLayout(
                     "hidemode 3,gap 0 0",
                     // columns
                     "[616,fill]" +
@@ -165,44 +172,44 @@ public class OrderMenu extends JPanel {
                     // rows
                     "[432]"));
 
-                //======== panel3 ========
+                //======== requiredPanel ========
                 {
-                    panel3.setBackground(Color.white);
-                    panel3.setLayout(new BorderLayout());
+                    requiredPanel.setBackground(Color.white);
+                    requiredPanel.setLayout(new BorderLayout());
 
-                    //======== panel5 ========
+                    //======== emptyBox0 ========
                     {
-                        panel5.setBackground(Color.white);
-                        panel5.setLayout(new BoxLayout(panel5, BoxLayout.X_AXIS));
+                        emptyBox0.setBackground(Color.white);
+                        emptyBox0.setLayout(new BoxLayout(emptyBox0, BoxLayout.X_AXIS));
                     }
-                    panel3.add(panel5, BorderLayout.LINE_END);
+                    requiredPanel.add(emptyBox0, BorderLayout.LINE_END);
 
-                    //======== panel4 ========
+                    //======== emptyBox1 ========
                     {
-                        panel4.setBackground(Color.white);
-                        panel4.setLayout(new BoxLayout(panel4, BoxLayout.X_AXIS));
+                        emptyBox1.setBackground(Color.white);
+                        emptyBox1.setLayout(new BoxLayout(emptyBox1, BoxLayout.X_AXIS));
                     }
-                    panel3.add(panel4, BorderLayout.PAGE_START);
+                    requiredPanel.add(emptyBox1, BorderLayout.PAGE_START);
 
-                    //======== panel6 ========
+                    //======== emptyBox2 ========
                     {
-                        panel6.setBackground(Color.white);
-                        panel6.setLayout(new BoxLayout(panel6, BoxLayout.X_AXIS));
+                        emptyBox2.setBackground(Color.white);
+                        emptyBox2.setLayout(new BoxLayout(emptyBox2, BoxLayout.X_AXIS));
                     }
-                    panel3.add(panel6, BorderLayout.PAGE_END);
+                    requiredPanel.add(emptyBox2, BorderLayout.PAGE_END);
 
-                    //======== panel7 ========
+                    //======== emptyBox3 ========
                     {
-                        panel7.setBackground(Color.white);
-                        panel7.setLayout(new BoxLayout(panel7, BoxLayout.X_AXIS));
+                        emptyBox3.setBackground(Color.white);
+                        emptyBox3.setLayout(new BoxLayout(emptyBox3, BoxLayout.X_AXIS));
                     }
-                    panel3.add(panel7, BorderLayout.LINE_START);
+                    requiredPanel.add(emptyBox3, BorderLayout.LINE_START);
 
-                    //======== panel8 ========
+                    //======== required_innerPanel ========
                     {
-                        panel8.setBorder(new TitledBorder("Requried"));
-                        panel8.setBackground(Color.white);
-                        panel8.setLayout(new MigLayout(
+                        required_innerPanel.setBorder(new TitledBorder("Requried"));
+                        required_innerPanel.setBackground(Color.white);
+                        required_innerPanel.setLayout(new MigLayout(
                             "hidemode 3,gap 0 8",
                             // columns
                             "[610,fill]",
@@ -211,202 +218,230 @@ public class OrderMenu extends JPanel {
                             "[185]" +
                             "[62]"));
 
-                        //======== panel9 ========
+                        //======== noodlePanel ========
                         {
-                            panel9.setBackground(Color.white);
-                            panel9.setLayout(new GridLayout(3, 4, 0, 8));
+                            noodlePanel.setBackground(Color.white);
+                            noodlePanel.setLayout(new GridLayout(3, 4, 0, 8));
 
-                            //---- label1 ----
-                            label1.setText("Soup:");
-                            panel9.add(label1);
+                            //---- label_soup ----
+                            label_soup.setText("Soup:");
+                            label_soup.setFont(label_soup.getFont().deriveFont(label_soup.getFont().getSize() + 3f));
+                            noodlePanel.add(label_soup);
 
-                            //---- toggleButton1 ----
-                            toggleButton1.setText("Tonkotsu");
-                            panel9.add(toggleButton1);
+                            //---- soup1 ----
+                            soup1.setText("Tonkotsu");
+                            soup1.setFont(soup1.getFont().deriveFont(soup1.getFont().getSize() + 3f));
+                            noodlePanel.add(soup1);
 
-                            //---- toggleButton2 ----
-                            toggleButton2.setText("Shoyo");
-                            panel9.add(toggleButton2);
+                            //---- soup2 ----
+                            soup2.setText("Shoyo");
+                            soup2.setFont(soup2.getFont().deriveFont(soup2.getFont().getSize() + 3f));
+                            noodlePanel.add(soup2);
 
-                            //---- toggleButton3 ----
-                            toggleButton3.setText("Shio");
-                            panel9.add(toggleButton3);
+                            //---- soup3 ----
+                            soup3.setText("Shio");
+                            soup3.setFont(soup3.getFont().deriveFont(soup3.getFont().getSize() + 3f));
+                            noodlePanel.add(soup3);
 
-                            //---- label2 ----
-                            label2.setText("Noodle:");
-                            panel9.add(label2);
+                            //---- label_noodle ----
+                            label_noodle.setText("Noodle:");
+                            label_noodle.setFont(label_noodle.getFont().deriveFont(label_noodle.getFont().getSize() + 3f));
+                            noodlePanel.add(label_noodle);
 
-                            //---- toggleButton4 ----
-                            toggleButton4.setText("Soft");
-                            panel9.add(toggleButton4);
+                            //---- noodle1 ----
+                            noodle1.setText("Soft");
+                            noodle1.setFont(noodle1.getFont().deriveFont(noodle1.getFont().getSize() + 3f));
+                            noodlePanel.add(noodle1);
 
-                            //---- toggleButton5 ----
-                            toggleButton5.setText("Medium");
-                            panel9.add(toggleButton5);
+                            //---- noodle2 ----
+                            noodle2.setText("Medium");
+                            noodle2.setFont(noodle2.getFont().deriveFont(noodle2.getFont().getSize() + 3f));
+                            noodlePanel.add(noodle2);
 
-                            //---- toggleButton6 ----
-                            toggleButton6.setText("Firm");
-                            panel9.add(toggleButton6);
+                            //---- noodle3 ----
+                            noodle3.setText("Firm");
+                            noodle3.setFont(noodle3.getFont().deriveFont(noodle3.getFont().getSize() + 3f));
+                            noodlePanel.add(noodle3);
 
-                            //---- label3 ----
-                            label3.setText("Spring onion:");
-                            panel9.add(label3);
+                            //---- label_onion ----
+                            label_onion.setText("Spring onion:");
+                            label_onion.setFont(label_onion.getFont().deriveFont(label_onion.getFont().getSize() + 3f));
+                            noodlePanel.add(label_onion);
 
-                            //---- toggleButton7 ----
-                            toggleButton7.setText("No please");
-                            panel9.add(toggleButton7);
+                            //---- onion1 ----
+                            onion1.setText("No please");
+                            onion1.setFont(onion1.getFont().deriveFont(onion1.getFont().getSize() + 3f));
+                            noodlePanel.add(onion1);
 
-                            //---- toggleButton8 ----
-                            toggleButton8.setText("Just a little");
-                            panel9.add(toggleButton8);
+                            //---- onion2 ----
+                            onion2.setText("Just a little");
+                            onion2.setFont(onion2.getFont().deriveFont(onion2.getFont().getSize() + 3f));
+                            noodlePanel.add(onion2);
 
-                            //---- toggleButton9 ----
-                            toggleButton9.setText("A lot");
-                            panel9.add(toggleButton9);
+                            //---- onion3 ----
+                            onion3.setText("A lot");
+                            onion3.setFont(onion3.getFont().deriveFont(onion3.getFont().getSize() + 3f));
+                            noodlePanel.add(onion3);
                         }
-                        panel8.add(panel9, "cell 0 0,dock center");
+                        required_innerPanel.add(noodlePanel, "cell 0 0,dock center");
 
-                        //======== panel10 ========
+                        //======== additionalPanel ========
                         {
-                            panel10.setBackground(Color.white);
-                            panel10.setLayout(new GridLayout(3, 4, 0, 8));
+                            additionalPanel.setBackground(Color.white);
+                            additionalPanel.setLayout(new GridLayout(3, 4, 0, 8));
 
-                            //---- label4 ----
-                            label4.setText("Nori:");
-                            panel10.add(label4);
+                            //---- label_nori ----
+                            label_nori.setText("Nori:");
+                            label_nori.setFont(label_nori.getFont().deriveFont(label_nori.getFont().getSize() + 3f));
+                            additionalPanel.add(label_nori);
 
-                            //======== panel14 ========
+                            //======== emptyBox4 ========
                             {
-                                panel14.setBackground(Color.white);
-                                panel14.setLayout(new BoxLayout(panel14, BoxLayout.X_AXIS));
+                                emptyBox4.setBackground(Color.white);
+                                emptyBox4.setLayout(new BoxLayout(emptyBox4, BoxLayout.X_AXIS));
                             }
-                            panel10.add(panel14);
+                            additionalPanel.add(emptyBox4);
 
-                            //---- toggleButton10 ----
-                            toggleButton10.setText("Yes");
-                            panel10.add(toggleButton10);
+                            //---- nori1 ----
+                            nori1.setText("Yes");
+                            nori1.setFont(nori1.getFont().deriveFont(nori1.getFont().getSize() + 3f));
+                            additionalPanel.add(nori1);
 
-                            //---- toggleButton11 ----
-                            toggleButton11.setText("No");
-                            panel10.add(toggleButton11);
+                            //---- nori2 ----
+                            nori2.setText("No");
+                            nori2.setFont(nori2.getFont().deriveFont(nori2.getFont().getSize() + 3f));
+                            additionalPanel.add(nori2);
 
-                            //---- label5 ----
-                            label5.setText("Chashu:");
-                            panel10.add(label5);
+                            //---- label_chashu ----
+                            label_chashu.setText("Chashu:");
+                            label_chashu.setFont(label_chashu.getFont().deriveFont(label_chashu.getFont().getSize() + 3f));
+                            additionalPanel.add(label_chashu);
 
-                            //======== panel13 ========
+                            //======== emptyBox5 ========
                             {
-                                panel13.setBackground(Color.white);
-                                panel13.setLayout(new BoxLayout(panel13, BoxLayout.X_AXIS));
+                                emptyBox5.setBackground(Color.white);
+                                emptyBox5.setLayout(new BoxLayout(emptyBox5, BoxLayout.X_AXIS));
                             }
-                            panel10.add(panel13);
+                            additionalPanel.add(emptyBox5);
 
-                            //---- toggleButton13 ----
-                            toggleButton13.setText("Yes");
-                            panel10.add(toggleButton13);
+                            //---- chashu1 ----
+                            chashu1.setText("Yes");
+                            chashu1.setFont(chashu1.getFont().deriveFont(chashu1.getFont().getSize() + 3f));
+                            additionalPanel.add(chashu1);
 
-                            //---- toggleButton14 ----
-                            toggleButton14.setText("No");
-                            panel10.add(toggleButton14);
+                            //---- chashu2 ----
+                            chashu2.setText("No");
+                            chashu2.setFont(chashu2.getFont().deriveFont(chashu2.getFont().getSize() + 3f));
+                            additionalPanel.add(chashu2);
 
-                            //---- label6 ----
-                            label6.setText("Boiled egg:");
-                            panel10.add(label6);
+                            //---- label_egg ----
+                            label_egg.setText("Boiled egg:");
+                            label_egg.setFont(label_egg.getFont().deriveFont(label_egg.getFont().getSize() + 3f));
+                            additionalPanel.add(label_egg);
 
-                            //======== panel12 ========
+                            //======== emptyBox6 ========
                             {
-                                panel12.setBackground(Color.white);
-                                panel12.setLayout(new BoxLayout(panel12, BoxLayout.X_AXIS));
+                                emptyBox6.setBackground(Color.white);
+                                emptyBox6.setLayout(new BoxLayout(emptyBox6, BoxLayout.X_AXIS));
                             }
-                            panel10.add(panel12);
+                            additionalPanel.add(emptyBox6);
 
-                            //---- toggleButton16 ----
-                            toggleButton16.setText("Yes");
-                            panel10.add(toggleButton16);
+                            //---- egg1 ----
+                            egg1.setText("Yes");
+                            egg1.setFont(egg1.getFont().deriveFont(egg1.getFont().getSize() + 3f));
+                            additionalPanel.add(egg1);
 
-                            //---- toggleButton17 ----
-                            toggleButton17.setText("No");
-                            panel10.add(toggleButton17);
+                            //---- egg2 ----
+                            egg2.setText("No");
+                            egg2.setFont(egg2.getFont().deriveFont(egg2.getFont().getSize() + 3f));
+                            additionalPanel.add(egg2);
                         }
-                        panel8.add(panel10, "cell 0 1,dock center");
+                        required_innerPanel.add(additionalPanel, "cell 0 1,dock center");
 
-                        //======== panel11 ========
+                        //======== spicinessPanel ========
                         {
-                            panel11.setBackground(Color.white);
-                            panel11.setLayout(new GridLayout(1, 7));
+                            spicinessPanel.setBackground(Color.white);
+                            spicinessPanel.setLayout(new GridLayout(1, 7));
 
-                            //---- label7 ----
-                            label7.setText("Spiciness:");
-                            panel11.add(label7);
+                            //---- label_spiciness ----
+                            label_spiciness.setText("Spiciness:");
+                            label_spiciness.setFont(label_spiciness.getFont().deriveFont(label_spiciness.getFont().getSize() + 3f));
+                            spicinessPanel.add(label_spiciness);
 
-                            //---- toggleButton19 ----
-                            toggleButton19.setText("0");
-                            panel11.add(toggleButton19);
+                            //---- spice0 ----
+                            spice0.setText("0");
+                            spice0.setFont(spice0.getFont().deriveFont(spice0.getFont().getSize() + 3f));
+                            spicinessPanel.add(spice0);
 
-                            //---- toggleButton20 ----
-                            toggleButton20.setText("1");
-                            panel11.add(toggleButton20);
+                            //---- spice1 ----
+                            spice1.setText("1");
+                            spice1.setFont(spice1.getFont().deriveFont(spice1.getFont().getSize() + 3f));
+                            spicinessPanel.add(spice1);
 
-                            //---- toggleButton21 ----
-                            toggleButton21.setText("2");
-                            panel11.add(toggleButton21);
+                            //---- spice2 ----
+                            spice2.setText("2");
+                            spice2.setFont(spice2.getFont().deriveFont(spice2.getFont().getSize() + 3f));
+                            spicinessPanel.add(spice2);
 
-                            //---- toggleButton22 ----
-                            toggleButton22.setText("3");
-                            panel11.add(toggleButton22);
+                            //---- spice3 ----
+                            spice3.setText("3");
+                            spice3.setFont(spice3.getFont().deriveFont(spice3.getFont().getSize() + 3f));
+                            spicinessPanel.add(spice3);
 
-                            //---- toggleButton23 ----
-                            toggleButton23.setText("4");
-                            panel11.add(toggleButton23);
+                            //---- spice4 ----
+                            spice4.setText("4");
+                            spice4.setFont(spice4.getFont().deriveFont(spice4.getFont().getSize() + 3f));
+                            spicinessPanel.add(spice4);
 
-                            //---- toggleButton24 ----
-                            toggleButton24.setText("5");
-                            panel11.add(toggleButton24);
+                            //---- spice5 ----
+                            spice5.setText("5");
+                            spice5.setFont(spice5.getFont().deriveFont(spice5.getFont().getSize() + 3f));
+                            spicinessPanel.add(spice5);
                         }
-                        panel8.add(panel11, "cell 0 2,dock center");
+                        required_innerPanel.add(spicinessPanel, "cell 0 2,dock center");
                     }
-                    panel3.add(panel8, BorderLayout.CENTER);
+                    requiredPanel.add(required_innerPanel, BorderLayout.CENTER);
                 }
-                panel2.add(panel3, "cell 0 0");
+                body.add(requiredPanel, "cell 0 0");
 
-                //======== panel17 ========
+                //======== optionalPanel ========
                 {
-                    panel17.setBackground(Color.white);
-                    panel17.setLayout(new BorderLayout());
+                    optionalPanel.setBackground(Color.white);
+                    optionalPanel.setLayout(new BorderLayout());
 
-                    //======== panel19 ========
+                    //======== emptyBox7 ========
                     {
-                        panel19.setBackground(Color.white);
-                        panel19.setLayout(new BoxLayout(panel19, BoxLayout.X_AXIS));
+                        emptyBox7.setBackground(Color.white);
+                        emptyBox7.setLayout(new BoxLayout(emptyBox7, BoxLayout.X_AXIS));
                     }
-                    panel17.add(panel19, BorderLayout.NORTH);
+                    optionalPanel.add(emptyBox7, BorderLayout.NORTH);
 
-                    //======== panel20 ========
+                    //======== emptyBox8 ========
                     {
-                        panel20.setBackground(Color.white);
-                        panel20.setLayout(new BoxLayout(panel20, BoxLayout.X_AXIS));
+                        emptyBox8.setBackground(Color.white);
+                        emptyBox8.setLayout(new BoxLayout(emptyBox8, BoxLayout.X_AXIS));
                     }
-                    panel17.add(panel20, BorderLayout.SOUTH);
+                    optionalPanel.add(emptyBox8, BorderLayout.SOUTH);
 
-                    //======== panel21 ========
+                    //======== emptyBox9 ========
                     {
-                        panel21.setBackground(Color.white);
-                        panel21.setLayout(new BoxLayout(panel21, BoxLayout.X_AXIS));
+                        emptyBox9.setBackground(Color.white);
+                        emptyBox9.setLayout(new BoxLayout(emptyBox9, BoxLayout.X_AXIS));
                     }
-                    panel17.add(panel21, BorderLayout.WEST);
+                    optionalPanel.add(emptyBox9, BorderLayout.WEST);
 
-                    //======== panel22 ========
+                    //======== emptyBox10 ========
                     {
-                        panel22.setBackground(Color.white);
-                        panel22.setLayout(new BoxLayout(panel22, BoxLayout.X_AXIS));
+                        emptyBox10.setBackground(Color.white);
+                        emptyBox10.setLayout(new BoxLayout(emptyBox10, BoxLayout.X_AXIS));
                     }
-                    panel17.add(panel22, BorderLayout.EAST);
+                    optionalPanel.add(emptyBox10, BorderLayout.EAST);
 
-                    //======== panel23 ========
+                    //======== optional_innerPanel ========
                     {
-                        panel23.setBorder(null);
-                        panel23.setBackground(Color.white);
-                        panel23.setLayout(new MigLayout(
+                        optional_innerPanel.setBorder(null);
+                        optional_innerPanel.setBackground(Color.white);
+                        optional_innerPanel.setLayout(new MigLayout(
                             "hidemode 3,gap 0 0",
                             // columns
                             "[370,fill]",
@@ -414,71 +449,95 @@ public class OrderMenu extends JPanel {
                             "[304]" +
                             "[128]"));
 
-                        //======== panel24 ========
+                        //======== dishPanel ========
                         {
-                            panel24.setBorder(new TitledBorder("Optional"));
-                            panel24.setBackground(Color.white);
-                            panel24.setLayout(new GridLayout(4, 4, 0, 10));
+                            dishPanel.setBorder(new TitledBorder("Optional"));
+                            dishPanel.setBackground(Color.white);
+                            dishPanel.setLayout(new GridLayout(4, 4, 0, 10));
 
-                            //---- label8 ----
-                            label8.setText("Nori:");
-                            panel24.add(label8);
+                            //---- label_right_nori ----
+                            label_right_nori.setText("Nori:");
+                            label_right_nori.setFont(label_right_nori.getFont().deriveFont(label_right_nori.getFont().getSize() + 3f));
+                            dishPanel.add(label_right_nori);
 
-                            //---- label9 ----
-                            label9.setText("Available");
-                            panel24.add(label9);
+                            //---- noriAvailable ----
+                            noriAvailable.setText("Available");
+                            noriAvailable.setFont(noriAvailable.getFont().deriveFont(noriAvailable.getFont().getSize() + 3f));
+                            dishPanel.add(noriAvailable);
 
-                            //---- label10 ----
-                            label10.setText("\uffe11");
-                            panel24.add(label10);
-                            panel24.add(spinner1);
+                            //---- noriPrice ----
+                            noriPrice.setText("\uffe11");
+                            noriPrice.setFont(noriPrice.getFont().deriveFont(noriPrice.getFont().getSize() + 3f));
+                            dishPanel.add(noriPrice);
 
-                            //---- label11 ----
-                            label11.setText("Chashu:");
-                            panel24.add(label11);
+                            //---- noriNumber ----
+                            noriNumber.setFont(noriNumber.getFont().deriveFont(noriNumber.getFont().getSize() + 3f));
+                            dishPanel.add(noriNumber);
 
-                            //---- label12 ----
-                            label12.setText("Available");
-                            panel24.add(label12);
+                            //---- label_right_chashu ----
+                            label_right_chashu.setText("Chashu:");
+                            label_right_chashu.setFont(label_right_chashu.getFont().deriveFont(label_right_chashu.getFont().getSize() + 3f));
+                            dishPanel.add(label_right_chashu);
 
-                            //---- label13 ----
-                            label13.setText("\uffe12");
-                            panel24.add(label13);
-                            panel24.add(spinner2);
+                            //---- chashuAvailable ----
+                            chashuAvailable.setText("Available");
+                            chashuAvailable.setFont(chashuAvailable.getFont().deriveFont(chashuAvailable.getFont().getSize() + 3f));
+                            dishPanel.add(chashuAvailable);
 
-                            //---- label14 ----
-                            label14.setText("Boiled egg:");
-                            panel24.add(label14);
+                            //---- chashuPrice ----
+                            chashuPrice.setText("\uffe12");
+                            chashuPrice.setFont(chashuPrice.getFont().deriveFont(chashuPrice.getFont().getSize() + 3f));
+                            dishPanel.add(chashuPrice);
 
-                            //---- label15 ----
-                            label15.setText("Available");
-                            panel24.add(label15);
+                            //---- chashuNumber ----
+                            chashuNumber.setFont(chashuNumber.getFont().deriveFont(chashuNumber.getFont().getSize() + 3f));
+                            dishPanel.add(chashuNumber);
 
-                            //---- label16 ----
-                            label16.setText("\uffe11");
-                            panel24.add(label16);
-                            panel24.add(spinner3);
+                            //---- label_right_egg ----
+                            label_right_egg.setText("Boiled egg:");
+                            label_right_egg.setFont(label_right_egg.getFont().deriveFont(label_right_egg.getFont().getSize() + 3f));
+                            dishPanel.add(label_right_egg);
 
-                            //---- label17 ----
-                            label17.setText("Shoot:");
-                            panel24.add(label17);
+                            //---- eggAvailable ----
+                            eggAvailable.setText("Available");
+                            eggAvailable.setFont(eggAvailable.getFont().deriveFont(eggAvailable.getFont().getSize() + 3f));
+                            dishPanel.add(eggAvailable);
 
-                            //---- label18 ----
-                            label18.setText("Available");
-                            panel24.add(label18);
+                            //---- eggPrice ----
+                            eggPrice.setText("\uffe11");
+                            eggPrice.setFont(eggPrice.getFont().deriveFont(eggPrice.getFont().getSize() + 3f));
+                            dishPanel.add(eggPrice);
 
-                            //---- label19 ----
-                            label19.setText("\uffe11");
-                            panel24.add(label19);
-                            panel24.add(spinner4);
+                            //---- eggNumber ----
+                            eggNumber.setFont(eggNumber.getFont().deriveFont(eggNumber.getFont().getSize() + 3f));
+                            dishPanel.add(eggNumber);
+
+                            //---- label_right_shoot ----
+                            label_right_shoot.setText("Shoot:");
+                            label_right_shoot.setFont(label_right_shoot.getFont().deriveFont(label_right_shoot.getFont().getSize() + 3f));
+                            dishPanel.add(label_right_shoot);
+
+                            //---- shootAvailable ----
+                            shootAvailable.setText("Available");
+                            shootAvailable.setFont(shootAvailable.getFont().deriveFont(shootAvailable.getFont().getSize() + 3f));
+                            dishPanel.add(shootAvailable);
+
+                            //---- shootPrice ----
+                            shootPrice.setText("\uffe11");
+                            shootPrice.setFont(shootPrice.getFont().deriveFont(shootPrice.getFont().getSize() + 3f));
+                            dishPanel.add(shootPrice);
+
+                            //---- shootNumber ----
+                            shootNumber.setFont(shootNumber.getFont().deriveFont(shootNumber.getFont().getSize() + 3f));
+                            dishPanel.add(shootNumber);
                         }
-                        panel23.add(panel24, "dock center");
+                        optional_innerPanel.add(dishPanel, "dock center");
 
-                        //======== panel25 ========
+                        //======== pricePanel ========
                         {
-                            panel25.setBorder(new TitledBorder("Price"));
-                            panel25.setBackground(Color.white);
-                            panel25.setLayout(new MigLayout(
+                            pricePanel.setBorder(new TitledBorder("Price"));
+                            pricePanel.setBackground(Color.white);
+                            pricePanel.setLayout(new MigLayout(
                                 "hidemode 3,gap 0 5",
                                 // columns
                                 "[370,fill]",
@@ -486,71 +545,80 @@ public class OrderMenu extends JPanel {
                                 "[80]" +
                                 "[40]"));
 
-                            //======== panel27 ========
+                            //======== price_topPanel ========
                             {
-                                panel27.setBackground(Color.white);
-                                panel27.setLayout(new GridLayout(2, 3));
+                                price_topPanel.setBackground(Color.white);
+                                price_topPanel.setLayout(new GridLayout(2, 3));
 
-                                //---- label22 ----
-                                label22.setText("Required");
-                                panel27.add(label22);
+                                //---- label_required ----
+                                label_required.setText("Required");
+                                label_required.setFont(label_required.getFont().deriveFont(label_required.getFont().getSize() + 3f));
+                                price_topPanel.add(label_required);
 
-                                //---- label23 ----
-                                label23.setText("\uffe1");
-                                label23.setHorizontalAlignment(SwingConstants.TRAILING);
-                                panel27.add(label23);
+                                //---- label_pound0 ----
+                                label_pound0.setText("\uffe1");
+                                label_pound0.setHorizontalAlignment(SwingConstants.TRAILING);
+                                label_pound0.setFont(label_pound0.getFont().deriveFont(label_pound0.getFont().getSize() + 3f));
+                                price_topPanel.add(label_pound0);
 
-                                //---- label24 ----
-                                label24.setText("9.99");
-                                panel27.add(label24);
+                                //---- noodlePrice ----
+                                noodlePrice.setText("9.99");
+                                noodlePrice.setFont(noodlePrice.getFont().deriveFont(noodlePrice.getFont().getSize() + 3f));
+                                price_topPanel.add(noodlePrice);
 
-                                //---- label25 ----
-                                label25.setText("Optional");
-                                panel27.add(label25);
+                                //---- label_optional ----
+                                label_optional.setText("Optional");
+                                label_optional.setFont(label_optional.getFont().deriveFont(label_optional.getFont().getSize() + 3f));
+                                price_topPanel.add(label_optional);
 
-                                //---- label26 ----
-                                label26.setText("\uffe1");
-                                label26.setHorizontalAlignment(SwingConstants.TRAILING);
-                                panel27.add(label26);
+                                //---- label_pound1 ----
+                                label_pound1.setText("\uffe1");
+                                label_pound1.setHorizontalAlignment(SwingConstants.TRAILING);
+                                label_pound1.setFont(label_pound1.getFont().deriveFont(label_pound1.getFont().getSize() + 3f));
+                                price_topPanel.add(label_pound1);
 
-                                //---- label27 ----
-                                label27.setText("x");
-                                panel27.add(label27);
+                                //---- extraPrice ----
+                                extraPrice.setText("x");
+                                extraPrice.setFont(extraPrice.getFont().deriveFont(extraPrice.getFont().getSize() + 3f));
+                                price_topPanel.add(extraPrice);
                             }
-                            panel25.add(panel27, "cell 0 0,dock center");
+                            pricePanel.add(price_topPanel, "cell 0 0,dock center");
 
-                            //======== panel28 ========
+                            //======== price_bottomPanel ========
                             {
-                                panel28.setBackground(Color.white);
-                                panel28.setLayout(new GridLayout(1, 2));
+                                price_bottomPanel.setBackground(Color.white);
+                                price_bottomPanel.setLayout(new GridLayout(1, 2));
 
-                                //---- label31 ----
-                                label31.setText("Total price");
-                                panel28.add(label31);
+                                //---- label_totalPrice ----
+                                label_totalPrice.setText("Total price");
+                                label_totalPrice.setFont(label_totalPrice.getFont().deriveFont(label_totalPrice.getFont().getSize() + 3f));
+                                price_bottomPanel.add(label_totalPrice);
 
-                                //---- label32 ----
-                                label32.setText("\uffe1");
-                                label32.setHorizontalAlignment(SwingConstants.TRAILING);
-                                panel28.add(label32);
+                                //---- label_pound2 ----
+                                label_pound2.setText("\uffe1");
+                                label_pound2.setHorizontalAlignment(SwingConstants.TRAILING);
+                                label_pound2.setFont(label_pound2.getFont().deriveFont(label_pound2.getFont().getSize() + 3f));
+                                price_bottomPanel.add(label_pound2);
 
-                                //---- label33 ----
-                                label33.setText("9.99+x");
-                                panel28.add(label33);
+                                //---- totalPrice ----
+                                totalPrice.setText("9.99+x");
+                                totalPrice.setFont(totalPrice.getFont().deriveFont(totalPrice.getFont().getSize() + 3f));
+                                price_bottomPanel.add(totalPrice);
                             }
-                            panel25.add(panel28, "cell 0 1,dock center");
+                            pricePanel.add(price_bottomPanel, "cell 0 1,dock center");
                         }
-                        panel23.add(panel25, "cell 0 1");
+                        optional_innerPanel.add(pricePanel, "cell 0 1");
                     }
-                    panel17.add(panel23, BorderLayout.CENTER);
+                    optionalPanel.add(optional_innerPanel, BorderLayout.CENTER);
                 }
-                panel2.add(panel17, "cell 1 0");
+                body.add(optionalPanel, "cell 1 0");
             }
-            panelBoard.add(panel2, "cell 0 1");
+            panelBoard.add(body, "cell 0 1");
 
-            //======== panel30 ========
+            //======== bottomPanel ========
             {
-                panel30.setBackground(new Color(252, 251, 245));
-                panel30.setLayout(new MigLayout(
+                bottomPanel.setBackground(new Color(252, 251, 245));
+                bottomPanel.setLayout(new MigLayout(
                     "hidemode 3",
                     // columns
                     "[18,fill]" +
@@ -559,223 +627,223 @@ public class OrderMenu extends JPanel {
                     // rows
                     "[75]"));
 
-                //======== panel36 ========
+                //======== storeinfoPanel ========
                 {
-                    panel36.setBackground(new Color(252, 251, 245));
-                    panel36.setLayout(new GridLayout(3, 1));
+                    storeinfoPanel.setBackground(new Color(252, 251, 245));
+                    storeinfoPanel.setLayout(new GridLayout(3, 1));
 
-                    //---- label34 ----
-                    label34.setText("TOTORO Ramen");
-                    panel36.add(label34);
+                    //---- storeName ----
+                    storeName.setText("TOTORO Ramen");
+                    storeinfoPanel.add(storeName);
 
-                    //---- label30 ----
-                    label30.setText("Address: B15 Baker Street in London");
-                    panel36.add(label30);
+                    //---- storeAddress ----
+                    storeAddress.setText("Address: B15 Baker Street in London");
+                    storeinfoPanel.add(storeAddress);
 
-                    //---- label29 ----
-                    label29.setText("Telphone: 44 (0) 203 178 4861");
-                    panel36.add(label29);
+                    //---- storeTelphone ----
+                    storeTelphone.setText("Telphone: 44 (0) 203 178 4861");
+                    storeinfoPanel.add(storeTelphone);
                 }
-                panel30.add(panel36, "cell 1 0");
+                bottomPanel.add(storeinfoPanel, "cell 1 0");
 
-                //======== panel33 ========
+                //======== nextPanel ========
                 {
-                    panel33.setBackground(new Color(252, 251, 245));
-                    panel33.setLayout(new GridLayout(1, 4));
+                    nextPanel.setBackground(new Color(252, 251, 245));
+                    nextPanel.setLayout(new GridLayout(1, 4));
 
-                    //======== panel38 ========
+                    //======== emptyBox15 ========
                     {
-                        panel38.setBackground(new Color(252, 251, 245));
-                        panel38.setLayout(new BoxLayout(panel38, BoxLayout.X_AXIS));
+                        emptyBox15.setBackground(new Color(252, 251, 245));
+                        emptyBox15.setLayout(new BoxLayout(emptyBox15, BoxLayout.X_AXIS));
                     }
-                    panel33.add(panel38);
+                    nextPanel.add(emptyBox15);
 
-                    //======== panel34 ========
+                    //======== emptyBox16 ========
                     {
-                        panel34.setBackground(new Color(252, 251, 245));
-                        panel34.setLayout(new BoxLayout(panel34, BoxLayout.X_AXIS));
+                        emptyBox16.setBackground(new Color(252, 251, 245));
+                        emptyBox16.setLayout(new BoxLayout(emptyBox16, BoxLayout.X_AXIS));
                     }
-                    panel33.add(panel34);
+                    nextPanel.add(emptyBox16);
 
-                    //---- button1 ----
-                    button1.setText("Settle");
-                    panel33.add(button1);
+                    //---- settleButton ----
+                    settleButton.setText("Settle");
+                    nextPanel.add(settleButton);
 
-                    //======== panel35 ========
+                    //======== emptyBox17 ========
                     {
-                        panel35.setBackground(new Color(252, 251, 245));
-                        panel35.setLayout(new BoxLayout(panel35, BoxLayout.X_AXIS));
+                        emptyBox17.setBackground(new Color(252, 251, 245));
+                        emptyBox17.setLayout(new BoxLayout(emptyBox17, BoxLayout.X_AXIS));
                     }
-                    panel33.add(panel35);
+                    nextPanel.add(emptyBox17);
                 }
-                panel30.add(panel33, "cell 2 0");
+                bottomPanel.add(nextPanel, "cell 2 0");
             }
-            panelBoard.add(panel30, "cell 0 2");
+            panelBoard.add(bottomPanel, "cell 0 2");
         }
         add(panelBoard, BorderLayout.CENTER);
 
-        //======== panel15 ========
+        //======== emptyBox11 ========
         {
-            panel15.setLayout(new BoxLayout(panel15, BoxLayout.X_AXIS));
+            emptyBox11.setLayout(new BoxLayout(emptyBox11, BoxLayout.X_AXIS));
         }
-        add(panel15, BorderLayout.NORTH);
+        add(emptyBox11, BorderLayout.NORTH);
 
-        //======== panel16 ========
+        //======== emptyBox12 ========
         {
-            panel16.setLayout(new BoxLayout(panel16, BoxLayout.X_AXIS));
+            emptyBox12.setLayout(new BoxLayout(emptyBox12, BoxLayout.X_AXIS));
         }
-        add(panel16, BorderLayout.SOUTH);
+        add(emptyBox12, BorderLayout.SOUTH);
 
-        //======== panel18 ========
+        //======== emptyBox13 ========
         {
-            panel18.setLayout(new BoxLayout(panel18, BoxLayout.X_AXIS));
+            emptyBox13.setLayout(new BoxLayout(emptyBox13, BoxLayout.X_AXIS));
         }
-        add(panel18, BorderLayout.WEST);
+        add(emptyBox13, BorderLayout.WEST);
 
-        //======== panel26 ========
+        //======== emptyBox14 ========
         {
-            panel26.setLayout(new BoxLayout(panel26, BoxLayout.X_AXIS));
+            emptyBox14.setLayout(new BoxLayout(emptyBox14, BoxLayout.X_AXIS));
         }
-        add(panel26, BorderLayout.EAST);
+        add(emptyBox14, BorderLayout.EAST);
 
         //---- buttonGroup1 ----
-        ButtonGroup buttonGroup1 = new ButtonGroup();
-        buttonGroup1.add(toggleButton1);
-        buttonGroup1.add(toggleButton2);
-        buttonGroup1.add(toggleButton3);
+        buttonGroup1.add(soup1);
+        buttonGroup1.add(soup2);
+        buttonGroup1.add(soup3);
 
         //---- buttonGroup2 ----
-        ButtonGroup buttonGroup2 = new ButtonGroup();
-        buttonGroup2.add(toggleButton4);
-        buttonGroup2.add(toggleButton5);
-        buttonGroup2.add(toggleButton6);
+        buttonGroup2.add(noodle1);
+        buttonGroup2.add(noodle2);
+        buttonGroup2.add(noodle3);
 
         //---- buttonGroup3 ----
-        ButtonGroup buttonGroup3 = new ButtonGroup();
-        buttonGroup3.add(toggleButton7);
-        buttonGroup3.add(toggleButton8);
-        buttonGroup3.add(toggleButton9);
+        buttonGroup3.add(onion1);
+        buttonGroup3.add(onion2);
+        buttonGroup3.add(onion3);
 
         //---- buttonGroup4 ----
-        ButtonGroup buttonGroup4 = new ButtonGroup();
-        buttonGroup4.add(toggleButton10);
-        buttonGroup4.add(toggleButton11);
+        buttonGroup4.add(nori1);
+        buttonGroup4.add(nori2);
 
         //---- buttonGroup5 ----
-        ButtonGroup buttonGroup5 = new ButtonGroup();
-        buttonGroup5.add(toggleButton13);
-        buttonGroup5.add(toggleButton14);
+        buttonGroup5.add(chashu1);
+        buttonGroup5.add(chashu2);
 
         //---- buttonGroup6 ----
-        ButtonGroup buttonGroup6 = new ButtonGroup();
-        buttonGroup6.add(toggleButton16);
-        buttonGroup6.add(toggleButton17);
+        buttonGroup6.add(egg1);
+        buttonGroup6.add(egg2);
 
         //---- buttonGroup7 ----
-        ButtonGroup buttonGroup7 = new ButtonGroup();
-        buttonGroup7.add(toggleButton19);
-        buttonGroup7.add(toggleButton20);
-        buttonGroup7.add(toggleButton21);
-        buttonGroup7.add(toggleButton22);
-        buttonGroup7.add(toggleButton23);
-        buttonGroup7.add(toggleButton24);
+        buttonGroup7.add(spice0);
+        buttonGroup7.add(spice1);
+        buttonGroup7.add(spice2);
+        buttonGroup7.add(spice3);
+        buttonGroup7.add(spice4);
+        buttonGroup7.add(spice5);
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
     private JPanel panelBoard;
-    private JPanel panel1;
-    private JPanel panel29;
-    private JLabel label28;
-    private JPanel panel2;
-    private JPanel panel3;
-    private JPanel panel5;
-    private JPanel panel4;
-    private JPanel panel6;
-    private JPanel panel7;
-    private JPanel panel8;
-    private JPanel panel9;
-    private JLabel label1;
-    private JToggleButton toggleButton1;
-    private JToggleButton toggleButton2;
-    private JToggleButton toggleButton3;
-    private JLabel label2;
-    private JToggleButton toggleButton4;
-    private JToggleButton toggleButton5;
-    private JToggleButton toggleButton6;
-    private JLabel label3;
-    private JToggleButton toggleButton7;
-    private JToggleButton toggleButton8;
-    private JToggleButton toggleButton9;
-    private JPanel panel10;
-    private JLabel label4;
-    private JPanel panel14;
-    private JToggleButton toggleButton10;
-    private JToggleButton toggleButton11;
-    private JLabel label5;
-    private JPanel panel13;
-    private JToggleButton toggleButton13;
-    private JToggleButton toggleButton14;
-    private JLabel label6;
-    private JPanel panel12;
-    private JToggleButton toggleButton16;
-    private JToggleButton toggleButton17;
-    private JPanel panel11;
-    private JLabel label7;
-    private JToggleButton toggleButton19;
-    private JToggleButton toggleButton20;
-    private JToggleButton toggleButton21;
-    private JToggleButton toggleButton22;
-    private JToggleButton toggleButton23;
-    private JToggleButton toggleButton24;
-    private JPanel panel17;
-    private JPanel panel19;
-    private JPanel panel20;
-    private JPanel panel21;
-    private JPanel panel22;
-    private JPanel panel23;
-    private JPanel panel24;
-    private JLabel label8;
-    private JLabel label9;
-    private JLabel label10;
-    private JSpinner spinner1;
-    private JLabel label11;
-    private JLabel label12;
-    private JLabel label13;
-    private JSpinner spinner2;
-    private JLabel label14;
-    private JLabel label15;
-    private JLabel label16;
-    private JSpinner spinner3;
-    private JLabel label17;
-    private JLabel label18;
-    private JLabel label19;
-    private JSpinner spinner4;
-    private JPanel panel25;
-    private JPanel panel27;
-    private JLabel label22;
-    private JLabel label23;
-    private JLabel label24;
-    private JLabel label25;
-    private JLabel label26;
-    private JLabel label27;
-    private JPanel panel28;
-    private JLabel label31;
-    private JLabel label32;
-    private JLabel label33;
-    private JPanel panel30;
-    private JPanel panel36;
-    private JLabel label34;
-    private JLabel label30;
-    private JLabel label29;
-    private JPanel panel33;
-    private JPanel panel38;
-    private JPanel panel34;
-    private JButton button1;
-    private JPanel panel35;
-    private JPanel panel15;
-    private JPanel panel16;
-    private JPanel panel18;
-    private JPanel panel26;
+    private JPanel title;
+    private JPanel title_innerPanel;
+    private JLabel logo;
+    private JPanel body;
+    private JPanel requiredPanel;
+    private JPanel emptyBox0;
+    private JPanel emptyBox1;
+    private JPanel emptyBox2;
+    private JPanel emptyBox3;
+    private JPanel required_innerPanel;
+    private JPanel noodlePanel;
+    private JLabel label_soup;
+    private JToggleButton soup1;
+    private JToggleButton soup2;
+    private JToggleButton soup3;
+    private JLabel label_noodle;
+    private JToggleButton noodle1;
+    private JToggleButton noodle2;
+    private JToggleButton noodle3;
+    private JLabel label_onion;
+    private JToggleButton onion1;
+    private JToggleButton onion2;
+    private JToggleButton onion3;
+    private JPanel additionalPanel;
+    private JLabel label_nori;
+    private JPanel emptyBox4;
+    private JToggleButton nori1;
+    private JToggleButton nori2;
+    private JLabel label_chashu;
+    private JPanel emptyBox5;
+    private JToggleButton chashu1;
+    private JToggleButton chashu2;
+    private JLabel label_egg;
+    private JPanel emptyBox6;
+    private JToggleButton egg1;
+    private JToggleButton egg2;
+    private JPanel spicinessPanel;
+    private JLabel label_spiciness;
+    private JToggleButton spice0;
+    private JToggleButton spice1;
+    private JToggleButton spice2;
+    private JToggleButton spice3;
+    private JToggleButton spice4;
+    private JToggleButton spice5;
+    private JPanel optionalPanel;
+    private JPanel emptyBox7;
+    private JPanel emptyBox8;
+    private JPanel emptyBox9;
+    private JPanel emptyBox10;
+    private JPanel optional_innerPanel;
+    private JPanel dishPanel;
+    private JLabel label_right_nori;
+    public JLabel noriAvailable;
+    public JLabel noriPrice;
+    public JSpinner noriNumber;
+    private JLabel label_right_chashu;
+    public JLabel chashuAvailable;
+    public JLabel chashuPrice;
+    public JSpinner chashuNumber;
+    private JLabel label_right_egg;
+    public JLabel eggAvailable;
+    public JLabel eggPrice;
+    public JSpinner eggNumber;
+    private JLabel label_right_shoot;
+    public JLabel shootAvailable;
+    public JLabel shootPrice;
+    public JSpinner shootNumber;
+    private JPanel pricePanel;
+    private JPanel price_topPanel;
+    private JLabel label_required;
+    private JLabel label_pound0;
+    public JLabel noodlePrice;
+    private JLabel label_optional;
+    private JLabel label_pound1;
+    public JLabel extraPrice;
+    private JPanel price_bottomPanel;
+    private JLabel label_totalPrice;
+    private JLabel label_pound2;
+    public JLabel totalPrice;
+    private JPanel bottomPanel;
+    private JPanel storeinfoPanel;
+    private JLabel storeName;
+    private JLabel storeAddress;
+    private JLabel storeTelphone;
+    private JPanel nextPanel;
+    private JPanel emptyBox15;
+    private JPanel emptyBox16;
+    private JButton settleButton;
+    private JPanel emptyBox17;
+    private JPanel emptyBox11;
+    private JPanel emptyBox12;
+    private JPanel emptyBox13;
+    private JPanel emptyBox14;
+    public ButtonGroup buttonGroup1;
+    public ButtonGroup buttonGroup2;
+    public ButtonGroup buttonGroup3;
+    public ButtonGroup buttonGroup4;
+    public ButtonGroup buttonGroup5;
+    public ButtonGroup buttonGroup6;
+    public ButtonGroup buttonGroup7;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }
