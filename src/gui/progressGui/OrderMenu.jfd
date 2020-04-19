@@ -1,0 +1,559 @@
+JFDML JFormDesigner: "6.0.6.2.195" Java: "11.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+				"$layoutConstraints": "insets 0,hidemode 3,gap 0 0"
+				"$columnConstraints": "[1000,fill]"
+				"$rowConstraints": "[100,fill][445,fill][75,fill]"
+			} ) {
+				name: "panelBoard"
+				"background": new java.awt.Color( 252, 251, 245, 255 )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+					"axis": 0
+				} ) {
+					name: "panel1"
+					"background": new java.awt.Color( 248, 193, 84, 255 )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+						"$layoutConstraints": "insets 0,hidemode 3"
+						"$columnConstraints": "[fill][grow,fill][fill]"
+						"$rowConstraints": "[grow,fill]"
+					} ) {
+						name: "panel29"
+						"background": new java.awt.Color( 248, 193, 84, 255 )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label28"
+							"icon": new com.jformdesigner.model.SwingIcon( 0, "/img/titleLogo.png" )
+						}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+							"value": "cell 1 0"
+						} )
+					} )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 0 0"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+					"$layoutConstraints": "hidemode 3,gap 0 0"
+					"$columnConstraints": "[616,fill][380,fill]"
+					"$rowConstraints": "[432]"
+				} ) {
+					name: "panel2"
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+						name: "panel3"
+						"background": new java.awt.Color( 255, 255, 255, 255 )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+							"axis": 0
+						} ) {
+							name: "panel5"
+							"background": new java.awt.Color( 255, 255, 255, 255 )
+						}, new FormLayoutConstraints( class java.lang.String ) {
+							"value": "After"
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+							"axis": 0
+						} ) {
+							name: "panel4"
+							"background": sfield java.awt.Color white
+						}, new FormLayoutConstraints( class java.lang.String ) {
+							"value": "First"
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+							"axis": 0
+						} ) {
+							name: "panel6"
+							"background": sfield java.awt.Color white
+						}, new FormLayoutConstraints( class java.lang.String ) {
+							"value": "Last"
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+							"axis": 0
+						} ) {
+							name: "panel7"
+							"background": sfield java.awt.Color white
+						}, new FormLayoutConstraints( class java.lang.String ) {
+							"value": "Before"
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+							"$layoutConstraints": "hidemode 3,gap 0 8"
+							"$columnConstraints": "[610,fill]"
+							"$rowConstraints": "[185][185][62]"
+						} ) {
+							name: "panel8"
+							"border": new javax.swing.border.TitledBorder( "Requried" )
+							"background": sfield java.awt.Color white
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+								"columns": 4
+								"rows": 3
+								"vgap": 8
+							} ) {
+								name: "panel9"
+								"background": sfield java.awt.Color white
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label1"
+									"text": "Soup:"
+								} )
+								add( new FormComponent( "javax.swing.JToggleButton" ) {
+									name: "toggleButton1"
+									"text": "Tonkotsu"
+									"$buttonGroup": new FormReference( "buttonGroup1" )
+								} )
+								add( new FormComponent( "javax.swing.JToggleButton" ) {
+									name: "toggleButton2"
+									"text": "Shoyo"
+									"$buttonGroup": new FormReference( "buttonGroup1" )
+								} )
+								add( new FormComponent( "javax.swing.JToggleButton" ) {
+									name: "toggleButton3"
+									"text": "Shio"
+									"$buttonGroup": new FormReference( "buttonGroup1" )
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label2"
+									"text": "Noodle:"
+								} )
+								add( new FormComponent( "javax.swing.JToggleButton" ) {
+									name: "toggleButton4"
+									"text": "Soft"
+									"$buttonGroup": new FormReference( "buttonGroup2" )
+								} )
+								add( new FormComponent( "javax.swing.JToggleButton" ) {
+									name: "toggleButton5"
+									"text": "Medium"
+									"$buttonGroup": new FormReference( "buttonGroup2" )
+								} )
+								add( new FormComponent( "javax.swing.JToggleButton" ) {
+									name: "toggleButton6"
+									"text": "Firm"
+									"$buttonGroup": new FormReference( "buttonGroup2" )
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label3"
+									"text": "Spring onion:"
+								} )
+								add( new FormComponent( "javax.swing.JToggleButton" ) {
+									name: "toggleButton7"
+									"text": "No please"
+									"$buttonGroup": new FormReference( "buttonGroup3" )
+								} )
+								add( new FormComponent( "javax.swing.JToggleButton" ) {
+									name: "toggleButton8"
+									"text": "Just a little"
+									"$buttonGroup": new FormReference( "buttonGroup3" )
+								} )
+								add( new FormComponent( "javax.swing.JToggleButton" ) {
+									name: "toggleButton9"
+									"text": "A lot"
+									"$buttonGroup": new FormReference( "buttonGroup3" )
+								} )
+							}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+								"value": "cell 0 0,dock center"
+							} )
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+								"columns": 4
+								"rows": 3
+								"vgap": 8
+							} ) {
+								name: "panel10"
+								"background": sfield java.awt.Color white
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label4"
+									"text": "Nori:"
+								} )
+								add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+									"axis": 0
+								} ) {
+									name: "panel14"
+									"background": sfield java.awt.Color white
+								} )
+								add( new FormComponent( "javax.swing.JToggleButton" ) {
+									name: "toggleButton10"
+									"text": "Yes"
+									"$buttonGroup": new FormReference( "buttonGroup4" )
+								} )
+								add( new FormComponent( "javax.swing.JToggleButton" ) {
+									name: "toggleButton11"
+									"text": "No"
+									"$buttonGroup": new FormReference( "buttonGroup4" )
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label5"
+									"text": "Chashu:"
+								} )
+								add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+									"axis": 0
+								} ) {
+									name: "panel13"
+									"background": sfield java.awt.Color white
+								} )
+								add( new FormComponent( "javax.swing.JToggleButton" ) {
+									name: "toggleButton13"
+									"text": "Yes"
+									"$buttonGroup": new FormReference( "buttonGroup5" )
+								} )
+								add( new FormComponent( "javax.swing.JToggleButton" ) {
+									name: "toggleButton14"
+									"text": "No"
+									"$buttonGroup": new FormReference( "buttonGroup5" )
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label6"
+									"text": "Boiled egg:"
+								} )
+								add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+									"axis": 0
+								} ) {
+									name: "panel12"
+									"background": sfield java.awt.Color white
+								} )
+								add( new FormComponent( "javax.swing.JToggleButton" ) {
+									name: "toggleButton16"
+									"text": "Yes"
+									"$buttonGroup": new FormReference( "buttonGroup6" )
+								} )
+								add( new FormComponent( "javax.swing.JToggleButton" ) {
+									name: "toggleButton17"
+									"text": "No"
+									"$buttonGroup": new FormReference( "buttonGroup6" )
+								} )
+							}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+								"value": "cell 0 1,dock center"
+							} )
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+								"columns": 7
+							} ) {
+								name: "panel11"
+								"background": sfield java.awt.Color white
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label7"
+									"text": "Spiciness:"
+								} )
+								add( new FormComponent( "javax.swing.JToggleButton" ) {
+									name: "toggleButton19"
+									"text": "0"
+									"$buttonGroup": new FormReference( "buttonGroup7" )
+								} )
+								add( new FormComponent( "javax.swing.JToggleButton" ) {
+									name: "toggleButton20"
+									"text": "1"
+									"$buttonGroup": new FormReference( "buttonGroup7" )
+								} )
+								add( new FormComponent( "javax.swing.JToggleButton" ) {
+									name: "toggleButton21"
+									"text": "2"
+									"$buttonGroup": new FormReference( "buttonGroup7" )
+								} )
+								add( new FormComponent( "javax.swing.JToggleButton" ) {
+									name: "toggleButton22"
+									"text": "3"
+									"$buttonGroup": new FormReference( "buttonGroup7" )
+								} )
+								add( new FormComponent( "javax.swing.JToggleButton" ) {
+									name: "toggleButton23"
+									"text": "4"
+									"$buttonGroup": new FormReference( "buttonGroup7" )
+								} )
+								add( new FormComponent( "javax.swing.JToggleButton" ) {
+									name: "toggleButton24"
+									"text": "5"
+									"$buttonGroup": new FormReference( "buttonGroup7" )
+								} )
+							}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+								"value": "cell 0 2,dock center"
+							} )
+						}, new FormLayoutConstraints( class java.lang.String ) {
+							"value": "Center"
+						} )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 0"
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+						name: "panel17"
+						"background": sfield java.awt.Color white
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+							"axis": 0
+						} ) {
+							name: "panel19"
+							"background": sfield java.awt.Color white
+						}, new FormLayoutConstraints( class java.lang.String ) {
+							"value": "North"
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+							"axis": 0
+						} ) {
+							name: "panel20"
+							"background": sfield java.awt.Color white
+						}, new FormLayoutConstraints( class java.lang.String ) {
+							"value": "South"
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+							"axis": 0
+						} ) {
+							name: "panel21"
+							"background": sfield java.awt.Color white
+						}, new FormLayoutConstraints( class java.lang.String ) {
+							"value": "West"
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+							"axis": 0
+						} ) {
+							name: "panel22"
+							"background": sfield java.awt.Color white
+						}, new FormLayoutConstraints( class java.lang.String ) {
+							"value": "East"
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+							"$layoutConstraints": "hidemode 3,gap 0 0"
+							"$columnConstraints": "[370,fill]"
+							"$rowConstraints": "[304][128]"
+						} ) {
+							name: "panel23"
+							"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+							"background": sfield java.awt.Color white
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+								"columns": 4
+								"rows": 4
+								"vgap": 10
+							} ) {
+								name: "panel24"
+								"border": new javax.swing.border.TitledBorder( "Optional" )
+								"background": sfield java.awt.Color white
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label8"
+									"text": "Nori:"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label9"
+									"text": "Available"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label10"
+									"text": "￡1"
+								} )
+								add( new FormComponent( "javax.swing.JSpinner" ) {
+									name: "spinner1"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label11"
+									"text": "Chashu:"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label12"
+									"text": "Available"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label13"
+									"text": "￡2"
+								} )
+								add( new FormComponent( "javax.swing.JSpinner" ) {
+									name: "spinner2"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label14"
+									"text": "Boiled egg:"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label15"
+									"text": "Available"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label16"
+									"text": "￡1"
+								} )
+								add( new FormComponent( "javax.swing.JSpinner" ) {
+									name: "spinner3"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label17"
+									"text": "Shoot:"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label18"
+									"text": "Available"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label19"
+									"text": "￡1"
+								} )
+								add( new FormComponent( "javax.swing.JSpinner" ) {
+									name: "spinner4"
+								} )
+							}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+								"value": "dock center"
+							} )
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+								"$layoutConstraints": "hidemode 3,gap 0 5"
+								"$columnConstraints": "[370,fill]"
+								"$rowConstraints": "[80][40]"
+							} ) {
+								name: "panel25"
+								"border": new javax.swing.border.TitledBorder( "Price" )
+								"background": sfield java.awt.Color white
+								add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+									"columns": 3
+									"rows": 2
+								} ) {
+									name: "panel27"
+									"background": sfield java.awt.Color white
+									add( new FormComponent( "javax.swing.JLabel" ) {
+										name: "label22"
+										"text": "Required"
+									} )
+									add( new FormComponent( "javax.swing.JLabel" ) {
+										name: "label23"
+										"text": "￡"
+										"horizontalAlignment": 11
+									} )
+									add( new FormComponent( "javax.swing.JLabel" ) {
+										name: "label24"
+										"text": "9.99"
+									} )
+									add( new FormComponent( "javax.swing.JLabel" ) {
+										name: "label25"
+										"text": "Optional"
+									} )
+									add( new FormComponent( "javax.swing.JLabel" ) {
+										name: "label26"
+										"text": "￡"
+										"horizontalAlignment": 11
+									} )
+									add( new FormComponent( "javax.swing.JLabel" ) {
+										name: "label27"
+										"text": "x"
+									} )
+								}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+									"value": "cell 0 0,dock center"
+								} )
+								add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+									"columns": 2
+								} ) {
+									name: "panel28"
+									"background": sfield java.awt.Color white
+									add( new FormComponent( "javax.swing.JLabel" ) {
+										name: "label31"
+										"text": "Total price"
+									} )
+									add( new FormComponent( "javax.swing.JLabel" ) {
+										name: "label32"
+										"text": "￡"
+										"horizontalAlignment": 11
+									} )
+									add( new FormComponent( "javax.swing.JLabel" ) {
+										name: "label33"
+										"text": "9.99+x"
+									} )
+								}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+									"value": "cell 0 1,dock center"
+								} )
+							}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+								"value": "cell 0 1"
+							} )
+						}, new FormLayoutConstraints( class java.lang.String ) {
+							"value": "Center"
+						} )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 0"
+					} )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 0 1"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+					"$layoutConstraints": "hidemode 3"
+					"$columnConstraints": "[18,fill][600,fill][382,fill]"
+					"$rowConstraints": "[75]"
+				} ) {
+					name: "panel30"
+					"background": new java.awt.Color( 252, 251, 245, 255 )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+						"columns": 1
+						"rows": 3
+					} ) {
+						name: "panel36"
+						"background": new java.awt.Color( 252, 251, 245, 255 )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label34"
+							"text": "TOTORO Ramen"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label30"
+							"text": "Address: B15 Baker Street in London"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label29"
+							"text": "Telphone: 44 (0) 203 178 4861"
+						} )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 0"
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+						"columns": 4
+					} ) {
+						name: "panel33"
+						"background": new java.awt.Color( 252, 251, 245, 255 )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+							"axis": 0
+						} ) {
+							name: "panel38"
+							"background": &Color0 new java.awt.Color( 252, 251, 245, 255 )
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+							"axis": 0
+						} ) {
+							name: "panel34"
+							"background": #Color0
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button1"
+							"text": "Settle"
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+							"axis": 0
+						} ) {
+							name: "panel35"
+							"background": new java.awt.Color( 252, 251, 245, 255 )
+						} )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 0"
+					} )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 0 2"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+				"axis": 0
+			} ) {
+				name: "panel15"
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "North"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+				"axis": 0
+			} ) {
+				name: "panel16"
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "South"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+				"axis": 0
+			} ) {
+				name: "panel18"
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "West"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+				"axis": 0
+			} ) {
+				name: "panel26"
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "East"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 1000, 620 )
+		} )
+	}
+}
