@@ -2,7 +2,7 @@
  * Created by JFormDesigner on Sun Apr 19 11:23:24 GMT+08:00 2020
  */
 
-package gui.progressGui;
+package newgui.order;
 
 import java.awt.*;
 import javax.swing.*;
