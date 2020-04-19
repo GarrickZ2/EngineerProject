@@ -106,9 +106,9 @@ public class OrderMenu extends JPanel {
         storeTelphone = new JLabel();
         nextPanel = new JPanel();
         emptyBox15 = new JPanel();
-        emptyBox16 = new JPanel();
+        returnButton = new JButton();
         settleButton = new JButton();
-        emptyBox17 = new JPanel();
+        emptyBox16 = new JPanel();
         emptyBox11 = new JPanel();
         emptyBox12 = new JPanel();
         emptyBox13 = new JPanel();
@@ -658,23 +658,20 @@ public class OrderMenu extends JPanel {
                     }
                     nextPanel.add(emptyBox15);
 
+                    //---- returnButton ----
+                    returnButton.setText("Return");
+                    nextPanel.add(returnButton);
+
+                    //---- settleButton ----
+                    settleButton.setText("Next");
+                    nextPanel.add(settleButton);
+
                     //======== emptyBox16 ========
                     {
                         emptyBox16.setBackground(new Color(252, 251, 245));
                         emptyBox16.setLayout(new BoxLayout(emptyBox16, BoxLayout.X_AXIS));
                     }
                     nextPanel.add(emptyBox16);
-
-                    //---- settleButton ----
-                    settleButton.setText("Settle");
-                    nextPanel.add(settleButton);
-
-                    //======== emptyBox17 ========
-                    {
-                        emptyBox17.setBackground(new Color(252, 251, 245));
-                        emptyBox17.setLayout(new BoxLayout(emptyBox17, BoxLayout.X_AXIS));
-                    }
-                    nextPanel.add(emptyBox17);
                 }
                 bottomPanel.add(nextPanel, "cell 2 0");
             }
@@ -831,9 +828,9 @@ public class OrderMenu extends JPanel {
     private JLabel storeTelphone;
     private JPanel nextPanel;
     private JPanel emptyBox15;
+    public JButton returnButton;
+    public JButton settleButton;
     private JPanel emptyBox16;
-    private JButton settleButton;
-    private JPanel emptyBox17;
     private JPanel emptyBox11;
     private JPanel emptyBox12;
     private JPanel emptyBox13;
