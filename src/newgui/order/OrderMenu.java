@@ -113,13 +113,13 @@ public class OrderMenu extends JPanel {
         emptyBox12 = new JPanel();
         emptyBox13 = new JPanel();
         emptyBox14 = new JPanel();
-        buttonGroup1 = new ButtonGroup();
-        buttonGroup2 = new ButtonGroup();
-        buttonGroup3 = new ButtonGroup();
-        buttonGroup4 = new ButtonGroup();
-        buttonGroup5 = new ButtonGroup();
-        buttonGroup6 = new ButtonGroup();
-        buttonGroup7 = new ButtonGroup();
+        soupGroup = new ButtonGroup();
+        noodleGroup = new ButtonGroup();
+        onionGroup = new ButtonGroup();
+        noriGroup = new ButtonGroup();
+        chashuGroup = new ButtonGroup();
+        eggGroup = new ButtonGroup();
+        spicinessGroup = new ButtonGroup();
 
         //======== this ========
         setLayout(new BorderLayout());
@@ -703,40 +703,40 @@ public class OrderMenu extends JPanel {
         }
         add(emptyBox14, BorderLayout.EAST);
 
-        //---- buttonGroup1 ----
-        buttonGroup1.add(soup1);
-        buttonGroup1.add(soup2);
-        buttonGroup1.add(soup3);
+        //---- soupGroup ----
+        soupGroup.add(soup1);
+        soupGroup.add(soup2);
+        soupGroup.add(soup3);
 
-        //---- buttonGroup2 ----
-        buttonGroup2.add(noodle1);
-        buttonGroup2.add(noodle2);
-        buttonGroup2.add(noodle3);
+        //---- noodleGroup ----
+        noodleGroup.add(noodle1);
+        noodleGroup.add(noodle2);
+        noodleGroup.add(noodle3);
 
-        //---- buttonGroup3 ----
-        buttonGroup3.add(onion1);
-        buttonGroup3.add(onion2);
-        buttonGroup3.add(onion3);
+        //---- onionGroup ----
+        onionGroup.add(onion1);
+        onionGroup.add(onion2);
+        onionGroup.add(onion3);
 
-        //---- buttonGroup4 ----
-        buttonGroup4.add(nori1);
-        buttonGroup4.add(nori2);
+        //---- noriGroup ----
+        noriGroup.add(nori1);
+        noriGroup.add(nori2);
 
-        //---- buttonGroup5 ----
-        buttonGroup5.add(chashu1);
-        buttonGroup5.add(chashu2);
+        //---- chashuGroup ----
+        chashuGroup.add(chashu1);
+        chashuGroup.add(chashu2);
 
-        //---- buttonGroup6 ----
-        buttonGroup6.add(egg1);
-        buttonGroup6.add(egg2);
+        //---- eggGroup ----
+        eggGroup.add(egg1);
+        eggGroup.add(egg2);
 
-        //---- buttonGroup7 ----
-        buttonGroup7.add(spice0);
-        buttonGroup7.add(spice1);
-        buttonGroup7.add(spice2);
-        buttonGroup7.add(spice3);
-        buttonGroup7.add(spice4);
-        buttonGroup7.add(spice5);
+        //---- spicinessGroup ----
+        spicinessGroup.add(spice0);
+        spicinessGroup.add(spice1);
+        spicinessGroup.add(spice2);
+        spicinessGroup.add(spice3);
+        spicinessGroup.add(spice4);
+        spicinessGroup.add(spice5);
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
@@ -835,12 +835,12 @@ public class OrderMenu extends JPanel {
     private JPanel emptyBox12;
     private JPanel emptyBox13;
     private JPanel emptyBox14;
-    public ButtonGroup buttonGroup1;
-    public ButtonGroup buttonGroup2;
-    public ButtonGroup buttonGroup3;
-    public ButtonGroup buttonGroup4;
-    public ButtonGroup buttonGroup5;
-    public ButtonGroup buttonGroup6;
-    public ButtonGroup buttonGroup7;
+    public ButtonGroup soupGroup;
+    public ButtonGroup noodleGroup;
+    public ButtonGroup onionGroup;
+    public ButtonGroup noriGroup;
+    public ButtonGroup chashuGroup;
+    public ButtonGroup eggGroup;
+    public ButtonGroup spicinessGroup;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

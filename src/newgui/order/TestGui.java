@@ -14,7 +14,8 @@ public class TestGui {
         WebLookAndFeel.initializeManagers ();
         JFrame jf = new JFrame();
         OrderMenu o = new OrderMenu();
-        jf.add(o);
+        Payment p = new Payment();
+        jf.add(p);
         jf.setVisible(true);
         jf.pack();
         jf.setDefaultCloseOperation(EXIT_ON_CLOSE);

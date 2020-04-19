@@ -99,19 +99,19 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "soup1"
 									"text": "Tonkotsu"
-									"$buttonGroup": new FormReference( "buttonGroup1" )
+									"$buttonGroup": new FormReference( "soupGroup" )
 									"font": #SwingDerivedFont0
 								} )
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "soup2"
 									"text": "Shoyo"
-									"$buttonGroup": new FormReference( "buttonGroup1" )
+									"$buttonGroup": new FormReference( "soupGroup" )
 									"font": #SwingDerivedFont0
 								} )
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "soup3"
 									"text": "Shio"
-									"$buttonGroup": new FormReference( "buttonGroup1" )
+									"$buttonGroup": new FormReference( "soupGroup" )
 									"font": #SwingDerivedFont0
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
@@ -122,19 +122,19 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "noodle1"
 									"text": "Soft"
-									"$buttonGroup": new FormReference( "buttonGroup2" )
+									"$buttonGroup": new FormReference( "noodleGroup" )
 									"font": #SwingDerivedFont0
 								} )
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "noodle2"
 									"text": "Medium"
-									"$buttonGroup": new FormReference( "buttonGroup2" )
+									"$buttonGroup": new FormReference( "noodleGroup" )
 									"font": #SwingDerivedFont0
 								} )
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "noodle3"
 									"text": "Firm"
-									"$buttonGroup": new FormReference( "buttonGroup2" )
+									"$buttonGroup": new FormReference( "noodleGroup" )
 									"font": #SwingDerivedFont0
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
@@ -145,19 +145,19 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "onion1"
 									"text": "No please"
-									"$buttonGroup": new FormReference( "buttonGroup3" )
+									"$buttonGroup": new FormReference( "onionGroup" )
 									"font": #SwingDerivedFont0
 								} )
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "onion2"
 									"text": "Just a little"
-									"$buttonGroup": new FormReference( "buttonGroup3" )
+									"$buttonGroup": new FormReference( "onionGroup" )
 									"font": #SwingDerivedFont0
 								} )
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "onion3"
 									"text": "A lot"
-									"$buttonGroup": new FormReference( "buttonGroup3" )
+									"$buttonGroup": new FormReference( "onionGroup" )
 									"font": #SwingDerivedFont0
 								} )
 							}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
@@ -184,13 +184,13 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "nori1"
 									"text": "Yes"
-									"$buttonGroup": new FormReference( "buttonGroup4" )
+									"$buttonGroup": new FormReference( "noriGroup" )
 									"font": #SwingDerivedFont0
 								} )
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "nori2"
 									"text": "No"
-									"$buttonGroup": new FormReference( "buttonGroup4" )
+									"$buttonGroup": new FormReference( "noriGroup" )
 									"font": #SwingDerivedFont0
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
@@ -207,13 +207,13 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "chashu1"
 									"text": "Yes"
-									"$buttonGroup": new FormReference( "buttonGroup5" )
+									"$buttonGroup": new FormReference( "chashuGroup" )
 									"font": #SwingDerivedFont0
 								} )
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "chashu2"
 									"text": "No"
-									"$buttonGroup": new FormReference( "buttonGroup5" )
+									"$buttonGroup": new FormReference( "chashuGroup" )
 									"font": #SwingDerivedFont0
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
@@ -230,13 +230,13 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "egg1"
 									"text": "Yes"
-									"$buttonGroup": new FormReference( "buttonGroup6" )
+									"$buttonGroup": new FormReference( "eggGroup" )
 									"font": #SwingDerivedFont0
 								} )
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "egg2"
 									"text": "No"
-									"$buttonGroup": new FormReference( "buttonGroup6" )
+									"$buttonGroup": new FormReference( "eggGroup" )
 									"font": #SwingDerivedFont0
 								} )
 							}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
@@ -255,37 +255,37 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "spice0"
 									"text": "0"
-									"$buttonGroup": new FormReference( "buttonGroup7" )
+									"$buttonGroup": new FormReference( "spicinessGroup" )
 									"font": #SwingDerivedFont0
 								} )
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "spice1"
 									"text": "1"
-									"$buttonGroup": new FormReference( "buttonGroup7" )
+									"$buttonGroup": new FormReference( "spicinessGroup" )
 									"font": #SwingDerivedFont0
 								} )
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "spice2"
 									"text": "2"
-									"$buttonGroup": new FormReference( "buttonGroup7" )
+									"$buttonGroup": new FormReference( "spicinessGroup" )
 									"font": #SwingDerivedFont0
 								} )
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "spice3"
 									"text": "3"
-									"$buttonGroup": new FormReference( "buttonGroup7" )
+									"$buttonGroup": new FormReference( "spicinessGroup" )
 									"font": #SwingDerivedFont0
 								} )
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "spice4"
 									"text": "4"
-									"$buttonGroup": new FormReference( "buttonGroup7" )
+									"$buttonGroup": new FormReference( "spicinessGroup" )
 									"font": #SwingDerivedFont0
 								} )
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "spice5"
 									"text": "5"
-									"$buttonGroup": new FormReference( "buttonGroup7" )
+									"$buttonGroup": new FormReference( "spicinessGroup" )
 									"font": #SwingDerivedFont0
 								} )
 							}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
@@ -658,7 +658,7 @@ new FormModel {
 			"size": new java.awt.Dimension( 1000, 620 )
 		} )
 		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
-			name: "buttonGroup1"
+			name: "soupGroup"
 			auxiliary() {
 				"JavaCodeGenerator.variableModifiers": 1
 				"JavaCodeGenerator.variableLocal": false
@@ -667,7 +667,7 @@ new FormModel {
 			"location": new java.awt.Point( 0, 636 )
 		} )
 		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
-			name: "buttonGroup2"
+			name: "noodleGroup"
 			auxiliary() {
 				"JavaCodeGenerator.variableModifiers": 1
 				"JavaCodeGenerator.variableLocal": false
@@ -676,7 +676,7 @@ new FormModel {
 			"location": new java.awt.Point( 115, 635 )
 		} )
 		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
-			name: "buttonGroup3"
+			name: "onionGroup"
 			auxiliary() {
 				"JavaCodeGenerator.variableModifiers": 1
 				"JavaCodeGenerator.variableLocal": false
@@ -685,7 +685,7 @@ new FormModel {
 			"location": new java.awt.Point( 0, 695 )
 		} )
 		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
-			name: "buttonGroup4"
+			name: "noriGroup"
 			auxiliary() {
 				"JavaCodeGenerator.variableModifiers": 1
 				"JavaCodeGenerator.variableLocal": false
@@ -694,7 +694,7 @@ new FormModel {
 			"location": new java.awt.Point( 110, 695 )
 		} )
 		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
-			name: "buttonGroup5"
+			name: "chashuGroup"
 			auxiliary() {
 				"JavaCodeGenerator.variableModifiers": 1
 				"JavaCodeGenerator.variableLocal": false
@@ -703,7 +703,7 @@ new FormModel {
 			"location": new java.awt.Point( 0, 750 )
 		} )
 		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
-			name: "buttonGroup6"
+			name: "eggGroup"
 			auxiliary() {
 				"JavaCodeGenerator.variableModifiers": 1
 				"JavaCodeGenerator.variableLocal": false
@@ -712,7 +712,7 @@ new FormModel {
 			"location": new java.awt.Point( 110, 750 )
 		} )
 		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
-			name: "buttonGroup7"
+			name: "spicinessGroup"
 			auxiliary() {
 				"JavaCodeGenerator.variableModifiers": 1
 				"JavaCodeGenerator.variableLocal": false
