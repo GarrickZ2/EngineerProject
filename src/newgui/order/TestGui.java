@@ -1,6 +1,7 @@
 package newgui.order;
 
 import com.alee.laf.WebLookAndFeel;
+import newgui.management.MenuOperation;
 
 import javax.swing.*;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
@@ -15,7 +16,8 @@ public class TestGui {
         JFrame jf = new JFrame();
         OrderMenu o = new OrderMenu();
         Payment p = new Payment();
-        jf.add(p);
+        MenuOperation mo = new MenuOperation();
+        jf.add(mo);
         jf.setVisible(true);
         jf.pack();
         jf.setDefaultCloseOperation(EXIT_ON_CLOSE);
