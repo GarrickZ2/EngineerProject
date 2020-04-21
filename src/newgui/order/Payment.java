@@ -281,6 +281,7 @@ public class Payment extends JPanel {
 
                                     //======== noodleInfo_empty ========
                                     {
+                                        noodleInfo_empty.setBackground(Color.white);
                                         noodleInfo_empty.setLayout(new GridLayout(4, 1));
 
                                         //======== emptyBox0 ========

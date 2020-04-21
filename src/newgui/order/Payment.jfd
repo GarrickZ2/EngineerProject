@@ -179,6 +179,7 @@ new FormModel {
 											"rows": 4
 										} ) {
 											name: "noodleInfo_empty"
+											"background": sfield java.awt.Color white
 											add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
 												"axis": 0
 											} ) {

@@ -1,0 +1,328 @@
+JFDML JFormDesigner: "6.0.6.2.195" Java: "11.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+				"$columnSpecs": "1000"
+				"$rowSpecs": "100, 445, 75"
+				"$alignLeft": true
+				"$alignTop": true
+			} ) {
+				name: "boardPanel"
+				"background": sfield java.awt.Color white
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+					"$columnSpecs": "25, 950, 25"
+					"$rowSpecs": "100"
+					"$alignLeft": true
+					"$alignTop": true
+				} ) {
+					name: "titlePanel"
+					"background": new java.awt.Color( 248, 193, 84, 255 )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "logo"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/img/titleLogo.png" )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+					"$columnSpecs": "25, 950, 25"
+					"$rowSpecs": "25, 395, 25"
+					"$alignLeft": true
+					"$alignTop": true
+				} ) {
+					name: "bodyPanel"
+					"background": sfield java.awt.Color white
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+						"$columnSpecs": "200, 25, 325, 25, 375"
+						"$rowSpecs": "395"
+						"$alignLeft": true
+						"$alignTop": true
+					} ) {
+						name: "body_innerPanel"
+						"background": sfield java.awt.Color white
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "left_advertisment"
+							"icon": new com.jformdesigner.model.SwingIcon( 0, "/img/Advertisement2(395x200).jpg" )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+							"$columnSpecs": "325"
+							"$rowSpecs": "156, 117, 5, 117"
+							"$alignLeft": true
+							"$alignTop": true
+						} ) {
+							name: "body_midPanel"
+							"background": sfield java.awt.Color white
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+								"columns": 2
+								"rows": 4
+							} ) {
+								name: "changablePanel"
+								"border": new javax.swing.border.TitledBorder( "Changable information" )
+								"background": sfield java.awt.Color white
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label_fName"
+									"text": "First name:"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "sug_fName"
+									"text": "Huang"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label_lName"
+									"text": "Last name:"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "sug_lName"
+									"text": "Huang"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label_telephone"
+									"text": "Telephone:"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "sug_telephone"
+									"text": "15500043370"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label_eMail"
+									"text": "E-mail:"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "sug_eMail"
+									"text": "447243910@qq.com"
+								} )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+								"columns": 2
+								"rows": 3
+							} ) {
+								name: "unchangablePanel"
+								"border": new javax.swing.border.TitledBorder( "Unchangable information" )
+								"background": sfield java.awt.Color white
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label_membershipNumber"
+									"text": "Membership number:"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "membershipNumber"
+									"text": "00000001"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label_registrationDate"
+									"text": "Registration date:"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "regDate"
+									"text": "(Optional)2020-04-05"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label_couponNumber"
+									"text": "Coupon number:"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "coupon"
+									"text": "5"
+								} )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridy": 1
+							} )
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+								"columns": 2
+								"rows": 3
+							} ) {
+								name: "lastCosumptionPanel"
+								"border": new javax.swing.border.TitledBorder( "Last Consumption" )
+								"background": sfield java.awt.Color white
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label_consumptionTime"
+									"text": "Time:"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "consumptionTime"
+									"text": "2020-04-05 11:22:30"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label_consumptionCost"
+									"text": "Cost:"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "consumptionCost"
+									"text": "￡11.9"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label_consumptionUseCoupon"
+									"text": "Use coupon:"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "consumptionUseCoupon"
+									"text": "False"
+								} )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridy": 3
+							} )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 2
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+							"$columnSpecs": "375"
+							"$rowSpecs": "125, 10, 160, 10, 40, 10, 40"
+							"$alignLeft": true
+							"$alignTop": true
+						} ) {
+							name: "body_rightPanel"
+							"background": sfield java.awt.Color white
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "right_advertisement"
+								"icon": new com.jformdesigner.model.SwingIcon( 0, "/img/ad3(125x375).jpg" )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+								"$columnSpecs": "25, 120:1.0, 195:1.0, 25"
+								"$rowSpecs": "0:1.0, 0:1.0, 0:1.0, 0:1.0"
+								"$vGap": 5
+								"$alignTop": true
+								"$alignLeft": true
+							} ) {
+								name: "changeInfoPanel"
+								"border": new javax.swing.border.TitledBorder( null, "Change your information here", 4, 0, new java.awt.Font( "Microsoft YaHei UI", 1, 12 ), null )
+								"background": sfield java.awt.Color white
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label_change_fName"
+									"text": "First name:"
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+									"gridx": 1
+								} )
+								add( new FormComponent( "javax.swing.JTextField" ) {
+									name: "change_fName"
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+									"gridx": 2
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label_change_lName"
+									"text": "Last name:"
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+									"gridy": 1
+									"gridx": 1
+								} )
+								add( new FormComponent( "javax.swing.JTextField" ) {
+									name: "change_lName"
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+									"gridx": 2
+									"gridy": 1
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label_change_telephone"
+									"text": "Telephone:"
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+									"gridy": 2
+									"gridx": 1
+								} )
+								add( new FormComponent( "javax.swing.JTextField" ) {
+									name: "change_telephone"
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+									"gridx": 2
+									"gridy": 2
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label_change_eMail"
+									"text": "E-mail:"
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+									"gridy": 3
+									"gridx": 1
+								} )
+								add( new FormComponent( "javax.swing.JTextField" ) {
+									name: "change_eMail"
+								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+									"gridx": 2
+									"gridy": 3
+								} )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridy": 2
+							} )
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+								"columns": 3
+							} ) {
+								name: "buttonPanel"
+								"background": sfield java.awt.Color white
+								add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+									"axis": 0
+								} ) {
+									name: "emptyBox0"
+									"background": sfield java.awt.Color white
+								} )
+								add( new FormComponent( "javax.swing.JButton" ) {
+									name: "saveAndChangeButton"
+									"text": "Check&Change"
+								} )
+								add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+									"axis": 0
+								} ) {
+									name: "emptyBox"
+									"background": sfield java.awt.Color white
+								} )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridy": 4
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "changeSuggestion"
+								"text": "Change successfully/failed"
+								"horizontalAlignment": 0
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+								"gridy": 6
+							} )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 4
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+						"gridy": 1
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 1
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+					"$columnSpecs": "20, 990"
+					"$rowSpecs": "5, center:65:1.0, 5"
+					"$alignTop": true
+					"$alignLeft": true
+				} ) {
+					name: "bottomPanel"
+					"background": new java.awt.Color( 252, 251, 245, 255 )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+						"columns": 1
+						"rows": 3
+					} ) {
+						name: "bottom_innerPanel"
+						"background": new java.awt.Color( 252, 251, 245, 255 )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "storeName"
+							"text": "TOTORO Ramen"
+							"background": new java.awt.Color( 252, 251, 245, 255 )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "storeAddress"
+							"text": "Address: B15 Baker Street in London"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "storeTelphone"
+							"text": "Telphone: 44 (0) 203 178 4861"
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+						"gridy": 1
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 2
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 1000, 620 )
+		} )
+	}
+}

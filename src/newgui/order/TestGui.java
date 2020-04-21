@@ -2,6 +2,7 @@ package newgui.order;
 
 import com.alee.laf.WebLookAndFeel;
 import newgui.management.MenuOperation;
+import newgui.membership.MemberChangeInfo;
 
 import javax.swing.*;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
@@ -17,7 +18,8 @@ public class TestGui {
         OrderMenu o = new OrderMenu();
         Payment p = new Payment();
         MenuOperation mo = new MenuOperation();
-        jf.add(mo);
+        MemberChangeInfo mci = new MemberChangeInfo();
+        jf.add(mci);
         jf.setVisible(true);
         jf.pack();
         jf.setDefaultCloseOperation(EXIT_ON_CLOSE);
