@@ -19,6 +19,9 @@ public class Payment extends JPanel {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
+        panel2 = new JPanel();
+        panel3 = new JPanel();
+        panel4 = new JPanel();
         boardPanel = new JPanel();
         titlePanel = new JPanel();
         logo = new JLabel();
@@ -96,24 +99,45 @@ public class Payment extends JPanel {
         useCoupon = new JCheckBox();
         billPanel = new JPanel();
         label_foodCost = new JLabel();
-        food = new JLabel();
+        noodlePrice = new JLabel();
+        label_extraCost = new JLabel();
+        extraPrice = new JLabel();
         label_packingCost = new JLabel();
-        packing = new JLabel();
-        label_serviceCost = new JLabel();
-        service = new JLabel();
+        packingPrice = new JLabel();
         label_totalCost = new JLabel();
-        total = new JLabel();
+        totalPrice = new JLabel();
+        panel1 = new JPanel();
+        returnButton = new JButton();
         settleButton = new JButton();
         bottomPanel = new JPanel();
         bottom_innerPanel = new JPanel();
         storeName = new JLabel();
         storeAddress = new JLabel();
         storeTelphone = new JLabel();
+        panel6 = new JPanel();
         diningMethod = new ButtonGroup();
         payingMethod = new ButtonGroup();
 
         //======== this ========
         setLayout(new BorderLayout());
+
+        //======== panel2 ========
+        {
+            panel2.setLayout(new BoxLayout(panel2, BoxLayout.X_AXIS));
+        }
+        add(panel2, BorderLayout.NORTH);
+
+        //======== panel3 ========
+        {
+            panel3.setLayout(new BoxLayout(panel3, BoxLayout.X_AXIS));
+        }
+        add(panel3, BorderLayout.SOUTH);
+
+        //======== panel4 ========
+        {
+            panel4.setLayout(new BoxLayout(panel4, BoxLayout.X_AXIS));
+        }
+        add(panel4, BorderLayout.WEST);
 
         //======== boardPanel ========
         {
@@ -445,9 +469,9 @@ public class Payment extends JPanel {
                             mb_rightPanel.setBackground(Color.white);
                             mb_rightPanel.setLayout(new GridBagLayout());
                             ((GridBagLayout)mb_rightPanel.getLayout()).columnWidths = new int[] {220, 0};
-                            ((GridBagLayout)mb_rightPanel.getLayout()).rowHeights = new int[] {200, 160, 45, 0};
+                            ((GridBagLayout)mb_rightPanel.getLayout()).rowHeights = new int[] {200, 160, 45, 0, 0};
                             ((GridBagLayout)mb_rightPanel.getLayout()).columnWeights = new double[] {0.0, 1.0E-4};
-                            ((GridBagLayout)mb_rightPanel.getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 1.0E-4};
+                            ((GridBagLayout)mb_rightPanel.getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 0.0, 1.0E-4};
 
                             //======== membershipPanel ========
                             {
@@ -526,7 +550,7 @@ public class Payment extends JPanel {
                                     memidSuggestPanel.setLayout(new GridLayout(1, 2));
 
                                     //---- label_memberIdSug ----
-                                    label_memberIdSug.setText("Membership id:");
+                                    label_memberIdSug.setText("Membership ID:");
                                     memidSuggestPanel.add(label_memberIdSug);
 
                                     //---- membershipNumber ----
@@ -574,44 +598,54 @@ public class Payment extends JPanel {
                                 billPanel.setLayout(new GridLayout(4, 2));
 
                                 //---- label_foodCost ----
-                                label_foodCost.setText("Food charge:");
+                                label_foodCost.setText("Noodle Charge:");
                                 billPanel.add(label_foodCost);
 
-                                //---- food ----
-                                food.setText("\uffe1");
-                                billPanel.add(food);
+                                //---- noodlePrice ----
+                                noodlePrice.setText("\uffe1");
+                                billPanel.add(noodlePrice);
+
+                                //---- label_extraCost ----
+                                label_extraCost.setText("Extra Charge");
+                                billPanel.add(label_extraCost);
+
+                                //---- extraPrice ----
+                                extraPrice.setText("\uffe1");
+                                billPanel.add(extraPrice);
 
                                 //---- label_packingCost ----
-                                label_packingCost.setText("Packing charge:");
+                                label_packingCost.setText("Packing Charge:");
                                 billPanel.add(label_packingCost);
 
-                                //---- packing ----
-                                packing.setText("\uffe1");
-                                billPanel.add(packing);
-
-                                //---- label_serviceCost ----
-                                label_serviceCost.setText("Service charge:");
-                                billPanel.add(label_serviceCost);
-
-                                //---- service ----
-                                service.setText("\uffe1");
-                                billPanel.add(service);
+                                //---- packingPrice ----
+                                packingPrice.setText("\uffe1");
+                                billPanel.add(packingPrice);
 
                                 //---- label_totalCost ----
-                                label_totalCost.setText("Total price:");
+                                label_totalCost.setText("Total Price:");
                                 billPanel.add(label_totalCost);
 
-                                //---- total ----
-                                total.setText("\uffe1");
-                                billPanel.add(total);
+                                //---- totalPrice ----
+                                totalPrice.setText("\uffe1");
+                                billPanel.add(totalPrice);
                             }
                             mb_rightPanel.add(billPanel, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0,
                                 GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                                 new Insets(0, 0, 0, 0), 0, 0));
 
-                            //---- settleButton ----
-                            settleButton.setText("Settle");
-                            mb_rightPanel.add(settleButton, new GridBagConstraints(0, 2, 1, 1, 0.0, 0.0,
+                            //======== panel1 ========
+                            {
+                                panel1.setLayout(new GridLayout(1, 2));
+
+                                //---- returnButton ----
+                                returnButton.setText("Return");
+                                panel1.add(returnButton);
+
+                                //---- settleButton ----
+                                settleButton.setText("Pay");
+                                panel1.add(settleButton);
+                            }
+                            mb_rightPanel.add(panel1, new GridBagConstraints(0, 2, 1, 1, 0.0, 0.0,
                                 GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                                 new Insets(0, 0, 0, 0), 0, 0));
                         }
@@ -668,6 +702,12 @@ public class Payment extends JPanel {
         }
         add(boardPanel, BorderLayout.CENTER);
 
+        //======== panel6 ========
+        {
+            panel6.setLayout(new BoxLayout(panel6, BoxLayout.X_AXIS));
+        }
+        add(panel6, BorderLayout.EAST);
+
         //---- diningMethod ----
         diningMethod.add(eatIn);
         diningMethod.add(takeAway);
@@ -679,6 +719,9 @@ public class Payment extends JPanel {
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
+    private JPanel panel2;
+    private JPanel panel3;
+    private JPanel panel4;
     private JPanel boardPanel;
     private JPanel titlePanel;
     private JLabel logo;
@@ -756,19 +799,22 @@ public class Payment extends JPanel {
     public JCheckBox useCoupon;
     private JPanel billPanel;
     private JLabel label_foodCost;
-    public JLabel food;
+    public JLabel noodlePrice;
+    private JLabel label_extraCost;
+    public JLabel extraPrice;
     private JLabel label_packingCost;
-    public JLabel packing;
-    private JLabel label_serviceCost;
-    public JLabel service;
+    public JLabel packingPrice;
     private JLabel label_totalCost;
-    public JLabel total;
+    public JLabel totalPrice;
+    private JPanel panel1;
+    public JButton returnButton;
     public JButton settleButton;
     private JPanel bottomPanel;
     private JPanel bottom_innerPanel;
     private JLabel storeName;
     private JLabel storeAddress;
     private JLabel storeTelphone;
+    private JPanel panel6;
     public ButtonGroup diningMethod;
     public ButtonGroup payingMethod;
     // JFormDesigner - End of variables declaration  //GEN-END:variables

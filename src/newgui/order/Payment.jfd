@@ -5,6 +5,27 @@ new FormModel {
 	root: new FormRoot {
 		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
 			name: "this"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+				"axis": 0
+			} ) {
+				name: "panel2"
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "North"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+				"axis": 0
+			} ) {
+				name: "panel3"
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "South"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+				"axis": 0
+			} ) {
+				name: "panel4"
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "West"
+			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
 				"$columnSpecs": "1000"
 				"$rowSpecs": "100, 445, 75"
@@ -367,7 +388,7 @@ new FormModel {
 							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
 							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
 								"$columnSpecs": "220"
-								"$rowSpecs": "200, 160, 45"
+								"$rowSpecs": "200, 160, 45, 0"
 								"$alignLeft": true
 								"$alignTop": true
 							} ) {
@@ -456,7 +477,7 @@ new FormModel {
 										"background": sfield java.awt.Color white
 										add( new FormComponent( "javax.swing.JLabel" ) {
 											name: "label_memberIdSug"
-											"text": "Membership id:"
+											"text": "Membership ID:"
 										} )
 										add( new FormComponent( "javax.swing.JLabel" ) {
 											name: "membershipNumber"
@@ -509,10 +530,21 @@ new FormModel {
 									"background": sfield java.awt.Color white
 									add( new FormComponent( "javax.swing.JLabel" ) {
 										name: "label_foodCost"
-										"text": "Food charge:"
+										"text": "Noodle Charge:"
 									} )
 									add( new FormComponent( "javax.swing.JLabel" ) {
-										name: "food"
+										name: "noodlePrice"
+										"text": "￡"
+										auxiliary() {
+											"JavaCodeGenerator.variableModifiers": 1
+										}
+									} )
+									add( new FormComponent( "javax.swing.JLabel" ) {
+										name: "label_extraCost"
+										"text": "Extra Charge"
+									} )
+									add( new FormComponent( "javax.swing.JLabel" ) {
+										name: "extraPrice"
 										"text": "￡"
 										auxiliary() {
 											"JavaCodeGenerator.variableModifiers": 1
@@ -520,21 +552,10 @@ new FormModel {
 									} )
 									add( new FormComponent( "javax.swing.JLabel" ) {
 										name: "label_packingCost"
-										"text": "Packing charge:"
+										"text": "Packing Charge:"
 									} )
 									add( new FormComponent( "javax.swing.JLabel" ) {
-										name: "packing"
-										"text": "￡"
-										auxiliary() {
-											"JavaCodeGenerator.variableModifiers": 1
-										}
-									} )
-									add( new FormComponent( "javax.swing.JLabel" ) {
-										name: "label_serviceCost"
-										"text": "Service charge:"
-									} )
-									add( new FormComponent( "javax.swing.JLabel" ) {
-										name: "service"
+										name: "packingPrice"
 										"text": "￡"
 										auxiliary() {
 											"JavaCodeGenerator.variableModifiers": 1
@@ -542,10 +563,10 @@ new FormModel {
 									} )
 									add( new FormComponent( "javax.swing.JLabel" ) {
 										name: "label_totalCost"
-										"text": "Total price:"
+										"text": "Total Price:"
 									} )
 									add( new FormComponent( "javax.swing.JLabel" ) {
-										name: "total"
+										name: "totalPrice"
 										"text": "￡"
 										auxiliary() {
 											"JavaCodeGenerator.variableModifiers": 1
@@ -554,12 +575,24 @@ new FormModel {
 								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 									"gridy": 1
 								} )
-								add( new FormComponent( "javax.swing.JButton" ) {
-									name: "settleButton"
-									"text": "Settle"
-									auxiliary() {
-										"JavaCodeGenerator.variableModifiers": 1
-									}
+								add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+									"columns": 2
+								} ) {
+									name: "panel1"
+									add( new FormComponent( "javax.swing.JButton" ) {
+										name: "returnButton"
+										"text": "Return"
+										auxiliary() {
+											"JavaCodeGenerator.variableModifiers": 1
+										}
+									} )
+									add( new FormComponent( "javax.swing.JButton" ) {
+										name: "settleButton"
+										"text": "Pay"
+										auxiliary() {
+											"JavaCodeGenerator.variableModifiers": 1
+										}
+									} )
 								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 									"gridy": 2
 								} )
@@ -612,6 +645,13 @@ new FormModel {
 				} )
 			}, new FormLayoutConstraints( class java.lang.String ) {
 				"value": "Center"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+				"axis": 0
+			} ) {
+				name: "panel6"
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "East"
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )

@@ -1,17 +1,18 @@
 import com.alee.laf.WebLookAndFeel;
+import database.MenuData;
 import newgui.Index;
 import gui.management.ManageIndex;
 import gui.membership.MemberIndex;
-import gui.order.OrderGUI;
+import newgui.order.OrderGUI;
 
 import javax.swing.*;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.awt.*;
-
 /**
  * @author Zixuan Zhang
  */
 public class MainVersion2 extends JFrame {
+    MenuData menuData;
     CardLayout card;
     JPanel content;
     Index index;
@@ -34,6 +35,11 @@ public class MainVersion2 extends JFrame {
         content.add(memberIndex, "membership");
         content.add(manageIndex, "manage");
 
+        index.dinner.addActionListener(e -> card.show(content, "order"));
+        orderGui.orderMenu.returnButton.addActionListener(e -> {
+            card.show(content, "index");
+        });
+
         //todo
 
 
@@ -42,8 +48,8 @@ public class MainVersion2 extends JFrame {
 //        index.membership.addActionListener(e -> card.show(content, "membership"));
 //
 //        memberIndex.checkPanel.back.addActionListener(e ->{
-//            orderGui.membership = memberIndex.membership;
-//            System.out.println("Member in order:" + orderGui.membership);
+//            OrderGUI.membership = memberIndex.membership;
+//            System.out.println("Member in order:" + OrderGUI.membership);
 //            System.out.println("Member in index:" + memberIndex.membership);
 //        });
 //
@@ -66,9 +72,9 @@ public class MainVersion2 extends JFrame {
 //        });
 //
 //
-//        orderGui.back.addActionListener(e -> card.show(content, "index"));
+//        OrderGUI.back.addActionListener(e -> card.show(content, "index"));
 //        //todo Page after finishing payment
-//        orderGui.payment.settleButton.addActionListener(e -> card.show(content, "index"));
+//        OrderGUI.payment.settleButton.addActionListener(e -> card.show(content, "index"));
 //        memberIndex.selectPanel.back.addActionListener(e -> card.show(content, "index"));
 //        manageIndex.manageSelect.back.addActionListener(e -> card.show(content, "index"));
         this.setTitle("TOTORO RAMEN");
@@ -77,6 +83,7 @@ public class MainVersion2 extends JFrame {
         this.pack();
 
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setSize(1040, 680);
         this.setLocation((dim.width - this.getWidth()) / 2, (dim.height - this.getHeight()) / 3);
         this.setVisible(true);
     }

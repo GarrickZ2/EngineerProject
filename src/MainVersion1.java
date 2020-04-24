@@ -52,7 +52,6 @@ public class MainVersion1 extends JFrame {
             while (true) {
                 JPasswordField pwd = new JPasswordField();
                 Object[] message = {"Input password:", pwd};
-//                String i = JOptionPane.showConfirmDialog(null, message, "Please input manager password", JOptionPane.OK_OPTION, JOptionPane.QUESTION_MESSAGE);
 
                 String pass = JOptionPane.showInputDialog(null, "Please input manager password(123456):");
                 if (pass == null) {

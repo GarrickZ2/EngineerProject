@@ -27,12 +27,10 @@ public class Index extends JPanel {
         panel10 = new JPanel();
         panel11 = new JPanel();
         panel4 = new JPanel();
-        button1 = new JButton();
+        dinner = new JButton();
         panel5 = new JPanel();
-        button2 = new JButton();
-        panel6 = new JPanel();
-        button3 = new JButton();
-        button4 = new JButton();
+        isVip = new JButton();
+        becomeVip = new JButton();
         panel7 = new JPanel();
         button5 = new JButton();
         button6 = new JButton();
@@ -105,13 +103,13 @@ public class Index extends JPanel {
                 {
                     panel4.setLayout(new GridLayout(1, 1));
 
-                    //---- button1 ----
-                    button1.setText("Order");
-                    button1.setPreferredSize(new Dimension(78, 80));
-                    button1.setBackground(new Color(255, 153, 102));
-                    button1.setForeground(Color.white);
-                    button1.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
-                    panel4.add(button1);
+                    //---- dinner ----
+                    dinner.setText("Order");
+                    dinner.setPreferredSize(new Dimension(78, 80));
+                    dinner.setBackground(new Color(255, 153, 102));
+                    dinner.setForeground(Color.white);
+                    dinner.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
+                    panel4.add(dinner);
                 }
                 panel11.add(panel4);
 
@@ -119,35 +117,21 @@ public class Index extends JPanel {
                 {
                     panel5.setLayout(new GridLayout(1, 2));
 
-                    //---- button2 ----
-                    button2.setText("Menu");
-                    button2.setPreferredSize(new Dimension(78, 80));
-                    button2.setBackground(new Color(255, 102, 102));
-                    button2.setForeground(Color.white);
-                    button2.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
-                    panel5.add(button2);
+                    //---- isVip ----
+                    isVip.setText("I'm VIP");
+                    isVip.setPreferredSize(new Dimension(78, 80));
+                    isVip.setBackground(new Color(51, 255, 255));
+                    isVip.setForeground(Color.white);
+                    isVip.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
+                    panel5.add(isVip);
 
-                    //======== panel6 ========
-                    {
-                        panel6.setLayout(new GridLayout(1, 2));
-
-                        //---- button3 ----
-                        button3.setText("I'm VIP");
-                        button3.setPreferredSize(new Dimension(78, 80));
-                        button3.setBackground(new Color(51, 255, 255));
-                        button3.setForeground(Color.white);
-                        button3.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
-                        panel6.add(button3);
-
-                        //---- button4 ----
-                        button4.setText("Become VIP");
-                        button4.setPreferredSize(new Dimension(78, 80));
-                        button4.setBackground(new Color(0, 255, 102));
-                        button4.setForeground(Color.white);
-                        button4.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
-                        panel6.add(button4);
-                    }
-                    panel5.add(panel6);
+                    //---- becomeVip ----
+                    becomeVip.setText("Become VIP");
+                    becomeVip.setPreferredSize(new Dimension(78, 80));
+                    becomeVip.setBackground(new Color(0, 255, 102));
+                    becomeVip.setForeground(Color.white);
+                    becomeVip.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
+                    panel5.add(becomeVip);
                 }
                 panel11.add(panel5);
 
@@ -215,12 +199,10 @@ public class Index extends JPanel {
     private JPanel panel10;
     private JPanel panel11;
     private JPanel panel4;
-    private JButton button1;
+    public JButton dinner;
     private JPanel panel5;
-    private JButton button2;
-    private JPanel panel6;
-    private JButton button3;
-    private JButton button4;
+    public JButton isVip;
+    public JButton becomeVip;
     private JPanel panel7;
     private JButton button5;
     private JButton button6;
