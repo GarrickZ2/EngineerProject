@@ -635,6 +635,7 @@ public class Payment extends JPanel {
 
                             //======== panel1 ========
                             {
+                                panel1.setBackground(Color.white);
                                 panel1.setLayout(new GridLayout(1, 2));
 
                                 //---- returnButton ----
