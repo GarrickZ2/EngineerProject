@@ -168,3 +168,22 @@ Print Time:2020-04-12 02:39:36
 Address: Totoro Ramen, B15 Baker Street in London
 Tel: 44 (0) 203 178 4861
 
+<Receipt>
+Serial Number:125f471ad7fd
+Time:2020-04-24 13:46:53
+NoMembership
+---------------------------------------------------------------------------
+Menu                                         Number      Single       Price      
+Noodle(Tonkotsu, Soft, Just a little)          1         ￡10.0       ￡10.0       
+Nori                                           0         ￡1.0        ￡0.0        
+Egg                                            0         ￡1.0        ￡0.0        
+Shoot                                          0         ￡2.0        ￡0.0        
+Chashu                                         0         ￡2.0        ￡0.0        
+---------------------------------------------------------------------------
+Total                                                                 ￡10.0      
+Paying Method:                                                        null       
+===========================================================================
+Print Time:2020-04-24 01:46:53
+Address: Totoro Ramen, B15 Baker Street in London
+Tel: 44 (0) 203 178 4861
+

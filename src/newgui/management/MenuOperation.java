@@ -22,6 +22,13 @@ public class MenuOperation extends JPanel {
         titlePanel = new JPanel();
         logo = new JLabel();
         bodyPanel = new JPanel();
+        emptyBox4 = new JPanel();
+        indexPanel = new JPanel();
+        menuOperationPanel = new JPanel();
+        indexLabel_menuOperation = new JLabel();
+        indexLabel_dataAnalysis = new JLabel();
+        indexLabel_membershipOperation = new JLabel();
+        emptyBox5 = new JPanel();
         body_innerPanel = new JPanel();
         bi_leftPanel = new JPanel();
         label_menuSuggested = new JLabel();
@@ -149,9 +156,68 @@ public class MenuOperation extends JPanel {
                 bodyPanel.setBackground(Color.white);
                 bodyPanel.setLayout(new GridBagLayout());
                 ((GridBagLayout)bodyPanel.getLayout()).columnWidths = new int[] {25, 950, 25, 0};
-                ((GridBagLayout)bodyPanel.getLayout()).rowHeights = new int[] {25, 395, 25, 0};
+                ((GridBagLayout)bodyPanel.getLayout()).rowHeights = new int[] {30, 395, 20, 0};
                 ((GridBagLayout)bodyPanel.getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 1.0E-4};
                 ((GridBagLayout)bodyPanel.getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 1.0E-4};
+
+                //======== emptyBox4 ========
+                {
+                    emptyBox4.setBackground(new Color(242, 156, 59, 86));
+                    emptyBox4.setLayout(new BoxLayout(emptyBox4, BoxLayout.X_AXIS));
+                }
+                bodyPanel.add(emptyBox4, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
+                    GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                    new Insets(0, 0, 0, 0), 0, 0));
+
+                //======== indexPanel ========
+                {
+                    indexPanel.setBackground(new Color(242, 156, 59, 86));
+                    indexPanel.setLayout(new GridBagLayout());
+                    ((GridBagLayout)indexPanel.getLayout()).columnWidths = new int[] {150, 150, 150, 150, 350, 0};
+                    ((GridBagLayout)indexPanel.getLayout()).rowHeights = new int[] {30, 0};
+                    ((GridBagLayout)indexPanel.getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 0.0, 0.0, 1.0E-4};
+                    ((GridBagLayout)indexPanel.getLayout()).rowWeights = new double[] {0.0, 1.0E-4};
+
+                    //======== menuOperationPanel ========
+                    {
+                        menuOperationPanel.setBackground(Color.white);
+                        menuOperationPanel.setLayout(new GridLayout(1, 1));
+
+                        //---- indexLabel_menuOperation ----
+                        indexLabel_menuOperation.setText("Menu operation");
+                        indexLabel_menuOperation.setHorizontalAlignment(SwingConstants.CENTER);
+                        menuOperationPanel.add(indexLabel_menuOperation);
+                    }
+                    indexPanel.add(menuOperationPanel, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
+                        GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                        new Insets(0, 0, 0, 0), 0, 0));
+
+                    //---- indexLabel_dataAnalysis ----
+                    indexLabel_dataAnalysis.setText("Data analysis");
+                    indexLabel_dataAnalysis.setHorizontalAlignment(SwingConstants.CENTER);
+                    indexPanel.add(indexLabel_dataAnalysis, new GridBagConstraints(2, 0, 1, 1, 0.0, 0.0,
+                        GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                        new Insets(0, 0, 0, 0), 0, 0));
+
+                    //---- indexLabel_membershipOperation ----
+                    indexLabel_membershipOperation.setText("Membership operation");
+                    indexLabel_membershipOperation.setHorizontalAlignment(SwingConstants.CENTER);
+                    indexPanel.add(indexLabel_membershipOperation, new GridBagConstraints(3, 0, 1, 1, 0.0, 0.0,
+                        GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                        new Insets(0, 0, 0, 0), 0, 0));
+                }
+                bodyPanel.add(indexPanel, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
+                    GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                    new Insets(0, 0, 0, 0), 0, 0));
+
+                //======== emptyBox5 ========
+                {
+                    emptyBox5.setBackground(new Color(242, 156, 59, 86));
+                    emptyBox5.setLayout(new BoxLayout(emptyBox5, BoxLayout.X_AXIS));
+                }
+                bodyPanel.add(emptyBox5, new GridBagConstraints(2, 0, 1, 1, 0.0, 0.0,
+                    GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                    new Insets(0, 0, 0, 0), 0, 0));
 
                 //======== body_innerPanel ========
                 {
@@ -654,6 +720,13 @@ public class MenuOperation extends JPanel {
     private JPanel titlePanel;
     private JLabel logo;
     private JPanel bodyPanel;
+    private JPanel emptyBox4;
+    private JPanel indexPanel;
+    private JPanel menuOperationPanel;
+    private JLabel indexLabel_menuOperation;
+    private JLabel indexLabel_dataAnalysis;
+    private JLabel indexLabel_membershipOperation;
+    private JPanel emptyBox5;
     private JPanel body_innerPanel;
     private JPanel bi_leftPanel;
     private JLabel label_menuSuggested;

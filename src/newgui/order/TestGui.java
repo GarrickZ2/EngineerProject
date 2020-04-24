@@ -2,7 +2,7 @@ package newgui.order;
 
 import com.alee.laf.WebLookAndFeel;
 import newgui.management.MenuOperation;
-import newgui.membership.CreatePanel;
+import newgui.membership.CreateMember;
 import newgui.membership.MemberChangeInfo;
 
 import javax.swing.*;
@@ -19,8 +19,9 @@ public class TestGui {
         OrderMenu o = new OrderMenu();
         Payment p = new Payment();
         MenuOperation mo = new MenuOperation();
-        CreatePanel mci = new CreatePanel();
-        jf.add(mci);
+        MemberChangeInfo mci = new MemberChangeInfo();
+        CreateMember cm = new CreateMember();
+        jf.add(cm);
         jf.setVisible(true);
         jf.pack();
         jf.setDefaultCloseOperation(EXIT_ON_CLOSE);

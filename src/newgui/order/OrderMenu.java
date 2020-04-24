@@ -109,10 +109,6 @@ public class OrderMenu extends JPanel {
         returnButton = new JButton();
         settleButton = new JButton();
         emptyBox16 = new JPanel();
-        emptyBox11 = new JPanel();
-        emptyBox12 = new JPanel();
-        emptyBox13 = new JPanel();
-        emptyBox14 = new JPanel();
         soupGroup = new ButtonGroup();
         noodleGroup = new ButtonGroup();
         onionGroup = new ButtonGroup();
@@ -679,30 +675,6 @@ public class OrderMenu extends JPanel {
         }
         add(panelBoard, BorderLayout.CENTER);
 
-        //======== emptyBox11 ========
-        {
-            emptyBox11.setLayout(new BoxLayout(emptyBox11, BoxLayout.X_AXIS));
-        }
-        add(emptyBox11, BorderLayout.NORTH);
-
-        //======== emptyBox12 ========
-        {
-            emptyBox12.setLayout(new BoxLayout(emptyBox12, BoxLayout.X_AXIS));
-        }
-        add(emptyBox12, BorderLayout.SOUTH);
-
-        //======== emptyBox13 ========
-        {
-            emptyBox13.setLayout(new BoxLayout(emptyBox13, BoxLayout.X_AXIS));
-        }
-        add(emptyBox13, BorderLayout.WEST);
-
-        //======== emptyBox14 ========
-        {
-            emptyBox14.setLayout(new BoxLayout(emptyBox14, BoxLayout.X_AXIS));
-        }
-        add(emptyBox14, BorderLayout.EAST);
-
         //---- soupGroup ----
         soupGroup.add(soup1);
         soupGroup.add(soup2);
@@ -831,10 +803,6 @@ public class OrderMenu extends JPanel {
     public JButton returnButton;
     public JButton settleButton;
     private JPanel emptyBox16;
-    private JPanel emptyBox11;
-    private JPanel emptyBox12;
-    private JPanel emptyBox13;
-    private JPanel emptyBox14;
     public ButtonGroup soupGroup;
     public ButtonGroup noodleGroup;
     public ButtonGroup onionGroup;

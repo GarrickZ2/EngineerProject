@@ -625,34 +625,6 @@ new FormModel {
 			}, new FormLayoutConstraints( class java.lang.String ) {
 				"value": "Center"
 			} )
-			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
-				"axis": 0
-			} ) {
-				name: "emptyBox11"
-			}, new FormLayoutConstraints( class java.lang.String ) {
-				"value": "North"
-			} )
-			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
-				"axis": 0
-			} ) {
-				name: "emptyBox12"
-			}, new FormLayoutConstraints( class java.lang.String ) {
-				"value": "South"
-			} )
-			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
-				"axis": 0
-			} ) {
-				name: "emptyBox13"
-			}, new FormLayoutConstraints( class java.lang.String ) {
-				"value": "West"
-			} )
-			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
-				"axis": 0
-			} ) {
-				name: "emptyBox14"
-			}, new FormLayoutConstraints( class java.lang.String ) {
-				"value": "East"
-			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
 			"size": new java.awt.Dimension( 1000, 620 )
@@ -722,3 +694,4 @@ new FormModel {
 		} )
 	}
 }
+
