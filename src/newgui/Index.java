@@ -26,10 +26,14 @@ public class Index extends JPanel {
         label5 = new JLabel();
         panel10 = new JPanel();
         panel11 = new JPanel();
+        panel4 = new JPanel();
         button1 = new JButton();
+        panel5 = new JPanel();
         button2 = new JButton();
+        panel6 = new JPanel();
         button3 = new JButton();
         button4 = new JButton();
+        panel7 = new JPanel();
         button5 = new JButton();
         button6 = new JButton();
         label4 = new JLabel();
@@ -95,55 +99,79 @@ public class Index extends JPanel {
 
             //======== panel11 ========
             {
-                panel11.setLayout(new GridLayout(3, 2, 10, 10));
+                panel11.setLayout(new GridLayout(3, 1, 10, 10));
 
-                //---- button1 ----
-                button1.setText("Order");
-                button1.setPreferredSize(new Dimension(78, 80));
-                button1.setBackground(new Color(255, 153, 102));
-                button1.setForeground(Color.white);
-                button1.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
-                panel11.add(button1);
+                //======== panel4 ========
+                {
+                    panel4.setLayout(new GridLayout(1, 1));
 
-                //---- button2 ----
-                button2.setText("Menu");
-                button2.setPreferredSize(new Dimension(78, 80));
-                button2.setBackground(new Color(255, 102, 102));
-                button2.setForeground(Color.white);
-                button2.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
-                panel11.add(button2);
+                    //---- button1 ----
+                    button1.setText("Order");
+                    button1.setPreferredSize(new Dimension(78, 80));
+                    button1.setBackground(new Color(255, 153, 102));
+                    button1.setForeground(Color.white);
+                    button1.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
+                    panel4.add(button1);
+                }
+                panel11.add(panel4);
 
-                //---- button3 ----
-                button3.setText("I'm VIP");
-                button3.setPreferredSize(new Dimension(78, 80));
-                button3.setBackground(new Color(51, 255, 255));
-                button3.setForeground(Color.white);
-                button3.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
-                panel11.add(button3);
+                //======== panel5 ========
+                {
+                    panel5.setLayout(new GridLayout(1, 2));
 
-                //---- button4 ----
-                button4.setText("Become VIP");
-                button4.setPreferredSize(new Dimension(78, 80));
-                button4.setBackground(new Color(0, 255, 102));
-                button4.setForeground(Color.white);
-                button4.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
-                panel11.add(button4);
+                    //---- button2 ----
+                    button2.setText("Menu");
+                    button2.setPreferredSize(new Dimension(78, 80));
+                    button2.setBackground(new Color(255, 102, 102));
+                    button2.setForeground(Color.white);
+                    button2.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
+                    panel5.add(button2);
 
-                //---- button5 ----
-                button5.setText("I'm Manager");
-                button5.setPreferredSize(new Dimension(78, 80));
-                button5.setBackground(new Color(153, 153, 255));
-                button5.setForeground(Color.white);
-                button5.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
-                panel11.add(button5);
+                    //======== panel6 ========
+                    {
+                        panel6.setLayout(new GridLayout(1, 2));
 
-                //---- button6 ----
-                button6.setText("Comment");
-                button6.setPreferredSize(new Dimension(78, 80));
-                button6.setBackground(new Color(255, 102, 255));
-                button6.setForeground(Color.white);
-                button6.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
-                panel11.add(button6);
+                        //---- button3 ----
+                        button3.setText("I'm VIP");
+                        button3.setPreferredSize(new Dimension(78, 80));
+                        button3.setBackground(new Color(51, 255, 255));
+                        button3.setForeground(Color.white);
+                        button3.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
+                        panel6.add(button3);
+
+                        //---- button4 ----
+                        button4.setText("Become VIP");
+                        button4.setPreferredSize(new Dimension(78, 80));
+                        button4.setBackground(new Color(0, 255, 102));
+                        button4.setForeground(Color.white);
+                        button4.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
+                        panel6.add(button4);
+                    }
+                    panel5.add(panel6);
+                }
+                panel11.add(panel5);
+
+                //======== panel7 ========
+                {
+                    panel7.setLayout(new GridLayout(1, 2));
+
+                    //---- button5 ----
+                    button5.setText("I'm Manager");
+                    button5.setPreferredSize(new Dimension(78, 80));
+                    button5.setBackground(new Color(153, 153, 255));
+                    button5.setForeground(Color.white);
+                    button5.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
+                    panel7.add(button5);
+
+                    //---- button6 ----
+                    button6.setText("Comment");
+                    button6.setPreferredSize(new Dimension(78, 80));
+                    button6.setBackground(new Color(255, 102, 255));
+                    button6.setForeground(Color.white);
+                    button6.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
+                    panel7.add(button6);
+                }
+                panel11.add(panel7);
             }
             panel10.add(panel11);
 
@@ -186,10 +214,14 @@ public class Index extends JPanel {
     private JLabel label5;
     private JPanel panel10;
     private JPanel panel11;
+    private JPanel panel4;
     private JButton button1;
+    private JPanel panel5;
     private JButton button2;
+    private JPanel panel6;
     private JButton button3;
     private JButton button4;
+    private JPanel panel7;
     private JButton button5;
     private JButton button6;
     private JLabel label4;

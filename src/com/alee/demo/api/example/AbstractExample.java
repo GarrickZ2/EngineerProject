@@ -91,7 +91,7 @@ public abstract class AbstractExample extends AbstractExampleElement implements 
     @Override
     public JComponent createContent ()
     {
-        // Main example container
+        // MainVersion1 example container
         final WebPanel container = new WebPanel ( new BorderLayout ( 0, 0 ) );
 
         // Example toolbar

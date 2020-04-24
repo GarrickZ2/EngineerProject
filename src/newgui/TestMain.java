@@ -11,14 +11,14 @@ public class TestMain extends JFrame {
     Index index;
     CreatePanel createPanel;
     public TestMain(){
-        createPanel = new CreatePanel();
-        this.add(createPanel);
+        index = new Index();
+        this.add(index);
 
-        Dimension screensize   =   Toolkit.getDefaultToolkit().getScreenSize();
-        int width = (int)screensize.getWidth();
-        int height = (int)screensize.getHeight();
-        this.setSize(width, height);
-//        this.setResizable(false);
+//        Dimension screensize = Toolkit.getDefaultToolkit().getScreenSize();
+//        int width = (int)screensize.getWidth();
+//        int height = (int)screensize.getHeight();
+        this.setSize(1000, 600);
+        this.setResizable(false);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setVisible(true);
     }

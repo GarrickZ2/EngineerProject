@@ -62,59 +62,88 @@ new FormModel {
 				name: "panel10"
 				"background": #Color0
 				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
-					"columns": 2
+					"columns": 1
 					"rows": 3
 					"vgap": 10
 					"hgap": 10
 				} ) {
 					name: "panel11"
-					add( new FormComponent( "javax.swing.JButton" ) {
-						name: "button1"
-						"text": "Order"
-						"preferredSize": new java.awt.Dimension( 78, 80 )
-						"background": new java.awt.Color( 255, 153, 102, 255 )
-						"foreground": new java.awt.Color( 255, 255, 255, 255 )
-						"font": &Font0 new java.awt.Font( "Microsoft YaHei UI", 1, 16 )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+						"columns": 1
+					} ) {
+						name: "panel4"
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "dinner"
+							"text": "Order"
+							"preferredSize": new java.awt.Dimension( 78, 80 )
+							"background": new java.awt.Color( 255, 153, 102, 255 )
+							"foreground": new java.awt.Color( 255, 255, 255, 255 )
+							"font": &Font0 new java.awt.Font( "Microsoft YaHei UI", 1, 16 )
+							auxiliary() {
+								"JavaCodeGenerator.variableModifiers": 1
+							}
+						} )
 					} )
-					add( new FormComponent( "javax.swing.JButton" ) {
-						name: "button2"
-						"text": "Menu"
-						"preferredSize": new java.awt.Dimension( 78, 80 )
-						"background": new java.awt.Color( 255, 102, 102, 255 )
-						"foreground": new java.awt.Color( 255, 255, 255, 255 )
-						"font": #Font0
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+						"columns": 2
+					} ) {
+						name: "panel5"
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button2"
+							"text": "Menu"
+							"preferredSize": new java.awt.Dimension( 78, 80 )
+							"background": new java.awt.Color( 255, 102, 102, 255 )
+							"foreground": new java.awt.Color( 255, 255, 255, 255 )
+							"font": #Font0
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+							"columns": 2
+						} ) {
+							name: "panel6"
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "isVip"
+								"text": "I'm VIP"
+								"preferredSize": new java.awt.Dimension( 78, 80 )
+								"background": new java.awt.Color( 51, 255, 255, 255 )
+								"foreground": new java.awt.Color( 255, 255, 255, 255 )
+								"font": #Font0
+								auxiliary() {
+									"JavaCodeGenerator.variableModifiers": 1
+								}
+							} )
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "becomeVip"
+								"text": "Become VIP"
+								"preferredSize": new java.awt.Dimension( 78, 80 )
+								"background": new java.awt.Color( 0, 255, 102, 255 )
+								"foreground": new java.awt.Color( 255, 255, 255, 255 )
+								"font": #Font0
+								auxiliary() {
+									"JavaCodeGenerator.variableModifiers": 1
+								}
+							} )
+						} )
 					} )
-					add( new FormComponent( "javax.swing.JButton" ) {
-						name: "button3"
-						"text": "I'm VIP"
-						"preferredSize": new java.awt.Dimension( 78, 80 )
-						"background": new java.awt.Color( 51, 255, 255, 255 )
-						"foreground": new java.awt.Color( 255, 255, 255, 255 )
-						"font": #Font0
-					} )
-					add( new FormComponent( "javax.swing.JButton" ) {
-						name: "button4"
-						"text": "Become VIP"
-						"preferredSize": new java.awt.Dimension( 78, 80 )
-						"background": new java.awt.Color( 0, 255, 102, 255 )
-						"foreground": new java.awt.Color( 255, 255, 255, 255 )
-						"font": #Font0
-					} )
-					add( new FormComponent( "javax.swing.JButton" ) {
-						name: "button5"
-						"text": "I'm Manager"
-						"preferredSize": new java.awt.Dimension( 78, 80 )
-						"background": new java.awt.Color( 153, 153, 255, 255 )
-						"foreground": new java.awt.Color( 255, 255, 255, 255 )
-						"font": #Font0
-					} )
-					add( new FormComponent( "javax.swing.JButton" ) {
-						name: "button6"
-						"text": "Comment"
-						"preferredSize": new java.awt.Dimension( 78, 80 )
-						"background": new java.awt.Color( 255, 102, 255, 255 )
-						"foreground": new java.awt.Color( 255, 255, 255, 255 )
-						"font": #Font0
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+						"columns": 2
+					} ) {
+						name: "panel7"
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button5"
+							"text": "I'm Manager"
+							"preferredSize": new java.awt.Dimension( 78, 80 )
+							"background": new java.awt.Color( 153, 153, 255, 255 )
+							"foreground": new java.awt.Color( 255, 255, 255, 255 )
+							"font": #Font0
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button6"
+							"text": "Comment"
+							"preferredSize": new java.awt.Dimension( 78, 80 )
+							"background": new java.awt.Color( 255, 102, 255, 255 )
+							"foreground": new java.awt.Color( 255, 255, 255, 255 )
+							"font": #Font0
+						} )
 					} )
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
@@ -149,7 +178,7 @@ new FormModel {
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 400, 300 )
+			"size": new java.awt.Dimension( 695, 375 )
 		} )
 	}
 }

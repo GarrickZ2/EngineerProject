@@ -1,6 +1,4 @@
 import com.alee.laf.WebLookAndFeel;
-import database.Data;
-import database.information.Membership;
 import gui.Index;
 import gui.management.ManageIndex;
 import gui.membership.MemberIndex;
@@ -13,7 +11,7 @@ import java.awt.*;
 /**
  * @author Zixuan Zhang
  */
-public class Main extends JFrame {
+public class MainVersion1 extends JFrame {
     CardLayout card;
     JPanel content;
     Index index;
@@ -22,7 +20,7 @@ public class Main extends JFrame {
     ManageIndex manageIndex;
 
 
-    public Main(){
+    public MainVersion1(){
         card = new CardLayout();
         content = new JPanel(card);
 
@@ -88,6 +86,6 @@ public class Main extends JFrame {
         UIManager.setLookAndFeel ( NimbusLookAndFeel.class.getCanonicalName () );
         WebLookAndFeel.initializeManagers ();
 
-        new Main();
+        new MainVersion1();
     }
 }
