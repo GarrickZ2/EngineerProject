@@ -1,8 +1,11 @@
 import com.alee.laf.WebLookAndFeel;
 import database.MenuData;
+import database.UserData;
+import database.information.MemberList;
 import newgui.Index;
-import gui.management.ManageIndex;
-import gui.membership.MemberIndex;
+import newgui.membership.CheckPanel;
+import newgui.membership.CreateMember;
+import newgui.membership.Register;
 import newgui.order.OrderGUI;
 
 import javax.swing.*;
@@ -12,13 +15,13 @@ import java.awt.*;
  * @author Zixuan Zhang
  */
 public class MainVersion2 extends JFrame {
-    MenuData menuData;
     CardLayout card;
     JPanel content;
     Index index;
     OrderGUI orderGui;
-    MemberIndex memberIndex;
-    ManageIndex manageIndex;
+    CreateMember createMember;
+    CheckPanel checkPanel;
+    Register register;
 
 
     public MainVersion2(){
@@ -27,56 +30,44 @@ public class MainVersion2 extends JFrame {
 
         index = new Index();
         orderGui = new OrderGUI(new BorderLayout());
-        memberIndex = new MemberIndex(new BorderLayout());
-        manageIndex = new ManageIndex();
+        checkPanel = new CheckPanel();
+        register = new Register();
 
         content.add(index, "index");
         content.add(orderGui, "order");
-        content.add(memberIndex, "membership");
-        content.add(manageIndex, "manage");
+        content.add(register, "register");
+        content.add(checkPanel, "check");
 
+        //switch function
         index.dinner.addActionListener(e -> card.show(content, "order"));
         orderGui.orderMenu.returnButton.addActionListener(e -> {
             card.show(content, "index");
         });
+        index.becomeVip.addActionListener(e -> card.show(content, "register"));
+        index.isVip.addActionListener(e -> {
+            while (true) {
+                String number = JOptionPane.showInputDialog("Please Input Your VIP Number");
+                if (number == null) {
+                    return;
+                }
+                UserData userData = new UserData();
+                MemberList memberList = userData.loadInfo();
+                if (memberList.queryMember(number)) {
+                    checkPanel.membership = memberList.getMember(number);
+                    checkPanel.setMessage();
+                    card.show(content, "check");
+                    return;
+                }
+                JOptionPane.showMessageDialog(null, "Doesn't exist this account!");
+            }
+        });
+        checkPanel.memberChangeInfo.returnButton.addActionListener(e -> card.show(content, "index"));
+        register.createMember.returnButton.addActionListener(e -> card.show(content, "index"));
 
         //todo
 
 
-//        index.dinner.addActionListener(e -> card.show(content, "order"));
-//
-//        index.membership.addActionListener(e -> card.show(content, "membership"));
-//
-//        memberIndex.checkPanel.back.addActionListener(e ->{
-//            OrderGUI.membership = memberIndex.membership;
-//            System.out.println("Member in order:" + OrderGUI.membership);
-//            System.out.println("Member in index:" + memberIndex.membership);
-//        });
-//
-//
-//        index.manage.addActionListener(e -> {
-//            while (true) {
-//                JPasswordField pwd = new JPasswordField();
-//                Object[] message = {"Input password:", pwd};
-//
-//                String pass = JOptionPane.showInputDialog(null, "Please input manager password(123456):");
-//                if (pass == null) {
-//                    return;
-//                }
-//                if("123456".equals(pass)){
-//                    card.show(content, "manage");
-//                    return;
-//                }
-//                JOptionPane.showMessageDialog(null, "The password is wrong!");
-//            }
-//        });
-//
-//
-//        OrderGUI.back.addActionListener(e -> card.show(content, "index"));
-//        //todo Page after finishing payment
-//        OrderGUI.payment.settleButton.addActionListener(e -> card.show(content, "index"));
-//        memberIndex.selectPanel.back.addActionListener(e -> card.show(content, "index"));
-//        manageIndex.manageSelect.back.addActionListener(e -> card.show(content, "index"));
+
         this.setTitle("TOTORO RAMEN");
         this.add(content);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);

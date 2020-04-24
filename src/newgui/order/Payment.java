@@ -511,7 +511,7 @@ public class Payment extends JPanel {
 
                                     //---- checkButton ----
                                     checkButton.setText("Check");
-                                    checkButtonPanel.add(checkButton, BorderLayout.CENTER);
+                                    checkButtonPanel.add(checkButton, BorderLayout.SOUTH);
 
                                     //======== emptyBox4 ========
                                     {
@@ -785,7 +785,7 @@ public class Payment extends JPanel {
     private JLabel label_memberId;
     public JTextField membershipNumberInput;
     private JPanel checkButtonPanel;
-    private JButton checkButton;
+    public JButton checkButton;
     private JPanel emptyBox4;
     private JPanel emptyBox5;
     public JLabel identifiedInformation;

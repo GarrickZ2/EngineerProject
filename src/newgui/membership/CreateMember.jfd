@@ -140,16 +140,28 @@ new FormModel {
 										name: "panel7"
 										"background": new java.awt.Color( 233, 221, 196, 255 )
 										add( new FormComponent( "javax.swing.JTextField" ) {
-											name: "textField5"
+											name: "fNameText"
+											auxiliary() {
+												"JavaCodeGenerator.variableModifiers": 1
+											}
 										} )
 										add( new FormComponent( "javax.swing.JTextField" ) {
-											name: "textField6"
+											name: "lNameText"
+											auxiliary() {
+												"JavaCodeGenerator.variableModifiers": 1
+											}
 										} )
 										add( new FormComponent( "javax.swing.JTextField" ) {
-											name: "textField7"
+											name: "telText"
+											auxiliary() {
+												"JavaCodeGenerator.variableModifiers": 1
+											}
 										} )
 										add( new FormComponent( "javax.swing.JTextField" ) {
-											name: "textField8"
+											name: "emailText"
+											auxiliary() {
+												"JavaCodeGenerator.variableModifiers": 1
+											}
 										} )
 									}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 										"gridx": 1
@@ -170,12 +182,18 @@ new FormModel {
 										name: "panel12"
 										"background": new java.awt.Color( 233, 221, 196, 255 )
 										add( new FormComponent( "javax.swing.JButton" ) {
-											name: "button2"
+											name: "returnButton"
 											"text": "Return"
+											auxiliary() {
+												"JavaCodeGenerator.variableModifiers": 1
+											}
 										} )
 										add( new FormComponent( "javax.swing.JButton" ) {
-											name: "button1"
+											name: "create"
 											"text": "Check and create"
+											auxiliary() {
+												"JavaCodeGenerator.variableModifiers": 1
+											}
 										} )
 									}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 										"gridy": 1

@@ -37,14 +37,14 @@ public class CreateMember extends JPanel {
         label5 = new JLabel();
         label6 = new JLabel();
         panel7 = new JPanel();
-        textField5 = new JTextField();
-        textField6 = new JTextField();
-        textField7 = new JTextField();
-        textField8 = new JTextField();
+        fNameText = new JTextField();
+        lNameText = new JTextField();
+        telText = new JTextField();
+        emailText = new JTextField();
         panel11 = new JPanel();
         panel12 = new JPanel();
-        button2 = new JButton();
-        button1 = new JButton();
+        returnButton = new JButton();
+        create = new JButton();
         panel13 = new JPanel();
         panel9 = new JPanel();
         panel14 = new JPanel();
@@ -208,10 +208,10 @@ public class CreateMember extends JPanel {
                                 {
                                     panel7.setBackground(new Color(233, 221, 196));
                                     panel7.setLayout(new GridLayout(4, 0, 0, 20));
-                                    panel7.add(textField5);
-                                    panel7.add(textField6);
-                                    panel7.add(textField7);
-                                    panel7.add(textField8);
+                                    panel7.add(fNameText);
+                                    panel7.add(lNameText);
+                                    panel7.add(telText);
+                                    panel7.add(emailText);
                                 }
                                 panel5.add(panel7, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
                                     GridBagConstraints.CENTER, GridBagConstraints.BOTH,
@@ -235,13 +235,13 @@ public class CreateMember extends JPanel {
                                     panel12.setBackground(new Color(233, 221, 196));
                                     panel12.setLayout(new GridLayout(1, 2, 20, 0));
 
-                                    //---- button2 ----
-                                    button2.setText("Return");
-                                    panel12.add(button2);
+                                    //---- returnButton ----
+                                    returnButton.setText("Return");
+                                    panel12.add(returnButton);
 
-                                    //---- button1 ----
-                                    button1.setText("Check and create");
-                                    panel12.add(button1);
+                                    //---- create ----
+                                    create.setText("Check and create");
+                                    panel12.add(create);
                                 }
                                 panel11.add(panel12, new GridBagConstraints(1, 1, 1, 1, 0.0, 0.0,
                                     GridBagConstraints.CENTER, GridBagConstraints.BOTH,
@@ -369,14 +369,14 @@ public class CreateMember extends JPanel {
     private JLabel label5;
     private JLabel label6;
     private JPanel panel7;
-    private JTextField textField5;
-    private JTextField textField6;
-    private JTextField textField7;
-    private JTextField textField8;
+    public JTextField fNameText;
+    public JTextField lNameText;
+    public JTextField telText;
+    public JTextField emailText;
     private JPanel panel11;
     private JPanel panel12;
-    private JButton button2;
-    private JButton button1;
+    public JButton returnButton;
+    public JButton create;
     private JPanel panel13;
     private JPanel panel9;
     private JPanel panel14;

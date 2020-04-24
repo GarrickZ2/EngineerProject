@@ -60,9 +60,9 @@ public class MemberChangeInfo extends JPanel {
         label_change_eMail = new JLabel();
         change_eMail = new JTextField();
         buttonPanel = new JPanel();
+        returnButton = new JButton();
         emptyBox0 = new JPanel();
         saveAndChangeButton = new JButton();
-        emptyBox = new JPanel();
         changeSuggestion = new JLabel();
         bottomPanel = new JPanel();
         bottom_innerPanel = new JPanel();
@@ -319,6 +319,10 @@ public class MemberChangeInfo extends JPanel {
                             buttonPanel.setBackground(Color.white);
                             buttonPanel.setLayout(new GridLayout(1, 3));
 
+                            //---- returnButton ----
+                            returnButton.setText("Return");
+                            buttonPanel.add(returnButton);
+
                             //======== emptyBox0 ========
                             {
                                 emptyBox0.setBackground(Color.white);
@@ -329,13 +333,6 @@ public class MemberChangeInfo extends JPanel {
                             //---- saveAndChangeButton ----
                             saveAndChangeButton.setText("Check&Change");
                             buttonPanel.add(saveAndChangeButton);
-
-                            //======== emptyBox ========
-                            {
-                                emptyBox.setBackground(Color.white);
-                                emptyBox.setLayout(new BoxLayout(emptyBox, BoxLayout.X_AXIS));
-                            }
-                            buttonPanel.add(emptyBox);
                         }
                         body_rightPanel.add(buttonPanel, new GridBagConstraints(0, 4, 1, 1, 0.0, 0.0,
                             GridBagConstraints.CENTER, GridBagConstraints.BOTH,
@@ -409,42 +406,42 @@ public class MemberChangeInfo extends JPanel {
     private JPanel body_midPanel;
     private JPanel changablePanel;
     private JLabel label_fName;
-    private JLabel sug_fName;
+    public JLabel sug_fName;
     private JLabel label_lName;
-    private JLabel sug_lName;
+    public JLabel sug_lName;
     private JLabel label_telephone;
-    private JLabel sug_telephone;
+    public JLabel sug_telephone;
     private JLabel label_eMail;
-    private JLabel sug_eMail;
+    public JLabel sug_eMail;
     private JPanel unchangablePanel;
     private JLabel label_membershipNumber;
-    private JLabel membershipNumber;
+    public JLabel membershipNumber;
     private JLabel label_registrationDate;
-    private JLabel regDate;
+    public JLabel regDate;
     private JLabel label_couponNumber;
-    private JLabel coupon;
+    public JLabel coupon;
     private JPanel lastCosumptionPanel;
     private JLabel label_consumptionTime;
-    private JLabel consumptionTime;
+    public JLabel consumptionTime;
     private JLabel label_consumptionCost;
-    private JLabel consumptionCost;
+    public JLabel consumptionCost;
     private JLabel label_consumptionUseCoupon;
-    private JLabel consumptionUseCoupon;
+    public JLabel consumptionUseCoupon;
     private JPanel body_rightPanel;
     private JLabel right_advertisement;
     private JPanel changeInfoPanel;
     private JLabel label_change_fName;
-    private JTextField change_fName;
+    public JTextField change_fName;
     private JLabel label_change_lName;
-    private JTextField change_lName;
+    public JTextField change_lName;
     private JLabel label_change_telephone;
-    private JTextField change_telephone;
+    public JTextField change_telephone;
     private JLabel label_change_eMail;
-    private JTextField change_eMail;
+    public JTextField change_eMail;
     private JPanel buttonPanel;
+    public JButton returnButton;
     private JPanel emptyBox0;
-    private JButton saveAndChangeButton;
-    private JPanel emptyBox;
+    public JButton saveAndChangeButton;
     private JLabel changeSuggestion;
     private JPanel bottomPanel;
     private JPanel bottom_innerPanel;

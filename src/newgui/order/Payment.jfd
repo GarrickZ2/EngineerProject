@@ -429,8 +429,11 @@ new FormModel {
 										add( new FormComponent( "javax.swing.JButton" ) {
 											name: "checkButton"
 											"text": "Check"
+											auxiliary() {
+												"JavaCodeGenerator.variableModifiers": 1
+											}
 										}, new FormLayoutConstraints( class java.lang.String ) {
-											"value": "Center"
+											"value": "South"
 										} )
 										add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
 											"axis": 0

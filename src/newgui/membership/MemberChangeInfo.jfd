@@ -70,6 +70,9 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "sug_fName"
 									"text": "Huang"
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "label_lName"
@@ -78,6 +81,9 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "sug_lName"
 									"text": "Huang"
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "label_telephone"
@@ -86,6 +92,9 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "sug_telephone"
 									"text": "15500043370"
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "label_eMail"
@@ -94,6 +103,9 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "sug_eMail"
 									"text": "447243910@qq.com"
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
 							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
@@ -110,6 +122,9 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "membershipNumber"
 									"text": "00000001"
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "label_registrationDate"
@@ -118,6 +133,9 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "regDate"
 									"text": "(Optional)2020-04-05"
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "label_couponNumber"
@@ -126,6 +144,9 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "coupon"
 									"text": "5"
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 								"gridy": 1
@@ -144,6 +165,9 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "consumptionTime"
 									"text": "2020-04-05 11:22:30"
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "label_consumptionCost"
@@ -152,6 +176,9 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "consumptionCost"
 									"text": "￡11.9"
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "label_consumptionUseCoupon"
@@ -160,6 +187,9 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "consumptionUseCoupon"
 									"text": "False"
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 								"gridy": 3
@@ -197,6 +227,9 @@ new FormModel {
 								} )
 								add( new FormComponent( "javax.swing.JTextField" ) {
 									name: "change_fName"
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 									"gridx": 2
 								} )
@@ -209,6 +242,9 @@ new FormModel {
 								} )
 								add( new FormComponent( "javax.swing.JTextField" ) {
 									name: "change_lName"
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 									"gridx": 2
 									"gridy": 1
@@ -222,6 +258,9 @@ new FormModel {
 								} )
 								add( new FormComponent( "javax.swing.JTextField" ) {
 									name: "change_telephone"
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 									"gridx": 2
 									"gridy": 2
@@ -235,6 +274,9 @@ new FormModel {
 								} )
 								add( new FormComponent( "javax.swing.JTextField" ) {
 									name: "change_eMail"
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 									"gridx": 2
 									"gridy": 3
@@ -247,6 +289,13 @@ new FormModel {
 							} ) {
 								name: "buttonPanel"
 								"background": sfield java.awt.Color white
+								add( new FormComponent( "javax.swing.JButton" ) {
+									name: "returnButton"
+									"text": "Return"
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
+								} )
 								add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
 									"axis": 0
 								} ) {
@@ -256,12 +305,9 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JButton" ) {
 									name: "saveAndChangeButton"
 									"text": "Check&Change"
-								} )
-								add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
-									"axis": 0
-								} ) {
-									name: "emptyBox"
-									"background": sfield java.awt.Color white
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 								"gridy": 4

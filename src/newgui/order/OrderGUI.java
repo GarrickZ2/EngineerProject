@@ -3,6 +3,7 @@ package newgui.order;
 
 import com.alee.laf.WebLookAndFeel;
 import database.MenuData;
+import database.UserData;
 import database.information.*;
 import database.information.Menu;
 
@@ -13,6 +14,8 @@ import javax.swing.event.ChangeListener;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.awt.*;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Enumeration;
@@ -174,6 +177,55 @@ public class OrderGUI extends JPanel{
             System.out.println(receipt.generateReceipt(true));
 
             card.show(middle,"compulsory");
+        });
+
+        //VIP SYSTEM
+        payment.identifiedInformation.setText("");
+        payment.userGreeting.setText("Welcome To Join Us");
+        payment.membershipNumber.setText(" ");
+        payment.coupon.setText("");
+        payment.useCoupon.setEnabled(false);
+        payment.useCoupon.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(payment.useCoupon.isSelected()){
+                    payment.cash.setEnabled(false);
+                    payment.visa.setEnabled(false);
+                }else {
+                    payment.cash.setEnabled(true);
+                    payment.visa.setEnabled(true);
+                }
+            }
+        });
+        payment.checkButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                UserData userData = new UserData();
+                MemberList memberList = userData.loadInfo();
+                String userId = payment.membershipNumberInput.getText();
+                if(memberList.queryMember(userId)){
+                    payment.identifiedInformation.setText("Identified Successfully");
+                    Membership member = memberList.getMember(userId);
+                    payment.userGreeting.setText("Hello, dear " + member.getFirstName() + " " + member.getLastName());
+                    payment.membershipNumber.setText(member.getMembershipId());
+                    String coupStatus = "";
+                    if(member.getStamps() > 10){
+                        coupStatus = "(Could Use)";
+                        payment.useCoupon.setEnabled(true);
+                    }else {
+                        coupStatus = "(Couldn't Use, Less Than 10)";
+                        payment.useCoupon.setEnabled(false);
+                    }
+                    payment.coupon.setText("" + member.getStamps() + coupStatus);
+
+                }else {
+                    payment.identifiedInformation.setText("Identified Failed");
+                    payment.userGreeting.setText("Welcome To Join Us");
+                    payment.membershipNumber.setText(" ");
+                    payment.coupon.setText("");
+                    payment.useCoupon.setEnabled(false);
+                }
+            }
         });
         this.add(middle, BorderLayout.CENTER);
     }
