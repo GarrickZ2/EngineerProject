@@ -582,6 +582,7 @@ new FormModel {
 									"columns": 2
 								} ) {
 									name: "panel1"
+									"background": sfield java.awt.Color white
 									add( new FormComponent( "javax.swing.JButton" ) {
 										name: "returnButton"
 										"text": "Return"
