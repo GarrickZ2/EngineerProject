@@ -32,7 +32,7 @@ public class Index extends JPanel {
         isVip = new JButton();
         becomeVip = new JButton();
         panel7 = new JPanel();
-        button5 = new JButton();
+        management = new JButton();
         button6 = new JButton();
         label4 = new JLabel();
         label3 = new JLabel();
@@ -139,13 +139,13 @@ public class Index extends JPanel {
                 {
                     panel7.setLayout(new GridLayout(1, 2));
 
-                    //---- button5 ----
-                    button5.setText("I'm Manager");
-                    button5.setPreferredSize(new Dimension(78, 80));
-                    button5.setBackground(new Color(153, 153, 255));
-                    button5.setForeground(Color.white);
-                    button5.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
-                    panel7.add(button5);
+                    //---- management ----
+                    management.setText("I'm Manager");
+                    management.setPreferredSize(new Dimension(78, 80));
+                    management.setBackground(new Color(153, 153, 255));
+                    management.setForeground(Color.white);
+                    management.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
+                    panel7.add(management);
 
                     //---- button6 ----
                     button6.setText("Comment");
@@ -204,7 +204,7 @@ public class Index extends JPanel {
     public JButton isVip;
     public JButton becomeVip;
     private JPanel panel7;
-    private JButton button5;
+    public JButton management;
     private JButton button6;
     private JLabel label4;
     private JLabel label3;

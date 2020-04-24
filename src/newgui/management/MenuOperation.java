@@ -5,6 +5,7 @@
 package newgui.management;
 
 import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
 
@@ -16,6 +17,8 @@ public class MenuOperation extends JPanel {
         initComponents();
     }
 
+
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         boardPanel = new JPanel();
@@ -26,7 +29,11 @@ public class MenuOperation extends JPanel {
         indexPanel = new JPanel();
         menuOperationPanel = new JPanel();
         indexLabel_menuOperation = new JLabel();
+        managerPasswordPanel = new JPanel();
+        indexLabel_managerPassword = new JLabel();
+        dataAnalysisPanel = new JPanel();
         indexLabel_dataAnalysis = new JLabel();
+        membershipOperationPanel = new JPanel();
         indexLabel_membershipOperation = new JLabel();
         emptyBox5 = new JPanel();
         body_innerPanel = new JPanel();
@@ -192,17 +199,47 @@ public class MenuOperation extends JPanel {
                         GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                         new Insets(0, 0, 0, 0), 0, 0));
 
-                    //---- indexLabel_dataAnalysis ----
-                    indexLabel_dataAnalysis.setText("Data analysis");
-                    indexLabel_dataAnalysis.setHorizontalAlignment(SwingConstants.CENTER);
-                    indexPanel.add(indexLabel_dataAnalysis, new GridBagConstraints(2, 0, 1, 1, 0.0, 0.0,
+                    //======== managerPasswordPanel ========
+                    {
+                        managerPasswordPanel.setBackground(new Color(242, 156, 59, 0));
+                        managerPasswordPanel.setLayout(new GridLayout());
+
+                        //---- indexLabel_managerPassword ----
+                        indexLabel_managerPassword.setText("Manager password");
+                        indexLabel_managerPassword.setHorizontalAlignment(SwingConstants.CENTER);
+                        managerPasswordPanel.add(indexLabel_managerPassword);
+                    }
+                    indexPanel.add(managerPasswordPanel, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
                         GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                         new Insets(0, 0, 0, 0), 0, 0));
 
-                    //---- indexLabel_membershipOperation ----
-                    indexLabel_membershipOperation.setText("Membership operation");
-                    indexLabel_membershipOperation.setHorizontalAlignment(SwingConstants.CENTER);
-                    indexPanel.add(indexLabel_membershipOperation, new GridBagConstraints(3, 0, 1, 1, 0.0, 0.0,
+                    //======== dataAnalysisPanel ========
+                    {
+                        dataAnalysisPanel.setBackground(new Color(242, 156, 59, 0));
+                        dataAnalysisPanel.setLayout(new GridLayout());
+
+                        //---- indexLabel_dataAnalysis ----
+                        indexLabel_dataAnalysis.setText("Data analysis");
+                        indexLabel_dataAnalysis.setHorizontalAlignment(SwingConstants.CENTER);
+                        indexLabel_dataAnalysis.setBackground(new Color(242, 156, 59, 86));
+                        dataAnalysisPanel.add(indexLabel_dataAnalysis);
+                    }
+                    indexPanel.add(dataAnalysisPanel, new GridBagConstraints(2, 0, 1, 1, 0.0, 0.0,
+                        GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                        new Insets(0, 0, 0, 0), 0, 0));
+
+                    //======== membershipOperationPanel ========
+                    {
+                        membershipOperationPanel.setBackground(new Color(242, 156, 59, 0));
+                        membershipOperationPanel.setLayout(new GridLayout());
+
+                        //---- indexLabel_membershipOperation ----
+                        indexLabel_membershipOperation.setText("Membership operation");
+                        indexLabel_membershipOperation.setHorizontalAlignment(SwingConstants.CENTER);
+                        indexLabel_membershipOperation.setBackground(new Color(242, 242, 242, 0));
+                        membershipOperationPanel.add(indexLabel_membershipOperation);
+                    }
+                    indexPanel.add(membershipOperationPanel, new GridBagConstraints(3, 0, 1, 1, 0.0, 0.0,
                         GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                         new Insets(0, 0, 0, 0), 0, 0));
                 }
@@ -722,9 +759,13 @@ public class MenuOperation extends JPanel {
     private JPanel bodyPanel;
     private JPanel emptyBox4;
     private JPanel indexPanel;
-    private JPanel menuOperationPanel;
+    public JPanel menuOperationPanel;
     private JLabel indexLabel_menuOperation;
+    public JPanel managerPasswordPanel;
+    private JLabel indexLabel_managerPassword;
+    public JPanel dataAnalysisPanel;
     private JLabel indexLabel_dataAnalysis;
+    public JPanel membershipOperationPanel;
     private JLabel indexLabel_membershipOperation;
     private JPanel emptyBox5;
     private JPanel body_innerPanel;

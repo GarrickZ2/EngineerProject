@@ -55,23 +55,56 @@ new FormModel {
 						} ) {
 							name: "menuOperationPanel"
 							"background": sfield java.awt.Color white
+							auxiliary() {
+								"JavaCodeGenerator.variableModifiers": 1
+							}
 							add( new FormComponent( "javax.swing.JLabel" ) {
 								name: "indexLabel_menuOperation"
 								"text": "Menu operation"
 								"horizontalAlignment": 0
 							} )
 						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
-						add( new FormComponent( "javax.swing.JLabel" ) {
-							name: "indexLabel_dataAnalysis"
-							"text": "Data analysis"
-							"horizontalAlignment": 0
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) ) {
+							name: "managerPasswordPanel"
+							"background": new java.awt.Color( 242, 156, 59, 0 )
+							auxiliary() {
+								"JavaCodeGenerator.variableModifiers": 1
+							}
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "indexLabel_managerPassword"
+								"text": "Manager password"
+								"horizontalAlignment": 0
+							} )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 1
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) ) {
+							name: "dataAnalysisPanel"
+							"background": new java.awt.Color( 242, 156, 59, 0 )
+							auxiliary() {
+								"JavaCodeGenerator.variableModifiers": 1
+							}
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "indexLabel_dataAnalysis"
+								"text": "Data analysis"
+								"horizontalAlignment": 0
+								"background": new java.awt.Color( 242, 156, 59, 86 )
+							} )
 						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 							"gridx": 2
 						} )
-						add( new FormComponent( "javax.swing.JLabel" ) {
-							name: "indexLabel_membershipOperation"
-							"text": "Membership operation"
-							"horizontalAlignment": 0
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) ) {
+							name: "membershipOperationPanel"
+							"background": new java.awt.Color( 242, 156, 59, 0 )
+							auxiliary() {
+								"JavaCodeGenerator.variableModifiers": 1
+							}
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "indexLabel_membershipOperation"
+								"text": "Membership operation"
+								"horizontalAlignment": 0
+								"background": new java.awt.Color( 242, 242, 242, 0 )
+							} )
 						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 							"gridx": 3
 						} )
@@ -719,3 +752,5 @@ new FormModel {
 		} )
 	}
 }
+
+

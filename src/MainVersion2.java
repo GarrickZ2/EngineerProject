@@ -3,6 +3,7 @@ import database.MenuData;
 import database.UserData;
 import database.information.MemberList;
 import newgui.Index;
+import newgui.management.ManagementIndex;
 import newgui.membership.CheckPanel;
 import newgui.membership.CreateMember;
 import newgui.membership.Register;
@@ -22,7 +23,7 @@ public class MainVersion2 extends JFrame {
     CreateMember createMember;
     CheckPanel checkPanel;
     Register register;
-
+    ManagementIndex managementIndex;
 
     public MainVersion2(){
         card = new CardLayout();
@@ -32,17 +33,17 @@ public class MainVersion2 extends JFrame {
         orderGui = new OrderGUI(new BorderLayout());
         checkPanel = new CheckPanel();
         register = new Register();
+        managementIndex = new ManagementIndex();
 
         content.add(index, "index");
         content.add(orderGui, "order");
         content.add(register, "register");
         content.add(checkPanel, "check");
+        content.add(managementIndex,"management");
 
         //switch function
         index.dinner.addActionListener(e -> card.show(content, "order"));
-        orderGui.orderMenu.returnButton.addActionListener(e -> {
-            card.show(content, "index");
-        });
+        orderGui.orderMenu.returnButton.addActionListener(e -> card.show(content, "index"));
         index.becomeVip.addActionListener(e -> card.show(content, "register"));
         index.isVip.addActionListener(e -> {
             while (true) {
@@ -61,9 +62,15 @@ public class MainVersion2 extends JFrame {
                 JOptionPane.showMessageDialog(null, "Doesn't exist this account!");
             }
         });
+        index.management.addActionListener(e -> {
+            managementIndex.setMenuSuggest();
+            managementIndex.setMenuChange();
+            card.show(content,"management");
+        });
         checkPanel.memberChangeInfo.returnButton.addActionListener(e -> card.show(content, "index"));
         register.createMember.returnButton.addActionListener(e -> card.show(content, "index"));
 
+        managementIndex.menuOperation.returnButton.addActionListener(e -> card.show(content,"index"));
         //todo
 
 

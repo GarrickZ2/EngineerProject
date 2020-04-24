@@ -1,0 +1,167 @@
+JFDML JFormDesigner: "6.0.6.2.195" Java: "11.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+				"$columnSpecs": "1000"
+				"$rowSpecs": "100, 445, 75"
+				"$alignLeft": true
+				"$alignTop": true
+			} ) {
+				name: "boardPanel"
+				"background": sfield java.awt.Color white
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+					"$columnSpecs": "25, 950, 25"
+					"$rowSpecs": "100"
+					"$alignLeft": true
+					"$alignTop": true
+				} ) {
+					name: "titlePanel"
+					"background": new java.awt.Color( 248, 193, 84, 255 )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "logo"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/img/titleLogo.png" )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+					"$columnSpecs": "25, 950, 25"
+					"$rowSpecs": "30, 395, 20"
+					"$alignLeft": true
+					"$alignTop": true
+				} ) {
+					name: "bodyPanel"
+					"background": sfield java.awt.Color white
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+						"axis": 0
+					} ) {
+						name: "emptyBox4"
+						"background": new java.awt.Color( 242, 156, 59, 86 )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+						"$columnSpecs": "150, 150, 150, 150, 350"
+						"$rowSpecs": "30"
+						"$alignLeft": true
+						"$alignTop": true
+					} ) {
+						name: "indexPanel"
+						"background": new java.awt.Color( 242, 156, 59, 86 )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+							"columns": 1
+						} ) {
+							name: "menuOperationPanel"
+							"background": new java.awt.Color( 242, 156, 59, 0 )
+							auxiliary() {
+								"JavaCodeGenerator.variableModifiers": 1
+							}
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "indexLabel_menuOperation"
+								"text": "Menu operation"
+								"horizontalAlignment": 0
+							} )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) ) {
+							name: "managerPasswordPanel"
+							"background": new java.awt.Color( 242, 156, 59, 0 )
+							auxiliary() {
+								"JavaCodeGenerator.variableModifiers": 1
+							}
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "indexLabel_managerPassword"
+								"text": "Manager password"
+								"horizontalAlignment": 0
+							} )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 1
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) ) {
+							name: "dataAnalysisPanel"
+							"background": new java.awt.Color( 242, 156, 59, 0 )
+							auxiliary() {
+								"JavaCodeGenerator.variableModifiers": 1
+							}
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "indexLabel_dataAnalysis"
+								"text": "Data analysis"
+								"horizontalAlignment": 0
+								"background": new java.awt.Color( 242, 156, 59, 86 )
+							} )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 2
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) ) {
+							name: "membershipOperationPanel"
+							"background": sfield java.awt.Color white
+							auxiliary() {
+								"JavaCodeGenerator.variableModifiers": 1
+							}
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "indexLabel_membershipOperation"
+								"text": "Membership operation"
+								"horizontalAlignment": 0
+								"background": new java.awt.Color( 242, 242, 242, 0 )
+							} )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 3
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+						"axis": 0
+					} ) {
+						name: "emptyBox5"
+						"background": new java.awt.Color( 242, 156, 59, 86 )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 2
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 1
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+					"$columnSpecs": "20, 990"
+					"$rowSpecs": "5, center:65:1.0, 5"
+					"$alignTop": true
+					"$alignLeft": true
+				} ) {
+					name: "bottomPanel"
+					"background": new java.awt.Color( 252, 251, 245, 255 )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+						"columns": 1
+						"rows": 3
+					} ) {
+						name: "bottom_innerPanel"
+						"background": new java.awt.Color( 252, 251, 245, 255 )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "storeName"
+							"text": "TOTORO Ramen"
+							"background": new java.awt.Color( 252, 251, 245, 255 )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "storeAddress"
+							"text": "Address: B15 Baker Street in London"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "storeTelphone"
+							"text": "Telphone: 44 (0) 203 178 4861"
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+						"gridy": 1
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 2
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 1000, 620 )
+		} )
+	}
+}

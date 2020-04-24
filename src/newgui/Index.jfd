@@ -116,12 +116,15 @@ new FormModel {
 					} ) {
 						name: "panel7"
 						add( new FormComponent( "javax.swing.JButton" ) {
-							name: "button5"
+							name: "management"
 							"text": "I'm Manager"
 							"preferredSize": new java.awt.Dimension( 78, 80 )
 							"background": new java.awt.Color( 153, 153, 255, 255 )
 							"foreground": new java.awt.Color( 255, 255, 255, 255 )
 							"font": #Font0
+							auxiliary() {
+								"JavaCodeGenerator.variableModifiers": 1
+							}
 						} )
 						add( new FormComponent( "javax.swing.JButton" ) {
 							name: "button6"

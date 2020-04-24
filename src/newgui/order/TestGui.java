@@ -1,6 +1,7 @@
 package newgui.order;
 
 import com.alee.laf.WebLookAndFeel;
+import newgui.management.ManagementIndex;
 import newgui.management.MenuOperation;
 import newgui.membership.CreateMember;
 import newgui.membership.MemberChangeInfo;
@@ -21,7 +22,8 @@ public class TestGui {
         MenuOperation mo = new MenuOperation();
         MemberChangeInfo mci = new MemberChangeInfo();
         CreateMember cm = new CreateMember();
-        jf.add(cm);
+        ManagementIndex mix = new ManagementIndex();
+        jf.add(mix);
         jf.setVisible(true);
         jf.pack();
         jf.setDefaultCloseOperation(EXIT_ON_CLOSE);
