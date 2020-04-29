@@ -10,6 +10,7 @@ import newgui.membership.CreateMember;
 import newgui.membership.Register;
 import newgui.order.OrderGUI;
 import newgui.order.Recipients;
+import org.junit.Test;
 
 import javax.swing.*;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
@@ -78,8 +79,7 @@ public class MainVersion2 extends JFrame {
 
             if((orderGui.membership == null)){
                 orderGui.orderList.createOrder(orderGui.cuisine, orderGui.eatType,"NoMembership");
-            }
-            else if(orderGui.membership.getMembershipId() == null){
+            } else if(orderGui.membership.getMembershipId() == null){
                 orderGui.orderList.createOrder(orderGui.cuisine, orderGui.eatType,"NoMembership");
             }else {
                 UserData userData = new UserData();
@@ -87,6 +87,8 @@ public class MainVersion2 extends JFrame {
                 orderGui.orderList.createOrder(orderGui.cuisine,orderGui.eatType,orderGui.membership.getMembershipId());
                 if (orderGui.usingCoupon){
                     memberList.getMember(orderGui.membership.getMembershipId()).useStamps();
+
+                    System.out.println(memberList.getMember(orderGui.membership.getMembershipId()).getStamps());
                 } else {
                     memberList.getMember(orderGui.membership.getMembershipId()).addStamps();
                 }

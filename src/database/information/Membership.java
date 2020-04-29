@@ -71,7 +71,7 @@ public class Membership {
 			System.out.println("These isn't enough stamps");
 			return;
 		}
-		this.stamps -= 10;
+		stamps -= 10;
 	}
 
 

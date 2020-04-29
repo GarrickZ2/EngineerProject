@@ -426,6 +426,7 @@ new FormModel {
 									}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
 									add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
 										name: "checkButtonPanel"
+										"background": sfield java.awt.Color white
 										add( new FormComponent( "javax.swing.JButton" ) {
 											name: "checkButton"
 											"text": "Check"

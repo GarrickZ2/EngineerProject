@@ -37,14 +37,8 @@ public class Register extends JPanel {
                 MemberList memberlist = userData.loadInfo();
                 String response = memberlist.createMember(fNameContent, lNameContent, phone, emailContent);
                 switch (response) {
-                    case "Error type 01: Null message input, name is empty or both telephone and e-mail are null":
-                        JOptionPane.showMessageDialog(null, "Null message input, name is empty or both telephone and e-mail are null", "Warning", JOptionPane.WARNING_MESSAGE);
-                        break;
-                    case "Error type 02: Invalid format of telephone or e-mail address":
-                        JOptionPane.showMessageDialog(null, "Invalid format of telephone or e-mail address", "Warning", JOptionPane.WARNING_MESSAGE);
-                        break;
-                    case "Error type 03: Telephone or E-mail address has been already used":
-                        JOptionPane.showMessageDialog(null, "Telephone or E-mail address has been already used", "Warning", JOptionPane.WARNING_MESSAGE);
+                    case "Error: Invalid data input.":
+                        JOptionPane.showMessageDialog(null, "Invalid input", "Warning", JOptionPane.WARNING_MESSAGE);
                         break;
                     default:
                         JOptionPane.showMessageDialog(null, "Create Successfully, Your ID number is " + response + ". Please remember it!", "Success", JOptionPane.INFORMATION_MESSAGE);

@@ -507,6 +507,7 @@ public class Payment extends JPanel {
 
                                 //======== checkButtonPanel ========
                                 {
+                                    checkButtonPanel.setBackground(Color.white);
                                     checkButtonPanel.setLayout(new BorderLayout());
 
                                     //---- checkButton ----

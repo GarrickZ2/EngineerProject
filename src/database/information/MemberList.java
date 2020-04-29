@@ -7,13 +7,14 @@ import java.util.regex.Pattern;
 
 /**
  * @author Huang
- * @version 1.4
+ * @version 1.5
  */
 public class MemberList extends DataType {
 
 	private ArrayList<Membership> msl;
 	final private static int membershipIdLength = 8;
 	private boolean fileChanged = false;
+	private static int errorCode = -1;
 
 	public MemberList() {
 		msl = new ArrayList<Membership>();
@@ -29,6 +30,18 @@ public class MemberList extends DataType {
 
 	public void setMembershipList(ArrayList<Membership> msl) {
 		this.msl = msl;
+	}
+
+	public static int getFinalNumber(ArrayList<Membership> list){
+		int temp;
+		int max = 0;
+		for (Membership m : list){
+			temp = Integer.parseInt(m.getMembershipId());
+			if(temp >= max){
+				max = temp;
+			}
+		}
+		return max;
 	}
 
 	public static boolean checkFormat(int mode, String information){
@@ -74,6 +87,9 @@ public class MemberList extends DataType {
 					if(checkFormat(1,telephone)&&checkFormat(2,eMail)){
 						//All conditions are met return true
 						validation = true;
+					}else{
+						errorCode = 2;
+						System.out.println("2: Telephone or e-mail format is invalid.");
 					}
 				}
 				//Else: One of telephone and email is null
@@ -84,22 +100,37 @@ public class MemberList extends DataType {
 						if(checkFormat(1,telephone)){
 							//All conditions are met return true
 							validation = true;
+						}else {
+							errorCode = 2;
 						}
 					}
 					//Else: Email is not null(Telephone is null)
 					else {
-						//Check if email format is right
-						if(checkFormat(2,eMail)){
-							//All conditions are met return true
-							validation = true;
+						//Check if e-mail is null
+						if(eMail != null){
+							//Check if email format is right
+							if(checkFormat(2,eMail)){
+								//All conditions are met return true
+								validation = true;
+							}
+							else {
+								errorCode = 2;
+							}
 						}
-						//Else: The last situation both telephone and email are null(It's for changeTnfo method)
+						//Else: The last situation both telephone and email are null
 						else{
-							validation = true;
+							errorCode = 3;
+							System.out.println("3:Either telephone or email is null");
 						}
 					}
 				}
+			}else {
+				errorCode = 1;
+				System.out.println("1:F or L name format is invalid.");
 			}
+		}else{
+			errorCode = 0;
+			System.out.println("0:Either f or l name is null.");
 		}
 		return validation;
 	}
@@ -121,7 +152,7 @@ public class MemberList extends DataType {
 				ms.setLastName(lastName);
 				ms.setTelephone(telephone);
 				ms.seteMail(eMail);
-				ms.setStamps(0);
+				ms.setStamps(5);
 
 				//Get the lastest membershipID
 				if(msl.size()==0) {
@@ -129,9 +160,7 @@ public class MemberList extends DataType {
 					msl.add(ms);
 					return ms.getMembershipId();
 				}else {
-					String lastID = msl.get(msl.size()-1).getMembershipId();
-					int idValue = Integer.parseInt(lastID);
-					String temp = String.valueOf(idValue+1);
+					String temp = String.valueOf(getFinalNumber(msl)+1);
 
 					//Check whether the number of members is over the max capacity of present format
 					if(temp.length()>membershipIdLength) {
@@ -139,7 +168,7 @@ public class MemberList extends DataType {
 					}else {
 						while(true) {
 							if(temp.length()!=membershipIdLength) {
-								temp = "0"+temp;
+								temp = "0" + temp;
 							}else {
 								break;
 							}
@@ -217,11 +246,13 @@ public class MemberList extends DataType {
 	}
 
 	public void saveMembershipCsv(){
-		if(fileChanged){
-			System.out.println(this);
-			UserData userData = new UserData();
-			userData.saveInfo(this);
-		}
+		System.out.println(this);
+		UserData userData = new UserData();
+		userData.saveInfo(this);
+	}
+
+	public void latestActivity(){
+		//New
 	}
 
 	@Override
