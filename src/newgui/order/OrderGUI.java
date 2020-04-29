@@ -164,11 +164,7 @@ public class OrderGUI extends JPanel{
         });
 
         //VIP SYSTEM
-        payment.identifiedInformation.setText("");
-        payment.userGreeting.setText("Welcome To Join Us");
-        payment.membershipNumber.setText(" ");
-        payment.coupon.setText("");
-        payment.useCoupon.setEnabled(false);
+
         payment.useCoupon.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -187,17 +183,18 @@ public class OrderGUI extends JPanel{
                 UserData userData = new UserData();
                 MemberList memberList = userData.loadInfo();
                 String userId = payment.membershipNumberInput.getText();
+                payment.useCoupon.setSelected(false);
                 if(memberList.queryMember(userId)){
                     payment.identifiedInformation.setText("Identified Successfully");
                     membership = memberList.getMember(userId);
                     payment.userGreeting.setText("Hello, dear " + membership.getFirstName() + " " + membership.getLastName());
                     payment.membershipNumber.setText(membership.getMembershipId());
                     String coupStatus = "";
-                    if(membership.getStamps() > 10){
+                    if(membership.getStamps() >= 10){
                         coupStatus = "(Could Use)";
                         payment.useCoupon.setEnabled(true);
                     }else {
-                        coupStatus = "(Couldn't Use, Less Than 10)";
+                        coupStatus = "(<10)";
                         payment.useCoupon.setEnabled(false);
                     }
                     login = true;
@@ -257,6 +254,76 @@ public class OrderGUI extends JPanel{
         }
     }
 
+    public void clearOrder(){
+        {
+           orderMenu.soup1.setSelected(true);
+           orderMenu.noodle1.setSelected(true);
+           orderMenu.onion1.setSelected(true);
+           orderMenu.nori2.setSelected(true);
+           orderMenu.chashu2.setSelected(true);
+           orderMenu.egg2.setSelected(true);
+           orderMenu.spice0.setSelected(true);
+        }
+
+        orderMenu.noriNumber.setValue(0);
+        orderMenu.chashuNumber.setValue(0);
+        orderMenu.eggNumber.setValue(0);
+        orderMenu.shootNumber.setValue(0);
+
+        orderMenu.noodlePrice.setText("" + menu.getNoodle());
+        orderMenu.extraPrice.setText("0");
+        orderMenu.totalPrice.setText("" + menu.getNoodle());
+
+        payment.membershipNumberInput.setText("");
+        payment.identifiedInformation.setText("");
+        payment.userGreeting.setText("Welcome To Join Us");
+        payment.membershipNumber.setText("");
+        payment.coupon.setText("");
+        payment.useCoupon.setEnabled(false);
+        payment.useCoupon.setSelected(false);
+        card.show(middle, "order");
+    }
+
+    public void setMenu(){
+        MenuData menuData = new MenuData();
+        menu = menuData.loadInfo();
+        if(!menu.isNoriAvailable()){
+            orderMenu.noriAvailable.setText("Unavailable");
+            orderMenu.noriNumber.setEnabled(false);
+        }else {
+            orderMenu.noriAvailable.setText("Available");
+            orderMenu.noriNumber.setEnabled(true);
+        }
+        orderMenu.noriPrice.setText("￡" + menu.getNori());
+
+        if(!menu.isEggAvailable()){
+            orderMenu.eggAvailable.setText("Unavailable");
+            orderMenu.eggNumber.setEnabled(false);
+        }else {
+            orderMenu.eggAvailable.setText("Available");
+            orderMenu.eggNumber.setEnabled(true);
+        }
+        orderMenu.eggPrice.setText("￡" + menu.getEgg());
+
+        if(!menu.isChashuAvailable()){
+            orderMenu.chashuAvailable.setText("Unavailable");
+            orderMenu.chashuNumber.setEnabled(false);
+        }else {
+            orderMenu.chashuAvailable.setText("Available");
+            orderMenu.chashuNumber.setEnabled(true);
+        }
+        orderMenu.chashuPrice.setText("￡" + menu.getChashu());
+
+        if(!menu.isShootAvailable()){
+            orderMenu.shootAvailable.setText("Unavailable");
+            orderMenu.shootNumber.setEnabled(false);
+        }else {
+            orderMenu.shootAvailable.setText("Available");
+            orderMenu.shootNumber.setEnabled(true);
+        }
+        orderMenu.shootPrice.setText("￡" + menu.getShoot());
+
+    }
 
     public static void main(String[] args) throws Exception{
         UIManager.setLookAndFeel ( NimbusLookAndFeel.class.getCanonicalName () );

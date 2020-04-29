@@ -101,18 +101,27 @@ new FormModel {
 									"text": "Tonkotsu"
 									"$buttonGroup": new FormReference( "soupGroup" )
 									"font": #SwingDerivedFont0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "soup2"
 									"text": "Shoyo"
 									"$buttonGroup": new FormReference( "soupGroup" )
 									"font": #SwingDerivedFont0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "soup3"
 									"text": "Shio"
 									"$buttonGroup": new FormReference( "soupGroup" )
 									"font": #SwingDerivedFont0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "label_noodle"
@@ -124,18 +133,27 @@ new FormModel {
 									"text": "Soft"
 									"$buttonGroup": new FormReference( "noodleGroup" )
 									"font": #SwingDerivedFont0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "noodle2"
 									"text": "Medium"
 									"$buttonGroup": new FormReference( "noodleGroup" )
 									"font": #SwingDerivedFont0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "noodle3"
 									"text": "Firm"
 									"$buttonGroup": new FormReference( "noodleGroup" )
 									"font": #SwingDerivedFont0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "label_onion"
@@ -147,18 +165,27 @@ new FormModel {
 									"text": "No please"
 									"$buttonGroup": new FormReference( "onionGroup" )
 									"font": #SwingDerivedFont0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "onion2"
 									"text": "Just a little"
 									"$buttonGroup": new FormReference( "onionGroup" )
 									"font": #SwingDerivedFont0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "onion3"
 									"text": "A lot"
 									"$buttonGroup": new FormReference( "onionGroup" )
 									"font": #SwingDerivedFont0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 							}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
 								"value": "cell 0 0,dock center"
@@ -186,12 +213,18 @@ new FormModel {
 									"text": "Yes"
 									"$buttonGroup": new FormReference( "noriGroup" )
 									"font": #SwingDerivedFont0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "nori2"
 									"text": "No"
 									"$buttonGroup": new FormReference( "noriGroup" )
 									"font": #SwingDerivedFont0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "label_chashu"
@@ -209,12 +242,18 @@ new FormModel {
 									"text": "Yes"
 									"$buttonGroup": new FormReference( "chashuGroup" )
 									"font": #SwingDerivedFont0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "chashu2"
 									"text": "No"
 									"$buttonGroup": new FormReference( "chashuGroup" )
 									"font": #SwingDerivedFont0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "label_egg"
@@ -232,12 +271,18 @@ new FormModel {
 									"text": "Yes"
 									"$buttonGroup": new FormReference( "eggGroup" )
 									"font": #SwingDerivedFont0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "egg2"
 									"text": "No"
 									"$buttonGroup": new FormReference( "eggGroup" )
 									"font": #SwingDerivedFont0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 							}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
 								"value": "cell 0 1,dock center"
@@ -257,36 +302,54 @@ new FormModel {
 									"text": "0"
 									"$buttonGroup": new FormReference( "spicinessGroup" )
 									"font": #SwingDerivedFont0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "spice1"
 									"text": "1"
 									"$buttonGroup": new FormReference( "spicinessGroup" )
 									"font": #SwingDerivedFont0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "spice2"
 									"text": "2"
 									"$buttonGroup": new FormReference( "spicinessGroup" )
 									"font": #SwingDerivedFont0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "spice3"
 									"text": "3"
 									"$buttonGroup": new FormReference( "spicinessGroup" )
 									"font": #SwingDerivedFont0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "spice4"
 									"text": "4"
 									"$buttonGroup": new FormReference( "spicinessGroup" )
 									"font": #SwingDerivedFont0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormComponent( "javax.swing.JToggleButton" ) {
 									name: "spice5"
 									"text": "5"
 									"$buttonGroup": new FormReference( "spicinessGroup" )
 									"font": #SwingDerivedFont0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 							}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
 								"value": "cell 0 2,dock center"
@@ -694,4 +757,3 @@ new FormModel {
 		} )
 	}
 }
-

@@ -45,7 +45,12 @@ public class MainVersion2 extends JFrame {
         content.add(managementIndex,"management");
 
         //switch function
-        index.dinner.addActionListener(e -> card.show(content, "order"));
+        index.dinner.addActionListener(e -> {
+            //qing chu shu ju
+            orderGui.setMenu();
+            orderGui.clearOrder();
+            card.show(content, "order");
+        });
         orderGui.orderMenu.returnButton.addActionListener(e -> card.show(content, "index"));
         index.becomeVip.addActionListener(e -> card.show(content, "register"));
         index.isVip.addActionListener(e -> {
