@@ -2,12 +2,14 @@ import com.alee.laf.WebLookAndFeel;
 import database.MenuData;
 import database.UserData;
 import database.information.MemberList;
+import database.information.Receipt;
 import newgui.Index;
 import newgui.management.ManagementIndex;
 import newgui.membership.CheckPanel;
 import newgui.membership.CreateMember;
 import newgui.membership.Register;
 import newgui.order.OrderGUI;
+import newgui.order.Recipients;
 
 import javax.swing.*;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
@@ -72,6 +74,32 @@ public class MainVersion2 extends JFrame {
 
         managementIndex.menuOperation.returnButton.addActionListener(e -> card.show(content,"index"));
         //todo
+        orderGui.payment.settleButton.addActionListener(e ->{
+
+            if((orderGui.membership == null)){
+                orderGui.orderList.createOrder(orderGui.cuisine, orderGui.eatType,"NoMembership");
+            }
+            else if(orderGui.membership.getMembershipId() == null){
+                orderGui.orderList.createOrder(orderGui.cuisine, orderGui.eatType,"NoMembership");
+            }else {
+                UserData userData = new UserData();
+                MemberList memberList = userData.loadInfo();
+                orderGui.orderList.createOrder(orderGui.cuisine,orderGui.eatType,orderGui.membership.getMembershipId());
+                if (orderGui.usingCoupon){
+                    memberList.getMember(orderGui.membership.getMembershipId()).useStamps();
+                } else {
+                    memberList.getMember(orderGui.membership.getMembershipId()).addStamps();
+                }
+                memberList.saveMembershipCsv();
+            }
+            orderGui.orderList.save();
+            orderGui.order = orderGui.orderList.getOrders().get(orderGui.orderList.getOrders().size()-1);
+            orderGui.receipt = new Receipt(orderGui.order);
+            orderGui.receipt.payingMethod = orderGui.payingMethod;
+            //check what is the membership
+            new Recipients(orderGui.receipt.generateReceipt(true));
+            card.show(content,"index");
+        });
 
 
 

@@ -33,7 +33,7 @@ public class Receipt {
     public String generateReceipt(){
         String receiptContent = "";
         receiptContent = "<Receipt>" + "\n" + "Serial Number:" + order.getOrderId() + "\n" + "Time:" + order.getDate()
-                + "\n" + order.getMembershipId() + "\n";
+                + "\n" + "Membership:" + order.getMembershipId() + "\n";
         for(int i = 0; i<15;i++){
             receiptContent = receiptContent + "-----";
         }
@@ -73,12 +73,11 @@ public class Receipt {
 
     public String generateReceipt(boolean file){
         if(file){
-            File f = new File("data/receipt.txt");
+            File f = new File("data/recipients/"+order.getBillId()+".txt");
             try {
                 BufferedWriter bw = new BufferedWriter(new FileWriter(f, true));
                 bw.write(generateReceipt());
                 bw.close();
-
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -98,23 +97,35 @@ public class Receipt {
             length = numberLength;
         }
 
-        String content = "";
+        StringBuilder content = new StringBuilder();
 
         for(int i=0;i<length;i++){
             if(line.length() > i){
-                content = content + line.charAt(i);
+                content.append(line.charAt(i));
             }else{
-                content = content + " ";
+                content.append(" ");
             }
         }
 
-        return content;
+        return content.toString();
+    }
+
+    //clear the data from 7days ago
+    public void clear(){
+        File folder = new File("/data/recipients/");
+        File[] files = folder.listFiles();
+        for (File file:files) {
+            int date = Integer.parseInt(order.getOrderId().substring(0,8))-7;
+            int name = Integer.parseInt(file.getName().substring(0,8));
+            if (name<date){
+                file.delete();
+            }
+        }
+        System.out.println("File have already been deleted");
     }
 
     public static void main(String[] args) {
-        String s = "QiShiWoShiNiBaBa";
         Receipt receipt = new Receipt();
-        System.out.println(receipt.receiptLineFormat(s,0)+"MaDe");
-
+        receipt.clear();
     }
 }

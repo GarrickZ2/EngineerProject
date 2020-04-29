@@ -29,24 +29,25 @@ public class OrderGUI extends JPanel{
 
     JPanel middle;
 
-    CardLayout card;
+    public CardLayout card;
 
     public OrderMenu orderMenu;
     public Payment payment;
 
     public Membership membership;
 
-    Order order;
-    OrderList orderList;
-    Cuisine cuisine;
-    MenuData menuData;
+    public Order order;
+    public OrderList orderList;
+    public Cuisine cuisine;
+    public MenuData menuData;
     public Menu menu;
 
-    Receipt receipt;
+    public Receipt receipt;
 
-    int eatType = 0;
-    String payingMethod;
-
+    public int eatType = 0;
+    public String payingMethod;
+    public boolean login = false;
+    public boolean usingCoupon = false;
     public OrderGUI(LayoutManager layoutManager){
 
         super(layoutManager);
@@ -133,6 +134,8 @@ public class OrderGUI extends JPanel{
                 payment.extraPrice.setText("￡"+ ( cuisine.calculate() - menu.getNoodle() ) );
                 payment.packingPrice.setText("￡0");
                 payment.totalPrice.setText("￡" + cuisine.calculate());
+                payment.eatIn.setSelected(true);
+                payment.cash.setSelected(true);
                 card.show(middle, "payment");
             }catch (Exception exception){
                 JOptionPane.showMessageDialog(this, "Please Select Necessary Option!");
@@ -158,25 +161,6 @@ public class OrderGUI extends JPanel{
 
         payment.returnButton.addActionListener(e ->{
             card.show(middle,"order");
-        });
-        payment.settleButton.addActionListener(e ->{
-
-            if((membership == null)){
-                orderList.createOrder(cuisine,eatType,"NoMembership");
-            }
-            else if(membership.getMembershipId() == null){
-                orderList.createOrder(cuisine,eatType,"NoMembership");
-            }else {
-                orderList.createOrder(cuisine,eatType,membership.getMembershipId());
-            }
-            orderList.save();
-            order = orderList.getOrders().get(orderList.getOrders().size()-1);
-            receipt = new Receipt(order);
-            receipt.payingMethod = this.payingMethod;
-
-            System.out.println(receipt.generateReceipt(true));
-
-            card.show(middle,"compulsory");
         });
 
         //VIP SYSTEM
@@ -205,26 +189,34 @@ public class OrderGUI extends JPanel{
                 String userId = payment.membershipNumberInput.getText();
                 if(memberList.queryMember(userId)){
                     payment.identifiedInformation.setText("Identified Successfully");
-                    Membership member = memberList.getMember(userId);
-                    payment.userGreeting.setText("Hello, dear " + member.getFirstName() + " " + member.getLastName());
-                    payment.membershipNumber.setText(member.getMembershipId());
+                    membership = memberList.getMember(userId);
+                    payment.userGreeting.setText("Hello, dear " + membership.getFirstName() + " " + membership.getLastName());
+                    payment.membershipNumber.setText(membership.getMembershipId());
                     String coupStatus = "";
-                    if(member.getStamps() > 10){
+                    if(membership.getStamps() > 10){
                         coupStatus = "(Could Use)";
                         payment.useCoupon.setEnabled(true);
                     }else {
                         coupStatus = "(Couldn't Use, Less Than 10)";
                         payment.useCoupon.setEnabled(false);
                     }
-                    payment.coupon.setText("" + member.getStamps() + coupStatus);
+                    login = true;
+                    payment.coupon.setText("" + membership.getStamps() + coupStatus);
 
                 }else {
                     payment.identifiedInformation.setText("Identified Failed");
                     payment.userGreeting.setText("Welcome To Join Us");
                     payment.membershipNumber.setText(" ");
                     payment.coupon.setText("");
+                    login = false;
                     payment.useCoupon.setEnabled(false);
                 }
+            }
+        });
+        payment.useCoupon.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                usingCoupon = payment.useCoupon.isSelected();
             }
         });
         this.add(middle, BorderLayout.CENTER);
@@ -264,7 +256,6 @@ public class OrderGUI extends JPanel{
             return false;
         }
     }
-
 
 
     public static void main(String[] args) throws Exception{
