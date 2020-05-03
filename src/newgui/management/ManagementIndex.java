@@ -21,7 +21,7 @@ public class ManagementIndex extends JPanel {
     CardLayout card;
     JPanel main;
     public MenuOperation menuOperation;
-    public ManagerPassword managerPassword;
+    public Popularity popularity;
     public MembershipOperation membershipOperation;
     public DataAnalysis dataAnalysis;
 
@@ -31,12 +31,12 @@ public class ManagementIndex extends JPanel {
         main = new JPanel(card);
 
         menuOperation = new MenuOperation();
-        managerPassword = new ManagerPassword();
+        popularity = new Popularity();
         membershipOperation = new MembershipOperation();
         dataAnalysis = new DataAnalysis();
 
         main.add(menuOperation,"menuOperation");
-        main.add(managerPassword,"managerPassword");
+        main.add(popularity,"managerPassword");
         main.add(membershipOperation,"membershipOperation");
         main.add(dataAnalysis,"dataAnalysis");
 
@@ -62,19 +62,19 @@ public class ManagementIndex extends JPanel {
                 }
             });
             //======== Index in ManagerPassword ========
-            managerPassword.menuOperationPanel.addMouseListener(new MouseAdapter() {
+            popularity.menuOperationPanel.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     menuOperationPanelMouseClicked(e);
                 }
             });
-            managerPassword.membershipOperationPanel.addMouseListener(new MouseAdapter() {
+            popularity.membershipOperationPanel.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     membershipOperationPanelMouseClicked(e);
                 }
             });
-            managerPassword.dataAnalysisPanel.addMouseListener(new MouseAdapter() {
+            popularity.dataAnalysisPanel.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     dataAnalysisPanelMouseClicked(e);

@@ -205,7 +205,7 @@ public class MenuOperation extends JPanel {
                         managerPasswordPanel.setLayout(new GridLayout());
 
                         //---- indexLabel_managerPassword ----
-                        indexLabel_managerPassword.setText("Manager password");
+                        indexLabel_managerPassword.setText("Popularity");
                         indexLabel_managerPassword.setHorizontalAlignment(SwingConstants.CENTER);
                         managerPasswordPanel.add(indexLabel_managerPassword);
                     }

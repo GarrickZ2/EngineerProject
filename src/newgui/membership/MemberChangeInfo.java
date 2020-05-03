@@ -195,7 +195,7 @@ public class MemberChangeInfo extends JPanel {
                             unchangablePanel.add(label_registrationDate);
 
                             //---- regDate ----
-                            regDate.setText("(Optional)2020-04-05");
+                            regDate.setText("2020-04-05");
                             unchangablePanel.add(regDate);
 
                             //---- label_couponNumber ----

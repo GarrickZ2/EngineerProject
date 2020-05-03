@@ -76,14 +76,6 @@ public class DataAnalysis extends JPanel {
         emptyBox7 = new JPanel();
         label_shoot = new JLabel();
         weeklyShoot = new JLabel();
-        switchOuterPanel = new JPanel();
-        switchInnerPanel = new JPanel();
-        button_weeklyStatistics = new JToggleButton();
-        button_monthlyStatistics = new JToggleButton();
-        button_annualStatistics = new JToggleButton();
-        button_membershipStatistics = new JToggleButton();
-        button_popularity = new JToggleButton();
-        button_emptyButton = new JToggleButton();
         bottomPanel = new JPanel();
         bottom_innerPanel = new JPanel();
         storeName = new JLabel();
@@ -168,7 +160,7 @@ public class DataAnalysis extends JPanel {
                         managerPasswordPanel.setLayout(new GridLayout());
 
                         //---- indexLabel_managerPassword ----
-                        indexLabel_managerPassword.setText("Manager password");
+                        indexLabel_managerPassword.setText("Popularity");
                         indexLabel_managerPassword.setHorizontalAlignment(SwingConstants.CENTER);
                         managerPasswordPanel.add(indexLabel_managerPassword);
                     }
@@ -231,9 +223,9 @@ public class DataAnalysis extends JPanel {
                     //======== sug_outerPanel ========
                     {
                         sug_outerPanel.setLayout(new GridBagLayout());
-                        ((GridBagLayout)sug_outerPanel.getLayout()).columnWidths = new int[] {760, 190, 0};
+                        ((GridBagLayout)sug_outerPanel.getLayout()).columnWidths = new int[] {950, 0};
                         ((GridBagLayout)sug_outerPanel.getLayout()).rowHeights = new int[] {375, 0};
-                        ((GridBagLayout)sug_outerPanel.getLayout()).columnWeights = new double[] {0.0, 0.0, 1.0E-4};
+                        ((GridBagLayout)sug_outerPanel.getLayout()).columnWeights = new double[] {0.0, 1.0E-4};
                         ((GridBagLayout)sug_outerPanel.getLayout()).rowWeights = new double[] {0.0, 1.0E-4};
 
                         //======== switchCard ========
@@ -244,7 +236,7 @@ public class DataAnalysis extends JPanel {
                             {
                                 switch_outerPanel.setBackground(Color.white);
                                 switch_outerPanel.setLayout(new GridBagLayout());
-                                ((GridBagLayout)switch_outerPanel.getLayout()).columnWidths = new int[] {100, 10, 340, 10, 300, 0};
+                                ((GridBagLayout)switch_outerPanel.getLayout()).columnWidths = new int[] {100, 20, 350, 20, 460, 0};
                                 ((GridBagLayout)switch_outerPanel.getLayout()).rowHeights = new int[] {375, 0};
                                 ((GridBagLayout)switch_outerPanel.getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 0.0, 0.0, 1.0E-4};
                                 ((GridBagLayout)switch_outerPanel.getLayout()).rowWeights = new double[] {0.0, 1.0E-4};
@@ -327,7 +319,7 @@ public class DataAnalysis extends JPanel {
                                         {
                                             weeklyBodyPanel.setBackground(new Color(248, 245, 239));
                                             weeklyBodyPanel.setLayout(new GridBagLayout());
-                                            ((GridBagLayout)weeklyBodyPanel.getLayout()).columnWidths = new int[] {300, 0};
+                                            ((GridBagLayout)weeklyBodyPanel.getLayout()).columnWidths = new int[] {460, 0};
                                             ((GridBagLayout)weeklyBodyPanel.getLayout()).rowHeights = new int[] {150, 180, 0};
                                             ((GridBagLayout)weeklyBodyPanel.getLayout()).columnWeights = new double[] {0.0, 1.0E-4};
                                             ((GridBagLayout)weeklyBodyPanel.getLayout()).rowWeights = new double[] {0.0, 0.0, 1.0E-4};
@@ -460,52 +452,6 @@ public class DataAnalysis extends JPanel {
                         sug_outerPanel.add(switchCard, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
                             GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                             new Insets(0, 0, 0, 0), 0, 0));
-
-                        //======== switchOuterPanel ========
-                        {
-                            switchOuterPanel.setBackground(Color.white);
-                            switchOuterPanel.setLayout(new GridBagLayout());
-                            ((GridBagLayout)switchOuterPanel.getLayout()).columnWidths = new int[] {10, 180, 0};
-                            ((GridBagLayout)switchOuterPanel.getLayout()).rowHeights = new int[] {375, 0};
-                            ((GridBagLayout)switchOuterPanel.getLayout()).columnWeights = new double[] {0.0, 0.0, 1.0E-4};
-                            ((GridBagLayout)switchOuterPanel.getLayout()).rowWeights = new double[] {0.0, 1.0E-4};
-
-                            //======== switchInnerPanel ========
-                            {
-                                switchInnerPanel.setBackground(Color.white);
-                                switchInnerPanel.setLayout(new GridLayout(6, 0));
-
-                                //---- button_weeklyStatistics ----
-                                button_weeklyStatistics.setText("Weekly Statistics");
-                                switchInnerPanel.add(button_weeklyStatistics);
-
-                                //---- button_monthlyStatistics ----
-                                button_monthlyStatistics.setText("Monthly Statistics");
-                                switchInnerPanel.add(button_monthlyStatistics);
-
-                                //---- button_annualStatistics ----
-                                button_annualStatistics.setText("Annual Statistics");
-                                switchInnerPanel.add(button_annualStatistics);
-
-                                //---- button_membershipStatistics ----
-                                button_membershipStatistics.setText("Membership Statistics");
-                                switchInnerPanel.add(button_membershipStatistics);
-
-                                //---- button_popularity ----
-                                button_popularity.setText("Popularity");
-                                switchInnerPanel.add(button_popularity);
-
-                                //---- button_emptyButton ----
-                                button_emptyButton.setText("Coming Soon");
-                                switchInnerPanel.add(button_emptyButton);
-                            }
-                            switchOuterPanel.add(switchInnerPanel, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
-                                GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-                                new Insets(0, 0, 0, 0), 0, 0));
-                        }
-                        sug_outerPanel.add(switchOuterPanel, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
-                            GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-                            new Insets(0, 0, 0, 0), 0, 0));
                     }
                     suggestionPanel.add(sug_outerPanel, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0,
                         GridBagConstraints.CENTER, GridBagConstraints.BOTH,
@@ -567,15 +513,6 @@ public class DataAnalysis extends JPanel {
         statisticsContentGroup.add(button_chashu);
         statisticsContentGroup.add(button_egg);
         statisticsContentGroup.add(button_shoot);
-
-        //---- dataAnalysisGroup ----
-        ButtonGroup dataAnalysisGroup = new ButtonGroup();
-        dataAnalysisGroup.add(button_weeklyStatistics);
-        dataAnalysisGroup.add(button_monthlyStatistics);
-        dataAnalysisGroup.add(button_annualStatistics);
-        dataAnalysisGroup.add(button_membershipStatistics);
-        dataAnalysisGroup.add(button_popularity);
-        dataAnalysisGroup.add(button_emptyButton);
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
@@ -638,14 +575,6 @@ public class DataAnalysis extends JPanel {
     private JPanel emptyBox7;
     private JLabel label_shoot;
     private JLabel weeklyShoot;
-    private JPanel switchOuterPanel;
-    private JPanel switchInnerPanel;
-    public JToggleButton button_weeklyStatistics;
-    public JToggleButton button_monthlyStatistics;
-    public JToggleButton button_annualStatistics;
-    public JToggleButton button_membershipStatistics;
-    public JToggleButton button_popularity;
-    public JToggleButton button_emptyButton;
     private JPanel bottomPanel;
     private JPanel bottom_innerPanel;
     private JLabel storeName;

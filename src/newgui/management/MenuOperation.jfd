@@ -72,7 +72,7 @@ new FormModel {
 							}
 							add( new FormComponent( "javax.swing.JLabel" ) {
 								name: "indexLabel_managerPassword"
-								"text": "Manager password"
+								"text": "Popularity"
 								"horizontalAlignment": 0
 							} )
 						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
@@ -752,5 +752,3 @@ new FormModel {
 		} )
 	}
 }
-
-

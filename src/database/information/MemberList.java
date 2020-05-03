@@ -2,6 +2,7 @@ package database.information;
 
 import database.UserData;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -153,6 +154,8 @@ public class MemberList extends DataType {
 				ms.setTelephone(telephone);
 				ms.seteMail(eMail);
 				ms.setStamps(5);
+				ms.setRegistrationDate(new Date());
+				ms.setLastConsumption("",0,false);
 
 				//Get the lastest membershipID
 				if(msl.size()==0) {
@@ -224,7 +227,7 @@ public class MemberList extends DataType {
 			System.out.println("Error: Invalid input");
 			return;
 		}else{
-			Membership ms = new Membership();
+			Membership ms;
 			if(this.queryMember(id)){
 				ms = this.getMember(id);
 				this.deleteMember(id);

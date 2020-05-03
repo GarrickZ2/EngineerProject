@@ -10,8 +10,8 @@ import javax.swing.*;
 /**
  * @author Brainrain
  */
-public class ManagerPassword extends JPanel {
-    public ManagerPassword() {
+public class Popularity extends JPanel {
+    public Popularity() {
         initComponents();
     }
 
@@ -116,7 +116,7 @@ public class ManagerPassword extends JPanel {
                         managerPasswordPanel.setLayout(new GridLayout());
 
                         //---- indexLabel_managerPassword ----
-                        indexLabel_managerPassword.setText("Manager password");
+                        indexLabel_managerPassword.setText("Popularity");
                         indexLabel_managerPassword.setHorizontalAlignment(SwingConstants.CENTER);
                         managerPasswordPanel.add(indexLabel_managerPassword);
                     }

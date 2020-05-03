@@ -72,7 +72,7 @@ new FormModel {
 							}
 							add( new FormComponent( "javax.swing.JLabel" ) {
 								name: "indexLabel_managerPassword"
-								"text": "Manager password"
+								"text": "Popularity"
 								"horizontalAlignment": 0
 							} )
 						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
@@ -128,7 +128,7 @@ new FormModel {
 						name: "suggestionPanel"
 						"background": sfield java.awt.Color white
 						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
-							"$columnSpecs": "760, 190"
+							"$columnSpecs": "950"
 							"$rowSpecs": "375"
 							"$alignLeft": true
 							"$alignTop": true
@@ -137,7 +137,7 @@ new FormModel {
 							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.CardLayout ) ) {
 								name: "switchCard"
 								add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
-									"$columnSpecs": "100, 10, 340, 10, 300"
+									"$columnSpecs": "100, 20, 350, 20, 460"
 									"$rowSpecs": "375"
 									"$alignLeft": true
 									"$alignTop": true
@@ -245,7 +245,7 @@ new FormModel {
 												"font": new java.awt.Font( "Microsoft YaHei UI", 1, 16 )
 											}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
 											add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
-												"$columnSpecs": "300"
+												"$columnSpecs": "460"
 												"$rowSpecs": "150, 180"
 												"$alignLeft": true
 												"$alignTop": true
@@ -374,73 +374,6 @@ new FormModel {
 									"value": "card1"
 								} )
 							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
-							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
-								"$columnSpecs": "10, 180"
-								"$rowSpecs": "375"
-								"$alignLeft": true
-								"$alignTop": true
-							} ) {
-								name: "switchOuterPanel"
-								"background": sfield java.awt.Color white
-								add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
-									"rows": 6
-								} ) {
-									name: "switchInnerPanel"
-									"background": sfield java.awt.Color white
-									add( new FormComponent( "javax.swing.JToggleButton" ) {
-										name: "button_weeklyStatistics"
-										"text": "Weekly Statistics"
-										"$buttonGroup": new FormReference( "dataAnalysisGroup" )
-										auxiliary() {
-											"JavaCodeGenerator.variableModifiers": 1
-										}
-									} )
-									add( new FormComponent( "javax.swing.JToggleButton" ) {
-										name: "button_monthlyStatistics"
-										"text": "Monthly Statistics"
-										"$buttonGroup": new FormReference( "dataAnalysisGroup" )
-										auxiliary() {
-											"JavaCodeGenerator.variableModifiers": 1
-										}
-									} )
-									add( new FormComponent( "javax.swing.JToggleButton" ) {
-										name: "button_annualStatistics"
-										"text": "Annual Statistics"
-										"$buttonGroup": new FormReference( "dataAnalysisGroup" )
-										auxiliary() {
-											"JavaCodeGenerator.variableModifiers": 1
-										}
-									} )
-									add( new FormComponent( "javax.swing.JToggleButton" ) {
-										name: "button_membershipStatistics"
-										"text": "Membership Statistics"
-										"$buttonGroup": new FormReference( "dataAnalysisGroup" )
-										auxiliary() {
-											"JavaCodeGenerator.variableModifiers": 1
-										}
-									} )
-									add( new FormComponent( "javax.swing.JToggleButton" ) {
-										name: "button_popularity"
-										"text": "Popularity"
-										"$buttonGroup": new FormReference( "dataAnalysisGroup" )
-										auxiliary() {
-											"JavaCodeGenerator.variableModifiers": 1
-										}
-									} )
-									add( new FormComponent( "javax.swing.JToggleButton" ) {
-										name: "button_emptyButton"
-										"text": "Coming Soon"
-										"$buttonGroup": new FormReference( "dataAnalysisGroup" )
-										auxiliary() {
-											"JavaCodeGenerator.variableModifiers": 1
-										}
-									} )
-								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
-									"gridx": 1
-								} )
-							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
-								"gridx": 1
-							} )
 						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 							"gridy": 1
 						} )
