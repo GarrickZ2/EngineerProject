@@ -31,6 +31,7 @@ public class OrderData extends BaseData {
                         attributes[14], Double.parseDouble(attributes[16]), attributes[17]);
                 orders.add(order);
             }
+
             reader.close();
         } catch (Exception e) {
             e.printStackTrace();
