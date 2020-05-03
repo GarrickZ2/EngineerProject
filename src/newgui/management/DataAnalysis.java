@@ -33,6 +33,57 @@ public class DataAnalysis extends JPanel {
         membershipOperationPanel = new JPanel();
         indexLabel_membershipOperation = new JLabel();
         emptyBox5 = new JPanel();
+        suggestionPanel = new JPanel();
+        sug_outerPanel = new JPanel();
+        switchCard = new JPanel();
+        switch_outerPanel = new JPanel();
+        switch_statisticsListPanel = new JPanel();
+        button_income = new JToggleButton();
+        button_orders = new JToggleButton();
+        button_tonkotsu = new JToggleButton();
+        button_shoyo = new JToggleButton();
+        button_shio = new JToggleButton();
+        button_nori = new JToggleButton();
+        button_chashu = new JToggleButton();
+        button_egg = new JToggleButton();
+        button_shoot = new JToggleButton();
+        statisticsImageCard = new JPanel();
+        statisticsDataCard = new JPanel();
+        weeklyPanel = new JPanel();
+        label_title_monthlyStatistics = new JLabel();
+        weeklyBodyPanel = new JPanel();
+        weekly_hedPanel = new JPanel();
+        label_statisticRange = new JLabel();
+        weeklyRange = new JLabel();
+        label_weeklyIncome = new JLabel();
+        weeklyIncome = new JLabel();
+        label_weeklyOrders = new JLabel();
+        weeklyOrders = new JLabel();
+        weekly_footPanel = new JPanel();
+        label_tonkotsu = new JLabel();
+        weeklyTonkotsu = new JLabel();
+        label_nori = new JLabel();
+        weeklyNori = new JLabel();
+        label_shoyo = new JLabel();
+        weeklyShoyo = new JLabel();
+        label_chashu = new JLabel();
+        weeklyChashu = new JLabel();
+        label_shio = new JLabel();
+        weeklyShio = new JLabel();
+        label_egg = new JLabel();
+        weeklyEgg = new JLabel();
+        emptyBox6 = new JPanel();
+        emptyBox7 = new JPanel();
+        label_shoot = new JLabel();
+        weeklyShoot = new JLabel();
+        switchOuterPanel = new JPanel();
+        switchInnerPanel = new JPanel();
+        button_weeklyStatistics = new JToggleButton();
+        button_monthlyStatistics = new JToggleButton();
+        button_annualStatistics = new JToggleButton();
+        button_membershipStatistics = new JToggleButton();
+        button_popularity = new JToggleButton();
+        button_emptyButton = new JToggleButton();
         bottomPanel = new JPanel();
         bottom_innerPanel = new JPanel();
         storeName = new JLabel();
@@ -167,6 +218,302 @@ public class DataAnalysis extends JPanel {
                 bodyPanel.add(emptyBox5, new GridBagConstraints(2, 0, 1, 1, 0.0, 0.0,
                     GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                     new Insets(0, 0, 0, 0), 0, 0));
+
+                //======== suggestionPanel ========
+                {
+                    suggestionPanel.setBackground(Color.white);
+                    suggestionPanel.setLayout(new GridBagLayout());
+                    ((GridBagLayout)suggestionPanel.getLayout()).columnWidths = new int[] {950, 0};
+                    ((GridBagLayout)suggestionPanel.getLayout()).rowHeights = new int[] {20, 375, 0};
+                    ((GridBagLayout)suggestionPanel.getLayout()).columnWeights = new double[] {0.0, 1.0E-4};
+                    ((GridBagLayout)suggestionPanel.getLayout()).rowWeights = new double[] {0.0, 0.0, 1.0E-4};
+
+                    //======== sug_outerPanel ========
+                    {
+                        sug_outerPanel.setLayout(new GridBagLayout());
+                        ((GridBagLayout)sug_outerPanel.getLayout()).columnWidths = new int[] {760, 190, 0};
+                        ((GridBagLayout)sug_outerPanel.getLayout()).rowHeights = new int[] {375, 0};
+                        ((GridBagLayout)sug_outerPanel.getLayout()).columnWeights = new double[] {0.0, 0.0, 1.0E-4};
+                        ((GridBagLayout)sug_outerPanel.getLayout()).rowWeights = new double[] {0.0, 1.0E-4};
+
+                        //======== switchCard ========
+                        {
+                            switchCard.setLayout(new CardLayout());
+
+                            //======== switch_outerPanel ========
+                            {
+                                switch_outerPanel.setBackground(Color.white);
+                                switch_outerPanel.setLayout(new GridBagLayout());
+                                ((GridBagLayout)switch_outerPanel.getLayout()).columnWidths = new int[] {100, 10, 340, 10, 300, 0};
+                                ((GridBagLayout)switch_outerPanel.getLayout()).rowHeights = new int[] {375, 0};
+                                ((GridBagLayout)switch_outerPanel.getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 0.0, 0.0, 1.0E-4};
+                                ((GridBagLayout)switch_outerPanel.getLayout()).rowWeights = new double[] {0.0, 1.0E-4};
+
+                                //======== switch_statisticsListPanel ========
+                                {
+                                    switch_statisticsListPanel.setBackground(Color.white);
+                                    switch_statisticsListPanel.setLayout(new GridLayout(9, 1));
+
+                                    //---- button_income ----
+                                    button_income.setText("Income");
+                                    switch_statisticsListPanel.add(button_income);
+
+                                    //---- button_orders ----
+                                    button_orders.setText("Orders");
+                                    switch_statisticsListPanel.add(button_orders);
+
+                                    //---- button_tonkotsu ----
+                                    button_tonkotsu.setText("Tonkotsu");
+                                    switch_statisticsListPanel.add(button_tonkotsu);
+
+                                    //---- button_shoyo ----
+                                    button_shoyo.setText("Shoyo");
+                                    switch_statisticsListPanel.add(button_shoyo);
+
+                                    //---- button_shio ----
+                                    button_shio.setText("Shio");
+                                    switch_statisticsListPanel.add(button_shio);
+
+                                    //---- button_nori ----
+                                    button_nori.setText("Nori");
+                                    switch_statisticsListPanel.add(button_nori);
+
+                                    //---- button_chashu ----
+                                    button_chashu.setText("Chashu");
+                                    switch_statisticsListPanel.add(button_chashu);
+
+                                    //---- button_egg ----
+                                    button_egg.setText("Egg");
+                                    switch_statisticsListPanel.add(button_egg);
+
+                                    //---- button_shoot ----
+                                    button_shoot.setText("Shoot");
+                                    switch_statisticsListPanel.add(button_shoot);
+                                }
+                                switch_outerPanel.add(switch_statisticsListPanel, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
+                                    GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                                    new Insets(0, 0, 0, 0), 0, 0));
+
+                                //======== statisticsImageCard ========
+                                {
+                                    statisticsImageCard.setLayout(new CardLayout());
+                                }
+                                switch_outerPanel.add(statisticsImageCard, new GridBagConstraints(2, 0, 1, 1, 0.0, 0.0,
+                                    GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                                    new Insets(0, 0, 0, 0), 0, 0));
+
+                                //======== statisticsDataCard ========
+                                {
+                                    statisticsDataCard.setLayout(new CardLayout());
+
+                                    //======== weeklyPanel ========
+                                    {
+                                        weeklyPanel.setBackground(new Color(223, 217, 213));
+                                        weeklyPanel.setLayout(new GridBagLayout());
+                                        ((GridBagLayout)weeklyPanel.getLayout()).columnWidths = new int[] {300, 0};
+                                        ((GridBagLayout)weeklyPanel.getLayout()).rowHeights = new int[] {45, 330, 0};
+                                        ((GridBagLayout)weeklyPanel.getLayout()).columnWeights = new double[] {0.0, 1.0E-4};
+                                        ((GridBagLayout)weeklyPanel.getLayout()).rowWeights = new double[] {0.0, 0.0, 1.0E-4};
+
+                                        //---- label_title_monthlyStatistics ----
+                                        label_title_monthlyStatistics.setText("Weekly Statistics");
+                                        label_title_monthlyStatistics.setHorizontalAlignment(SwingConstants.CENTER);
+                                        label_title_monthlyStatistics.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
+                                        weeklyPanel.add(label_title_monthlyStatistics, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
+                                            GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                                            new Insets(0, 0, 0, 0), 0, 0));
+
+                                        //======== weeklyBodyPanel ========
+                                        {
+                                            weeklyBodyPanel.setBackground(new Color(248, 245, 239));
+                                            weeklyBodyPanel.setLayout(new GridBagLayout());
+                                            ((GridBagLayout)weeklyBodyPanel.getLayout()).columnWidths = new int[] {300, 0};
+                                            ((GridBagLayout)weeklyBodyPanel.getLayout()).rowHeights = new int[] {150, 180, 0};
+                                            ((GridBagLayout)weeklyBodyPanel.getLayout()).columnWeights = new double[] {0.0, 1.0E-4};
+                                            ((GridBagLayout)weeklyBodyPanel.getLayout()).rowWeights = new double[] {0.0, 0.0, 1.0E-4};
+
+                                            //======== weekly_hedPanel ========
+                                            {
+                                                weekly_hedPanel.setBackground(new Color(248, 245, 239));
+                                                weekly_hedPanel.setLayout(new GridLayout(3, 2));
+
+                                                //---- label_statisticRange ----
+                                                label_statisticRange.setText("Statistic range:");
+                                                weekly_hedPanel.add(label_statisticRange);
+
+                                                //---- weeklyRange ----
+                                                weeklyRange.setText("2020-05-04 -> 2020-05-11");
+                                                weekly_hedPanel.add(weeklyRange);
+
+                                                //---- label_weeklyIncome ----
+                                                label_weeklyIncome.setText("Weekly income:");
+                                                weekly_hedPanel.add(label_weeklyIncome);
+
+                                                //---- weeklyIncome ----
+                                                weeklyIncome.setText("\u00a3 2000");
+                                                weekly_hedPanel.add(weeklyIncome);
+
+                                                //---- label_weeklyOrders ----
+                                                label_weeklyOrders.setText("Orders number:");
+                                                weekly_hedPanel.add(label_weeklyOrders);
+
+                                                //---- weeklyOrders ----
+                                                weeklyOrders.setText("100");
+                                                weekly_hedPanel.add(weeklyOrders);
+                                            }
+                                            weeklyBodyPanel.add(weekly_hedPanel, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
+                                                GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                                                new Insets(0, 0, 0, 0), 0, 0));
+
+                                            //======== weekly_footPanel ========
+                                            {
+                                                weekly_footPanel.setBorder(new TitledBorder("Details number"));
+                                                weekly_footPanel.setBackground(new Color(248, 245, 239));
+                                                weekly_footPanel.setLayout(new GridLayout(4, 4));
+
+                                                //---- label_tonkotsu ----
+                                                label_tonkotsu.setText("Tonkotsu:");
+                                                weekly_footPanel.add(label_tonkotsu);
+
+                                                //---- weeklyTonkotsu ----
+                                                weeklyTonkotsu.setText("10");
+                                                weekly_footPanel.add(weeklyTonkotsu);
+
+                                                //---- label_nori ----
+                                                label_nori.setText("Nori:");
+                                                weekly_footPanel.add(label_nori);
+
+                                                //---- weeklyNori ----
+                                                weeklyNori.setText("10");
+                                                weekly_footPanel.add(weeklyNori);
+
+                                                //---- label_shoyo ----
+                                                label_shoyo.setText("Shoyo:");
+                                                weekly_footPanel.add(label_shoyo);
+
+                                                //---- weeklyShoyo ----
+                                                weeklyShoyo.setText("10");
+                                                weekly_footPanel.add(weeklyShoyo);
+
+                                                //---- label_chashu ----
+                                                label_chashu.setText("Chashu:");
+                                                weekly_footPanel.add(label_chashu);
+
+                                                //---- weeklyChashu ----
+                                                weeklyChashu.setText("10");
+                                                weekly_footPanel.add(weeklyChashu);
+
+                                                //---- label_shio ----
+                                                label_shio.setText("Shio:");
+                                                weekly_footPanel.add(label_shio);
+
+                                                //---- weeklyShio ----
+                                                weeklyShio.setText("10");
+                                                weekly_footPanel.add(weeklyShio);
+
+                                                //---- label_egg ----
+                                                label_egg.setText("Egg:");
+                                                weekly_footPanel.add(label_egg);
+
+                                                //---- weeklyEgg ----
+                                                weeklyEgg.setText("10");
+                                                weekly_footPanel.add(weeklyEgg);
+
+                                                //======== emptyBox6 ========
+                                                {
+                                                    emptyBox6.setBackground(new Color(248, 245, 239));
+                                                    emptyBox6.setLayout(new BoxLayout(emptyBox6, BoxLayout.X_AXIS));
+                                                }
+                                                weekly_footPanel.add(emptyBox6);
+
+                                                //======== emptyBox7 ========
+                                                {
+                                                    emptyBox7.setBackground(new Color(248, 245, 239));
+                                                    emptyBox7.setLayout(new BoxLayout(emptyBox7, BoxLayout.X_AXIS));
+                                                }
+                                                weekly_footPanel.add(emptyBox7);
+
+                                                //---- label_shoot ----
+                                                label_shoot.setText("Shoot:");
+                                                weekly_footPanel.add(label_shoot);
+
+                                                //---- weeklyShoot ----
+                                                weeklyShoot.setText("10");
+                                                weekly_footPanel.add(weeklyShoot);
+                                            }
+                                            weeklyBodyPanel.add(weekly_footPanel, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0,
+                                                GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                                                new Insets(0, 0, 0, 0), 0, 0));
+                                        }
+                                        weeklyPanel.add(weeklyBodyPanel, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0,
+                                            GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                                            new Insets(0, 0, 0, 0), 0, 0));
+                                    }
+                                    statisticsDataCard.add(weeklyPanel, "card1");
+                                }
+                                switch_outerPanel.add(statisticsDataCard, new GridBagConstraints(4, 0, 1, 1, 0.0, 0.0,
+                                    GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                                    new Insets(0, 0, 0, 0), 0, 0));
+                            }
+                            switchCard.add(switch_outerPanel, "card1");
+                        }
+                        sug_outerPanel.add(switchCard, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
+                            GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                            new Insets(0, 0, 0, 0), 0, 0));
+
+                        //======== switchOuterPanel ========
+                        {
+                            switchOuterPanel.setBackground(Color.white);
+                            switchOuterPanel.setLayout(new GridBagLayout());
+                            ((GridBagLayout)switchOuterPanel.getLayout()).columnWidths = new int[] {10, 180, 0};
+                            ((GridBagLayout)switchOuterPanel.getLayout()).rowHeights = new int[] {375, 0};
+                            ((GridBagLayout)switchOuterPanel.getLayout()).columnWeights = new double[] {0.0, 0.0, 1.0E-4};
+                            ((GridBagLayout)switchOuterPanel.getLayout()).rowWeights = new double[] {0.0, 1.0E-4};
+
+                            //======== switchInnerPanel ========
+                            {
+                                switchInnerPanel.setBackground(Color.white);
+                                switchInnerPanel.setLayout(new GridLayout(6, 0));
+
+                                //---- button_weeklyStatistics ----
+                                button_weeklyStatistics.setText("Weekly Statistics");
+                                switchInnerPanel.add(button_weeklyStatistics);
+
+                                //---- button_monthlyStatistics ----
+                                button_monthlyStatistics.setText("Monthly Statistics");
+                                switchInnerPanel.add(button_monthlyStatistics);
+
+                                //---- button_annualStatistics ----
+                                button_annualStatistics.setText("Annual Statistics");
+                                switchInnerPanel.add(button_annualStatistics);
+
+                                //---- button_membershipStatistics ----
+                                button_membershipStatistics.setText("Membership Statistics");
+                                switchInnerPanel.add(button_membershipStatistics);
+
+                                //---- button_popularity ----
+                                button_popularity.setText("Popularity");
+                                switchInnerPanel.add(button_popularity);
+
+                                //---- button_emptyButton ----
+                                button_emptyButton.setText("Coming Soon");
+                                switchInnerPanel.add(button_emptyButton);
+                            }
+                            switchOuterPanel.add(switchInnerPanel, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
+                                GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                                new Insets(0, 0, 0, 0), 0, 0));
+                        }
+                        sug_outerPanel.add(switchOuterPanel, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
+                            GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                            new Insets(0, 0, 0, 0), 0, 0));
+                    }
+                    suggestionPanel.add(sug_outerPanel, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0,
+                        GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                        new Insets(0, 0, 0, 0), 0, 0));
+                }
+                bodyPanel.add(suggestionPanel, new GridBagConstraints(1, 1, 1, 1, 0.0, 0.0,
+                    GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                    new Insets(0, 0, 0, 0), 0, 0));
             }
             boardPanel.add(bodyPanel, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0,
                 GridBagConstraints.CENTER, GridBagConstraints.BOTH,
@@ -208,6 +555,27 @@ public class DataAnalysis extends JPanel {
                 new Insets(0, 0, 0, 0), 0, 0));
         }
         add(boardPanel, BorderLayout.CENTER);
+
+        //---- statisticsContentGroup ----
+        ButtonGroup statisticsContentGroup = new ButtonGroup();
+        statisticsContentGroup.add(button_income);
+        statisticsContentGroup.add(button_orders);
+        statisticsContentGroup.add(button_tonkotsu);
+        statisticsContentGroup.add(button_shoyo);
+        statisticsContentGroup.add(button_shio);
+        statisticsContentGroup.add(button_nori);
+        statisticsContentGroup.add(button_chashu);
+        statisticsContentGroup.add(button_egg);
+        statisticsContentGroup.add(button_shoot);
+
+        //---- dataAnalysisGroup ----
+        ButtonGroup dataAnalysisGroup = new ButtonGroup();
+        dataAnalysisGroup.add(button_weeklyStatistics);
+        dataAnalysisGroup.add(button_monthlyStatistics);
+        dataAnalysisGroup.add(button_annualStatistics);
+        dataAnalysisGroup.add(button_membershipStatistics);
+        dataAnalysisGroup.add(button_popularity);
+        dataAnalysisGroup.add(button_emptyButton);
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
@@ -227,6 +595,57 @@ public class DataAnalysis extends JPanel {
     public JPanel membershipOperationPanel;
     private JLabel indexLabel_membershipOperation;
     private JPanel emptyBox5;
+    private JPanel suggestionPanel;
+    private JPanel sug_outerPanel;
+    private JPanel switchCard;
+    private JPanel switch_outerPanel;
+    private JPanel switch_statisticsListPanel;
+    public JToggleButton button_income;
+    public JToggleButton button_orders;
+    public JToggleButton button_tonkotsu;
+    public JToggleButton button_shoyo;
+    public JToggleButton button_shio;
+    public JToggleButton button_nori;
+    public JToggleButton button_chashu;
+    public JToggleButton button_egg;
+    public JToggleButton button_shoot;
+    private JPanel statisticsImageCard;
+    private JPanel statisticsDataCard;
+    private JPanel weeklyPanel;
+    private JLabel label_title_monthlyStatistics;
+    private JPanel weeklyBodyPanel;
+    private JPanel weekly_hedPanel;
+    private JLabel label_statisticRange;
+    private JLabel weeklyRange;
+    private JLabel label_weeklyIncome;
+    private JLabel weeklyIncome;
+    private JLabel label_weeklyOrders;
+    private JLabel weeklyOrders;
+    private JPanel weekly_footPanel;
+    private JLabel label_tonkotsu;
+    private JLabel weeklyTonkotsu;
+    private JLabel label_nori;
+    private JLabel weeklyNori;
+    private JLabel label_shoyo;
+    private JLabel weeklyShoyo;
+    private JLabel label_chashu;
+    private JLabel weeklyChashu;
+    private JLabel label_shio;
+    private JLabel weeklyShio;
+    private JLabel label_egg;
+    private JLabel weeklyEgg;
+    private JPanel emptyBox6;
+    private JPanel emptyBox7;
+    private JLabel label_shoot;
+    private JLabel weeklyShoot;
+    private JPanel switchOuterPanel;
+    private JPanel switchInnerPanel;
+    public JToggleButton button_weeklyStatistics;
+    public JToggleButton button_monthlyStatistics;
+    public JToggleButton button_annualStatistics;
+    public JToggleButton button_membershipStatistics;
+    public JToggleButton button_popularity;
+    public JToggleButton button_emptyButton;
     private JPanel bottomPanel;
     private JPanel bottom_innerPanel;
     private JLabel storeName;
