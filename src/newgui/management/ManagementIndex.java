@@ -25,6 +25,8 @@ public class ManagementIndex extends JPanel {
     public Popularity popularity;
     public MembershipOperation membershipOperation;
     public DataAnalysis dataAnalysis;
+    CardLayout innerCard;
+
 
     public ManagementIndex(){
         menu = menuData.loadInfo();
@@ -35,6 +37,7 @@ public class ManagementIndex extends JPanel {
         popularity = new Popularity();
         membershipOperation = new MembershipOperation();
         dataAnalysis = new DataAnalysis();
+        innerCard = (CardLayout)popularity.popularList_cardPanel.getLayout();
 
         main.add(menuOperation,"menuOperation");
         main.add(popularity,"managerPassword");
@@ -44,10 +47,10 @@ public class ManagementIndex extends JPanel {
         //======== Index ========
         {
             //======== Index in menuOperation ========
-            menuOperation.managerPasswordPanel.addMouseListener(new MouseAdapter() {
+            menuOperation.popularityPanel.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
-                    managerPasswordPanelMouseClicked(e);
+                    popularityPanelMouseClicked(e);
                 }
             });
             menuOperation.membershipOperationPanel.addMouseListener(new MouseAdapter() {
@@ -89,10 +92,10 @@ public class ManagementIndex extends JPanel {
                     menuOperationPanelMouseClicked(e);
                 }
             });
-            membershipOperation.managerPasswordPanel.addMouseListener(new MouseAdapter() {
+            membershipOperation.popularityPanel.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
-                    managerPasswordPanelMouseClicked(e);
+                    popularityPanelMouseClicked(e);
                 }
             });
             membershipOperation.dataAnalysisPanel.addMouseListener(new MouseAdapter() {
@@ -109,10 +112,10 @@ public class ManagementIndex extends JPanel {
                     menuOperationPanelMouseClicked(e);
                 }
             });
-            dataAnalysis.managerPasswordPanel.addMouseListener(new MouseAdapter() {
+            dataAnalysis.popularityPanel.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
-                    managerPasswordPanelMouseClicked(e);
+                    popularityPanelMouseClicked(e);
                 }
             });
             dataAnalysis.membershipOperationPanel.addMouseListener(new MouseAdapter() {
@@ -201,12 +204,54 @@ public class ManagementIndex extends JPanel {
                 }
             });
             menuOperation.resetButton.addActionListener(e -> setMenuChange());
-            //todo return button should be finished in outer gui
         }
 
-        //======== managerPassword ========
+        //======== popularity ========
         {
-            //todo
+            //soupCard
+
+            popularity.soupCard_garnishPanelButton.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    garnishCardClicked(e);
+                }
+            });
+            popularity.soupCard_spicinessPanelButton.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    spicinessCardClicked(e);
+                }
+            });
+
+
+            //gCard
+            popularity.gCard_soupPanelButton.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    soupCardClicked(e);
+                }
+            });
+            popularity.gCard_spicinessPanelButton.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    spicinessCardClicked(e);
+                }
+            });
+
+            //spiCard
+
+            popularity.spiCard_soupPanelButton.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    soupCardClicked(e);
+                }
+            });
+            popularity.spiCard_garnishPanelButton.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    garnishCardClicked(e);
+                }
+            });
         }
 
         //======== MembershipOperation ========
@@ -291,8 +336,19 @@ public class ManagementIndex extends JPanel {
         card.show(main,"membershipOperation");
     }
 
-    private void managerPasswordPanelMouseClicked(MouseEvent e) {
+    private void popularityPanelMouseClicked(MouseEvent e) {
         card.show(main,"managerPassword");
+    }
+
+    private void soupCardClicked(MouseEvent e) {
+
+        innerCard.show(popularity.popularList_cardPanel,"soupCard");
+    }
+    private void garnishCardClicked(MouseEvent e) {
+        innerCard.show(popularity.popularList_cardPanel,"gCard");
+    }
+    private void spicinessCardClicked(MouseEvent e) {
+        innerCard.show(popularity.popularList_cardPanel,"spiCard");
     }
 
     public static boolean isNumber(String information){

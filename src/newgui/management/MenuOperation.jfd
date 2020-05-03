@@ -65,13 +65,13 @@ new FormModel {
 							} )
 						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
 						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) ) {
-							name: "managerPasswordPanel"
+							name: "popularityPanel"
 							"background": new java.awt.Color( 242, 156, 59, 0 )
 							auxiliary() {
 								"JavaCodeGenerator.variableModifiers": 1
 							}
 							add( new FormComponent( "javax.swing.JLabel" ) {
-								name: "indexLabel_managerPassword"
+								name: "indexLabel_popularity"
 								"text": "Popularity"
 								"horizontalAlignment": 0
 							} )

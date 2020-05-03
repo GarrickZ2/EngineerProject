@@ -26,8 +26,8 @@ public class DataAnalysis extends JPanel {
         indexPanel = new JPanel();
         menuOperationPanel = new JPanel();
         indexLabel_menuOperation = new JLabel();
-        managerPasswordPanel = new JPanel();
-        indexLabel_managerPassword = new JLabel();
+        popularityPanel = new JPanel();
+        indexLabel_popularity = new JLabel();
         dataAnalysisPanel = new JPanel();
         indexLabel_dataAnalysis = new JLabel();
         membershipOperationPanel = new JPanel();
@@ -154,17 +154,17 @@ public class DataAnalysis extends JPanel {
                         GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                         new Insets(0, 0, 0, 0), 0, 0));
 
-                    //======== managerPasswordPanel ========
+                    //======== popularityPanel ========
                     {
-                        managerPasswordPanel.setBackground(new Color(242, 156, 59, 0));
-                        managerPasswordPanel.setLayout(new GridLayout());
+                        popularityPanel.setBackground(new Color(242, 156, 59, 0));
+                        popularityPanel.setLayout(new GridLayout());
 
-                        //---- indexLabel_managerPassword ----
-                        indexLabel_managerPassword.setText("Popularity");
-                        indexLabel_managerPassword.setHorizontalAlignment(SwingConstants.CENTER);
-                        managerPasswordPanel.add(indexLabel_managerPassword);
+                        //---- indexLabel_popularity ----
+                        indexLabel_popularity.setText("Popularity");
+                        indexLabel_popularity.setHorizontalAlignment(SwingConstants.CENTER);
+                        popularityPanel.add(indexLabel_popularity);
                     }
-                    indexPanel.add(managerPasswordPanel, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
+                    indexPanel.add(popularityPanel, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
                         GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                         new Insets(0, 0, 0, 0), 0, 0));
 
@@ -525,8 +525,8 @@ public class DataAnalysis extends JPanel {
     private JPanel indexPanel;
     public JPanel menuOperationPanel;
     private JLabel indexLabel_menuOperation;
-    public JPanel managerPasswordPanel;
-    private JLabel indexLabel_managerPassword;
+    public JPanel popularityPanel;
+    private JLabel indexLabel_popularity;
     public JPanel dataAnalysisPanel;
     private JLabel indexLabel_dataAnalysis;
     public JPanel membershipOperationPanel;
