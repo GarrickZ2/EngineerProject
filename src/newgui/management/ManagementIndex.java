@@ -3,6 +3,7 @@ package newgui.management;
 import database.MenuData;
 import database.information.Menu;
 import gui.AlertWindow;
+import newgui.management.Statistics.DataAnalysis;
 
 import javax.swing.*;
 import java.awt.*;

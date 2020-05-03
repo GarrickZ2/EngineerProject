@@ -2,7 +2,7 @@
  * Created by JFormDesigner on Fri Apr 24 14:00:13 GMT+08:00 2020
  */
 
-package newgui.management;
+package newgui.management.Statistics;
 
 import java.awt.*;
 import javax.swing.*;

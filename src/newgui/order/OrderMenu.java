@@ -468,6 +468,7 @@ public class OrderMenu extends JPanel {
 
                             //---- noriNumber ----
                             noriNumber.setFont(noriNumber.getFont().deriveFont(noriNumber.getFont().getSize() + 3f));
+                            noriNumber.setModel(new SpinnerNumberModel(0, 0, null, 1));
                             dishPanel.add(noriNumber);
 
                             //---- label_right_chashu ----
@@ -487,6 +488,7 @@ public class OrderMenu extends JPanel {
 
                             //---- chashuNumber ----
                             chashuNumber.setFont(chashuNumber.getFont().deriveFont(chashuNumber.getFont().getSize() + 3f));
+                            chashuNumber.setModel(new SpinnerNumberModel(0, 0, null, 1));
                             dishPanel.add(chashuNumber);
 
                             //---- label_right_egg ----
@@ -506,6 +508,7 @@ public class OrderMenu extends JPanel {
 
                             //---- eggNumber ----
                             eggNumber.setFont(eggNumber.getFont().deriveFont(eggNumber.getFont().getSize() + 3f));
+                            eggNumber.setModel(new SpinnerNumberModel(0, 0, null, 1));
                             dishPanel.add(eggNumber);
 
                             //---- label_right_shoot ----
@@ -525,6 +528,7 @@ public class OrderMenu extends JPanel {
 
                             //---- shootNumber ----
                             shootNumber.setFont(shootNumber.getFont().deriveFont(shootNumber.getFont().getSize() + 3f));
+                            shootNumber.setModel(new SpinnerNumberModel(0, 0, null, 1));
                             dishPanel.add(shootNumber);
                         }
                         optional_innerPanel.add(dishPanel, "dock center");

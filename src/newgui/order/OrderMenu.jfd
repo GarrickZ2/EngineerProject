@@ -435,6 +435,9 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JSpinner" ) {
 									name: "noriNumber"
 									"font": #SwingDerivedFont0
+									"model": new javax.swing.SpinnerNumberModel {
+										minimum: 0
+									}
 									auxiliary() {
 										"JavaCodeGenerator.variableModifiers": 1
 									}
@@ -463,6 +466,9 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JSpinner" ) {
 									name: "chashuNumber"
 									"font": #SwingDerivedFont0
+									"model": new javax.swing.SpinnerNumberModel {
+										minimum: 0
+									}
 									auxiliary() {
 										"JavaCodeGenerator.variableModifiers": 1
 									}
@@ -491,6 +497,9 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JSpinner" ) {
 									name: "eggNumber"
 									"font": #SwingDerivedFont0
+									"model": new javax.swing.SpinnerNumberModel {
+										minimum: 0
+									}
 									auxiliary() {
 										"JavaCodeGenerator.variableModifiers": 1
 									}
@@ -519,6 +528,9 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JSpinner" ) {
 									name: "shootNumber"
 									"font": #SwingDerivedFont0
+									"model": new javax.swing.SpinnerNumberModel {
+										minimum: 0
+									}
 									auxiliary() {
 										"JavaCodeGenerator.variableModifiers": 1
 									}
