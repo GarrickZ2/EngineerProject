@@ -2,7 +2,7 @@
  * Created by JFormDesigner on Fri Apr 24 14:02:25 GMT+08:00 2020
  */
 
-package newgui.management;
+package newgui.management.Statistics;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -704,31 +704,31 @@ public class Popularity extends JPanel {
     private JPanel membersTablePanel;
     private JPanel filledBox0;
     private JLabel label_member_costMost;
-    private JPanel filledBox1;
-    private JLabel member_costMost_membershipNumber;
+    JPanel filledBox1;
+    public JLabel member_costMost_membershipNumber;
     private JLabel label_member_costMost_name;
-    private JLabel member_costMost_name;
+    public JLabel member_costMost_name;
     private JLabel label_member_costMost_TAE;
-    private JLabel member_costMost_TAE;
+    public JLabel member_costMost_TAE;
     private JPanel filledBox2;
     private JLabel label_member_ordersMost;
-    private JPanel filledBox3;
-    private JLabel member_ordersMost_membershipNumber;
+    JPanel filledBox3;
+    public JLabel member_ordersMost_membershipNumber;
     private JLabel label_member_ordersMost_name;
-    private JLabel member_ordersMost_name;
+    public JLabel member_ordersMost_name;
     private JLabel label_member_ordersMost_TAE;
-    private JLabel member_ordersMost_TAE;
+    public JLabel member_ordersMost_TAE;
     private JPanel UndeterminedPanel;
     private JLabel label43;
     private JPanel body_rightPanel;
     private JLabel label_mostPopular;
     private JPanel popularTablePanel;
     private JLabel label_mp_soup;
-    private JLabel mp_soup;
+    public JLabel mp_soup;
     private JLabel label_mp_garnish;
-    private JLabel mp_garnish;
+    public JLabel mp_garnish;
     private JLabel label_mp_spiciness;
-    private JLabel mp_spiciness;
+    public JLabel mp_spiciness;
     private JPanel statisticsImagesHeadPanel;
     private JLabel label_statisticsImages;
     private JPanel statisticsImagesFootPanel;

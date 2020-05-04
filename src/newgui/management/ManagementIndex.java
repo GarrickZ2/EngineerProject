@@ -4,7 +4,8 @@ import database.MenuData;
 import database.information.Menu;
 import gui.AlertWindow;
 import newgui.management.Statistics.Analysis;
-import newgui.management.Statistics.DataAnalysis;
+import newgui.management.Statistics.Popular;
+import newgui.management.Statistics.Popularity;
 
 import javax.swing.*;
 import java.awt.*;
@@ -23,24 +24,24 @@ public class ManagementIndex extends JPanel {
     CardLayout card;
     JPanel main;
     public MenuOperation menuOperation;
-    public Popularity popularity;
+    public Popular popularity;
     public MembershipOperation membershipOperation;
     public Analysis dataAnalysis;
     CardLayout innerCard;
 
 
-    public ManagementIndex(){
+    public ManagementIndex() throws Exception{
         menu = menuData.loadInfo();
         card = new CardLayout();
         main = new JPanel(card);
 
         menuOperation = new MenuOperation();
-        popularity = new Popularity();
+        popularity = new Popular();
         membershipOperation = new MembershipOperation();
         try {
             dataAnalysis = new Analysis();
         } catch (Exception ignored) { }
-        innerCard = (CardLayout)popularity.popularList_cardPanel.getLayout();
+        innerCard = (CardLayout)popularity.popularity.popularList_cardPanel.getLayout();
 
         main.add(menuOperation,"menuOperation");
         main.add(popularity,"managerPassword");
@@ -69,19 +70,19 @@ public class ManagementIndex extends JPanel {
                 }
             });
             //======== Index in ManagerPassword ========
-            popularity.menuOperationPanel.addMouseListener(new MouseAdapter() {
+            popularity.popularity.menuOperationPanel.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     menuOperationPanelMouseClicked(e);
                 }
             });
-            popularity.membershipOperationPanel.addMouseListener(new MouseAdapter() {
+            popularity.popularity.membershipOperationPanel.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     membershipOperationPanelMouseClicked(e);
                 }
             });
-            popularity.dataAnalysisPanel.addMouseListener(new MouseAdapter() {
+            popularity.popularity.dataAnalysisPanel.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     dataAnalysisPanelMouseClicked(e);
@@ -213,13 +214,13 @@ public class ManagementIndex extends JPanel {
         {
             //soupCard
 
-            popularity.soupCard_garnishPanelButton.addMouseListener(new MouseAdapter() {
+            popularity.popularity.soupCard_garnishPanelButton.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     garnishCardClicked(e);
                 }
             });
-            popularity.soupCard_spicinessPanelButton.addMouseListener(new MouseAdapter() {
+            popularity.popularity.soupCard_spicinessPanelButton.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     spicinessCardClicked(e);
@@ -228,13 +229,13 @@ public class ManagementIndex extends JPanel {
 
 
             //gCard
-            popularity.gCard_soupPanelButton.addMouseListener(new MouseAdapter() {
+            popularity.popularity.gCard_soupPanelButton.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     soupCardClicked(e);
                 }
             });
-            popularity.gCard_spicinessPanelButton.addMouseListener(new MouseAdapter() {
+            popularity.popularity.gCard_spicinessPanelButton.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     spicinessCardClicked(e);
@@ -243,13 +244,13 @@ public class ManagementIndex extends JPanel {
 
             //spiCard
 
-            popularity.spiCard_soupPanelButton.addMouseListener(new MouseAdapter() {
+            popularity.popularity.spiCard_soupPanelButton.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     soupCardClicked(e);
                 }
             });
-            popularity.spiCard_garnishPanelButton.addMouseListener(new MouseAdapter() {
+            popularity.popularity.spiCard_garnishPanelButton.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     garnishCardClicked(e);
@@ -345,13 +346,13 @@ public class ManagementIndex extends JPanel {
 
     private void soupCardClicked(MouseEvent e) {
 
-        innerCard.show(popularity.popularList_cardPanel,"soupCard");
+        innerCard.show(popularity.popularity.popularList_cardPanel,"soupCard");
     }
     private void garnishCardClicked(MouseEvent e) {
-        innerCard.show(popularity.popularList_cardPanel,"gCard");
+        innerCard.show(popularity.popularity.popularList_cardPanel,"gCard");
     }
     private void spicinessCardClicked(MouseEvent e) {
-        innerCard.show(popularity.popularList_cardPanel,"spiCard");
+        innerCard.show(popularity.popularity.popularList_cardPanel,"spiCard");
     }
 
     public static boolean isNumber(String information){

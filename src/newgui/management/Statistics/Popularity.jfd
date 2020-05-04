@@ -164,9 +164,15 @@ new FormModel {
 								} ) {
 									name: "filledBox1"
 									"background": #Color0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 0
+									}
 									add( new FormComponent( "javax.swing.JLabel" ) {
 										name: "member_costMost_membershipNumber"
 										"text": "00000002"
+										auxiliary() {
+											"JavaCodeGenerator.variableModifiers": 1
+										}
 									} )
 								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 									"gridx": 1
@@ -180,6 +186,9 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "member_costMost_name"
 									"text": "Zhang Zixuan"
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 									"gridx": 1
 									"gridy": 1
@@ -193,6 +202,9 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "member_costMost_TAE"
 									"text": "15500043370 / 447243910@qq.com"
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 									"gridx": 1
 									"gridy": 2
@@ -214,9 +226,15 @@ new FormModel {
 								} ) {
 									name: "filledBox3"
 									"background": #Color0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 0
+									}
 									add( new FormComponent( "javax.swing.JLabel" ) {
 										name: "member_ordersMost_membershipNumber"
 										"text": "00000001"
+										auxiliary() {
+											"JavaCodeGenerator.variableModifiers": 1
+										}
 									} )
 								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 									"gridx": 1
@@ -231,6 +249,9 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "member_ordersMost_name"
 									"text": "Huang Tianhe"
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 									"gridx": 1
 									"gridy": 4
@@ -244,6 +265,9 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "member_ordersMost_TAE"
 									"text": "15500043370 / 447243910@qq.com"
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 									"gridx": 1
 									"gridy": 5
@@ -290,6 +314,9 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "mp_soup"
 									"text": "Tonkotsu"
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "label_mp_garnish"
@@ -298,6 +325,9 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "mp_garnish"
 									"text": "Chashu"
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "label_mp_spiciness"
@@ -306,6 +336,9 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "mp_spiciness"
 									"text": "2"
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 								"gridy": 1

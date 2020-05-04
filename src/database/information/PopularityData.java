@@ -10,33 +10,77 @@ import java.util.Map;
 /**
  * @author zzx
  */
-public class Popularity {
+public class PopularityData {
     String popularMemberByTimes;
     String popularMemberByMoney;
     String popularDish;
     String popularSoup;
     String popularEatType;
     int popularSpicy;
+    private int[] spiciness = new int[6];
+    private int[] soup = new int[3];
+
+    public String getPopularMemberByTimes() {
+        return popularMemberByTimes;
+    }
+
+    public String getPopularMemberByMoney() {
+        return popularMemberByMoney;
+    }
+
+    public String getPopularDish() {
+        return popularDish;
+    }
+
+    public String getPopularSoup() {
+        return popularSoup;
+    }
+
+    public String getPopularEatType() {
+        return popularEatType;
+    }
+
+    public int getPopularSpicy() {
+        return popularSpicy;
+    }
+
+    public int getDays() {
+        return days;
+    }
+
+    //0: egg 1: chashu 2: shoot 3:nori
+    private int[] dishes = new int[4];
+    //0: in 1: out
+    private int[] types = new int[2];
+
+    public int[] getSpiciness() {
+        return spiciness;
+    }
+
+    public int[] getSoup() {
+        return soup;
+    }
+
+    public int[] getDishes() {
+        return dishes;
+    }
+
+    public int[] getTypes() {
+        return types;
+    }
 
     int days = 7;
-    public Popularity(int days) throws Exception{
+    public PopularityData(int days) throws Exception{
         OrderData orderData = new OrderData();
         OrderList list = orderData.loadInfo();
-        int[] spiciness = new int[6];
-        int[] soup = new int[3];
 
-        //0: egg 1: chashu 2: shoot 3:nori
-        int[] dishes = new int[4];
-
-        //0: in 1: out
-        int[] types = new int[2];
 
         HashMap<String ,Double> memberByTimes = new HashMap<>();
         HashMap<String ,Double> memberByMoney = new HashMap<>();
 
         Date today = new Date();
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        for (Order each: orderData.orders){
+        for (Order each: list.getOrders()){
             int diffDay = Statistics.differentDays(format.parse(each.getDate()), today);
             if(diffDay <= days & diffDay >= 0){
                 switch (each.getCuisine().getSoupType()){
@@ -118,7 +162,7 @@ public class Popularity {
         popularMemberByTimes = getBestMember(memberByTimes);
     }
 
-    public Popularity() throws Exception{
+    public PopularityData() throws Exception{
         this(7);
     }
 
@@ -148,7 +192,7 @@ public class Popularity {
 
     @Override
     public String toString() {
-        return "Popularity{" +
+        return "PopularityData{" +
                 "popularMemberByTimes='" + popularMemberByTimes + '\'' +
                 ", popularMemberByMoney='" + popularMemberByMoney + '\'' +
                 ", popularDish='" + popularDish + '\'' +
@@ -160,7 +204,7 @@ public class Popularity {
     }
 
     public static void main(String[] args) throws Exception{
-        Popularity popularity = new Popularity();
-        System.out.println(popularity);
+        PopularityData popularityData = new PopularityData();
+        System.out.println(popularityData);
     }
 }

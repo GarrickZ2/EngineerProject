@@ -77,7 +77,7 @@ public class MainVersion2 extends JFrame {
         register.createMember.returnButton.addActionListener(e -> card.show(content, "index"));
 
         managementIndex.menuOperation.returnButton.addActionListener(e -> card.show(content,"index"));
-        managementIndex.popularity.returnButton.addActionListener(e -> card.show(content,"index"));
+        managementIndex.popularity.popularity.returnButton.addActionListener(e -> card.show(content,"index"));
         //todo
         orderGui.payment.settleButton.addActionListener(e ->{
 

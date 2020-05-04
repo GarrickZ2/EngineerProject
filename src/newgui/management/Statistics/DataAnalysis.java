@@ -160,7 +160,7 @@ public class DataAnalysis extends JPanel {
                         popularityPanel.setLayout(new GridLayout());
 
                         //---- indexLabel_popularity ----
-                        indexLabel_popularity.setText("Popularity");
+                        indexLabel_popularity.setText("PopularityData");
                         indexLabel_popularity.setHorizontalAlignment(SwingConstants.CENTER);
                         popularityPanel.add(indexLabel_popularity);
                     }

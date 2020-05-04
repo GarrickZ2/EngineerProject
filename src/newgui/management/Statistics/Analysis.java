@@ -15,6 +15,7 @@ import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 /**
  * @author Zixuan Zhang
@@ -55,7 +56,7 @@ public class Analysis extends JPanel implements ActionListener {
 
         Calendar calendar = Calendar.getInstance();
         Date date = new Date();
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
         calendar.setTime(date);
         calendar.add(Calendar.DATE, -7);
         dataAnalysis.weeklyRange.setText(format.format(calendar.getTime())+ " -> "+ format.format(date));
@@ -107,7 +108,7 @@ public class Analysis extends JPanel implements ActionListener {
 
         TimeSeries timeSeries = new TimeSeries(type);
         Date date = new Date();
-        SimpleDateFormat format = new SimpleDateFormat("yyyy MM dd");
+        SimpleDateFormat format = new SimpleDateFormat("yyyy MM dd", Locale.US);
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(date);
         for(int i = dataList.length - 1; i >= 0; i--){
