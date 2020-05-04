@@ -223,8 +223,11 @@ new FormModel {
 											}
 										} )
 									}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
-									add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.CardLayout ) ) {
+									add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
 										name: "statisticsImageCard"
+										auxiliary() {
+											"JavaCodeGenerator.variableModifiers": 1
+										}
 									}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 										"gridx": 2
 									} )
@@ -265,6 +268,9 @@ new FormModel {
 													add( new FormComponent( "javax.swing.JLabel" ) {
 														name: "weeklyRange"
 														"text": "2020-05-04 -> 2020-05-11"
+														auxiliary() {
+															"JavaCodeGenerator.variableModifiers": 1
+														}
 													} )
 													add( new FormComponent( "javax.swing.JLabel" ) {
 														name: "label_weeklyIncome"
@@ -273,6 +279,9 @@ new FormModel {
 													add( new FormComponent( "javax.swing.JLabel" ) {
 														name: "weeklyIncome"
 														"text": "£ 2000"
+														auxiliary() {
+															"JavaCodeGenerator.variableModifiers": 1
+														}
 													} )
 													add( new FormComponent( "javax.swing.JLabel" ) {
 														name: "label_weeklyOrders"
@@ -281,6 +290,9 @@ new FormModel {
 													add( new FormComponent( "javax.swing.JLabel" ) {
 														name: "weeklyOrders"
 														"text": "100"
+														auxiliary() {
+															"JavaCodeGenerator.variableModifiers": 1
+														}
 													} )
 												}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
 												add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
@@ -297,6 +309,9 @@ new FormModel {
 													add( new FormComponent( "javax.swing.JLabel" ) {
 														name: "weeklyTonkotsu"
 														"text": "10"
+														auxiliary() {
+															"JavaCodeGenerator.variableModifiers": 1
+														}
 													} )
 													add( new FormComponent( "javax.swing.JLabel" ) {
 														name: "label_nori"
@@ -305,6 +320,9 @@ new FormModel {
 													add( new FormComponent( "javax.swing.JLabel" ) {
 														name: "weeklyNori"
 														"text": "10"
+														auxiliary() {
+															"JavaCodeGenerator.variableModifiers": 1
+														}
 													} )
 													add( new FormComponent( "javax.swing.JLabel" ) {
 														name: "label_shoyo"
@@ -313,6 +331,9 @@ new FormModel {
 													add( new FormComponent( "javax.swing.JLabel" ) {
 														name: "weeklyShoyo"
 														"text": "10"
+														auxiliary() {
+															"JavaCodeGenerator.variableModifiers": 1
+														}
 													} )
 													add( new FormComponent( "javax.swing.JLabel" ) {
 														name: "label_chashu"
@@ -321,6 +342,9 @@ new FormModel {
 													add( new FormComponent( "javax.swing.JLabel" ) {
 														name: "weeklyChashu"
 														"text": "10"
+														auxiliary() {
+															"JavaCodeGenerator.variableModifiers": 1
+														}
 													} )
 													add( new FormComponent( "javax.swing.JLabel" ) {
 														name: "label_shio"
@@ -329,6 +353,9 @@ new FormModel {
 													add( new FormComponent( "javax.swing.JLabel" ) {
 														name: "weeklyShio"
 														"text": "10"
+														auxiliary() {
+															"JavaCodeGenerator.variableModifiers": 1
+														}
 													} )
 													add( new FormComponent( "javax.swing.JLabel" ) {
 														name: "label_egg"
@@ -337,6 +364,9 @@ new FormModel {
 													add( new FormComponent( "javax.swing.JLabel" ) {
 														name: "weeklyEgg"
 														"text": "10"
+														auxiliary() {
+															"JavaCodeGenerator.variableModifiers": 1
+														}
 													} )
 													add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
 														"axis": 0
@@ -357,6 +387,9 @@ new FormModel {
 													add( new FormComponent( "javax.swing.JLabel" ) {
 														name: "weeklyShoot"
 														"text": "10"
+														auxiliary() {
+															"JavaCodeGenerator.variableModifiers": 1
+														}
 													} )
 												}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 													"gridy": 1

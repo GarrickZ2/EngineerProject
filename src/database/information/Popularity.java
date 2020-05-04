@@ -63,7 +63,7 @@ public class Popularity {
                 }
                 String membership = each.getMembershipId();
 
-                if(!membership.equals("NoMembership")){
+                if(!"NoMembership".equals(membership)){
                     if(memberByMoney.containsKey(membership)){
                         double money = memberByMoney.get(membership) + each.getAmountMoney();
                         memberByMoney.remove(membership);

@@ -1,5 +1,4 @@
 import com.alee.laf.WebLookAndFeel;
-import database.MenuData;
 import database.UserData;
 import database.information.MemberList;
 import database.information.Receipt;
@@ -10,7 +9,6 @@ import newgui.membership.CreateMember;
 import newgui.membership.Register;
 import newgui.order.OrderGUI;
 import newgui.order.Recipients;
-import org.junit.Test;
 
 import javax.swing.*;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
@@ -28,7 +26,7 @@ public class MainVersion2 extends JFrame {
     Register register;
     ManagementIndex managementIndex;
 
-    public MainVersion2(){
+    public MainVersion2() throws Exception{
         card = new CardLayout();
         content = new JPanel(card);
 
@@ -122,7 +120,7 @@ public class MainVersion2 extends JFrame {
         this.setVisible(true);
     }
 
-    public static void main(String[] args) throws ClassNotFoundException, UnsupportedLookAndFeelException, InstantiationException, IllegalAccessException {
+    public static void main(String[] args) throws Exception {
         UIManager.setLookAndFeel ( NimbusLookAndFeel.class.getCanonicalName () );
         WebLookAndFeel.initializeManagers ();
 

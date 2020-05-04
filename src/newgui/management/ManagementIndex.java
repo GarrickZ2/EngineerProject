@@ -3,6 +3,7 @@ package newgui.management;
 import database.MenuData;
 import database.information.Menu;
 import gui.AlertWindow;
+import newgui.management.Statistics.Analysis;
 import newgui.management.Statistics.DataAnalysis;
 
 import javax.swing.*;
@@ -24,7 +25,7 @@ public class ManagementIndex extends JPanel {
     public MenuOperation menuOperation;
     public Popularity popularity;
     public MembershipOperation membershipOperation;
-    public DataAnalysis dataAnalysis;
+    public Analysis dataAnalysis;
     CardLayout innerCard;
 
 
@@ -36,7 +37,9 @@ public class ManagementIndex extends JPanel {
         menuOperation = new MenuOperation();
         popularity = new Popularity();
         membershipOperation = new MembershipOperation();
-        dataAnalysis = new DataAnalysis();
+        try {
+            dataAnalysis = new Analysis();
+        } catch (Exception ignored) { }
         innerCard = (CardLayout)popularity.popularList_cardPanel.getLayout();
 
         main.add(menuOperation,"menuOperation");
@@ -106,19 +109,19 @@ public class ManagementIndex extends JPanel {
             });
 
             //======== Index in DataAnalysis ========
-            dataAnalysis.menuOperationPanel.addMouseListener(new MouseAdapter() {
+            dataAnalysis.dataAnalysis.menuOperationPanel.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     menuOperationPanelMouseClicked(e);
                 }
             });
-            dataAnalysis.popularityPanel.addMouseListener(new MouseAdapter() {
+            dataAnalysis.dataAnalysis.popularityPanel.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     popularityPanelMouseClicked(e);
                 }
             });
-            dataAnalysis.membershipOperationPanel.addMouseListener(new MouseAdapter() {
+            dataAnalysis.dataAnalysis.membershipOperationPanel.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     membershipOperationPanelMouseClicked(e);

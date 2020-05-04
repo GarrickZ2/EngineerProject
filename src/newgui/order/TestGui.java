@@ -13,7 +13,7 @@ import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
 
 public class TestGui {
-    public static void main(String[] args) throws ClassNotFoundException, UnsupportedLookAndFeelException, InstantiationException, IllegalAccessException {
+    public static void main(String[] args) throws Exception {
         UIManager.setLookAndFeel ( NimbusLookAndFeel.class.getCanonicalName () );
         WebLookAndFeel.initializeManagers ();
         JFrame jf = new JFrame();

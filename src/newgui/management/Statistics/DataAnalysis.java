@@ -288,7 +288,7 @@ public class DataAnalysis extends JPanel {
 
                                 //======== statisticsImageCard ========
                                 {
-                                    statisticsImageCard.setLayout(new CardLayout());
+                                    statisticsImageCard.setLayout(new BorderLayout());
                                 }
                                 switch_outerPanel.add(statisticsImageCard, new GridBagConstraints(2, 0, 1, 1, 0.0, 0.0,
                                     GridBagConstraints.CENTER, GridBagConstraints.BOTH,
@@ -546,35 +546,35 @@ public class DataAnalysis extends JPanel {
     public JToggleButton button_chashu;
     public JToggleButton button_egg;
     public JToggleButton button_shoot;
-    private JPanel statisticsImageCard;
+    public JPanel statisticsImageCard;
     private JPanel statisticsDataCard;
     private JPanel weeklyPanel;
     private JLabel label_title_monthlyStatistics;
     private JPanel weeklyBodyPanel;
     private JPanel weekly_hedPanel;
     private JLabel label_statisticRange;
-    private JLabel weeklyRange;
+    public JLabel weeklyRange;
     private JLabel label_weeklyIncome;
-    private JLabel weeklyIncome;
+    public JLabel weeklyIncome;
     private JLabel label_weeklyOrders;
-    private JLabel weeklyOrders;
+    public JLabel weeklyOrders;
     private JPanel weekly_footPanel;
     private JLabel label_tonkotsu;
-    private JLabel weeklyTonkotsu;
+    public JLabel weeklyTonkotsu;
     private JLabel label_nori;
-    private JLabel weeklyNori;
+    public JLabel weeklyNori;
     private JLabel label_shoyo;
-    private JLabel weeklyShoyo;
+    public JLabel weeklyShoyo;
     private JLabel label_chashu;
-    private JLabel weeklyChashu;
+    public JLabel weeklyChashu;
     private JLabel label_shio;
-    private JLabel weeklyShio;
+    public JLabel weeklyShio;
     private JLabel label_egg;
-    private JLabel weeklyEgg;
+    public JLabel weeklyEgg;
     private JPanel emptyBox6;
     private JPanel emptyBox7;
     private JLabel label_shoot;
-    private JLabel weeklyShoot;
+    public JLabel weeklyShoot;
     private JPanel bottomPanel;
     private JPanel bottom_innerPanel;
     private JLabel storeName;

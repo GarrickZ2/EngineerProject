@@ -62,15 +62,7 @@ public class Statistics {
     }
 
     public Statistics(){
-        income = new int[days];
-        orders = new int[days];
-        soup1 = new int[days];
-        soup2 = new int[days];
-        soup3 = new int[days];
-        nori = new int[days];
-        chashu = new int[days];
-        egg = new int[days];
-        shoot = new int[days];
+        this(7);
     }
 
     public Statistics(int days){
@@ -116,6 +108,23 @@ public class Statistics {
     public static int differentDays(Date date1, Date date2)
     {
         return (int) ((date2.getTime() - date1.getTime()) / (1000*3600*24));
+    }
+
+    public double getSumIncome(){
+        double sum = 0.0;
+        for (double each: getIncome()
+             ) {
+            sum += each;
+        }
+        return sum;
+    }
+
+    public int getSumInt(int[] list){
+        int sum = 0;
+        for(int each: list){
+            sum += each;
+        }
+        return sum;
     }
 
     public static void main(String[] args) throws Exception{
