@@ -276,9 +276,9 @@ new FormModel {
 								"gridy": 1
 							} )
 							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) ) {
-								name: "UndeterminedPanel"
+								name: "innerLogoPanel"
 								add( new FormComponent( "javax.swing.JLabel" ) {
-									name: "label43"
+									name: "logoImage"
 									"icon": new com.jformdesigner.model.SwingIcon( 0, "/img/145x360LOGO.jpg" )
 								} )
 							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {

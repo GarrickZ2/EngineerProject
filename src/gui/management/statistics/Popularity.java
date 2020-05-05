@@ -53,8 +53,8 @@ public class Popularity extends JPanel {
         member_ordersMost_name = new JLabel();
         label_member_ordersMost_TAE = new JLabel();
         member_ordersMost_TAE = new JLabel();
-        UndeterminedPanel = new JPanel();
-        label43 = new JLabel();
+        innerLogoPanel = new JPanel();
+        logoImage = new JLabel();
         body_rightPanel = new JPanel();
         label_mostPopular = new JLabel();
         popularTablePanel = new JPanel();
@@ -368,15 +368,15 @@ public class Popularity extends JPanel {
                             GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                             new Insets(0, 0, 0, 0), 0, 0));
 
-                        //======== UndeterminedPanel ========
+                        //======== innerLogoPanel ========
                         {
-                            UndeterminedPanel.setLayout(new GridLayout());
+                            innerLogoPanel.setLayout(new GridLayout());
 
-                            //---- label43 ----
-                            label43.setIcon(new ImageIcon(getClass().getResource("/img/145x360LOGO.jpg")));
-                            UndeterminedPanel.add(label43);
+                            //---- logoImage ----
+                            logoImage.setIcon(new ImageIcon(getClass().getResource("/img/145x360LOGO.jpg")));
+                            innerLogoPanel.add(logoImage);
                         }
-                        body_leftPanel.add(UndeterminedPanel, new GridBagConstraints(0, 3, 1, 1, 0.0, 0.0,
+                        body_leftPanel.add(innerLogoPanel, new GridBagConstraints(0, 3, 1, 1, 0.0, 0.0,
                             GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                             new Insets(0, 0, 0, 0), 0, 0));
                     }
@@ -717,8 +717,8 @@ public class Popularity extends JPanel {
     public JLabel member_ordersMost_name;
     private JLabel label_member_ordersMost_TAE;
     public JLabel member_ordersMost_TAE;
-    private JPanel UndeterminedPanel;
-    private JLabel label43;
+    private JPanel innerLogoPanel;
+    private JLabel logoImage;
     private JPanel body_rightPanel;
     private JLabel label_mostPopular;
     private JPanel popularTablePanel;
