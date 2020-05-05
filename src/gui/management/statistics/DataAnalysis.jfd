@@ -1,0 +1,478 @@
+JFDML JFormDesigner: "6.0.6.2.195" Java: "11.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+				"$columnSpecs": "1000"
+				"$rowSpecs": "100, 445, 75"
+				"$alignLeft": true
+				"$alignTop": true
+			} ) {
+				name: "boardPanel"
+				"background": sfield java.awt.Color white
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+					"$columnSpecs": "25, 950, 25"
+					"$rowSpecs": "100"
+					"$alignLeft": true
+					"$alignTop": true
+				} ) {
+					name: "titlePanel"
+					"background": new java.awt.Color( 248, 193, 84, 255 )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "logo"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/img/titleLogo.png" )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+					"$columnSpecs": "25, 950, 25"
+					"$rowSpecs": "30, 395, 20"
+					"$alignLeft": true
+					"$alignTop": true
+				} ) {
+					name: "bodyPanel"
+					"background": sfield java.awt.Color white
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+						"axis": 0
+					} ) {
+						name: "emptyBox4"
+						"background": new java.awt.Color( 242, 156, 59, 86 )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+						"$columnSpecs": "150, 150, 150, 150, 350"
+						"$rowSpecs": "30"
+						"$alignLeft": true
+						"$alignTop": true
+					} ) {
+						name: "indexPanel"
+						"background": new java.awt.Color( 242, 156, 59, 86 )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+							"columns": 1
+						} ) {
+							name: "menuOperationPanel"
+							"background": new java.awt.Color( 242, 156, 59, 0 )
+							auxiliary() {
+								"JavaCodeGenerator.variableModifiers": 1
+							}
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "indexLabel_menuOperation"
+								"text": "Menu operation"
+								"horizontalAlignment": 0
+							} )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) ) {
+							name: "popularityPanel"
+							"background": new java.awt.Color( 242, 156, 59, 0 )
+							auxiliary() {
+								"JavaCodeGenerator.variableModifiers": 1
+							}
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "indexLabel_popularity"
+								"text": "Popularity"
+								"horizontalAlignment": 0
+							} )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 1
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) ) {
+							name: "dataAnalysisPanel"
+							"background": new java.awt.Color( 255, 255, 255, 255 )
+							auxiliary() {
+								"JavaCodeGenerator.variableModifiers": 1
+							}
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "indexLabel_dataAnalysis"
+								"text": "Data analysis"
+								"horizontalAlignment": 0
+								"background": new java.awt.Color( 242, 156, 59, 86 )
+							} )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 2
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) ) {
+							name: "membershipOperationPanel"
+							"background": new java.awt.Color( 242, 156, 59, 0 )
+							auxiliary() {
+								"JavaCodeGenerator.variableModifiers": 1
+							}
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "indexLabel_membershipOperation"
+								"text": "Membership operation"
+								"horizontalAlignment": 0
+								"background": new java.awt.Color( 242, 242, 242, 0 )
+							} )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridx": 3
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+						"axis": 0
+					} ) {
+						name: "emptyBox5"
+						"background": new java.awt.Color( 242, 156, 59, 86 )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 2
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+						"$columnSpecs": "950"
+						"$rowSpecs": "20, 375"
+						"$alignLeft": true
+						"$alignTop": true
+					} ) {
+						name: "suggestionPanel"
+						"background": sfield java.awt.Color white
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+							"$columnSpecs": "950"
+							"$rowSpecs": "375"
+							"$alignLeft": true
+							"$alignTop": true
+						} ) {
+							name: "sug_outerPanel"
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.CardLayout ) ) {
+								name: "switchCard"
+								add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+									"$columnSpecs": "100, 20, 350, 20, 460"
+									"$rowSpecs": "375"
+									"$alignLeft": true
+									"$alignTop": true
+								} ) {
+									name: "switch_outerPanel"
+									"background": sfield java.awt.Color white
+									add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+										"columns": 1
+										"rows": 9
+									} ) {
+										name: "switch_statisticsListPanel"
+										"background": sfield java.awt.Color white
+										add( new FormComponent( "javax.swing.JToggleButton" ) {
+											name: "button_income"
+											"text": "Income"
+											"$buttonGroup": new FormReference( "statisticsContentGroup" )
+											auxiliary() {
+												"JavaCodeGenerator.variableModifiers": 1
+											}
+										} )
+										add( new FormComponent( "javax.swing.JToggleButton" ) {
+											name: "button_orders"
+											"text": "Orders"
+											"$buttonGroup": new FormReference( "statisticsContentGroup" )
+											auxiliary() {
+												"JavaCodeGenerator.variableModifiers": 1
+											}
+										} )
+										add( new FormComponent( "javax.swing.JToggleButton" ) {
+											name: "button_tonkotsu"
+											"text": "Tonkotsu"
+											"$buttonGroup": new FormReference( "statisticsContentGroup" )
+											auxiliary() {
+												"JavaCodeGenerator.variableModifiers": 1
+											}
+										} )
+										add( new FormComponent( "javax.swing.JToggleButton" ) {
+											name: "button_shoyo"
+											"text": "Shoyo"
+											"$buttonGroup": new FormReference( "statisticsContentGroup" )
+											auxiliary() {
+												"JavaCodeGenerator.variableModifiers": 1
+											}
+										} )
+										add( new FormComponent( "javax.swing.JToggleButton" ) {
+											name: "button_shio"
+											"text": "Shio"
+											"$buttonGroup": new FormReference( "statisticsContentGroup" )
+											auxiliary() {
+												"JavaCodeGenerator.variableModifiers": 1
+											}
+										} )
+										add( new FormComponent( "javax.swing.JToggleButton" ) {
+											name: "button_nori"
+											"text": "Nori"
+											"$buttonGroup": new FormReference( "statisticsContentGroup" )
+											auxiliary() {
+												"JavaCodeGenerator.variableModifiers": 1
+											}
+										} )
+										add( new FormComponent( "javax.swing.JToggleButton" ) {
+											name: "button_chashu"
+											"text": "Chashu"
+											"$buttonGroup": new FormReference( "statisticsContentGroup" )
+											auxiliary() {
+												"JavaCodeGenerator.variableModifiers": 1
+											}
+										} )
+										add( new FormComponent( "javax.swing.JToggleButton" ) {
+											name: "button_egg"
+											"text": "Egg"
+											"$buttonGroup": new FormReference( "statisticsContentGroup" )
+											auxiliary() {
+												"JavaCodeGenerator.variableModifiers": 1
+											}
+										} )
+										add( new FormComponent( "javax.swing.JToggleButton" ) {
+											name: "button_shoot"
+											"text": "Shoot"
+											"$buttonGroup": new FormReference( "statisticsContentGroup" )
+											auxiliary() {
+												"JavaCodeGenerator.variableModifiers": 1
+											}
+										} )
+									}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+									add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+										name: "statisticsImageCard"
+										auxiliary() {
+											"JavaCodeGenerator.variableModifiers": 1
+										}
+									}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+										"gridx": 2
+									} )
+									add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.CardLayout ) ) {
+										name: "statisticsDataCard"
+										add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+											"$rowSpecs": "45, 330"
+											"$alignLeft": true
+											"$alignTop": true
+											"$columnSpecs": "300"
+										} ) {
+											name: "weeklyPanel"
+											"background": new java.awt.Color( 223, 217, 213, 255 )
+											add( new FormComponent( "javax.swing.JLabel" ) {
+												name: "label_title_monthlyStatistics"
+												"text": "Weekly Statistics"
+												"horizontalAlignment": 0
+												"font": new java.awt.Font( "Microsoft YaHei UI", 1, 16 )
+											}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+											add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+												"$columnSpecs": "460"
+												"$rowSpecs": "150, 180"
+												"$alignLeft": true
+												"$alignTop": true
+											} ) {
+												name: "weeklyBodyPanel"
+												"background": new java.awt.Color( 248, 245, 239, 255 )
+												add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+													"rows": 3
+													"columns": 2
+												} ) {
+													name: "weekly_hedPanel"
+													"background": new java.awt.Color( 248, 245, 239, 255 )
+													add( new FormComponent( "javax.swing.JLabel" ) {
+														name: "label_statisticRange"
+														"text": "Statistic range:"
+													} )
+													add( new FormComponent( "javax.swing.JLabel" ) {
+														name: "weeklyRange"
+														"text": "2020-05-04 -> 2020-05-11"
+														auxiliary() {
+															"JavaCodeGenerator.variableModifiers": 1
+														}
+													} )
+													add( new FormComponent( "javax.swing.JLabel" ) {
+														name: "label_weeklyIncome"
+														"text": "Weekly income:"
+													} )
+													add( new FormComponent( "javax.swing.JLabel" ) {
+														name: "weeklyIncome"
+														"text": "£ 2000"
+														auxiliary() {
+															"JavaCodeGenerator.variableModifiers": 1
+														}
+													} )
+													add( new FormComponent( "javax.swing.JLabel" ) {
+														name: "label_weeklyOrders"
+														"text": "Orders number:"
+													} )
+													add( new FormComponent( "javax.swing.JLabel" ) {
+														name: "weeklyOrders"
+														"text": "100"
+														auxiliary() {
+															"JavaCodeGenerator.variableModifiers": 1
+														}
+													} )
+												}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+												add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+													"columns": 4
+													"rows": 4
+												} ) {
+													name: "weekly_footPanel"
+													"border": new javax.swing.border.TitledBorder( "Details number" )
+													"background": new java.awt.Color( 248, 245, 239, 255 )
+													add( new FormComponent( "javax.swing.JLabel" ) {
+														name: "label_tonkotsu"
+														"text": "Tonkotsu:"
+													} )
+													add( new FormComponent( "javax.swing.JLabel" ) {
+														name: "weeklyTonkotsu"
+														"text": "10"
+														auxiliary() {
+															"JavaCodeGenerator.variableModifiers": 1
+														}
+													} )
+													add( new FormComponent( "javax.swing.JLabel" ) {
+														name: "label_nori"
+														"text": "Nori:"
+													} )
+													add( new FormComponent( "javax.swing.JLabel" ) {
+														name: "weeklyNori"
+														"text": "10"
+														auxiliary() {
+															"JavaCodeGenerator.variableModifiers": 1
+														}
+													} )
+													add( new FormComponent( "javax.swing.JLabel" ) {
+														name: "label_shoyo"
+														"text": "Shoyo:"
+													} )
+													add( new FormComponent( "javax.swing.JLabel" ) {
+														name: "weeklyShoyo"
+														"text": "10"
+														auxiliary() {
+															"JavaCodeGenerator.variableModifiers": 1
+														}
+													} )
+													add( new FormComponent( "javax.swing.JLabel" ) {
+														name: "label_chashu"
+														"text": "Chashu:"
+													} )
+													add( new FormComponent( "javax.swing.JLabel" ) {
+														name: "weeklyChashu"
+														"text": "10"
+														auxiliary() {
+															"JavaCodeGenerator.variableModifiers": 1
+														}
+													} )
+													add( new FormComponent( "javax.swing.JLabel" ) {
+														name: "label_shio"
+														"text": "Shio:"
+													} )
+													add( new FormComponent( "javax.swing.JLabel" ) {
+														name: "weeklyShio"
+														"text": "10"
+														auxiliary() {
+															"JavaCodeGenerator.variableModifiers": 1
+														}
+													} )
+													add( new FormComponent( "javax.swing.JLabel" ) {
+														name: "label_egg"
+														"text": "Egg:"
+													} )
+													add( new FormComponent( "javax.swing.JLabel" ) {
+														name: "weeklyEgg"
+														"text": "10"
+														auxiliary() {
+															"JavaCodeGenerator.variableModifiers": 1
+														}
+													} )
+													add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+														"axis": 0
+													} ) {
+														name: "emptyBox6"
+														"background": new java.awt.Color( 248, 245, 239, 255 )
+													} )
+													add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+														"axis": 0
+													} ) {
+														name: "emptyBox7"
+														"background": new java.awt.Color( 248, 245, 239, 255 )
+													} )
+													add( new FormComponent( "javax.swing.JLabel" ) {
+														name: "label_shoot"
+														"text": "Shoot:"
+													} )
+													add( new FormComponent( "javax.swing.JLabel" ) {
+														name: "weeklyShoot"
+														"text": "10"
+														auxiliary() {
+															"JavaCodeGenerator.variableModifiers": 1
+														}
+													} )
+												}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+													"gridy": 1
+												} )
+											}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+												"gridy": 1
+											} )
+										}, new FormLayoutConstraints( class java.lang.String ) {
+											"value": "card1"
+										} )
+									}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+										"gridx": 4
+									} )
+								}, new FormLayoutConstraints( class java.lang.String ) {
+									"value": "card1"
+								} )
+							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+							"gridy": 1
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 1
+						"gridx": 1
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 1
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+					"$columnSpecs": "20, 990"
+					"$rowSpecs": "5, center:65:1.0, 5"
+					"$alignTop": true
+					"$alignLeft": true
+				} ) {
+					name: "bottomPanel"
+					"background": new java.awt.Color( 252, 251, 245, 255 )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+						"columns": 1
+						"rows": 3
+					} ) {
+						name: "bottom_innerPanel"
+						"background": new java.awt.Color( 252, 251, 245, 255 )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "storeName"
+							"text": "TOTORO Ramen"
+							"background": new java.awt.Color( 252, 251, 245, 255 )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "storeAddress"
+							"text": "Address: B15 Baker Street in London"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "storeTelphone"
+							"text": "Telphone: 44 (0) 203 178 4861"
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+						"gridy": 1
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 2
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 1000, 620 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "statisticsContentGroup"
+			auxiliary() {
+				"JavaCodeGenerator.variableModifiers": 1
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 636 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "dataAnalysisGroup"
+			auxiliary() {
+				"JavaCodeGenerator.variableModifiers": 1
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 697 )
+		} )
+	}
+}

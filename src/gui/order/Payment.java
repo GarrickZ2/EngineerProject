@@ -1,5 +1,5 @@
 /*
- * Created by JFormDesigner on Fri Apr 03 18:44:03 GMT+08:00 2020
+ * Created by JFormDesigner on Sun Apr 19 16:51:11 GMT+08:00 2020
  */
 
 package gui.order;
@@ -16,380 +16,698 @@ public class Payment extends JPanel {
         initComponents();
     }
 
-    public void initComponents() {
+    private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
+        panel2 = new JPanel();
+        panel3 = new JPanel();
+        panel4 = new JPanel();
+        boardPanel = new JPanel();
         titlePanel = new JPanel();
-        snLabel = new JLabel();
+        logo = new JLabel();
+        body = new JPanel();
+        body_innerPanel = new JPanel();
+        advertisementPanel = new JPanel();
+        advertisement = new JLabel();
+        MessageBoardPanel = new JPanel();
+        mb_leftPanel = new JPanel();
+        informtionPanel = new JPanel();
+        label_serialNumber = new JLabel();
         serialNumber = new JLabel();
-        timeLabel = new JLabel();
+        label_time = new JLabel();
         time = new JLabel();
-        membershipLabel = new JLabel();
-        membershipNumber = new JLabel();
-        itemLabel = new JLabel();
-        itemPanel0 = new JPanel();
-        noodlePicture = new JLabel();
-        itemLabelList = new JPanel();
-        soupLabel = new JLabel();
-        noodleLabel = new JLabel();
-        onionLabel = new JLabel();
-        spicinessLabel = new JLabel();
-        itemLabelList1 = new JPanel();
+        itemPanel = new JPanel();
+        item_topPanel = new JPanel();
+        noodleInfo_list = new JPanel();
+        label_soup = new JLabel();
+        label_noodle = new JLabel();
+        label_onion = new JLabel();
+        label_spiciness = new JLabel();
+        noodleInfo_variable = new JPanel();
         soup = new JLabel();
         noodle = new JLabel();
         onion = new JLabel();
         spiciness = new JLabel();
-        itemLabelList2 = new JPanel();
-        noodlePrice = new JLabel();
-        noodlePrice1 = new JLabel();
-        onionPrice = new JLabel();
-        spicinessPrice = new JLabel();
-        itemPanel1 = new JPanel();
-        noriLabel = new JLabel();
+        noodleInfo_empty = new JPanel();
+        emptyBox0 = new JPanel();
+        emptyBox1 = new JPanel();
+        emptyBox2 = new JPanel();
+        emptyBox3 = new JPanel();
+        soupPicturePanel = new JPanel();
+        soupPicture = new JLabel();
+        item_bottomPanel = new JPanel();
+        label_nori = new JLabel();
         nori = new JLabel();
-        extraLabel0 = new JLabel();
+        label_extra0 = new JLabel();
         extraNori = new JLabel();
-        noriPrice = new JLabel();
-        eggLabel = new JLabel();
-        egg = new JLabel();
-        extraLabel1 = new JLabel();
-        extraEgg = new JLabel();
-        eggPrice = new JLabel();
-        shootLabel = new JLabel();
-        shoot = new JLabel();
-        extraLabel2 = new JLabel();
-        extraShoot = new JLabel();
-        shootPrice = new JLabel();
-        chashuLabel = new JLabel();
+        label_chashu = new JLabel();
         chashu = new JLabel();
-        extraLabel3 = new JLabel();
+        label_extra1 = new JLabel();
         extraChashu = new JLabel();
-        chashuPrice = new JLabel();
+        label_egg = new JLabel();
+        egg = new JLabel();
+        label_extra2 = new JLabel();
+        extraEgg = new JLabel();
+        label_shoot = new JLabel();
+        shoot = new JLabel();
+        label_extra3 = new JLabel();
+        extraShoot = new JLabel();
         methodPanel = new JPanel();
-        dinningLabel = new JLabel();
+        label_diningMethod = new JLabel();
         eatIn = new JToggleButton();
         takeAway = new JToggleButton();
-        payingLabel = new JLabel();
+        label_payingMethod = new JLabel();
         cash = new JToggleButton();
         visa = new JToggleButton();
-        totalPricePanel = new JPanel();
-        totalPriceLabel = new JLabel();
+        mb_rightPanel = new JPanel();
+        membershipPanel = new JPanel();
+        memIdPanel = new JPanel();
+        label_memberId = new JLabel();
+        membershipNumberInput = new JTextField();
+        checkButtonPanel = new JPanel();
+        checkButton = new JButton();
+        emptyBox4 = new JPanel();
+        emptyBox5 = new JPanel();
+        identifiedInformation = new JLabel();
+        userGreeting = new JLabel();
+        memidSuggestPanel = new JPanel();
+        label_memberIdSug = new JLabel();
+        membershipNumber = new JLabel();
+        couponPanel = new JPanel();
+        label_coupon = new JLabel();
+        coupon = new JLabel();
+        useCoupon = new JCheckBox();
+        billPanel = new JPanel();
+        label_foodCost = new JLabel();
+        noodlePrice = new JLabel();
+        label_extraCost = new JLabel();
+        extraPrice = new JLabel();
+        label_packingCost = new JLabel();
+        packingPrice = new JLabel();
+        label_totalCost = new JLabel();
         totalPrice = new JLabel();
-        bottomPanel = new JPanel();
+        panel1 = new JPanel();
         returnButton = new JButton();
-        emptyBox = new JPanel();
         settleButton = new JButton();
+        bottomPanel = new JPanel();
+        bottom_innerPanel = new JPanel();
+        storeName = new JLabel();
+        storeAddress = new JLabel();
+        storeTelphone = new JLabel();
+        panel6 = new JPanel();
         diningMethod = new ButtonGroup();
         payingMethod = new ButtonGroup();
 
         //======== this ========
-        setBorder(new TitledBorder("Payment"));
-        setLayout(new GridBagLayout());
-        ((GridBagLayout)getLayout()).columnWidths = new int[] {55, 481, 50, 0};
-        ((GridBagLayout)getLayout()).rowHeights = new int[] {25, 50, 20, 105, 105, 55, 20, 30, 20, 0};
-        ((GridBagLayout)getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 1.0E-4};
-        ((GridBagLayout)getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0E-4};
+        setLayout(new BorderLayout());
 
-        //======== titlePanel ========
+        //======== panel2 ========
         {
-            titlePanel.setLayout(new GridLayout(3, 2));
-
-            //---- snLabel ----
-            snLabel.setText("Serial Number:");
-            titlePanel.add(snLabel);
-
-            //---- serialNumber ----
-            serialNumber.setText("200345548218752");
-            serialNumber.setHorizontalTextPosition(SwingConstants.RIGHT);
-            serialNumber.setHorizontalAlignment(SwingConstants.TRAILING);
-            titlePanel.add(serialNumber);
-
-            //---- timeLabel ----
-            timeLabel.setText("Time:");
-            titlePanel.add(timeLabel);
-
-            //---- time ----
-            time.setText("2020-04-03 18:49:20");
-            time.setHorizontalAlignment(SwingConstants.TRAILING);
-            titlePanel.add(time);
-
-            //---- membershipLabel ----
-            membershipLabel.setText("Membership Number:");
-            titlePanel.add(membershipLabel);
-
-            //---- membershipNumber ----
-            membershipNumber.setText("00000001");
-            membershipNumber.setHorizontalAlignment(SwingConstants.TRAILING);
-            titlePanel.add(membershipNumber);
+            panel2.setLayout(new BoxLayout(panel2, BoxLayout.X_AXIS));
         }
-        add(titlePanel, new GridBagConstraints(1, 1, 1, 1, 0.0, 0.0,
-            GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-            new Insets(0, 0, 5, 5), 0, 0));
+        add(panel2, BorderLayout.NORTH);
 
-        //---- itemLabel ----
-        itemLabel.setText("Items:");
-        add(itemLabel, new GridBagConstraints(1, 2, 1, 1, 0.0, 0.0,
-            GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-            new Insets(0, 0, 5, 5), 0, 0));
-
-        //======== itemPanel0 ========
+        //======== panel3 ========
         {
-            itemPanel0.setBorder(new EtchedBorder());
-            itemPanel0.setLayout(new GridLayout(1, 4));
+            panel3.setLayout(new BoxLayout(panel3, BoxLayout.X_AXIS));
+        }
+        add(panel3, BorderLayout.SOUTH);
 
-            //---- noodlePicture ----
-            noodlePicture.setIcon(new ImageIcon(getClass().getResource("/img/1.jpg")));
-            itemPanel0.add(noodlePicture);
+        //======== panel4 ========
+        {
+            panel4.setLayout(new BoxLayout(panel4, BoxLayout.X_AXIS));
+        }
+        add(panel4, BorderLayout.WEST);
 
-            //======== itemLabelList ========
+        //======== boardPanel ========
+        {
+            boardPanel.setLayout(new GridBagLayout());
+            ((GridBagLayout)boardPanel.getLayout()).columnWidths = new int[] {1000, 0};
+            ((GridBagLayout)boardPanel.getLayout()).rowHeights = new int[] {100, 445, 75, 0};
+            ((GridBagLayout)boardPanel.getLayout()).columnWeights = new double[] {0.0, 1.0E-4};
+            ((GridBagLayout)boardPanel.getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 1.0E-4};
+
+            //======== titlePanel ========
             {
-                itemLabelList.setLayout(new GridLayout(4, 0));
+                titlePanel.setBackground(new Color(248, 193, 84));
+                titlePanel.setLayout(new GridBagLayout());
+                ((GridBagLayout)titlePanel.getLayout()).columnWidths = new int[] {25, 950, 25, 0};
+                ((GridBagLayout)titlePanel.getLayout()).rowHeights = new int[] {100, 0};
+                ((GridBagLayout)titlePanel.getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 1.0E-4};
+                ((GridBagLayout)titlePanel.getLayout()).rowWeights = new double[] {0.0, 1.0E-4};
 
-                //---- soupLabel ----
-                soupLabel.setText("Soup:");
-                itemLabelList.add(soupLabel);
-
-                //---- noodleLabel ----
-                noodleLabel.setText("Noodle:");
-                itemLabelList.add(noodleLabel);
-
-                //---- onionLabel ----
-                onionLabel.setText("Spring onion:");
-                itemLabelList.add(onionLabel);
-
-                //---- spicinessLabel ----
-                spicinessLabel.setText("Spiciness:");
-                itemLabelList.add(spicinessLabel);
+                //---- logo ----
+                logo.setIcon(new ImageIcon(getClass().getResource("/img/titleLogo.png")));
+                titlePanel.add(logo, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
+                    GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                    new Insets(0, 0, 0, 0), 0, 0));
             }
-            itemPanel0.add(itemLabelList);
+            boardPanel.add(titlePanel, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
+                GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                new Insets(0, 0, 0, 0), 0, 0));
 
-            //======== itemLabelList1 ========
+            //======== body ========
             {
-                itemLabelList1.setLayout(new GridLayout(4, 0));
+                body.setBackground(Color.white);
+                body.setLayout(new GridBagLayout());
+                ((GridBagLayout)body.getLayout()).columnWidths = new int[] {25, 950, 25, 0};
+                ((GridBagLayout)body.getLayout()).rowHeights = new int[] {25, 395, 25, 0};
+                ((GridBagLayout)body.getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 1.0E-4};
+                ((GridBagLayout)body.getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 1.0E-4};
 
-                //---- soup ----
-                soup.setText("Tonkotsu");
-                itemLabelList1.add(soup);
+                //======== body_innerPanel ========
+                {
+                    body_innerPanel.setLayout(new GridBagLayout());
+                    ((GridBagLayout)body_innerPanel.getLayout()).columnWidths = new int[] {300, 650, 0};
+                    ((GridBagLayout)body_innerPanel.getLayout()).rowHeights = new int[] {395, 0};
+                    ((GridBagLayout)body_innerPanel.getLayout()).columnWeights = new double[] {0.0, 0.0, 1.0E-4};
+                    ((GridBagLayout)body_innerPanel.getLayout()).rowWeights = new double[] {0.0, 1.0E-4};
 
-                //---- noodle ----
-                noodle.setText("Soft");
-                itemLabelList1.add(noodle);
+                    //======== advertisementPanel ========
+                    {
+                        advertisementPanel.setBackground(Color.white);
+                        advertisementPanel.setLayout(new GridBagLayout());
+                        ((GridBagLayout)advertisementPanel.getLayout()).columnWidths = new int[] {15, 270, 15, 0};
+                        ((GridBagLayout)advertisementPanel.getLayout()).rowHeights = new int[] {15, 15, 375, 0};
+                        ((GridBagLayout)advertisementPanel.getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 1.0E-4};
+                        ((GridBagLayout)advertisementPanel.getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 1.0E-4};
 
-                //---- onion ----
-                onion.setText("No please");
-                itemLabelList1.add(onion);
+                        //---- advertisement ----
+                        advertisement.setIcon(new ImageIcon(getClass().getResource("/img/adPoster.jpg")));
+                        advertisementPanel.add(advertisement, new GridBagConstraints(1, 2, 1, 1, 0.0, 0.0,
+                            GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                            new Insets(0, 0, 0, 0), 0, 0));
+                    }
+                    body_innerPanel.add(advertisementPanel, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
+                        GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                        new Insets(0, 0, 0, 0), 0, 0));
 
-                //---- spiciness ----
-                spiciness.setText("5");
-                itemLabelList1.add(spiciness);
+                    //======== MessageBoardPanel ========
+                    {
+                        MessageBoardPanel.setLayout(new GridBagLayout());
+                        ((GridBagLayout)MessageBoardPanel.getLayout()).columnWidths = new int[] {430, 220, 0};
+                        ((GridBagLayout)MessageBoardPanel.getLayout()).rowHeights = new int[] {400, 0};
+                        ((GridBagLayout)MessageBoardPanel.getLayout()).columnWeights = new double[] {0.0, 0.0, 1.0E-4};
+                        ((GridBagLayout)MessageBoardPanel.getLayout()).rowWeights = new double[] {0.0, 1.0E-4};
+
+                        //======== mb_leftPanel ========
+                        {
+                            mb_leftPanel.setLayout(new GridBagLayout());
+                            ((GridBagLayout)mb_leftPanel.getLayout()).columnWidths = new int[] {430, 0};
+                            ((GridBagLayout)mb_leftPanel.getLayout()).rowHeights = new int[] {65, 265, 65, 0};
+                            ((GridBagLayout)mb_leftPanel.getLayout()).columnWeights = new double[] {0.0, 1.0E-4};
+                            ((GridBagLayout)mb_leftPanel.getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 1.0E-4};
+
+                            //======== informtionPanel ========
+                            {
+                                informtionPanel.setBorder(new TitledBorder("Information"));
+                                informtionPanel.setBackground(Color.white);
+                                informtionPanel.setLayout(new GridLayout(2, 2));
+
+                                //---- label_serialNumber ----
+                                label_serialNumber.setText("Serial Number:");
+                                informtionPanel.add(label_serialNumber);
+
+                                //---- serialNumber ----
+                                serialNumber.setText("200345548218752");
+                                serialNumber.setHorizontalAlignment(SwingConstants.TRAILING);
+                                informtionPanel.add(serialNumber);
+
+                                //---- label_time ----
+                                label_time.setText("Time:");
+                                informtionPanel.add(label_time);
+
+                                //---- time ----
+                                time.setText("2020-04-03 18:49:20");
+                                time.setHorizontalAlignment(SwingConstants.TRAILING);
+                                informtionPanel.add(time);
+                            }
+                            mb_leftPanel.add(informtionPanel, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
+                                GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                                new Insets(0, 0, 0, 0), 0, 0));
+
+                            //======== itemPanel ========
+                            {
+                                itemPanel.setBorder(new TitledBorder("Item"));
+                                itemPanel.setBackground(Color.white);
+                                itemPanel.setLayout(new GridLayout(2, 1));
+
+                                //======== item_topPanel ========
+                                {
+                                    item_topPanel.setBackground(Color.white);
+                                    item_topPanel.setLayout(new GridLayout(1, 4));
+
+                                    //======== noodleInfo_list ========
+                                    {
+                                        noodleInfo_list.setBackground(Color.white);
+                                        noodleInfo_list.setLayout(new GridLayout(4, 1));
+
+                                        //---- label_soup ----
+                                        label_soup.setText("Soup:");
+                                        noodleInfo_list.add(label_soup);
+
+                                        //---- label_noodle ----
+                                        label_noodle.setText("Noodle:");
+                                        noodleInfo_list.add(label_noodle);
+
+                                        //---- label_onion ----
+                                        label_onion.setText("Spring onion:");
+                                        noodleInfo_list.add(label_onion);
+
+                                        //---- label_spiciness ----
+                                        label_spiciness.setText("Spiciness:");
+                                        noodleInfo_list.add(label_spiciness);
+                                    }
+                                    item_topPanel.add(noodleInfo_list);
+
+                                    //======== noodleInfo_variable ========
+                                    {
+                                        noodleInfo_variable.setBackground(Color.white);
+                                        noodleInfo_variable.setLayout(new GridLayout(4, 1));
+
+                                        //---- soup ----
+                                        soup.setText("Tonkotsu");
+                                        noodleInfo_variable.add(soup);
+
+                                        //---- noodle ----
+                                        noodle.setText("Soft");
+                                        noodleInfo_variable.add(noodle);
+
+                                        //---- onion ----
+                                        onion.setText("No please");
+                                        noodleInfo_variable.add(onion);
+
+                                        //---- spiciness ----
+                                        spiciness.setText("5");
+                                        noodleInfo_variable.add(spiciness);
+                                    }
+                                    item_topPanel.add(noodleInfo_variable);
+
+                                    //======== noodleInfo_empty ========
+                                    {
+                                        noodleInfo_empty.setBackground(Color.white);
+                                        noodleInfo_empty.setLayout(new GridLayout(4, 1));
+
+                                        //======== emptyBox0 ========
+                                        {
+                                            emptyBox0.setBackground(Color.white);
+                                            emptyBox0.setLayout(new BoxLayout(emptyBox0, BoxLayout.X_AXIS));
+                                        }
+                                        noodleInfo_empty.add(emptyBox0);
+
+                                        //======== emptyBox1 ========
+                                        {
+                                            emptyBox1.setBackground(Color.white);
+                                            emptyBox1.setLayout(new BoxLayout(emptyBox1, BoxLayout.X_AXIS));
+                                        }
+                                        noodleInfo_empty.add(emptyBox1);
+
+                                        //======== emptyBox2 ========
+                                        {
+                                            emptyBox2.setBackground(Color.white);
+                                            emptyBox2.setLayout(new BoxLayout(emptyBox2, BoxLayout.X_AXIS));
+                                        }
+                                        noodleInfo_empty.add(emptyBox2);
+
+                                        //======== emptyBox3 ========
+                                        {
+                                            emptyBox3.setBackground(Color.white);
+                                            emptyBox3.setLayout(new BoxLayout(emptyBox3, BoxLayout.X_AXIS));
+                                        }
+                                        noodleInfo_empty.add(emptyBox3);
+                                    }
+                                    item_topPanel.add(noodleInfo_empty);
+
+                                    //======== soupPicturePanel ========
+                                    {
+                                        soupPicturePanel.setBackground(Color.white);
+                                        soupPicturePanel.setLayout(new BorderLayout());
+
+                                        //---- soupPicture ----
+                                        soupPicture.setIcon(new ImageIcon(getClass().getResource("/img/1.jpg")));
+                                        soupPicturePanel.add(soupPicture, BorderLayout.CENTER);
+                                    }
+                                    item_topPanel.add(soupPicturePanel);
+                                }
+                                itemPanel.add(item_topPanel);
+
+                                //======== item_bottomPanel ========
+                                {
+                                    item_bottomPanel.setBackground(Color.white);
+                                    item_bottomPanel.setLayout(new GridLayout(4, 4));
+
+                                    //---- label_nori ----
+                                    label_nori.setText("Nori(free):");
+                                    item_bottomPanel.add(label_nori);
+
+                                    //---- nori ----
+                                    nori.setText("Yes");
+                                    item_bottomPanel.add(nori);
+
+                                    //---- label_extra0 ----
+                                    label_extra0.setText("Extra number:");
+                                    item_bottomPanel.add(label_extra0);
+
+                                    //---- extraNori ----
+                                    extraNori.setText("1");
+                                    item_bottomPanel.add(extraNori);
+
+                                    //---- label_chashu ----
+                                    label_chashu.setText("Chashu(free):");
+                                    item_bottomPanel.add(label_chashu);
+
+                                    //---- chashu ----
+                                    chashu.setText("Yes");
+                                    item_bottomPanel.add(chashu);
+
+                                    //---- label_extra1 ----
+                                    label_extra1.setText("Extra number:");
+                                    item_bottomPanel.add(label_extra1);
+
+                                    //---- extraChashu ----
+                                    extraChashu.setText("1");
+                                    item_bottomPanel.add(extraChashu);
+
+                                    //---- label_egg ----
+                                    label_egg.setText("Egg(free):");
+                                    item_bottomPanel.add(label_egg);
+
+                                    //---- egg ----
+                                    egg.setText("Yes");
+                                    item_bottomPanel.add(egg);
+
+                                    //---- label_extra2 ----
+                                    label_extra2.setText("Extra number:");
+                                    item_bottomPanel.add(label_extra2);
+
+                                    //---- extraEgg ----
+                                    extraEgg.setText("1");
+                                    item_bottomPanel.add(extraEgg);
+
+                                    //---- label_shoot ----
+                                    label_shoot.setText("Shoot:");
+                                    item_bottomPanel.add(label_shoot);
+
+                                    //---- shoot ----
+                                    shoot.setText("No");
+                                    item_bottomPanel.add(shoot);
+
+                                    //---- label_extra3 ----
+                                    label_extra3.setText("Extra number:");
+                                    item_bottomPanel.add(label_extra3);
+
+                                    //---- extraShoot ----
+                                    extraShoot.setText("1");
+                                    item_bottomPanel.add(extraShoot);
+                                }
+                                itemPanel.add(item_bottomPanel);
+                            }
+                            mb_leftPanel.add(itemPanel, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0,
+                                GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                                new Insets(0, 0, 0, 0), 0, 0));
+
+                            //======== methodPanel ========
+                            {
+                                methodPanel.setBorder(new TitledBorder("Method"));
+                                methodPanel.setBackground(Color.white);
+                                methodPanel.setLayout(new GridLayout(2, 4));
+
+                                //---- label_diningMethod ----
+                                label_diningMethod.setText("Dining method:");
+                                methodPanel.add(label_diningMethod);
+
+                                //---- eatIn ----
+                                eatIn.setText("Eat in");
+                                methodPanel.add(eatIn);
+
+                                //---- takeAway ----
+                                takeAway.setText("Take away");
+                                methodPanel.add(takeAway);
+
+                                //---- label_payingMethod ----
+                                label_payingMethod.setText("Paying method:");
+                                methodPanel.add(label_payingMethod);
+
+                                //---- cash ----
+                                cash.setText("Cash");
+                                methodPanel.add(cash);
+
+                                //---- visa ----
+                                visa.setText("Visa");
+                                methodPanel.add(visa);
+                            }
+                            mb_leftPanel.add(methodPanel, new GridBagConstraints(0, 2, 1, 1, 0.0, 0.0,
+                                GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                                new Insets(0, 0, 0, 0), 0, 0));
+                        }
+                        MessageBoardPanel.add(mb_leftPanel, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
+                            GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                            new Insets(0, 0, 0, 0), 0, 0));
+
+                        //======== mb_rightPanel ========
+                        {
+                            mb_rightPanel.setBackground(Color.white);
+                            mb_rightPanel.setLayout(new GridBagLayout());
+                            ((GridBagLayout)mb_rightPanel.getLayout()).columnWidths = new int[] {220, 0};
+                            ((GridBagLayout)mb_rightPanel.getLayout()).rowHeights = new int[] {200, 160, 45, 0, 0};
+                            ((GridBagLayout)mb_rightPanel.getLayout()).columnWeights = new double[] {0.0, 1.0E-4};
+                            ((GridBagLayout)mb_rightPanel.getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 0.0, 1.0E-4};
+
+                            //======== membershipPanel ========
+                            {
+                                membershipPanel.setBorder(new TitledBorder("Totoro Membership"));
+                                membershipPanel.setBackground(Color.white);
+                                membershipPanel.setLayout(new GridBagLayout());
+                                ((GridBagLayout)membershipPanel.getLayout()).columnWidths = new int[] {220, 0};
+                                ((GridBagLayout)membershipPanel.getLayout()).rowHeights = new int[] {25, 20, 25, 25, 25, 25, 25, 0};
+                                ((GridBagLayout)membershipPanel.getLayout()).columnWeights = new double[] {0.0, 1.0E-4};
+                                ((GridBagLayout)membershipPanel.getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0E-4};
+
+                                //======== memIdPanel ========
+                                {
+                                    memIdPanel.setBackground(Color.white);
+                                    memIdPanel.setLayout(new GridBagLayout());
+                                    ((GridBagLayout)memIdPanel.getLayout()).columnWidths = new int[] {75, 145, 0};
+                                    ((GridBagLayout)memIdPanel.getLayout()).rowHeights = new int[] {25, 0};
+                                    ((GridBagLayout)memIdPanel.getLayout()).columnWeights = new double[] {0.0, 0.0, 1.0E-4};
+                                    ((GridBagLayout)memIdPanel.getLayout()).rowWeights = new double[] {0.0, 1.0E-4};
+
+                                    //---- label_memberId ----
+                                    label_memberId.setText("Member id:");
+                                    memIdPanel.add(label_memberId, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
+                                        GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                                        new Insets(0, 0, 0, 0), 0, 0));
+                                    memIdPanel.add(membershipNumberInput, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
+                                        GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                                        new Insets(0, 0, 0, 0), 0, 0));
+                                }
+                                membershipPanel.add(memIdPanel, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
+                                    GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                                    new Insets(0, 0, 0, 0), 0, 0));
+
+                                //======== checkButtonPanel ========
+                                {
+                                    checkButtonPanel.setBackground(Color.white);
+                                    checkButtonPanel.setLayout(new BorderLayout());
+
+                                    //---- checkButton ----
+                                    checkButton.setText("Check");
+                                    checkButtonPanel.add(checkButton, BorderLayout.SOUTH);
+
+                                    //======== emptyBox4 ========
+                                    {
+                                        emptyBox4.setBackground(Color.white);
+                                        emptyBox4.setLayout(new BoxLayout(emptyBox4, BoxLayout.X_AXIS));
+                                    }
+                                    checkButtonPanel.add(emptyBox4, BorderLayout.EAST);
+
+                                    //======== emptyBox5 ========
+                                    {
+                                        emptyBox5.setBackground(Color.white);
+                                        emptyBox5.setLayout(new BoxLayout(emptyBox5, BoxLayout.X_AXIS));
+                                    }
+                                    checkButtonPanel.add(emptyBox5, BorderLayout.WEST);
+                                }
+                                membershipPanel.add(checkButtonPanel, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0,
+                                    GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                                    new Insets(0, 0, 0, 0), 0, 0));
+
+                                //---- identifiedInformation ----
+                                identifiedInformation.setText("Identified Successfully");
+                                identifiedInformation.setHorizontalAlignment(SwingConstants.CENTER);
+                                membershipPanel.add(identifiedInformation, new GridBagConstraints(0, 2, 1, 1, 0.0, 0.0,
+                                    GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                                    new Insets(0, 0, 0, 0), 0, 0));
+
+                                //---- userGreeting ----
+                                userGreeting.setText("Hello, dear xxx");
+                                membershipPanel.add(userGreeting, new GridBagConstraints(0, 3, 1, 1, 0.0, 0.0,
+                                    GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                                    new Insets(0, 0, 0, 0), 0, 0));
+
+                                //======== memidSuggestPanel ========
+                                {
+                                    memidSuggestPanel.setBackground(Color.white);
+                                    memidSuggestPanel.setLayout(new GridLayout(1, 2));
+
+                                    //---- label_memberIdSug ----
+                                    label_memberIdSug.setText("Membership ID:");
+                                    memidSuggestPanel.add(label_memberIdSug);
+
+                                    //---- membershipNumber ----
+                                    membershipNumber.setText("00000001");
+                                    membershipNumber.setHorizontalAlignment(SwingConstants.TRAILING);
+                                    memidSuggestPanel.add(membershipNumber);
+                                }
+                                membershipPanel.add(memidSuggestPanel, new GridBagConstraints(0, 4, 1, 1, 0.0, 0.0,
+                                    GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                                    new Insets(0, 0, 0, 0), 0, 0));
+
+                                //======== couponPanel ========
+                                {
+                                    couponPanel.setBackground(Color.white);
+                                    couponPanel.setLayout(new GridLayout(1, 2));
+
+                                    //---- label_coupon ----
+                                    label_coupon.setText("Coupon:");
+                                    couponPanel.add(label_coupon);
+
+                                    //---- coupon ----
+                                    coupon.setText("5");
+                                    coupon.setHorizontalAlignment(SwingConstants.TRAILING);
+                                    couponPanel.add(coupon);
+                                }
+                                membershipPanel.add(couponPanel, new GridBagConstraints(0, 5, 1, 1, 0.0, 0.0,
+                                    GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                                    new Insets(0, 0, 0, 0), 0, 0));
+
+                                //---- useCoupon ----
+                                useCoupon.setText("Use my Coupons to pay this bill");
+                                useCoupon.setBackground(Color.white);
+                                membershipPanel.add(useCoupon, new GridBagConstraints(0, 6, 1, 1, 0.0, 0.0,
+                                    GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                                    new Insets(0, 0, 0, 0), 0, 0));
+                            }
+                            mb_rightPanel.add(membershipPanel, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
+                                GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                                new Insets(0, 0, 0, 0), 0, 0));
+
+                            //======== billPanel ========
+                            {
+                                billPanel.setBorder(new TitledBorder("Bill"));
+                                billPanel.setBackground(Color.white);
+                                billPanel.setLayout(new GridLayout(4, 2));
+
+                                //---- label_foodCost ----
+                                label_foodCost.setText("Noodle Charge:");
+                                billPanel.add(label_foodCost);
+
+                                //---- noodlePrice ----
+                                noodlePrice.setText("\uffe1");
+                                billPanel.add(noodlePrice);
+
+                                //---- label_extraCost ----
+                                label_extraCost.setText("Extra Charge");
+                                billPanel.add(label_extraCost);
+
+                                //---- extraPrice ----
+                                extraPrice.setText("\uffe1");
+                                billPanel.add(extraPrice);
+
+                                //---- label_packingCost ----
+                                label_packingCost.setText("Packing Charge:");
+                                billPanel.add(label_packingCost);
+
+                                //---- packingPrice ----
+                                packingPrice.setText("\uffe1");
+                                billPanel.add(packingPrice);
+
+                                //---- label_totalCost ----
+                                label_totalCost.setText("Total Price:");
+                                billPanel.add(label_totalCost);
+
+                                //---- totalPrice ----
+                                totalPrice.setText("\uffe1");
+                                billPanel.add(totalPrice);
+                            }
+                            mb_rightPanel.add(billPanel, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0,
+                                GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                                new Insets(0, 0, 0, 0), 0, 0));
+
+                            //======== panel1 ========
+                            {
+                                panel1.setBackground(Color.white);
+                                panel1.setLayout(new GridLayout(1, 2));
+
+                                //---- returnButton ----
+                                returnButton.setText("Return");
+                                panel1.add(returnButton);
+
+                                //---- settleButton ----
+                                settleButton.setText("Pay");
+                                panel1.add(settleButton);
+                            }
+                            mb_rightPanel.add(panel1, new GridBagConstraints(0, 2, 1, 1, 0.0, 0.0,
+                                GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                                new Insets(0, 0, 0, 0), 0, 0));
+                        }
+                        MessageBoardPanel.add(mb_rightPanel, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
+                            GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                            new Insets(0, 0, 0, 0), 0, 0));
+                    }
+                    body_innerPanel.add(MessageBoardPanel, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
+                        GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                        new Insets(0, 0, 0, 0), 0, 0));
+                }
+                body.add(body_innerPanel, new GridBagConstraints(1, 1, 1, 1, 0.0, 0.0,
+                    GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                    new Insets(0, 0, 0, 0), 0, 0));
             }
-            itemPanel0.add(itemLabelList1);
+            boardPanel.add(body, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0,
+                GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                new Insets(0, 0, 0, 0), 0, 0));
 
-            //======== itemLabelList2 ========
+            //======== bottomPanel ========
             {
-                itemLabelList2.setLayout(new GridLayout(4, 0));
+                bottomPanel.setBackground(new Color(252, 251, 245));
+                bottomPanel.setLayout(new GridBagLayout());
+                ((GridBagLayout)bottomPanel.getLayout()).columnWidths = new int[] {20, 990, 0};
+                ((GridBagLayout)bottomPanel.getLayout()).rowHeights = new int[] {5, 65, 5, 0};
+                ((GridBagLayout)bottomPanel.getLayout()).columnWeights = new double[] {0.0, 0.0, 1.0E-4};
+                ((GridBagLayout)bottomPanel.getLayout()).rowWeights = new double[] {0.0, 1.0, 0.0, 1.0E-4};
 
-                //---- noodlePrice ----
-                noodlePrice.setText("\uffe19.99");
-                noodlePrice.setHorizontalAlignment(SwingConstants.TRAILING);
-                itemLabelList2.add(noodlePrice);
+                //======== bottom_innerPanel ========
+                {
+                    bottom_innerPanel.setBackground(new Color(252, 251, 245));
+                    bottom_innerPanel.setLayout(new GridLayout(3, 1));
 
-                //---- noodlePrice1 ----
-                noodlePrice1.setText("\uffe10");
-                noodlePrice1.setHorizontalAlignment(SwingConstants.TRAILING);
-                itemLabelList2.add(noodlePrice1);
+                    //---- storeName ----
+                    storeName.setText("TOTORO Ramen");
+                    storeName.setBackground(new Color(252, 251, 245));
+                    bottom_innerPanel.add(storeName);
 
-                //---- onionPrice ----
-                onionPrice.setText("\uffe10");
-                onionPrice.setHorizontalAlignment(SwingConstants.TRAILING);
-                itemLabelList2.add(onionPrice);
+                    //---- storeAddress ----
+                    storeAddress.setText("Address: B15 Baker Street in London");
+                    bottom_innerPanel.add(storeAddress);
 
-                //---- spicinessPrice ----
-                spicinessPrice.setText("\uffe10");
-                spicinessPrice.setHorizontalAlignment(SwingConstants.TRAILING);
-                itemLabelList2.add(spicinessPrice);
+                    //---- storeTelphone ----
+                    storeTelphone.setText("Telphone: 44 (0) 203 178 4861");
+                    bottom_innerPanel.add(storeTelphone);
+                }
+                bottomPanel.add(bottom_innerPanel, new GridBagConstraints(1, 1, 1, 1, 0.0, 0.0,
+                    GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL,
+                    new Insets(0, 0, 0, 0), 0, 0));
             }
-            itemPanel0.add(itemLabelList2);
+            boardPanel.add(bottomPanel, new GridBagConstraints(0, 2, 1, 1, 0.0, 0.0,
+                GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                new Insets(0, 0, 0, 0), 0, 0));
         }
-        add(itemPanel0, new GridBagConstraints(1, 3, 1, 1, 0.0, 0.0,
-            GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-            new Insets(0, 0, 5, 5), 0, 0));
+        add(boardPanel, BorderLayout.CENTER);
 
-        //======== itemPanel1 ========
+        //======== panel6 ========
         {
-            itemPanel1.setBorder(new EtchedBorder());
-            itemPanel1.setLayout(new GridLayout(4, 5));
-
-            //---- noriLabel ----
-            noriLabel.setText("Nori:");
-            itemPanel1.add(noriLabel);
-
-            //---- nori ----
-            nori.setText("Yes");
-            nori.setHorizontalAlignment(SwingConstants.CENTER);
-            itemPanel1.add(nori);
-
-            //---- extraLabel0 ----
-            extraLabel0.setText("Extra:");
-            extraLabel0.setHorizontalAlignment(SwingConstants.TRAILING);
-            itemPanel1.add(extraLabel0);
-
-            //---- extraNori ----
-            extraNori.setText("0");
-            extraNori.setHorizontalAlignment(SwingConstants.CENTER);
-            itemPanel1.add(extraNori);
-
-            //---- noriPrice ----
-            noriPrice.setText("\uffe10");
-            noriPrice.setHorizontalAlignment(SwingConstants.TRAILING);
-            itemPanel1.add(noriPrice);
-
-            //---- eggLabel ----
-            eggLabel.setText("Boiled egg:");
-            itemPanel1.add(eggLabel);
-
-            //---- egg ----
-            egg.setText("Yes");
-            egg.setHorizontalAlignment(SwingConstants.CENTER);
-            itemPanel1.add(egg);
-
-            //---- extraLabel1 ----
-            extraLabel1.setText("Extra:");
-            extraLabel1.setHorizontalAlignment(SwingConstants.TRAILING);
-            itemPanel1.add(extraLabel1);
-
-            //---- extraEgg ----
-            extraEgg.setText("0");
-            extraEgg.setHorizontalAlignment(SwingConstants.CENTER);
-            itemPanel1.add(extraEgg);
-
-            //---- eggPrice ----
-            eggPrice.setText("\uffe10");
-            eggPrice.setHorizontalAlignment(SwingConstants.TRAILING);
-            itemPanel1.add(eggPrice);
-
-            //---- shootLabel ----
-            shootLabel.setText("Shoot:");
-            itemPanel1.add(shootLabel);
-
-            //---- shoot ----
-            shoot.setText("No");
-            shoot.setHorizontalAlignment(SwingConstants.CENTER);
-            itemPanel1.add(shoot);
-
-            //---- extraLabel2 ----
-            extraLabel2.setText("Extra:");
-            extraLabel2.setHorizontalAlignment(SwingConstants.TRAILING);
-            itemPanel1.add(extraLabel2);
-
-            //---- extraShoot ----
-            extraShoot.setText("0");
-            extraShoot.setHorizontalAlignment(SwingConstants.CENTER);
-            itemPanel1.add(extraShoot);
-
-            //---- shootPrice ----
-            shootPrice.setText("\uffe10");
-            shootPrice.setHorizontalAlignment(SwingConstants.TRAILING);
-            itemPanel1.add(shootPrice);
-
-            //---- chashuLabel ----
-            chashuLabel.setText("Chashu:");
-            itemPanel1.add(chashuLabel);
-
-            //---- chashu ----
-            chashu.setText("Yes");
-            chashu.setHorizontalAlignment(SwingConstants.CENTER);
-            itemPanel1.add(chashu);
-
-            //---- extraLabel3 ----
-            extraLabel3.setText("Extra:");
-            extraLabel3.setHorizontalAlignment(SwingConstants.TRAILING);
-            itemPanel1.add(extraLabel3);
-
-            //---- extraChashu ----
-            extraChashu.setText("1");
-            extraChashu.setHorizontalAlignment(SwingConstants.CENTER);
-            itemPanel1.add(extraChashu);
-
-            //---- chashuPrice ----
-            chashuPrice.setText("\uffe12");
-            chashuPrice.setHorizontalAlignment(SwingConstants.TRAILING);
-            itemPanel1.add(chashuPrice);
+            panel6.setLayout(new BoxLayout(panel6, BoxLayout.X_AXIS));
         }
-        add(itemPanel1, new GridBagConstraints(1, 4, 1, 1, 0.0, 0.0,
-            GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-            new Insets(0, 0, 5, 5), 0, 0));
-
-        //======== methodPanel ========
-        {
-            methodPanel.setBorder(new EtchedBorder());
-            methodPanel.setLayout(new GridLayout(2, 3));
-
-            //---- dinningLabel ----
-            dinningLabel.setText("Dining method:");
-            methodPanel.add(dinningLabel);
-
-            //---- eatIn ----
-            eatIn.setText("Eat in");
-            methodPanel.add(eatIn);
-
-            //---- takeAway ----
-            takeAway.setText("Take away");
-            methodPanel.add(takeAway);
-
-            //---- payingLabel ----
-            payingLabel.setText("Paying method:");
-            methodPanel.add(payingLabel);
-
-            //---- cash ----
-            cash.setText("Cash");
-            methodPanel.add(cash);
-
-            //---- visa ----
-            visa.setText("Visa");
-            methodPanel.add(visa);
-        }
-        add(methodPanel, new GridBagConstraints(1, 5, 1, 1, 0.0, 0.0,
-            GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-            new Insets(0, 0, 5, 5), 0, 0));
-
-        //======== totalPricePanel ========
-        {
-            totalPricePanel.setLayout(new GridLayout(1, 2));
-
-            //---- totalPriceLabel ----
-            totalPriceLabel.setText("Total price:");
-            totalPricePanel.add(totalPriceLabel);
-
-            //---- totalPrice ----
-            totalPrice.setText("\uffe111.99");
-            totalPrice.setHorizontalAlignment(SwingConstants.TRAILING);
-            totalPricePanel.add(totalPrice);
-        }
-        add(totalPricePanel, new GridBagConstraints(1, 6, 1, 1, 0.0, 0.0,
-            GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-            new Insets(0, 0, 5, 5), 0, 0));
-
-        //======== bottomPanel ========
-        {
-            bottomPanel.setLayout(new GridLayout(1, 3));
-
-            //---- returnButton ----
-            returnButton.setText("Return");
-            bottomPanel.add(returnButton);
-
-            //======== emptyBox ========
-            {
-                emptyBox.setLayout(new BoxLayout(emptyBox, BoxLayout.X_AXIS));
-            }
-            bottomPanel.add(emptyBox);
-
-            //---- settleButton ----
-            settleButton.setText("Settle");
-            bottomPanel.add(settleButton);
-        }
-        add(bottomPanel, new GridBagConstraints(1, 7, 1, 1, 0.0, 0.0,
-            GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-            new Insets(0, 0, 5, 5), 0, 0));
+        add(panel6, BorderLayout.EAST);
 
         //---- diningMethod ----
         diningMethod.add(eatIn);
@@ -402,66 +720,102 @@ public class Payment extends JPanel {
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-    public JPanel titlePanel;
-    public JLabel snLabel;
+    private JPanel panel2;
+    private JPanel panel3;
+    private JPanel panel4;
+    private JPanel boardPanel;
+    private JPanel titlePanel;
+    private JLabel logo;
+    private JPanel body;
+    private JPanel body_innerPanel;
+    private JPanel advertisementPanel;
+    private JLabel advertisement;
+    private JPanel MessageBoardPanel;
+    private JPanel mb_leftPanel;
+    private JPanel informtionPanel;
+    private JLabel label_serialNumber;
     public JLabel serialNumber;
-    public JLabel timeLabel;
+    private JLabel label_time;
     public JLabel time;
-    public JLabel membershipLabel;
-    public JLabel membershipNumber;
-    public JLabel itemLabel;
-    public JPanel itemPanel0;
-    public JLabel noodlePicture;
-    public JPanel itemLabelList;
-    public JLabel soupLabel;
-    public JLabel noodleLabel;
-    public JLabel onionLabel;
-    public JLabel spicinessLabel;
-    public JPanel itemLabelList1;
+    private JPanel itemPanel;
+    private JPanel item_topPanel;
+    private JPanel noodleInfo_list;
+    private JLabel label_soup;
+    private JLabel label_noodle;
+    private JLabel label_onion;
+    private JLabel label_spiciness;
+    private JPanel noodleInfo_variable;
     public JLabel soup;
     public JLabel noodle;
     public JLabel onion;
     public JLabel spiciness;
-    public JPanel itemLabelList2;
-    public JLabel noodlePrice;
-    public JLabel noodlePrice1;
-    public JLabel onionPrice;
-    public JLabel spicinessPrice;
-    public JPanel itemPanel1;
-    public JLabel noriLabel;
+    private JPanel noodleInfo_empty;
+    private JPanel emptyBox0;
+    private JPanel emptyBox1;
+    private JPanel emptyBox2;
+    private JPanel emptyBox3;
+    private JPanel soupPicturePanel;
+    private JLabel soupPicture;
+    private JPanel item_bottomPanel;
+    private JLabel label_nori;
     public JLabel nori;
-    public JLabel extraLabel0;
+    private JLabel label_extra0;
     public JLabel extraNori;
-    public JLabel noriPrice;
-    public JLabel eggLabel;
-    public JLabel egg;
-    public JLabel extraLabel1;
-    public JLabel extraEgg;
-    public JLabel eggPrice;
-    public JLabel shootLabel;
-    public JLabel shoot;
-    public JLabel extraLabel2;
-    public JLabel extraShoot;
-    public JLabel shootPrice;
-    public JLabel chashuLabel;
+    private JLabel label_chashu;
     public JLabel chashu;
-    public JLabel extraLabel3;
+    private JLabel label_extra1;
     public JLabel extraChashu;
-    public JLabel chashuPrice;
-    public JPanel methodPanel;
-    public JLabel dinningLabel;
+    private JLabel label_egg;
+    public JLabel egg;
+    private JLabel label_extra2;
+    public JLabel extraEgg;
+    private JLabel label_shoot;
+    public JLabel shoot;
+    private JLabel label_extra3;
+    public JLabel extraShoot;
+    private JPanel methodPanel;
+    private JLabel label_diningMethod;
     public JToggleButton eatIn;
     public JToggleButton takeAway;
-    public JLabel payingLabel;
+    private JLabel label_payingMethod;
     public JToggleButton cash;
     public JToggleButton visa;
-    public JPanel totalPricePanel;
-    public JLabel totalPriceLabel;
+    private JPanel mb_rightPanel;
+    private JPanel membershipPanel;
+    private JPanel memIdPanel;
+    private JLabel label_memberId;
+    public JTextField membershipNumberInput;
+    private JPanel checkButtonPanel;
+    public JButton checkButton;
+    private JPanel emptyBox4;
+    private JPanel emptyBox5;
+    public JLabel identifiedInformation;
+    public JLabel userGreeting;
+    private JPanel memidSuggestPanel;
+    private JLabel label_memberIdSug;
+    public JLabel membershipNumber;
+    private JPanel couponPanel;
+    private JLabel label_coupon;
+    public JLabel coupon;
+    public JCheckBox useCoupon;
+    private JPanel billPanel;
+    private JLabel label_foodCost;
+    public JLabel noodlePrice;
+    private JLabel label_extraCost;
+    public JLabel extraPrice;
+    private JLabel label_packingCost;
+    public JLabel packingPrice;
+    private JLabel label_totalCost;
     public JLabel totalPrice;
-    public JPanel bottomPanel;
+    private JPanel panel1;
     public JButton returnButton;
-    public JPanel emptyBox;
     public JButton settleButton;
+    private JPanel bottomPanel;
+    private JPanel bottom_innerPanel;
+    private JLabel storeName;
+    private JLabel storeAddress;
+    private JLabel storeTelphone;
+    private JPanel panel6;
     public ButtonGroup diningMethod;
     public ButtonGroup payingMethod;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
