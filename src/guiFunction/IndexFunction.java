@@ -101,6 +101,15 @@ public class IndexFunction extends JFrame {
             }
             orderGuiFunction.orderList.save();
             orderGuiFunction.order = orderGuiFunction.orderList.getOrders().get(orderGuiFunction.orderList.getOrders().size()-1);
+            if(orderGuiFunction.usingCoupon){
+                orderGuiFunction.order.setPayingMethod("Coupon");
+            }else {
+                if(orderGuiFunction.payment.cash.isSelected()){
+                    orderGuiFunction.order.setPayingMethod("Cash");
+                }else {
+                    orderGuiFunction.order.setPayingMethod("Visa");
+                }
+            }
             orderGuiFunction.receipt = new Receipt(orderGuiFunction.order);
             orderGuiFunction.receipt.payingMethod = orderGuiFunction.payingMethod;
             //check what is the membership

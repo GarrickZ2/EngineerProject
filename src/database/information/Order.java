@@ -15,6 +15,16 @@ public class Order {
     private String billId;
     final private double outMoney = 1.0;
 
+    public String getPayingMethod() {
+        return payingMethod;
+    }
+
+    public void setPayingMethod(String payingMethod) {
+        this.payingMethod = payingMethod;
+    }
+
+    private String payingMethod;
+
     public Order(Cuisine cuisine, int eatType, String membershipId) {
         this.cuisine = cuisine;
         this.eatType = eatType;
