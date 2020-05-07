@@ -20,6 +20,7 @@ public class RecipientReader {
     private double eggTotalPrice;
     private double shootTotalPrice;
     private double chashuTotalPrice;
+    private String payingMethod;
 
     public RecipientReader(String recipientsName) throws Exception{
         File file = new File("data/recipients/"+ recipientsName +".txt");
@@ -56,6 +57,9 @@ public class RecipientReader {
                     this.chashu =Double.parseDouble(line.substring(46,57));
                     this.chashuPrice = Double.parseDouble(line.substring(58,69));
                     this.chashuTotalPrice = Double.parseDouble(line.substring(70,81));
+                }
+                if (lineNum==14){
+                    this.payingMethod = line.substring(70,81);
                 }
             }
         }
@@ -138,6 +142,10 @@ public class RecipientReader {
         return chashuTotalPrice;
     }
 
+    public String getPayingMethod() {
+        return payingMethod;
+    }
+
     public static void main(String[] args) throws Exception{
         RecipientReader recipientReader = new RecipientReader("20200503172956");
         System.out.println(recipientReader.getNoodle());
@@ -147,5 +155,6 @@ public class RecipientReader {
         System.out.println(recipientReader.getEgg());
         System.out.println(recipientReader.getShoot());
         System.out.println(recipientReader.getChashu());
+        System.out.println(recipientReader.getPayingMethod());
     }
 }
