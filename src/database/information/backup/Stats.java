@@ -1,4 +1,6 @@
-package database.information;
+package database.information.backup;
+
+import database.information.Cuisine;
 
 /**
  * @author cyz

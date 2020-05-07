@@ -6,6 +6,7 @@ import database.MenuData;
 import database.UserData;
 import database.information.*;
 import database.information.Menu;
+import database.process.Receipt;
 import gui.order.OrderMenu;
 import gui.order.Payment;
 

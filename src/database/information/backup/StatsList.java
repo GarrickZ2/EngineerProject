@@ -1,4 +1,4 @@
-package database.information;
+package database.information.backup;
 
 /**
  * @author cyz
@@ -6,6 +6,7 @@ package database.information;
  */
 
 import database.StatsData;
+import database.information.DataType;
 
 import java.util.ArrayList;
 

@@ -6,6 +6,8 @@ package database;
  */
 
 import database.information.*;
+import database.information.backup.Stats;
+import database.information.backup.StatsList;
 
 import java.io.BufferedReader;
 import java.io.File;

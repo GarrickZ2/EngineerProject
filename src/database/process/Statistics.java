@@ -4,6 +4,7 @@ import database.OrderData;
 import database.information.Order;
 import database.information.OrderList;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -78,14 +79,17 @@ public class Statistics {
         shoot = new int[days];
     }
 
-    public void loadData() throws Exception{
+    public void loadData(){
         OrderData orderData = new OrderData();
         OrderList list = orderData.loadInfo();
         Date today = new Date();
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         for(Order each:list.getOrders()){
-            int diffDays = differentDays(format.parse(each.getDate()), today);
-            if(diffDays <= days & diffDays >= 0){
+            int diffDays = 0;
+            try {
+                diffDays = differentDays(format.parse(each.getDate()), today);
+            } catch (ParseException ignored) { }
+            if(diffDays < days & diffDays >= 0){
                 income[diffDays] += each.getAmountMoney();
                 income[diffDays] += 1;
                 switch (each.getCuisine().getSoupType()){

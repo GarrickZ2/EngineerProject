@@ -21,11 +21,11 @@ import java.util.regex.Pattern;
 public class ManagementIndex extends JPanel {
     MenuData menuData = new MenuData();
     Menu menu;
-    CardLayout card;
+    public CardLayout card;
     JPanel main;
     public MenuOperation menuOperation;
     public PopularityFunction popularity;
-    public MembershipOperation membershipOperation;
+    public MembershipOperationFunction membershipOperation;
     public DataAnalysisFunction dataDataAnalysisFunction;
     CardLayout innerCard;
 
@@ -37,10 +37,8 @@ public class ManagementIndex extends JPanel {
 
         menuOperation = new MenuOperation();
         popularity = new PopularityFunction();
-        membershipOperation = new MembershipOperation();
-        try {
-            dataDataAnalysisFunction = new DataAnalysisFunction();
-        } catch (Exception ignored) { }
+        membershipOperation = new MembershipOperationFunction();
+        dataDataAnalysisFunction = new DataAnalysisFunction();
         innerCard = (CardLayout)popularity.popularity.popularList_cardPanel.getLayout();
 
         main.add(menuOperation,"menuOperation");
@@ -90,19 +88,19 @@ public class ManagementIndex extends JPanel {
             });
 
             //======== Index in MembershipOperation ========
-            membershipOperation.menuOperationPanel.addMouseListener(new MouseAdapter() {
+            membershipOperation.membershipOperation.menuOperationPanel.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     menuOperationPanelMouseClicked(e);
                 }
             });
-            membershipOperation.popularityPanel.addMouseListener(new MouseAdapter() {
+            membershipOperation.membershipOperation.popularityPanel.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     popularityPanelMouseClicked(e);
                 }
             });
-            membershipOperation.dataAnalysisPanel.addMouseListener(new MouseAdapter() {
+            membershipOperation.membershipOperation.dataAnalysisPanel.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     dataAnalysisPanelMouseClicked(e);

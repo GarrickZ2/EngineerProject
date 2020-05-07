@@ -26,7 +26,7 @@ public class DataAnalysisFunction extends JPanel implements ActionListener {
     CardLayout card;
     JPanel graphics;
     Statistics statistics;
-    public DataAnalysisFunction() throws Exception{
+    public DataAnalysisFunction(){
         dataAnalysis = new DataAnalysis();
         statistics = new Statistics();
         statistics.loadData();

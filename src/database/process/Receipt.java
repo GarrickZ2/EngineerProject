@@ -1,6 +1,9 @@
-package database.information;
+package database.process;
 
 import database.MenuData;
+import database.information.Cuisine;
+import database.information.Menu;
+import database.information.Order;
 
 import java.io.BufferedWriter;
 import java.io.File;

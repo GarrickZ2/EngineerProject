@@ -1,9 +1,8 @@
 package guiFunction;
 
-import com.alee.laf.WebLookAndFeel;
 import database.UserData;
 import database.information.MemberList;
-import database.information.Receipt;
+import database.process.Receipt;
 import gui.Index;
 import guiFunction.management.ManagementIndex;
 import guiFunction.membership.MemberChangeInfoFunction;
@@ -13,7 +12,6 @@ import guiFunction.order.OrderGuiFunction;
 import gui.order.Recipients;
 
 import javax.swing.*;
-import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.awt.*;
 /**
  * @author Zixuan Zhang
@@ -73,6 +71,7 @@ public class IndexFunction extends JFrame {
         index.management.addActionListener(e -> {
             managementIndex.setMenuSuggest();
             managementIndex.setMenuChange();
+            managementIndex.membershipOperation.initialize();
             card.show(content,"management");
         });
         memberChangeInfoFunction.memberChangeInfo.returnButton.addActionListener(e -> card.show(content, "index"));
@@ -108,6 +107,9 @@ public class IndexFunction extends JFrame {
             new Recipients(orderGuiFunction.receipt.generateReceipt(true));
             card.show(content,"index");
         });
+
+        managementIndex.membershipOperation.membershipOperation.returnButton.addActionListener(e ->
+                card.show(content, "index"));
 
 
         this.setTitle("TOTORO RAMEN");

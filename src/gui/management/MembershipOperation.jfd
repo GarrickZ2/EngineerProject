@@ -138,10 +138,16 @@ new FormModel {
 							"background": new java.awt.Color( 255, 255, 255, 255 )
 							add( new FormComponent( "javax.swing.JTextField" ) {
 								name: "search_input"
+								auxiliary() {
+									"JavaCodeGenerator.variableModifiers": 1
+								}
 							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
 							add( new FormComponent( "javax.swing.JButton" ) {
 								name: "searchButton"
 								"text": "Search"
+								auxiliary() {
+									"JavaCodeGenerator.variableModifiers": 1
+								}
 							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 								"gridx": 1
 							} )
@@ -165,6 +171,9 @@ new FormModel {
 								name: "membeshipNumber"
 								"text": "00000001"
 								"font": new java.awt.Font( "Microsoft YaHei UI", 1, 16 )
+								auxiliary() {
+									"JavaCodeGenerator.variableModifiers": 1
+								}
 							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 								"gridx": 1
 							} )
@@ -196,6 +205,9 @@ new FormModel {
 									name: "serialNumber"
 									"text": "125f4768763c"
 									"horizontalAlignment": 11
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 							} )
 						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
@@ -204,10 +216,11 @@ new FormModel {
 						} )
 						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
 							name: "membershipListPane"
-							add( new FormComponent( "javax.swing.JTextArea" ) {
+							add( new FormComponent( "javax.swing.JList" ) {
 								name: "membershipList"
-								"text": "00000001 Huang Tianhe"
-								"editable": false
+								auxiliary() {
+									"JavaCodeGenerator.variableModifiers": 1
+								}
 							} )
 						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 							"gridy": 3
@@ -236,6 +249,9 @@ new FormModel {
 									name: "name"
 									"text": "Huang Tianhe"
 									"horizontalAlignment": 0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 									"gridx": 1
 								} )
@@ -249,6 +265,9 @@ new FormModel {
 									name: "telephone"
 									"text": "15500043370"
 									"horizontalAlignment": 0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 									"gridx": 1
 									"gridy": 1
@@ -263,6 +282,9 @@ new FormModel {
 									name: "eMail"
 									"text": "447243910@qq.com"
 									"horizontalAlignment": 0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 									"gridx": 1
 									"gridy": 2
@@ -277,6 +299,9 @@ new FormModel {
 									name: "stamps"
 									"text": "5"
 									"horizontalAlignment": 0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 									"gridy": 3
 									"gridx": 1
@@ -284,7 +309,7 @@ new FormModel {
 							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
 							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
 								"$columnSpecs": "0"
-								"$rowSpecs": "30, 20, 165"
+								"$rowSpecs": "30, 20, 223"
 								"$alignLeft": true
 								"$alignTop": true
 							} ) {
@@ -309,15 +334,24 @@ new FormModel {
 										"background": new java.awt.Color( 255, 255, 255, 255 )
 										add( new FormComponent( "javax.swing.JButton" ) {
 											name: "addStamps_plus1"
-											"text": "+1"
+											"text": "-1"
+											auxiliary() {
+												"JavaCodeGenerator.variableModifiers": 1
+											}
 										} )
 										add( new FormComponent( "javax.swing.JButton" ) {
 											name: "addStamps_plus5"
-											"text": "+5"
+											"text": "+1"
+											auxiliary() {
+												"JavaCodeGenerator.variableModifiers": 1
+											}
 										} )
 										add( new FormComponent( "javax.swing.JButton" ) {
 											name: "addStamps_plus10"
-											"text": "+10"
+											"text": "+5"
+											auxiliary() {
+												"JavaCodeGenerator.variableModifiers": 1
+											}
 										} )
 									}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 										"gridx": 1
@@ -325,10 +359,11 @@ new FormModel {
 								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
 								add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
 									name: "consuptionListPane"
-									add( new FormComponent( "javax.swing.JTextArea" ) {
-										name: "consumptionList"
-										"text": "125f45e90883 2020-04-05 15:00:00 £20"
-										"editable": false
+									add( new FormComponent( "javax.swing.JList" ) {
+										name: "consumpList"
+										auxiliary() {
+											"JavaCodeGenerator.variableModifiers": 1
+										}
 									} )
 								}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 									"gridy": 2
@@ -359,6 +394,9 @@ new FormModel {
 									name: "consumptionTime"
 									"text": "2020-05-03 17:29:56"
 									"horizontalAlignment": 11
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 							} )
 							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
@@ -400,6 +438,9 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "label_noodle"
 									"text": "Shoyo (Medium, A lot)"
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
 									"columns": 3
@@ -410,16 +451,25 @@ new FormModel {
 										name: "noodleNumber"
 										"text": "1"
 										"horizontalAlignment": 0
+										auxiliary() {
+											"JavaCodeGenerator.variableModifiers": 1
+										}
 									} )
 									add( new FormComponent( "javax.swing.JLabel" ) {
 										name: "noodleSingle"
 										"text": "£9.0"
 										"horizontalAlignment": 0
+										auxiliary() {
+											"JavaCodeGenerator.variableModifiers": 1
+										}
 									} )
 									add( new FormComponent( "javax.swing.JLabel" ) {
 										name: "noodlePrice"
 										"text": "£9.0"
 										"horizontalAlignment": 0
+										auxiliary() {
+											"JavaCodeGenerator.variableModifiers": 1
+										}
 									} )
 								} )
 							} )
@@ -441,16 +491,25 @@ new FormModel {
 										name: "noriNumber"
 										"text": "1"
 										"horizontalAlignment": 0
+										auxiliary() {
+											"JavaCodeGenerator.variableModifiers": 1
+										}
 									} )
 									add( new FormComponent( "javax.swing.JLabel" ) {
 										name: "noriSingle"
 										"text": "£1.0"
 										"horizontalAlignment": 0
+										auxiliary() {
+											"JavaCodeGenerator.variableModifiers": 1
+										}
 									} )
 									add( new FormComponent( "javax.swing.JLabel" ) {
 										name: "noriPrice"
 										"text": "£1.0"
 										"horizontalAlignment": 0
+										auxiliary() {
+											"JavaCodeGenerator.variableModifiers": 1
+										}
 									} )
 								} )
 							} )
@@ -472,16 +531,25 @@ new FormModel {
 										name: "chashuNumber"
 										"text": "1"
 										"horizontalAlignment": 0
+										auxiliary() {
+											"JavaCodeGenerator.variableModifiers": 1
+										}
 									} )
 									add( new FormComponent( "javax.swing.JLabel" ) {
 										name: "chashuSingle"
 										"text": "£2.0"
 										"horizontalAlignment": 0
+										auxiliary() {
+											"JavaCodeGenerator.variableModifiers": 1
+										}
 									} )
 									add( new FormComponent( "javax.swing.JLabel" ) {
 										name: "chashuPrice"
 										"text": "£2.0"
 										"horizontalAlignment": 0
+										auxiliary() {
+											"JavaCodeGenerator.variableModifiers": 1
+										}
 									} )
 								} )
 							} )
@@ -503,16 +571,25 @@ new FormModel {
 										name: "eggNumber"
 										"text": "1"
 										"horizontalAlignment": 0
+										auxiliary() {
+											"JavaCodeGenerator.variableModifiers": 1
+										}
 									} )
 									add( new FormComponent( "javax.swing.JLabel" ) {
 										name: "eggSingle"
 										"text": "£1.0"
 										"horizontalAlignment": 0
+										auxiliary() {
+											"JavaCodeGenerator.variableModifiers": 1
+										}
 									} )
 									add( new FormComponent( "javax.swing.JLabel" ) {
 										name: "eggPrice"
 										"text": "£1.0"
 										"horizontalAlignment": 0
+										auxiliary() {
+											"JavaCodeGenerator.variableModifiers": 1
+										}
 									} )
 								} )
 							} )
@@ -534,16 +611,25 @@ new FormModel {
 										name: "shootNumber"
 										"text": "1"
 										"horizontalAlignment": 0
+										auxiliary() {
+											"JavaCodeGenerator.variableModifiers": 1
+										}
 									} )
 									add( new FormComponent( "javax.swing.JLabel" ) {
 										name: "shootSingle"
 										"text": "£1.0"
 										"horizontalAlignment": 0
+										auxiliary() {
+											"JavaCodeGenerator.variableModifiers": 1
+										}
 									} )
 									add( new FormComponent( "javax.swing.JLabel" ) {
 										name: "shootPrice"
 										"text": "£1.0"
 										"horizontalAlignment": 0
+										auxiliary() {
+											"JavaCodeGenerator.variableModifiers": 1
+										}
 									} )
 								} )
 							} )
@@ -565,16 +651,25 @@ new FormModel {
 										name: "packingNumber"
 										"text": "1"
 										"horizontalAlignment": 0
+										auxiliary() {
+											"JavaCodeGenerator.variableModifiers": 1
+										}
 									} )
 									add( new FormComponent( "javax.swing.JLabel" ) {
 										name: "packingSingle"
 										"text": "£1.0"
 										"horizontalAlignment": 0
+										auxiliary() {
+											"JavaCodeGenerator.variableModifiers": 1
+										}
 									} )
 									add( new FormComponent( "javax.swing.JLabel" ) {
 										name: "packingPrice"
 										"text": "£1.0"
 										"horizontalAlignment": 0
+										auxiliary() {
+											"JavaCodeGenerator.variableModifiers": 1
+										}
 									} )
 								} )
 							} )
@@ -591,6 +686,9 @@ new FormModel {
 									name: "diningMethod"
 									"text": "Take away"
 									"horizontalAlignment": 0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 							} )
 							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
@@ -606,6 +704,9 @@ new FormModel {
 									name: "useCoupon"
 									"text": "False"
 									"horizontalAlignment": 0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 							} )
 							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
@@ -621,6 +722,9 @@ new FormModel {
 									name: "totalPrice"
 									"text": "£15.0"
 									"horizontalAlignment": 0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 							} )
 							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
@@ -636,6 +740,9 @@ new FormModel {
 									name: "payingMethod"
 									"text": "Visa"
 									"horizontalAlignment": 0
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 							} )
 							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
@@ -646,14 +753,23 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JButton" ) {
 									name: "resetAdditionStampsButton"
 									"text": "Reset stamp"
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormComponent( "javax.swing.JButton" ) {
 									name: "returnButton"
 									"text": "Return"
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 								add( new FormComponent( "javax.swing.JButton" ) {
 									name: "printButton"
 									"text": "Print"
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 							} )
 						}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {

@@ -45,7 +45,7 @@ public class MembershipOperation extends JPanel {
         label_serialNumber = new JLabel();
         serialNumber = new JLabel();
         membershipListPane = new JScrollPane();
-        membershipList = new JTextArea();
+        membershipList = new JList();
         memberInfoPanel = new JPanel();
         memberTablePanel = new JPanel();
         label_name = new JLabel();
@@ -64,7 +64,7 @@ public class MembershipOperation extends JPanel {
         addStamps_plus5 = new JButton();
         addStamps_plus10 = new JButton();
         consuptionListPane = new JScrollPane();
-        consumptionList = new JTextArea();
+        consumpList = new JList();
         consumptionDetailBodyPanel = new JPanel();
         detail_timePanel = new JPanel();
         label_consumptionTime = new JLabel();
@@ -353,10 +353,6 @@ public class MembershipOperation extends JPanel {
 
                     //======== membershipListPane ========
                     {
-
-                        //---- membershipList ----
-                        membershipList.setText("00000001 Huang Tianhe");
-                        membershipList.setEditable(false);
                         membershipListPane.setViewportView(membershipList);
                     }
                     body_innerPanel.add(membershipListPane, new GridBagConstraints(0, 3, 1, 1, 0.0, 0.0,
@@ -442,7 +438,7 @@ public class MembershipOperation extends JPanel {
                             memberInfo_bottomPanel.setBackground(Color.white);
                             memberInfo_bottomPanel.setLayout(new GridBagLayout());
                             ((GridBagLayout)memberInfo_bottomPanel.getLayout()).columnWidths = new int[] {0, 0};
-                            ((GridBagLayout)memberInfo_bottomPanel.getLayout()).rowHeights = new int[] {30, 20, 165, 0};
+                            ((GridBagLayout)memberInfo_bottomPanel.getLayout()).rowHeights = new int[] {30, 20, 223, 0};
                             ((GridBagLayout)memberInfo_bottomPanel.getLayout()).columnWeights = new double[] {0.0, 1.0E-4};
                             ((GridBagLayout)memberInfo_bottomPanel.getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 1.0E-4};
 
@@ -467,15 +463,15 @@ public class MembershipOperation extends JPanel {
                                     stampAddition_buttonPanel.setLayout(new GridLayout(1, 3));
 
                                     //---- addStamps_plus1 ----
-                                    addStamps_plus1.setText("+1");
+                                    addStamps_plus1.setText("-1");
                                     stampAddition_buttonPanel.add(addStamps_plus1);
 
                                     //---- addStamps_plus5 ----
-                                    addStamps_plus5.setText("+5");
+                                    addStamps_plus5.setText("+1");
                                     stampAddition_buttonPanel.add(addStamps_plus5);
 
                                     //---- addStamps_plus10 ----
-                                    addStamps_plus10.setText("+10");
+                                    addStamps_plus10.setText("+5");
                                     stampAddition_buttonPanel.add(addStamps_plus10);
                                 }
                                 stampAdditionPanel.add(stampAddition_buttonPanel, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
@@ -488,11 +484,7 @@ public class MembershipOperation extends JPanel {
 
                             //======== consuptionListPane ========
                             {
-
-                                //---- consumptionList ----
-                                consumptionList.setText("125f45e90883 2020-04-05 15:00:00 \u00a320");
-                                consumptionList.setEditable(false);
-                                consuptionListPane.setViewportView(consumptionList);
+                                consuptionListPane.setViewportView(consumpList);
                             }
                             memberInfo_bottomPanel.add(consuptionListPane, new GridBagConstraints(0, 2, 1, 1, 0.0, 0.0,
                                 GridBagConstraints.CENTER, GridBagConstraints.BOTH,
@@ -910,41 +902,41 @@ public class MembershipOperation extends JPanel {
     private JPanel emptyBox5;
     private JPanel body_innerPanel;
     private JPanel searchPanel;
-    private JTextField search_input;
-    private JButton searchButton;
+    public JTextField search_input;
+    public JButton searchButton;
     private JPanel memberInfo_titlePanel;
     private JLabel label_membershipNumber;
-    private JLabel membeshipNumber;
+    public JLabel membeshipNumber;
     private JPanel consumptionDetailTitlePanel;
     private JLabel label_consumptionDetail;
     private JPanel panel12;
     private JLabel label_serialNumber;
-    private JLabel serialNumber;
+    public JLabel serialNumber;
     private JScrollPane membershipListPane;
-    private JTextArea membershipList;
+    public JList membershipList;
     private JPanel memberInfoPanel;
     private JPanel memberTablePanel;
     private JLabel label_name;
-    private JLabel name;
+    public JLabel name;
     private JLabel label_telephone;
-    private JLabel telephone;
+    public JLabel telephone;
     private JLabel label_eMail;
-    private JLabel eMail;
+    public JLabel eMail;
     private JLabel label_stamps;
-    private JLabel stamps;
+    public JLabel stamps;
     private JPanel memberInfo_bottomPanel;
     private JPanel stampAdditionPanel;
     private JLabel label_addStamps;
     private JPanel stampAddition_buttonPanel;
-    private JButton addStamps_plus1;
-    private JButton addStamps_plus5;
-    private JButton addStamps_plus10;
+    public JButton addStamps_plus1;
+    public JButton addStamps_plus5;
+    public JButton addStamps_plus10;
     private JScrollPane consuptionListPane;
-    private JTextArea consumptionList;
+    public JList consumpList;
     private JPanel consumptionDetailBodyPanel;
     private JPanel detail_timePanel;
     private JLabel label_consumptionTime;
-    private JLabel consumptionTime;
+    public JLabel consumptionTime;
     private JPanel detail_goodsIndexPanel;
     private JLabel label_goodsName;
     private JPanel detail_goodsIndexInnerPanel;
@@ -952,57 +944,57 @@ public class MembershipOperation extends JPanel {
     private JLabel label_goodsSingle;
     private JLabel label_goodsTotal;
     private JPanel detail_noodlePanel;
-    private JLabel label_noodle;
+    public JLabel label_noodle;
     private JPanel detail_noodleInnerPanel;
-    private JLabel noodleNumber;
-    private JLabel noodleSingle;
-    private JLabel noodlePrice;
+    public JLabel noodleNumber;
+    public JLabel noodleSingle;
+    public JLabel noodlePrice;
     private JPanel detail_noriPanel;
     private JLabel label_nori;
     private JPanel detail_noriInnerPanel;
-    private JLabel noriNumber;
-    private JLabel noriSingle;
-    private JLabel noriPrice;
+    public JLabel noriNumber;
+    public JLabel noriSingle;
+    public JLabel noriPrice;
     private JPanel detail_chashuPanel;
     private JLabel label_chashu;
     private JPanel detail_chashuInnerPanel;
-    private JLabel chashuNumber;
-    private JLabel chashuSingle;
-    private JLabel chashuPrice;
+    public JLabel chashuNumber;
+    public JLabel chashuSingle;
+    public JLabel chashuPrice;
     private JPanel detail_eggPanel;
     private JLabel label_egg;
     private JPanel detail_eggInnerPanel;
-    private JLabel eggNumber;
-    private JLabel eggSingle;
-    private JLabel eggPrice;
+    public JLabel eggNumber;
+    public JLabel eggSingle;
+    public JLabel eggPrice;
     private JPanel detail_shootPanel;
     private JLabel label_shoot;
     private JPanel detail_shootInnerPanel;
-    private JLabel shootNumber;
-    private JLabel shootSingle;
-    private JLabel shootPrice;
+    public JLabel shootNumber;
+    public JLabel shootSingle;
+    public JLabel shootPrice;
     private JPanel detail_packingPanel;
     private JLabel label_packing;
     private JPanel detail_packingInnerPanel;
-    private JLabel packingNumber;
-    private JLabel packingSingle;
-    private JLabel packingPrice;
+    public JLabel packingNumber;
+    public JLabel packingSingle;
+    public JLabel packingPrice;
     private JPanel detail_diningMethodPanel;
     private JLabel label_diningMethod;
-    private JLabel diningMethod;
+    public JLabel diningMethod;
     private JPanel detail_useCouponPanel;
     private JLabel label_useCoupon;
-    private JLabel useCoupon;
+    public JLabel useCoupon;
     private JPanel detail_totalPricePanel;
     private JLabel label_totalPrice;
-    private JLabel totalPrice;
+    public JLabel totalPrice;
     private JPanel detail_payingMethodPanel;
     private JLabel label_payingMethod;
-    private JLabel payingMethod;
+    public JLabel payingMethod;
     private JPanel detail_buttonsPanel;
-    private JButton resetAdditionStampsButton;
-    private JButton returnButton;
-    private JButton printButton;
+    public JButton resetAdditionStampsButton;
+    public JButton returnButton;
+    public JButton printButton;
     private JPanel bottomPanel;
     private JPanel bottom_innerPanel;
     private JLabel storeName;
