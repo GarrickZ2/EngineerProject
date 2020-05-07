@@ -204,6 +204,12 @@ public class MembershipOperationFunction extends JPanel implements ActionListene
             membershipOperation.eggPrice.setText("" + recipientReader.getEggTotalPrice());
             membershipOperation.noodlePrice.setText("" + recipientReader.getNoodleTotalPrice());
             membershipOperation.noodleSingle.setText("" + recipientReader.getNoodlePrice());
+            membershipOperation.diningMethod.setText(recipientReader.getPayingMethod());
+            if("Coupon".equals(recipientReader.getPayingMethod())){
+                membershipOperation.useCoupon.setText("True");
+            }else {
+                membershipOperation.useCoupon.setText("False");
+            }
         }else {
             membershipOperation.noriSingle.setText("Lost");
             membershipOperation.noriPrice.setText("Lost");
@@ -215,6 +221,8 @@ public class MembershipOperationFunction extends JPanel implements ActionListene
             membershipOperation.eggPrice.setText("Lost");
             membershipOperation.noodlePrice.setText("Lost");
             membershipOperation.noodleSingle.setText("Lost");
+            membershipOperation.diningMethod.setText("Lost");
+            membershipOperation.useCoupon.setText("Lost");
         }
     }
 
@@ -250,6 +258,8 @@ public class MembershipOperationFunction extends JPanel implements ActionListene
         membershipOperation.eggPrice.setText("");
         membershipOperation.noodlePrice.setText("");
         membershipOperation.noodleSingle.setText("");
+        membershipOperation.diningMethod.setText("");
+        membershipOperation.useCoupon.setText("");
     }
 
     @Override
