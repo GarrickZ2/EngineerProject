@@ -30,7 +30,9 @@ public class MembershipOperationFunction extends JPanel implements ActionListene
         membershipOperation.membershipList.addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
-                membership = memberList.getMsl().get(membershipOperation.membershipList.getSelectedIndex());
+                try {
+                    membership = memberList.getMsl().get(membershipOperation.membershipList.getSelectedIndex());
+                }catch (Exception ignored){}
                 setUserInfo();
                 orderList = getOrders(membership.getMembershipId());
                 if (orderList.size() == 0){
@@ -57,6 +59,42 @@ public class MembershipOperationFunction extends JPanel implements ActionListene
         membershipOperation.addStamps_plus1.addActionListener(this);
         membershipOperation.addStamps_plus5.addActionListener(this);
         membershipOperation.addStamps_plus10.addActionListener(this);
+        membershipOperation.searchButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String searchText = membershipOperation.search_input.getText();
+                if("".equals(searchText)){
+                    initialize();
+                    return;
+                }
+                String[] content;
+                for(Membership each: memberList.getMsl()){
+                    if(searchText.equals(each.getMembershipId())){
+                        content = new String[1];
+                        membership = each;
+                        content[0] = membership.getMembershipId() + " | " + membership.getFirstName() + " " + membership.getLastName();
+                        setUserInfo();
+                        orderList = getOrders(membership.getMembershipId());
+                        if (orderList.size() == 0){
+                            order = null;
+                            clearOrder();
+                            membershipOperation.consumpList.setListData(new String[0]);
+                            return;
+                        }
+                        order = orderList.get(0);
+                        setOrderList();
+                        setOrderInfo();
+                        membershipOperation.membershipList.setListData(content);
+                        return;
+                    }
+                }
+                content = new String[1];
+                membershipOperation.membershipList.setListData(content);
+                membershipOperation.consumpList.setListData(new String[0]);
+                clearOrder();
+                order = null;
+            }
+        });
 
         this.setLayout(new BorderLayout());
         this.add(membershipOperation);
