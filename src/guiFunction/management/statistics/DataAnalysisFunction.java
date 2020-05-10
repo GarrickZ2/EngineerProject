@@ -60,7 +60,7 @@ public class DataAnalysisFunction extends JPanel implements ActionListener {
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
         calendar.setTime(date);
         calendar.add(Calendar.DATE, -7);
-        dataAnalysis.weeklyRange.setText(format.format(calendar.getTime())+ " -> "+ format.format(date));
+        dataAnalysis.weeklyRange.setText(format.format(date) + " -> "+ format.format(calendar.getTime()));
         dataAnalysis.weeklyIncome.setText("£" + statistics.getSumInt(statistics.getIncome()));
         dataAnalysis.weeklyOrders.setText("" + statistics.getSumInt(statistics.getOrders()));
         dataAnalysis.weeklyTonkotsu.setText("" + statistics.getSumInt(statistics.getSoup1()));

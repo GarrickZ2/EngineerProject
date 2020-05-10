@@ -22,7 +22,7 @@ public class UserData extends BaseData{
             while ((contents = reader.readLine())!=null){
                 String[] attributes = contents.split(",");
                 Membership membership = new Membership(attributes[0],attributes[1],attributes[2],attributes[3],
-                        attributes[4], Integer.parseInt(attributes[5]));
+                        attributes[4], Integer.parseInt(attributes[5]), attributes[6]);
                 memberships.add(membership);
             }
             reader.close();

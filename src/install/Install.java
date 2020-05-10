@@ -27,7 +27,6 @@ public class Install {
 		filename.add(root+"\\menu.csv");
 		filename.add(root+"\\order.csv");
 		filename.add(root+"\\membership.csv");
-		filename.add(root+"\\recipients\\recdata.csv");
 	}
 	
 	public void Add_new_dir(String s) {

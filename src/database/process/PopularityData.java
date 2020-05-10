@@ -72,7 +72,12 @@ public class PopularityData {
     }
 
     int days = 7;
+
     public PopularityData(int days) throws Exception{
+        this(new Date(), days);
+    }
+
+    public PopularityData(Date today, int days) throws Exception{
         OrderData orderData = new OrderData();
         OrderList list = orderData.loadInfo();
 
@@ -80,7 +85,6 @@ public class PopularityData {
         HashMap<String ,Double> memberByTimes = new HashMap<>();
         HashMap<String ,Double> memberByMoney = new HashMap<>();
 
-        Date today = new Date();
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         for (Order each: list.getOrders()){
             int diffDay = Statistics.differentDays(format.parse(each.getDate()), today);

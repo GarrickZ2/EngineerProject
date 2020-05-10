@@ -106,7 +106,12 @@ public class MembershipOperationFunction extends JPanel implements ActionListene
         this.memberList = userData.loadInfo();
         setMemberList();
 
-        this.orderList = getOrders(membership.getMembershipId());
+        if(membership == null){
+
+            this.orderList = new ArrayList<>();
+        }else {
+            this.orderList = getOrders(membership.getMembershipId());
+        }
         if(orderList.size() == 0){
             clearOrder();
             return;
@@ -122,6 +127,14 @@ public class MembershipOperationFunction extends JPanel implements ActionListene
 
     private void setMemberList(){
         String[] users = new String[memberList.getMsl().size()];
+        if(memberList.getMsl().size() == 0){
+            membershipOperation.name.setText("");
+            membershipOperation.telephone.setText("");
+            membershipOperation.eMail.setText("");
+            membershipOperation.stamps.setText("");
+            membership = null;
+            return;
+        }
         this.membership = memberList.getMsl().get(0);
         for(int i = 0; i < users.length; i++){
             Membership membership = memberList.getMsl().get(i);
@@ -204,6 +217,12 @@ public class MembershipOperationFunction extends JPanel implements ActionListene
             membershipOperation.eggPrice.setText("" + recipientReader.getEggTotalPrice());
             membershipOperation.noodlePrice.setText("" + recipientReader.getNoodleTotalPrice());
             membershipOperation.noodleSingle.setText("" + recipientReader.getNoodlePrice());
+            membershipOperation.diningMethod.setText(recipientReader.getPayingMethod());
+            if("Coupon".equals(recipientReader.getPayingMethod())){
+                membershipOperation.useCoupon.setText("True");
+            }else {
+                membershipOperation.useCoupon.setText("False");
+            }
         }else {
             membershipOperation.noriSingle.setText("Lost");
             membershipOperation.noriPrice.setText("Lost");
@@ -215,6 +234,8 @@ public class MembershipOperationFunction extends JPanel implements ActionListene
             membershipOperation.eggPrice.setText("Lost");
             membershipOperation.noodlePrice.setText("Lost");
             membershipOperation.noodleSingle.setText("Lost");
+            membershipOperation.diningMethod.setText("Lost");
+            membershipOperation.useCoupon.setText("Lost");
         }
     }
 
@@ -250,6 +271,8 @@ public class MembershipOperationFunction extends JPanel implements ActionListene
         membershipOperation.eggPrice.setText("");
         membershipOperation.noodlePrice.setText("");
         membershipOperation.noodleSingle.setText("");
+        membershipOperation.diningMethod.setText("");
+        membershipOperation.useCoupon.setText("");
     }
 
     @Override

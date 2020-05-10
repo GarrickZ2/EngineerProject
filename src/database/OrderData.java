@@ -28,7 +28,7 @@ public class OrderData extends BaseData {
                 //todo problems occurred with below code
 
                 Order order = new Order(attributes[0], attributes[1], cuisine, Integer.parseInt(attributes[13]),
-                        attributes[14], Double.parseDouble(attributes[16]), attributes[17]);
+                        attributes[14], Double.parseDouble(attributes[16]), attributes[17], attributes[18]);
                 orders.add(order);
             }
 

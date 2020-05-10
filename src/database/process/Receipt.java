@@ -31,6 +31,7 @@ public class Receipt {
         this.order = order;
         cuisine = order.getCuisine();
         menu = menuData.loadInfo();
+        payingMethod = order.getPayingMethod();
     }
 
     public String generateReceipt(){

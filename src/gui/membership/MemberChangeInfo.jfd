@@ -182,7 +182,7 @@ new FormModel {
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "label_consumptionUseCoupon"
-									"text": "Use coupon:"
+									"text": "Paying Method:"
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "consumptionUseCoupon"

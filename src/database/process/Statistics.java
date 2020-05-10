@@ -80,9 +80,13 @@ public class Statistics {
     }
 
     public void loadData(){
+        Date today = new Date();
+        loadData(today);
+    }
+
+    public void loadData(Date today){
         OrderData orderData = new OrderData();
         OrderList list = orderData.loadInfo();
-        Date today = new Date();
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         for(Order each:list.getOrders()){
             int diffDays = 0;
@@ -90,8 +94,8 @@ public class Statistics {
                 diffDays = differentDays(format.parse(each.getDate()), today);
             } catch (ParseException ignored) { }
             if(diffDays < days & diffDays >= 0){
+                orders[diffDays] += 1;
                 income[diffDays] += each.getAmountMoney();
-                income[diffDays] += 1;
                 switch (each.getCuisine().getSoupType()){
                     case "Tonkotsu":
                         soup1[diffDays] += 1;
