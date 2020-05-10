@@ -31,7 +31,8 @@ public class Order {
         this.membershipId = membershipId;
     }
 
-    public Order(String orderId, String date, Cuisine cuisine, int eatType, String membershipId, double amountMoney, String billId) {
+    public Order(String orderId, String date, Cuisine cuisine, int eatType, String membershipId,
+                 double amountMoney, String billId, String payingMethod) {
         this.orderId = orderId;
         this.date = date;
         this.cuisine = cuisine;
@@ -40,6 +41,7 @@ public class Order {
         this.membershipId = membershipId;
         this.amountMoney = amountMoney;
         this.billId = billId;
+        this.payingMethod = payingMethod;
     }
 
     public Order(String orderId, String date, Cuisine cuisine, int eatType, String membershipId,
@@ -52,6 +54,7 @@ public class Order {
         this.membershipId = membershipId;
         this.amountMoney = eatMoney + outMoney*eatType;
         this.billId = billId;
+        this.payingMethod = null;
     }
 
 
@@ -114,7 +117,7 @@ public class Order {
     @Override
     public String toString() {
         return orderId + "," + date + "," + cuisine + "," + eatType + "," + membershipId + "," + amountMoney + "," +
-                amountMoney + "," + billId;
+                amountMoney + "," + billId + "," + payingMethod;
     }
 
 }

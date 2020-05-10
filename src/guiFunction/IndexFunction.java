@@ -76,6 +76,7 @@ public class IndexFunction extends JFrame {
         });
         memberChangeInfoFunction.memberChangeInfo.returnButton.addActionListener(e -> card.show(content, "index"));
         createMemberFunction.createMember.returnButton.addActionListener(e -> card.show(content, "index"));
+        createMemberFunction.createMember.create.addActionListener(e -> card.show(content, "index"));
 
         managementIndex.menuOperation.returnButton.addActionListener(e -> card.show(content,"index"));
         managementIndex.popularity.popularity.returnButton.addActionListener(e -> card.show(content,"index"));
@@ -97,6 +98,9 @@ public class IndexFunction extends JFrame {
                 } else {
                     memberList.getMember(orderGuiFunction.membership.getMembershipId()).addStamps();
                 }
+                memberList.getMember(orderGuiFunction.membership.getMembershipId()).setLastOrder(
+                        orderGuiFunction.orderList.getOrders().get(orderGuiFunction.orderList.getOrders().size() - 1).getOrderId()
+                );
                 memberList.saveMembershipCsv();
             }
             orderGuiFunction.orderList.save();
@@ -110,6 +114,7 @@ public class IndexFunction extends JFrame {
                     orderGuiFunction.order.setPayingMethod("Visa");
                 }
             }
+
             orderGuiFunction.receipt = new Receipt(orderGuiFunction.order);
             orderGuiFunction.receipt.payingMethod = orderGuiFunction.payingMethod;
             //check what is the membership

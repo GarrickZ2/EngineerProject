@@ -1,8 +1,11 @@
 package guiFunction.membership;
 
+import database.OrderData;
 import database.UserData;
 import database.information.MemberList;
 import database.information.Membership;
+import database.information.Order;
+import database.information.OrderList;
 import gui.membership.MemberChangeInfo;
 
 import javax.swing.*;
@@ -33,9 +36,11 @@ public class MemberChangeInfoFunction extends JPanel {
             setMessage();
             list.saveMembershipCsv();
         });
+//        memberChangeInfo.consumptionTime.setText("");
+//        memberChangeInfo.consumptionCost.setText("");
+//        memberChangeInfo.consumptionUseCoupon.setText("");
         this.setLayout(new BorderLayout());
         this.add(memberChangeInfo);
-
     }
     public void setMessage(){
         memberChangeInfo.sug_fName.setText(membership.getFirstName());
@@ -44,5 +49,21 @@ public class MemberChangeInfoFunction extends JPanel {
         memberChangeInfo.sug_telephone.setText(membership.getTelephone());
         memberChangeInfo.membershipNumber.setText(membership.getMembershipId());
         memberChangeInfo.coupon.setText("" + membership.getStamps());
+        if(membership.getLastOrder().equals("null")){
+            memberChangeInfo.consumptionTime.setText("");
+            memberChangeInfo.consumptionCost.setText("");
+            memberChangeInfo.consumptionUseCoupon.setText("");
+            return;
+        }
+        OrderData orderData = new OrderData();
+        OrderList orderList = orderData.loadInfo();
+        for(Order each:orderList.getOrders()){
+            if(each.getOrderId().equals(membership.getLastOrder())){
+                memberChangeInfo.consumptionTime.setText(each.getDate());
+                memberChangeInfo.consumptionCost.setText("" + each.getAmountMoney());
+                memberChangeInfo.consumptionUseCoupon.setText(each.getPayingMethod());
+                return;
+            }
+        }
     }
 }

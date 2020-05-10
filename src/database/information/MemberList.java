@@ -155,7 +155,7 @@ public class MemberList extends DataType {
 				ms.seteMail(eMail);
 				ms.setStamps(5);
 				ms.setRegistrationDate(new Date());
-				ms.setLastConsumption("",0,false);
+				ms.setLastName(null);
 
 				//Get the lastest membershipID
 				if(msl.size()==0) {
@@ -225,7 +225,6 @@ public class MemberList extends DataType {
 		fileChanged = true;
 		if(!checkValidation(fName, lName, tel, eMail)){
 			System.out.println("Error: Invalid input");
-			return;
 		}else{
 			Membership ms;
 			if(this.queryMember(id)){
@@ -254,9 +253,6 @@ public class MemberList extends DataType {
 		userData.saveInfo(this);
 	}
 
-	public void latestActivity(){
-		//New
-	}
 
 	@Override
 	public String toString() {
@@ -269,7 +265,7 @@ public class MemberList extends DataType {
 
 	public static void main(String[] s) {
 		MemberList list = new MemberList();
-		Membership m = new Membership("00000001","Tian", "Huang", "15500043370", null,0);
+		Membership m = new Membership("00000001","Tian", "Huang", "15500043370", null,0, null);
 		list.msl.add(m);
 		list.createMember("Tssn", "Huang", "15500043371", null);
 		list.createMember("Hu", "Son", "18810009295", null);

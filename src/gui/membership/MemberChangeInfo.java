@@ -233,7 +233,7 @@ public class MemberChangeInfo extends JPanel {
                             lastCosumptionPanel.add(consumptionCost);
 
                             //---- label_consumptionUseCoupon ----
-                            label_consumptionUseCoupon.setText("Use coupon:");
+                            label_consumptionUseCoupon.setText("Paying Method:");
                             lastCosumptionPanel.add(label_consumptionUseCoupon);
 
                             //---- consumptionUseCoupon ----

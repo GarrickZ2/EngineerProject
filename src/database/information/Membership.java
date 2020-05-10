@@ -14,15 +14,21 @@ public class Membership {
 	private String telephone;
 	private String eMail;
 	private int stamps;
+	private String lastOrder;
 
 	private String registrationDate;
-	private String lConsumptionTime;
-	private double lConsumptionCost;
-	private boolean lConsumptionUseCoupon;
+
 
 	SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-	SimpleDateFormat format_1 = new SimpleDateFormat("yyyy-MM-dd");
+	SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
 
+	public String getLastOrder() {
+		return lastOrder;
+	}
+
+	public void setLastOrder(String lastOrder) {
+		this.lastOrder = lastOrder;
+	}
 
 	public String getRegistrationDate() {
 		return registrationDate;
@@ -33,36 +39,9 @@ public class Membership {
 	}
 
 	public void setRegistrationDate(Date registrationDate) {
-		this.registrationDate = format_1.format(registrationDate);
+		this.registrationDate = format1.format(registrationDate);
 	}
 
-	public String getlConsumptionTime() {
-		return lConsumptionTime;
-	}
-
-	public void setlConsumptionTime(String lConsumptionTime) {
-		this.lConsumptionTime = lConsumptionTime;
-	}
-
-	public void setlConsumptionTime(Date lConsumptionTime) {
-		this.lConsumptionTime = format.format(lConsumptionTime);
-	}
-
-	public double getlConsumptionCost() {
-		return lConsumptionCost;
-	}
-
-	public void setlConsumptionCost(double lConsumptionCost) {
-		this.lConsumptionCost = lConsumptionCost;
-	}
-
-	public boolean islConsumptionUseCoupon() {
-		return lConsumptionUseCoupon;
-	}
-
-	public void setlConsumptionUseCoupon(boolean lConsumptionUseCoupon) {
-		this.lConsumptionUseCoupon = lConsumptionUseCoupon;
-	}
 
 	public String getMembershipId() {
 		return membershipId;
@@ -102,44 +81,21 @@ public class Membership {
 	}
 	public Membership() {
 	}
-	public Membership(String membershipID, String firstName, String lastName, String telephone, String eMail, int stamps) {
-		this.membershipId = membershipID;
+	public Membership(String membershipId, String firstName, String lastName, String telephone, String eMail,
+					  int stamps, String lastOrder) {
+		this.membershipId = membershipId;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.telephone = telephone;
 		this.eMail = eMail;
 		this.stamps = stamps;
+		this.lastOrder = lastOrder;
 	}
 
-	public Membership(String membershipID, String firstName, String lastName, String telephone,
-					  String eMail, int stamps, Date registrationDate, Date lConsumptionTime,
-					  double lConsumptionCost, boolean lConsumptionUseCoupon) {
-		this.membershipId = membershipID;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.telephone = telephone;
-		this.eMail = eMail;
-		this.stamps = stamps;
-		this.registrationDate = format_1.format(registrationDate);
-		setLastConsumption(lConsumptionTime,lConsumptionCost,lConsumptionUseCoupon);
-	}
-
-	public Membership(String membershipID, String firstName, String lastName, String telephone,
-					  String eMail, int stamps, String registrationDate, String lConsumptionTime,
-					  double lConsumptionCost, boolean lConsumptionUseCoupon) {
-		this.membershipId = membershipID;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.telephone = telephone;
-		this.eMail = eMail;
-		this.stamps = stamps;
-		this.registrationDate = registrationDate;
-		setLastConsumption(lConsumptionTime,lConsumptionCost,lConsumptionUseCoupon);
-	}
 
 	public void additionRegistrationDate(Date registrationDate){
 		if(this.registrationDate == null){
-			this.registrationDate = format_1.format(registrationDate);
+			this.registrationDate = format1.format(registrationDate);
 		}else{
 			System.out.println("<Method:additionRegistrationDate>Have already set the reg date.");
 		}
@@ -147,7 +103,7 @@ public class Membership {
 
 	public void additionRegistrationDate(String registrationDate){
 		try{
-			Date d = format_1.parse(registrationDate);
+			Date d = format1.parse(registrationDate);
 			this.registrationDate = registrationDate;
 		}catch(Exception e){
 			//todo An alert window, window's content:
@@ -155,18 +111,6 @@ public class Membership {
 		}
 	}
 
-	public void setLastConsumption(Date lConsumptionTime, double lConsumptionCost, boolean lConsumptionUseCoupon){
-
-		setlConsumptionTime(format.format(lConsumptionTime));
-		setlConsumptionCost(lConsumptionCost);
-		setlConsumptionUseCoupon(lConsumptionUseCoupon);
-	}
-
-	public void setLastConsumption(String lConsumptionTime, double lConsumptionCost, boolean lConsumptionUseCoupon){
-		setlConsumptionTime(lConsumptionTime);
-		setlConsumptionCost(lConsumptionCost);
-		setlConsumptionUseCoupon(lConsumptionUseCoupon);
-	}
 
 	public void addStamps(){
 		this.stamps += 1;
@@ -184,6 +128,6 @@ public class Membership {
 	@Override
 	public String toString() {
 		return membershipId + "," + firstName + "," +lastName + "," +telephone + "," +
-				eMail + "," + stamps;
+				eMail + "," + stamps + "," + lastOrder;
 	}
 }
