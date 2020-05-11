@@ -1,4 +1,4 @@
-package database.information;
+package database.entity;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -7,7 +7,7 @@ import java.util.Date;
  * @author Huang
  * @version 1.0
  */
-public class Membership {
+public class Member {
 	private String membershipId;
 	private String firstName;
 	private String lastName;
@@ -79,10 +79,10 @@ public class Membership {
 	public void setStamps(int stamps) {
 		this.stamps = stamps;
 	}
-	public Membership() {
+	public Member() {
 	}
-	public Membership(String membershipId, String firstName, String lastName, String telephone, String eMail,
-					  int stamps, String lastOrder) {
+	public Member(String membershipId, String firstName, String lastName, String telephone, String eMail,
+				  int stamps, String lastOrder) {
 		this.membershipId = membershipId;
 		this.firstName = firstName;
 		this.lastName = lastName;

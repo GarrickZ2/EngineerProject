@@ -240,7 +240,7 @@ public class MembershipOperation extends JPanel {
                         membershipOperationPanel.setLayout(new GridLayout());
 
                         //---- indexLabel_membershipOperation ----
-                        indexLabel_membershipOperation.setText("Membership operation");
+                        indexLabel_membershipOperation.setText("Member operation");
                         indexLabel_membershipOperation.setHorizontalAlignment(SwingConstants.CENTER);
                         indexLabel_membershipOperation.setBackground(new Color(242, 242, 242, 0));
                         membershipOperationPanel.add(indexLabel_membershipOperation);
@@ -303,7 +303,7 @@ public class MembershipOperation extends JPanel {
                         ((GridBagLayout)memberInfo_titlePanel.getLayout()).rowWeights = new double[] {0.0, 1.0E-4};
 
                         //---- label_membershipNumber ----
-                        label_membershipNumber.setText("Membership Number -");
+                        label_membershipNumber.setText("Member Number -");
                         label_membershipNumber.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
                         memberInfo_titlePanel.add(label_membershipNumber, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
                             GridBagConstraints.CENTER, GridBagConstraints.BOTH,

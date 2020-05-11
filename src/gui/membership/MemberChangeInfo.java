@@ -183,7 +183,7 @@ public class MemberChangeInfo extends JPanel {
                             unchangablePanel.setLayout(new GridLayout(3, 2));
 
                             //---- label_membershipNumber ----
-                            label_membershipNumber.setText("Membership number:");
+                            label_membershipNumber.setText("Member number:");
                             unchangablePanel.add(label_membershipNumber);
 
                             //---- membershipNumber ----

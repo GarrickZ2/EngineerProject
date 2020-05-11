@@ -1,9 +1,9 @@
-package database;
+package database.interaction;
 
-import database.information.Cuisine;
-import database.information.DataType;
-import database.information.Order;
-import database.information.OrderList;
+import database.entity.Cuisine;
+import database.entity.DataType;
+import database.entity.Order;
+import database.entityList.OrderList;
 
 import java.io.*;
 import java.util.ArrayList;

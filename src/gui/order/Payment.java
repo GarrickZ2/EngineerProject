@@ -474,7 +474,7 @@ public class Payment extends JPanel {
 
                             //======== membershipPanel ========
                             {
-                                membershipPanel.setBorder(new TitledBorder("Totoro Membership"));
+                                membershipPanel.setBorder(new TitledBorder("Totoro Member"));
                                 membershipPanel.setBackground(Color.white);
                                 membershipPanel.setLayout(new GridBagLayout());
                                 ((GridBagLayout)membershipPanel.getLayout()).columnWidths = new int[] {220, 0};
@@ -550,7 +550,7 @@ public class Payment extends JPanel {
                                     memidSuggestPanel.setLayout(new GridLayout(1, 2));
 
                                     //---- label_memberIdSug ----
-                                    label_memberIdSug.setText("Membership ID:");
+                                    label_memberIdSug.setText("Member ID:");
                                     memidSuggestPanel.add(label_memberIdSug);
 
                                     //---- membershipNumber ----

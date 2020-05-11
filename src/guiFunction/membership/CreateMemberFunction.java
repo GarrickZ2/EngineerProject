@@ -1,7 +1,7 @@
 package guiFunction.membership;
 
-import database.UserData;
-import database.information.MemberList;
+import database.interaction.UserData;
+import database.entityList.MemberList;
 import gui.membership.CreateMember;
 
 import javax.swing.*;

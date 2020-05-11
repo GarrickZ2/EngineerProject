@@ -1,7 +1,7 @@
 package guiFunction;
 
-import database.UserData;
-import database.information.MemberList;
+import database.interaction.UserData;
+import database.entityList.MemberList;
 import database.process.Receipt;
 import gui.Index;
 import guiFunction.management.ManagementIndex;
@@ -13,6 +13,7 @@ import gui.order.Recipients;
 
 import javax.swing.*;
 import java.awt.*;
+
 /**
  * @author Zixuan Zhang
  */
@@ -60,7 +61,7 @@ public class IndexFunction extends JFrame {
                 UserData userData = new UserData();
                 MemberList memberList = userData.loadInfo();
                 if (memberList.queryMember(number)) {
-                    memberChangeInfoFunction.membership = memberList.getMember(number);
+                    memberChangeInfoFunction.member = memberList.getMember(number);
                     memberChangeInfoFunction.setMessage();
                     card.show(content, "check");
                     return;
@@ -83,22 +84,22 @@ public class IndexFunction extends JFrame {
         //todo
         orderGuiFunction.payment.settleButton.addActionListener(e ->{
 
-            if((orderGuiFunction.membership == null)){
+            if((orderGuiFunction.member == null)){
                 orderGuiFunction.orderList.createOrder(orderGuiFunction.cuisine, orderGuiFunction.eatType,"NoMembership");
-            } else if(orderGuiFunction.membership.getMembershipId() == null){
+            } else if(orderGuiFunction.member.getMembershipId() == null){
                 orderGuiFunction.orderList.createOrder(orderGuiFunction.cuisine, orderGuiFunction.eatType,"NoMembership");
             }else {
                 UserData userData = new UserData();
                 MemberList memberList = userData.loadInfo();
-                orderGuiFunction.orderList.createOrder(orderGuiFunction.cuisine, orderGuiFunction.eatType, orderGuiFunction.membership.getMembershipId());
+                orderGuiFunction.orderList.createOrder(orderGuiFunction.cuisine, orderGuiFunction.eatType, orderGuiFunction.member.getMembershipId());
                 if (orderGuiFunction.usingCoupon){
-                    memberList.getMember(orderGuiFunction.membership.getMembershipId()).useStamps();
+                    memberList.getMember(orderGuiFunction.member.getMembershipId()).useStamps();
 
-                    System.out.println(memberList.getMember(orderGuiFunction.membership.getMembershipId()).getStamps());
+                    System.out.println(memberList.getMember(orderGuiFunction.member.getMembershipId()).getStamps());
                 } else {
-                    memberList.getMember(orderGuiFunction.membership.getMembershipId()).addStamps();
+                    memberList.getMember(orderGuiFunction.member.getMembershipId()).addStamps();
                 }
-                memberList.getMember(orderGuiFunction.membership.getMembershipId()).setLastOrder(
+                memberList.getMember(orderGuiFunction.member.getMembershipId()).setLastOrder(
                         orderGuiFunction.orderList.getOrders().get(orderGuiFunction.orderList.getOrders().size() - 1).getOrderId()
                 );
                 memberList.saveMembershipCsv();
@@ -117,7 +118,7 @@ public class IndexFunction extends JFrame {
 
             orderGuiFunction.receipt = new Receipt(orderGuiFunction.order);
             orderGuiFunction.receipt.payingMethod = orderGuiFunction.payingMethod;
-            //check what is the membership
+            //check what is the member
             new Recipients(orderGuiFunction.receipt.generateReceipt(true));
             card.show(content,"index");
         });
@@ -135,7 +136,9 @@ public class IndexFunction extends JFrame {
         this.setSize(1040, 680);
         this.setLocation((dim.width - this.getWidth()) / 2, (dim.height - this.getHeight()) / 3);
         this.setVisible(true);
-    }
 
+        Clock clock = new Clock(index);
+        clock.start();
+    }
 
 }

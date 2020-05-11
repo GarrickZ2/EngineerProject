@@ -1,7 +1,9 @@
-package database.information;
+package database.entityList;
 
-import database.OrderData;
-import org.junit.Test;
+import database.interaction.OrderData;
+import database.entity.Cuisine;
+import database.entity.DataType;
+import database.entity.Order;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -10,7 +12,7 @@ import java.util.Date;
 /**
  * @author Zixuan Zhang
  */
-public class OrderList extends DataType{
+public class OrderList extends DataType {
 
     Date date;
     SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd kk:mm:ss");

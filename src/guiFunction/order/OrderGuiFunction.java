@@ -2,10 +2,12 @@ package guiFunction.order;
 
 
 import com.alee.laf.WebLookAndFeel;
-import database.MenuData;
-import database.UserData;
-import database.information.*;
-import database.information.Menu;
+import database.interaction.MenuData;
+import database.interaction.UserData;
+import database.entity.*;
+import database.entity.Menu;
+import database.entityList.MemberList;
+import database.entityList.OrderList;
 import database.process.Receipt;
 import gui.order.OrderMenu;
 import gui.order.Payment;
@@ -37,7 +39,7 @@ public class OrderGuiFunction extends JPanel{
     public OrderMenu orderMenu;
     public Payment payment;
 
-    public Membership membership;
+    public Member member;
 
     public Order order;
     public OrderList orderList;
@@ -90,13 +92,13 @@ public class OrderGuiFunction extends JPanel{
 
                 payment.serialNumber.setText(orderList.generateOrderId("orderId"));
                 payment.time.setText(dateFormat.format(new Date()));
-                if((membership == null)){
+                if((member == null)){
                     payment.membershipNumber.setText("null");
                 }
-                else if(membership.getMembershipId() == null){
+                else if(member.getMembershipId() == null){
                     payment.membershipNumber.setText("null");
                 }else {
-                    payment.membershipNumber.setText(membership.getMembershipId());
+                    payment.membershipNumber.setText(member.getMembershipId());
                 }
 
                 payment.soup.setText(cuisine.getSoupType());
@@ -189,11 +191,11 @@ public class OrderGuiFunction extends JPanel{
                 payment.useCoupon.setSelected(false);
                 if(memberList.queryMember(userId)){
                     payment.identifiedInformation.setText("Identified Successfully");
-                    membership = memberList.getMember(userId);
-                    payment.userGreeting.setText("Hello, dear " + membership.getFirstName() + " " + membership.getLastName());
-                    payment.membershipNumber.setText(membership.getMembershipId());
+                    member = memberList.getMember(userId);
+                    payment.userGreeting.setText("Hello, dear " + member.getFirstName() + " " + member.getLastName());
+                    payment.membershipNumber.setText(member.getMembershipId());
                     String coupStatus = "";
-                    if(membership.getStamps() >= 10){
+                    if(member.getStamps() >= 10){
                         coupStatus = "(Could Use)";
                         payment.useCoupon.setEnabled(true);
                     }else {
@@ -201,7 +203,7 @@ public class OrderGuiFunction extends JPanel{
                         payment.useCoupon.setEnabled(false);
                     }
                     login = true;
-                    payment.coupon.setText("" + membership.getStamps() + coupStatus);
+                    payment.coupon.setText("" + member.getStamps() + coupStatus);
 
                 }else {
                     payment.identifiedInformation.setText("Identified Failed");

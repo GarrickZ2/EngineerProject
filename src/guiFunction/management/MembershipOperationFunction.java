@@ -1,8 +1,10 @@
 package guiFunction.management;
 
-import database.OrderData;
-import database.UserData;
-import database.information.*;
+import database.interaction.OrderData;
+import database.interaction.UserData;
+import database.entity.*;
+import database.entityList.MemberList;
+import database.entityList.OrderList;
 import gui.management.MembershipOperation;
 
 import javax.swing.*;
@@ -18,7 +20,7 @@ import java.util.ArrayList;
  */
 public class MembershipOperationFunction extends JPanel implements ActionListener {
     public MembershipOperation membershipOperation;
-    Membership membership = null;
+    Member member = null;
     Order order = null;
     RecipientReader recipientReader = null;
     MemberList memberList;
@@ -31,10 +33,10 @@ public class MembershipOperationFunction extends JPanel implements ActionListene
             @Override
             public void valueChanged(ListSelectionEvent e) {
                 try {
-                    membership = memberList.getMsl().get(membershipOperation.membershipList.getSelectedIndex());
+                    member = memberList.getMsl().get(membershipOperation.membershipList.getSelectedIndex());
                 }catch (Exception ignored){}
                 setUserInfo();
-                orderList = getOrders(membership.getMembershipId());
+                orderList = getOrders(member.getMembershipId());
                 if (orderList.size() == 0){
                     order = null;
                     clearOrder();
@@ -68,13 +70,13 @@ public class MembershipOperationFunction extends JPanel implements ActionListene
                     return;
                 }
                 String[] content;
-                for(Membership each: memberList.getMsl()){
+                for(Member each: memberList.getMsl()){
                     if(searchText.equals(each.getMembershipId())){
                         content = new String[1];
-                        membership = each;
-                        content[0] = membership.getMembershipId() + " | " + membership.getFirstName() + " " + membership.getLastName();
+                        member = each;
+                        content[0] = member.getMembershipId() + " | " + member.getFirstName() + " " + member.getLastName();
                         setUserInfo();
-                        orderList = getOrders(membership.getMembershipId());
+                        orderList = getOrders(member.getMembershipId());
                         if (orderList.size() == 0){
                             order = null;
                             clearOrder();
@@ -106,11 +108,11 @@ public class MembershipOperationFunction extends JPanel implements ActionListene
         this.memberList = userData.loadInfo();
         setMemberList();
 
-        if(membership == null){
+        if(member == null){
 
             this.orderList = new ArrayList<>();
         }else {
-            this.orderList = getOrders(membership.getMembershipId());
+            this.orderList = getOrders(member.getMembershipId());
         }
         if(orderList.size() == 0){
             clearOrder();
@@ -132,13 +134,13 @@ public class MembershipOperationFunction extends JPanel implements ActionListene
             membershipOperation.telephone.setText("");
             membershipOperation.eMail.setText("");
             membershipOperation.stamps.setText("");
-            membership = null;
+            member = null;
             return;
         }
-        this.membership = memberList.getMsl().get(0);
+        this.member = memberList.getMsl().get(0);
         for(int i = 0; i < users.length; i++){
-            Membership membership = memberList.getMsl().get(i);
-            users[i] = membership.getMembershipId() + " | " + membership.getFirstName() + " " + membership.getLastName();
+            Member member = memberList.getMsl().get(i);
+            users[i] = member.getMembershipId() + " | " + member.getFirstName() + " " + member.getLastName();
         }
         membershipOperation.membershipList.setListData(users);
     }
@@ -147,7 +149,7 @@ public class MembershipOperationFunction extends JPanel implements ActionListene
         String[] orders = new String[orderList.size()];
         for(int i = 0; i <orders.length; i++){
             Order order = orderList.get(i);
-            if(order.getMembershipId().equals(membership.getMembershipId())) {
+            if(order.getMembershipId().equals(member.getMembershipId())) {
                 orders[i] = order.getDate() + " | " + order.getOrderId() + " | $" + order.getAmountMoney();
             }
         }
@@ -167,12 +169,12 @@ public class MembershipOperationFunction extends JPanel implements ActionListene
     }
 
     public void setUserInfo(){
-        membershipOperation.addStamps_plus1.setEnabled(membership.getStamps() != 0);
-        membershipOperation.membeshipNumber.setText(membership.getMembershipId());
-        membershipOperation.name.setText(membership.getFirstName() + " " + membership.getLastName());
-        membershipOperation.telephone.setText(membership.getTelephone());
-        membershipOperation.eMail.setText(membership.geteMail());
-        membershipOperation.stamps.setText("" + membership.getStamps());
+        membershipOperation.addStamps_plus1.setEnabled(member.getStamps() != 0);
+        membershipOperation.membeshipNumber.setText(member.getMembershipId());
+        membershipOperation.name.setText(member.getFirstName() + " " + member.getLastName());
+        membershipOperation.telephone.setText(member.getTelephone());
+        membershipOperation.eMail.setText(member.geteMail());
+        membershipOperation.stamps.setText("" + member.getStamps());
     }
 
     public void setOrderInfo(){
@@ -280,13 +282,13 @@ public class MembershipOperationFunction extends JPanel implements ActionListene
         JButton button = (JButton)e.getSource();
         switch (button.getText()){
             case "-1":
-                membership.setStamps(membership.getStamps() - 1);
+                member.setStamps(member.getStamps() - 1);
                 break;
             case "+1":
-                membership.addStamps();
+                member.addStamps();
                 break;
             default:
-                membership.setStamps(membership.getStamps() + 5);
+                member.setStamps(member.getStamps() + 5);
                 break;
         }
         memberList.saveMembershipCsv();

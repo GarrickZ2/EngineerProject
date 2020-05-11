@@ -1,4 +1,4 @@
-package database.information;
+package database.entity;
 
 /**
  * @author Zixuan Zhang

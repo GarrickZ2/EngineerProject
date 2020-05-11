@@ -233,7 +233,7 @@ public class MenuOperation extends JPanel {
                         membershipOperationPanel.setLayout(new GridLayout());
 
                         //---- indexLabel_membershipOperation ----
-                        indexLabel_membershipOperation.setText("Membership operation");
+                        indexLabel_membershipOperation.setText("Member operation");
                         indexLabel_membershipOperation.setHorizontalAlignment(SwingConstants.CENTER);
                         indexLabel_membershipOperation.setBackground(new Color(242, 242, 242, 0));
                         membershipOperationPanel.add(indexLabel_membershipOperation);

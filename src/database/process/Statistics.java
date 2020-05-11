@@ -1,8 +1,8 @@
 package database.process;
 
-import database.OrderData;
-import database.information.Order;
-import database.information.OrderList;
+import database.interaction.OrderData;
+import database.entity.Order;
+import database.entityList.OrderList;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

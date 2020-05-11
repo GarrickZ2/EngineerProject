@@ -1,8 +1,8 @@
-package database;
+package database.interaction;
 
-import database.information.DataType;
-import database.information.MemberList;
-import database.information.Membership;
+import database.entity.DataType;
+import database.entity.Member;
+import database.entityList.MemberList;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -11,26 +11,26 @@ import java.util.ArrayList;
  * @author Zixuan Zhang
  */
 public class UserData extends BaseData{
-    private final String addr = "data/membership.csv";
+    private final String addr = "data/member.csv";
 
     @Override
     public MemberList loadInfo(){
-        ArrayList<Membership> memberships = new ArrayList<Membership>();
+        ArrayList<Member> members = new ArrayList<Member>();
         File file = new File(addr);
         try{
             BufferedReader reader = new BufferedReader(new FileReader(file));
             while ((contents = reader.readLine())!=null){
                 String[] attributes = contents.split(",");
-                Membership membership = new Membership(attributes[0],attributes[1],attributes[2],attributes[3],
+                Member member = new Member(attributes[0],attributes[1],attributes[2],attributes[3],
                         attributes[4], Integer.parseInt(attributes[5]), attributes[6]);
-                memberships.add(membership);
+                members.add(member);
             }
             reader.close();
         } catch (Exception e) {
             System.out.println("The necessary file has been broken, please re-install.");
             System.exit(-1);
         }
-        return new MemberList(memberships);
+        return new MemberList(members);
     }
 
     @Override
@@ -38,8 +38,8 @@ public class UserData extends BaseData{
         MemberList memberList = (MemberList)dataType;
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(addr));
-            for(Membership membership:memberList.getMsl()){
-                writer.write(String.valueOf(membership));
+            for(Member member :memberList.getMsl()){
+                writer.write(String.valueOf(member));
                 writer.newLine();
             }
             writer.close();

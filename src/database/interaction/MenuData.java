@@ -1,13 +1,10 @@
-package database;
+package database.interaction;
 
 
-import database.information.DataType;
-import database.information.MemberList;
-import database.information.Membership;
-import database.information.Menu;
+import database.entity.DataType;
+import database.entity.Menu;
 
 import java.io.*;
-import java.util.ArrayList;
 
 /**
  * @author Zixuan Zhang

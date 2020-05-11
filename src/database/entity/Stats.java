@@ -1,6 +1,6 @@
-package database.information.backup;
+package database.entity;
 
-import database.information.Cuisine;
+import database.entity.Cuisine;
 
 /**
  * @author cyz

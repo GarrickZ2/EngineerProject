@@ -1,6 +1,6 @@
-package database.information;
+package database.entity;
 
-import database.MenuData;
+import database.interaction.MenuData;
 
 /**
  * @author Zixuan Zhang

@@ -1,8 +1,7 @@
 package guiFunction.management;
 
-import database.MenuData;
-import database.information.Menu;
-import gui.management.MembershipOperation;
+import database.interaction.MenuData;
+import database.entity.Menu;
 import gui.management.MenuOperation;
 import guiFunction.management.statistics.DataAnalysisFunction;
 import guiFunction.management.statistics.PopularityFunction;

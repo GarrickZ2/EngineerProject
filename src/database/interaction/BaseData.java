@@ -1,6 +1,6 @@
-package database;
+package database.interaction;
 
-import database.information.DataType;
+import database.entity.DataType;
 
 /**
  * @author Zixuan Zhang

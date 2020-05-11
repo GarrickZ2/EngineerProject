@@ -1,9 +1,9 @@
 package database.process;
 
-import database.MenuData;
-import database.information.Cuisine;
-import database.information.Menu;
-import database.information.Order;
+import database.interaction.MenuData;
+import database.entity.Cuisine;
+import database.entity.Menu;
+import database.entity.Order;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -37,7 +37,7 @@ public class Receipt {
     public String generateReceipt(){
         String receiptContent = "";
         receiptContent = "<Receipt>" + "\n" + "Serial Number:" + order.getOrderId() + "\n" + "Time:" + order.getDate()
-                + "\n" + "Membership:" + order.getMembershipId() + "\n";
+                + "\n" + "Member:" + order.getMembershipId() + "\n";
         for(int i = 0; i<15;i++){
             receiptContent = receiptContent + "-----";
         }

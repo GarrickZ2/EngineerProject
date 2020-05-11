@@ -26,7 +26,7 @@ public class Install {
 
 		filename.add(root+"\\menu.csv");
 		filename.add(root+"\\order.csv");
-		filename.add(root+"\\membership.csv");
+		filename.add(root+"\\member.csv");
 	}
 	
 	public void Add_new_dir(String s) {
@@ -141,15 +141,15 @@ public class Install {
 		}
 		switch (args[0]) {
 			case "repair": {
-				Install is = new Install(0);
+				new Install(0);
 				break;
 			}
 			case "force": {
-				Install is = new Install(1);
+				new Install(1);
 				break;
 			}
 			case "uninstall": {
-				Install is = new Install(-1);
+				new Install(-1);
 				break;
 			}
 			default:

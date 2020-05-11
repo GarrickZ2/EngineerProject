@@ -21,7 +21,6 @@ public class Index extends JPanel {
         panel9 = new JPanel();
         time2 = new JLabel();
         date2 = new JLabel();
-        panel13 = new JPanel();
         panel14 = new JPanel();
         label5 = new JLabel();
         panel10 = new JPanel();
@@ -66,13 +65,6 @@ public class Index extends JPanel {
                 panel9.add(date2);
             }
             panel1.add(panel9);
-
-            //======== panel13 ========
-            {
-                panel13.setBackground(Color.white);
-                panel13.setLayout(new BoxLayout(panel13, BoxLayout.X_AXIS));
-            }
-            panel1.add(panel13);
 
             //======== panel14 ========
             {
@@ -191,9 +183,8 @@ public class Index extends JPanel {
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
     private JPanel panel1;
     private JPanel panel9;
-    private JLabel time2;
-    private JLabel date2;
-    private JPanel panel13;
+    public JLabel time2;
+    public JLabel date2;
     private JPanel panel14;
     private JLabel label5;
     private JPanel panel10;

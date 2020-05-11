@@ -1,6 +1,9 @@
-package database.information;
+package database.entityList;
 
-import database.UserData;
+import database.interaction.UserData;
+import database.entity.DataType;
+import database.entity.Member;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.regex.Matcher;
@@ -12,31 +15,31 @@ import java.util.regex.Pattern;
  */
 public class MemberList extends DataType {
 
-	private ArrayList<Membership> msl;
+	private ArrayList<Member> msl;
 	final private static int membershipIdLength = 8;
 	private boolean fileChanged = false;
 	private static int errorCode = -1;
 
 	public MemberList() {
-		msl = new ArrayList<Membership>();
+		msl = new ArrayList<Member>();
 	}
-	public MemberList(ArrayList<Membership> msl) {
+	public MemberList(ArrayList<Member> msl) {
 		this.msl = msl;
 	}
 
-	public ArrayList<Membership> getMsl() {
+	public ArrayList<Member> getMsl() {
 		return msl;
 	}
 
 
-	public void setMembershipList(ArrayList<Membership> msl) {
+	public void setMembershipList(ArrayList<Member> msl) {
 		this.msl = msl;
 	}
 
-	public static int getFinalNumber(ArrayList<Membership> list){
+	public static int getFinalNumber(ArrayList<Member> list){
 		int temp;
 		int max = 0;
-		for (Membership m : list){
+		for (Member m : list){
 			temp = Integer.parseInt(m.getMembershipId());
 			if(temp >= max){
 				max = temp;
@@ -145,8 +148,8 @@ public class MemberList extends DataType {
 		if(checkValidation(firstName, lastName, telephone, eMail)){
 			//Check if telephone or email exists
 			if((!this.queryMember(telephone))&&(!this.queryMember(eMail))){
-				//Create a new object Membership
-				Membership ms = new Membership();
+				//Create a new object Member
+				Member ms = new Member();
 
 				//Set the data
 				ms.setFirstName(firstName);
@@ -193,7 +196,7 @@ public class MemberList extends DataType {
 
 	public boolean deleteMember(String id) {
 		fileChanged = true;
-		for(Membership ms :msl) {
+		for(Member ms :msl) {
 			if(ms.getMembershipId().equals(id)) {
 				msl.remove(ms);
 				return true;
@@ -206,19 +209,19 @@ public class MemberList extends DataType {
 		return this.getMember(str).getMembershipId() != null;
 	}
 
-	public Membership getMember(String str){
+	public Member getMember(String str){
 		String keywords = null;
 		if(str == null) {
 			keywords = "empty";
 		}else {
 			keywords = str;
 		}
-		for(Membership temp: msl) {
+		for(Member temp: msl) {
 			if(temp.getMembershipId().equals(keywords) || temp.getTelephone().equals(keywords) || temp.geteMail().equals(keywords)) {
 				return temp;
 			}
 		}
-		return new Membership();
+		return new Member();
 	}
 
 	public void changeInfo(String id, String fName, String lName, String tel, String eMail){
@@ -226,7 +229,7 @@ public class MemberList extends DataType {
 		if(!checkValidation(fName, lName, tel, eMail)){
 			System.out.println("Error: Invalid input");
 		}else{
-			Membership ms;
+			Member ms;
 			if(this.queryMember(id)){
 				ms = this.getMember(id);
 				this.deleteMember(id);
@@ -257,7 +260,7 @@ public class MemberList extends DataType {
 	@Override
 	public String toString() {
 		StringBuilder content = new StringBuilder();
-		for(Membership m : getMsl()){
+		for(Member m : getMsl()){
 			content.append(m).append("\n");
 		}
 		return content.toString();
@@ -265,12 +268,12 @@ public class MemberList extends DataType {
 
 	public static void main(String[] s) {
 		MemberList list = new MemberList();
-		Membership m = new Membership("00000001","Tian", "Huang", "15500043370", null,0, null);
+		Member m = new Member("00000001","Tian", "Huang", "15500043370", null,0, null);
 		list.msl.add(m);
 		list.createMember("Tssn", "Huang", "15500043371", null);
 		list.createMember("Hu", "Son", "18810009295", null);
 		//System.out.println("Create: "+list.createMember("Tssn", "Huang", "15500043371", "447243910@qq.com"));
-		Membership x = list.getMember("00000001");
+		Member x = list.getMember("00000001");
 		System.out.println("Allocation:");
 		System.out.println(x);
 		System.out.println(list.msl.get(list.msl.size()-1));
@@ -278,7 +281,7 @@ public class MemberList extends DataType {
 		list.changeInfo("00000001","gao","son",null,null);
 		x = list.getMember("00000001");
 
-		for(Membership ms:list.msl){
+		for(Member ms:list.msl){
 			System.out.println(ms);
 		}
 	}

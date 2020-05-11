@@ -1,12 +1,13 @@
-package database.information.backup;
+package database.entityList;
 
 /**
  * @author cyz
  * @version 1.0
  */
 
-import database.StatsData;
-import database.information.DataType;
+import database.interaction.StatsData;
+import database.entity.DataType;
+import database.entity.Stats;
 
 import java.util.ArrayList;
 

@@ -1,6 +1,6 @@
-package database.information;
+package database.entity;
 
-import database.MenuData;
+import database.interaction.MenuData;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

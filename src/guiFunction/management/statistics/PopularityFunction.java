@@ -1,8 +1,8 @@
 package guiFunction.management.statistics;
 
-import database.UserData;
-import database.information.MemberList;
-import database.information.Membership;
+import database.interaction.UserData;
+import database.entityList.MemberList;
+import database.entity.Member;
 import database.process.PopularityData;
 import gui.management.statistics.Popularity;
 import org.jfree.chart.ChartFactory;
@@ -38,8 +38,8 @@ public class PopularityFunction extends JPanel {
         }
         UserData userData = new UserData();
         MemberList list = userData.loadInfo();
-        Membership moneyMember = list.getMember(data.getPopularMemberByMoney());
-        Membership timesMember = list.getMember(data.getPopularMemberByTimes());
+        Member moneyMember = list.getMember(data.getPopularMemberByMoney());
+        Member timesMember = list.getMember(data.getPopularMemberByTimes());
         popularity.member_costMost_membershipNumber.setText(moneyMember.getMembershipId());
         popularity.member_costMost_name.setText(moneyMember.getFirstName() + " " + moneyMember.getLastName());
         popularity.member_costMost_TAE.setText(moneyMember.getTelephone() + " / " + moneyMember.geteMail());

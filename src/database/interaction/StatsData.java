@@ -1,13 +1,13 @@
-package database;
+package database.interaction;
 
 /**
  * @author cyz
  * @version 1.0
  */
 
-import database.information.*;
-import database.information.backup.Stats;
-import database.information.backup.StatsList;
+import database.entity.*;
+import database.entity.Stats;
+import database.entityList.StatsList;
 
 import java.io.BufferedReader;
 import java.io.File;

@@ -2,7 +2,7 @@
  * Created by JFormDesigner on Sun Apr 19 20:41:42 GMT+08:00 2020
  */
 
-package gui.management;
+package gui;
 
 import java.awt.*;
 import javax.swing.*;
@@ -10,8 +10,8 @@ import javax.swing.*;
 /**
  * @author Brainrain
  */
-public class emptyFormat extends JPanel {
-    public emptyFormat() {
+public class Format extends JPanel {
+    public Format() {
         initComponents();
     }
 
