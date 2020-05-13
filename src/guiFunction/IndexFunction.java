@@ -6,7 +6,6 @@ import database.process.Receipt;
 import gui.Index;
 import guiFunction.management.ManagementIndex;
 import guiFunction.membership.MemberChangeInfoFunction;
-import gui.membership.CreateMember;
 import guiFunction.membership.CreateMemberFunction;
 import guiFunction.order.OrderGuiFunction;
 import gui.order.Recipients;
@@ -15,6 +14,7 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
+ *
  * @author Zixuan Zhang
  */
 public class IndexFunction extends JFrame {
@@ -22,11 +22,14 @@ public class IndexFunction extends JFrame {
     JPanel content;
     Index index;
     OrderGuiFunction orderGuiFunction;
-    CreateMember createMember;
     MemberChangeInfoFunction memberChangeInfoFunction;
     CreateMemberFunction createMemberFunction;
     ManagementIndex managementIndex;
 
+    /**
+     * 
+     * @throws Exception
+     */
     public IndexFunction() throws Exception{
         card = new CardLayout();
         content = new JPanel(card);
@@ -106,6 +109,7 @@ public class IndexFunction extends JFrame {
             }
             orderGuiFunction.orderList.save();
             orderGuiFunction.order = orderGuiFunction.orderList.getOrders().get(orderGuiFunction.orderList.getOrders().size()-1);
+
             if(orderGuiFunction.usingCoupon){
                 orderGuiFunction.order.setPayingMethod("Coupon");
             }else {
@@ -115,6 +119,7 @@ public class IndexFunction extends JFrame {
                     orderGuiFunction.order.setPayingMethod("Visa");
                 }
             }
+            System.out.println(orderGuiFunction.order.getPayingMethod());
 
             orderGuiFunction.receipt = new Receipt(orderGuiFunction.order);
             orderGuiFunction.receipt.payingMethod = orderGuiFunction.payingMethod;
@@ -126,6 +131,9 @@ public class IndexFunction extends JFrame {
         managementIndex.membershipOperation.membershipOperation.returnButton.addActionListener(e ->
                 card.show(content, "index"));
 
+
+        //set for exit button's function
+        index.exit.addActionListener(e -> System.exit(0));
 
         this.setTitle("TOTORO RAMEN");
         this.add(content);

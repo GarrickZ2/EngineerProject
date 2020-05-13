@@ -26,6 +26,9 @@ import java.util.Date;
 import java.util.Enumeration;
 
 /**
+ * The Control Class for OrderGui.
+ *
+ * Used to store the information of user's order and relevant operations.
  * @author Zixuan Zhang
  */
 public class OrderGuiFunction extends JPanel{

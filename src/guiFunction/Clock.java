@@ -6,20 +6,29 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * @author zzx
+ * Thread Class independent from the Main thread.
+ * Used to control the clock on the Index GUI
+ * @author Zixuan Zhang
  */
 public class Clock extends Thread{
     Index index;
     public Clock(Index index){
         this.index = index;
     }
+
+    /**
+     * Override for run function in Thread class.
+     * Get the time from now and set it on the Index GUI
+     */
     @Override
     public void run() {
+        //Initialize a time format
         SimpleDateFormat format = new SimpleDateFormat("yyyy MM dd hh:mm:ss");
         while (true){
             Date timer = new Date();
             String[] time = format.format(timer).split(" ");
             String month = "";
+            // Replace the month with English words.
             switch (time[1]){
                 case "01":
                     month = "January";
@@ -60,7 +69,6 @@ public class Clock extends Thread{
             }
             index.time2.setText(time[3]);
             index.date2.setText(time[2] + "/" + month + "/" + time[0]);
-
         }
     }
 }

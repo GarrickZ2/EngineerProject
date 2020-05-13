@@ -1,9 +1,6 @@
 package database.process;
 
 import database.entity.Member;
-import database.entity.Order;
-import database.entityList.MemberList;
-import database.interaction.OrderData;
 import database.interaction.UserData;
 
 import java.io.BufferedWriter;
@@ -11,7 +8,6 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 

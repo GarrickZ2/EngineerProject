@@ -1,7 +1,7 @@
 package database.entity;
 
 
-public class Order {
+public class Order extends DataType{
 
     private String orderId;
     private String date;

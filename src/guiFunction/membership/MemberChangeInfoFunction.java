@@ -42,6 +42,10 @@ public class MemberChangeInfoFunction extends JPanel {
         this.setLayout(new BorderLayout());
         this.add(memberChangeInfo);
     }
+
+    /**
+     *
+     */
     public void setMessage(){
         memberChangeInfo.sug_fName.setText(member.getFirstName());
         memberChangeInfo.sug_lName.setText(member.getLastName());

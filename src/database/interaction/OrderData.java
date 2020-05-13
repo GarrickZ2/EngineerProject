@@ -9,12 +9,17 @@ import java.io.*;
 import java.util.ArrayList;
 
 /**
+ * OrderData Class, a type of BaseData, used to access to order.csv
  * @author Zixuan Zhang
  */
 public class OrderData extends BaseData {
     private final String addr = "data/order.csv";
     public ArrayList<Order> orders = new ArrayList<Order>();
 
+    /**
+     * load information from order.csv
+     * @return OrderList Class store all the information of order
+     */
     @Override
     public OrderList loadInfo() {
         File file = new File(addr);
@@ -41,13 +46,16 @@ public class OrderData extends BaseData {
         return new OrderList(orders);
     }
 
+    /**
+     * Save all the information of OrderList.
+     * @param dataType Input the DataType which you want to store.
+     */
     @Override
     public void saveInfo(DataType dataType) {
         OrderList orderList = (OrderList)dataType;
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(addr));
             for(Order order:orderList.getOrders()){
-                //System.out.println(order);
                 writer.write(String.valueOf(order));
                 writer.newLine();
             }

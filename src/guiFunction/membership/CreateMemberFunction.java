@@ -9,8 +9,17 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * sdfjdkjfdkjfksdjfkjksdjfk
+ * @author Zixuan Zhang
+ * @version 1.0
+ */
 public class CreateMemberFunction extends JPanel {
     public CreateMember createMember;
+
+    /**
+     *
+     */
     public CreateMemberFunction(){
 
         createMember = new CreateMember();

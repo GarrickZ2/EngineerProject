@@ -3,6 +3,7 @@ package database.interaction;
 import database.entity.DataType;
 
 /**
+ * A generalized Class BaseData, used as a model for all the class have access to database file.
  * @author Zixuan Zhang
  */
 public abstract class BaseData {

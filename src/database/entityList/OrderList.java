@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 /**
+ * OrderList Class, a type of DataType, used to store all the information of OrderList.
  * @author Zixuan Zhang
  */
 public class OrderList extends DataType {

@@ -10,6 +10,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
+ * MemberList Class, a type of DataType, used to store all the information of Member
  * @author Huang
  * @version 1.5
  */
@@ -251,7 +252,6 @@ public class MemberList extends DataType {
 	}
 
 	public void saveMembershipCsv(){
-		System.out.println(this);
 		UserData userData = new UserData();
 		userData.saveInfo(this);
 	}

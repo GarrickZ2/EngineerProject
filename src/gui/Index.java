@@ -32,7 +32,7 @@ public class Index extends JPanel {
         becomeVip = new JButton();
         panel7 = new JPanel();
         management = new JButton();
-        button6 = new JButton();
+        exit = new JButton();
         label4 = new JLabel();
         label3 = new JLabel();
         panel2 = new JPanel();
@@ -139,13 +139,13 @@ public class Index extends JPanel {
                     management.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
                     panel7.add(management);
 
-                    //---- button6 ----
-                    button6.setText("Comment");
-                    button6.setPreferredSize(new Dimension(78, 80));
-                    button6.setBackground(new Color(255, 102, 255));
-                    button6.setForeground(Color.white);
-                    button6.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
-                    panel7.add(button6);
+                    //---- exit ----
+                    exit.setText("EXIT");
+                    exit.setPreferredSize(new Dimension(78, 80));
+                    exit.setBackground(new Color(255, 102, 255));
+                    exit.setForeground(Color.white);
+                    exit.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
+                    panel7.add(exit);
                 }
                 panel11.add(panel7);
             }
@@ -196,7 +196,7 @@ public class Index extends JPanel {
     public JButton becomeVip;
     private JPanel panel7;
     public JButton management;
-    private JButton button6;
+    public JButton exit;
     private JLabel label4;
     private JLabel label3;
     private JPanel panel2;

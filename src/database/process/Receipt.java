@@ -27,6 +27,10 @@ public class Receipt {
 
     }
 
+    /**
+     *
+     * @param order
+     */
     public  Receipt(Order order){
         this.order = order;
         cuisine = order.getCuisine();

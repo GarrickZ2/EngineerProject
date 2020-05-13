@@ -6,6 +6,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
+ * This is Cuisine Class, used to store the information of a cuisine ordered by customer.
+ * It provide some getter and setter methods for attributes.
+ * And also a calculate method to get the money for this cuisine.
  * @author Huang
  * @version 1.0
  * @author Zixuan Zhang
@@ -38,7 +41,20 @@ public class Cuisine {
     private String billID;
 
 
-
+    /**
+     * Cuisine constructor to initialize a cuisine class. It inputs all the attributes and create the new instance
+     * @param soupType The type of soup customer ordered.
+     * @param noodleType The type of noodle customer ordered.
+     * @param onionType The type pf onion customer ordered.
+     * @param nori Whether customer order a nori.
+     * @param chashu Whether customer order a chashu.
+     * @param egg Whether customer orders a egg.
+     * @param spiciness The spiciness customer opt
+     * @param extraNori The extra number of Nori customer ordered
+     * @param extraEgg The extra number of Egg customer ordered
+     * @param extraShoot The extra number of shoot customer ordered
+     * @param extraChashu The extra number of Chashu customer ordered
+     */
     public Cuisine(String soupType, String noodleType, String onionType, boolean nori, boolean chashu, boolean egg,
                    int spiciness, int extraNori, int extraEgg, int extraShoot, int extraChashu) {
         this.soupType = soupType;
@@ -54,34 +70,66 @@ public class Cuisine {
         this.extraChashu = extraChashu;
     }
 
+    /**
+     * getter method for soupType
+     * @return String soupType
+     */
     public String getSoupType() {
         return soupType;
     }
 
+    /**
+     * setter method for SoupType
+     * @param soupType String type of soup
+     */
     public void setSoupType(String soupType) {
         this.soupType = soupType;
     }
 
+    /**
+     * getter method for noodle type
+     * @return String noodle
+     */
     public String getNoodleType() {
         return noodleType;
     }
 
+    /**
+     * setter method for noodle type
+     * @param noodleType the type of noodle
+     */
     public void setNoodleType(String noodleType) {
         this.noodleType = noodleType;
     }
 
+    /**
+     * getter method for onionType
+     * @return the type of onion
+     */
     public String getOnionType() {
         return onionType;
     }
 
+    /**
+     * setter method for onionType
+     * @param onionType the type of onion
+     */
     public void setOnionType(String onionType) {
         this.onionType = onionType;
     }
 
+    /**
+     * get whether customer opt nori
+     * @return boolean data
+     */
     public boolean isNori() {
         return nori;
     }
 
+    /**
+     * setter for Nori
+     * @param nori boolean type for nori
+     */
     public void setNori(boolean nori) {
         this.nori = nori;
     }
@@ -142,55 +190,20 @@ public class Cuisine {
         this.extraChashu = extraChashu;
     }
 
+    /**
+     * The override for toString, arrange attributes into an csv file.
+     * @return type of String
+     */
     @Override
     public String toString() {
         return soupType + "," + noodleType + "," +onionType + "," +nori + "," +chashu + "," +
                 egg + "," +spiciness + "," +extraNori + "," +extraEgg + "," +extraShoot + "," +extraChashu;
     }
 
-    public String printReceipt(){
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd kk:mm:ss");
-        Cuisine a = new Cuisine("Shio", "Soft", "No please", true, false, false,5,0,2,1,3);
-        Order order = new Order("123", format.format(new Date()), a, 1, "123", "212");
-
-        String type =this.soupType + "," + this.noodleType + "," + this.onionType;
-        if(this.nori){
-            type = type + "," + "nori";
-        }
-        if(this.chashu){
-            type = type + "," + "chashu";
-        }
-        if(this.egg){
-            type = type + "," + "egg";
-        }
-        type = type + "," + this.spiciness;
-
-        return "\t\t\t\t            --Receipt--\r\n"+
-                "\r\n" +
-                "账单号：" + order.getBillId() + "\r\n"  +
-                "开单时间：" + order.getDate() +"\r\n"+
-                "结账时间：" + order.getDate() +"\r\n"+
-                "会员编号："+ order.getMembershipId() + "\r\n"+
-                "---------------------------------------------------------------------------\r\n"+
-                "Menu \t\t\t\t\t\t\t                        数量 \t 单价\t  金额\r\n"+
-                "Noddles("+ type + ")  \t         1\t     9.9\t  9.9\r\n"+
-                "+Nori\t\t\t\t\t\t\t                         "+ this.extraNori + "\t     1.0\t  " + (1.0*this.extraNori) +"\r\n"+
-                "+Egg\t\t\t\t\t\t\t                         " + this.extraEgg + "       2.0\t  " + (2.0*this.extraEgg) +"\r\n"+
-                "+Shoot\t\t\t\t\t\t\t                         " + this.extraShoot +  "       1.0\t  " + (1.0*this.extraShoot) +"\r\n"+
-                "+Chashu\t\t\t\t\t\t\t                         " + this.extraChashu + "       2.0\t  " + (2.0*this.extraChashu) + "\r\n"+
-                "----------------------------------------------------------------------------\r\n"+
-                "\r\n"+
-                "合计\t\t\t\t\t\t\t                " + (1+this.extraNori+this.extraEgg+this.extraShoot+this.extraChashu ) + "     \t\t     " + calculate() +"\r\n"+
-                "\r\n"+
-                "银行卡支付\t\t\t\t\t\t\t\t                         " + calculate() + "\r\n"+
-                "\r\n"+
-                "============================================================================\r\n"+
-                "\t\t\t        打印时间：" + order.getDate() +"\r\n" +
-                "		伦敦市力王区贝克街B15号龙猫拉面 电话： 44 (0) 203 178 4861\r\n";
-    }
-
-
-
+    /**
+     * Calculate the total money of one cuisine
+     * @return the total money of
+     */
     public double calculate(){
         MenuData menuData = new MenuData();
         Menu menu = menuData.loadInfo();

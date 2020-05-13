@@ -7,11 +7,16 @@ import database.entity.Menu;
 import java.io.*;
 
 /**
+ * Menu Data used to access menu.csv
  * @author Zixuan Zhang
  */
 public class MenuData extends BaseData{
     private final String addr = "data/menu.csv";
 
+    /**
+     * Load information from menu.csv
+     * @return Menu data used to store information of menu.
+     */
     @Override
     public Menu loadInfo() {
         Menu menu = new Menu();
@@ -51,6 +56,10 @@ public class MenuData extends BaseData{
         return menu;
     }
 
+    /**
+     * Save Menu information into menu.csv
+     * @param dataType Input the DataType which you want to store.
+     */
     @Override
     public void saveInfo(DataType dataType) {
         Menu menu = (Menu)dataType;
