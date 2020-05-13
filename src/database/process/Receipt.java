@@ -23,6 +23,9 @@ public class Receipt {
     MenuData menuData = new MenuData();
     SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 
+    /**
+     * An empty Class
+     */
     public Receipt(){
 
     }
@@ -116,24 +119,5 @@ public class Receipt {
         }
 
         return content.toString();
-    }
-
-    //clear the data from 7days ago
-    public void clear(){
-        File folder = new File("/data/recipients/");
-        File[] files = folder.listFiles();
-        for (File file:files) {
-            int date = Integer.parseInt(order.getOrderId().substring(0,8))-7;
-            int name = Integer.parseInt(file.getName().substring(0,8));
-            if (name<date){
-                file.delete();
-            }
-        }
-        System.out.println("File have already been deleted");
-    }
-
-    public static void main(String[] args) {
-        Receipt receipt = new Receipt();
-        receipt.clear();
     }
 }
