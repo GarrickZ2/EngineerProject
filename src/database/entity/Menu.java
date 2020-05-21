@@ -3,6 +3,7 @@ package database.entity;
 import database.interaction.MenuData;
 
 /**
+ * This is an Entity Class for a Menu. Sotre the information about the storage and prices.
  * @author Zixuan Zhang
  */
 public class Menu extends DataType{
@@ -17,20 +18,10 @@ public class Menu extends DataType{
     private boolean shootAvailable;
     private boolean chashuAvailable;
 
+    /**
+     * Enpty Constructor for Menu Class
+     */
     public Menu(){}
-
-    public Menu(double noodle, double nori, boolean noriAvailable, double egg, boolean eggAvailable,
-                double shoot, boolean shootAvailable, double chashu, boolean chashuAvailable) {
-        this.setNoodle(noodle);
-        this.setNori(nori);
-        this.setEgg(egg);
-        this.setShoot(shoot);
-        this.setChashu(chashu);
-        this.setNoriAvailable(noriAvailable);
-        this.setEggAvailable(eggAvailable);
-        this.setShootAvailable(shootAvailable);
-        this.setChashuAvailable(chashuAvailable);
-    }
 
     public double getNoodle() {
         return noodle;
@@ -105,6 +96,9 @@ public class Menu extends DataType{
     }
 
 
+    /**
+     * Save information for Menu Class
+     */
     public void save(){
         MenuData menuData = new MenuData();
         menuData.saveInfo(this);

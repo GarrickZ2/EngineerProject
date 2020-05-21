@@ -4,6 +4,10 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 
+/**
+ * This class is used to read a recipient. And store the information of one recipient.
+ * @author Yanzhao Chen
+ */
 public class RecipientReader extends DataType{
     private double noodle;
     private double nori;
@@ -22,6 +26,11 @@ public class RecipientReader extends DataType{
     private double chashuTotalPrice;
     private String payingMethod;
 
+    /**
+     * This constructor get the id of recipient and read the necessary information from the file.
+     * @param recipientsName the id of recipient
+     * @throws Exception IOException while input or output happened accidents.
+     */
     public RecipientReader(String recipientsName) throws Exception{
         File file = new File("data/recipients/"+ recipientsName +".txt");
         BufferedReader reader = new BufferedReader(new FileReader(file));
@@ -146,15 +155,4 @@ public class RecipientReader extends DataType{
         return payingMethod;
     }
 
-    public static void main(String[] args) throws Exception{
-        RecipientReader recipientReader = new RecipientReader("20200503172956");
-        System.out.println(recipientReader.getNoodle());
-        System.out.println(recipientReader.getNoodlePrice());
-        System.out.println(recipientReader.getNoodleTotalPrice());
-        System.out.println(recipientReader.getNori());
-        System.out.println(recipientReader.getEgg());
-        System.out.println(recipientReader.getShoot());
-        System.out.println(recipientReader.getChashu());
-        System.out.println(recipientReader.getPayingMethod());
-    }
 }

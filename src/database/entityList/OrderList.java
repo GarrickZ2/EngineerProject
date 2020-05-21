@@ -20,10 +20,17 @@ public class OrderList extends DataType {
     private ArrayList<Order> orders;
     OrderData orderData = new OrderData();
 
+    /**
+     * A construct input the order list and initialize a new Order List Class
+     * @param orders the ArrayList Orders
+     */
     public OrderList(ArrayList<Order> orders) {
         this.orders = orders;
     }
 
+    /**
+     * A construct load data from database
+     */
     public OrderList(){
         orderData.loadInfo();
         orders = orderData.orders;
@@ -37,6 +44,12 @@ public class OrderList extends DataType {
         this.orders = orders;
     }
 
+    /**
+     * Create a new order for users
+     * @param cuisine the cuisine class
+     * @param eatType the eat type of user
+     * @param membershipId the id of member
+     */
     public void createOrder(Cuisine cuisine, int eatType, String membershipId){
 
         Order order = new Order(generateOrderId("orderId"), dateFormat.format(new Date()), cuisine, eatType,
@@ -44,6 +57,11 @@ public class OrderList extends DataType {
         orders.add(order);
     }
 
+    /**
+     * Automatically generate the id for this order
+     * @param select "orderId" means generate a order id, "billId" means generate a bill id
+     * @return the id generated
+     */
     public String generateOrderId(String select){
         date = new Date();
         SimpleDateFormat format = new SimpleDateFormat("yyyyMMddkkmmss");
@@ -60,6 +78,9 @@ public class OrderList extends DataType {
         }
     }
 
+    /**
+     * Save the information of orders into the database.
+     */
     public void save(){
         orderData.saveInfo(this);
     }

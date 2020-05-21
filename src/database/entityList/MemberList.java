@@ -21,9 +21,10 @@ public class MemberList extends DataType {
 	private boolean fileChanged = false;
 	private static int errorCode = -1;
 
-	public MemberList() {
-		msl = new ArrayList<Member>();
-	}
+	/**
+	 * Create a new class with the memberlist ArrayList
+	 * @param msl the ArrayList version for memberlist
+	 */
 	public MemberList(ArrayList<Member> msl) {
 		this.msl = msl;
 	}
@@ -31,12 +32,15 @@ public class MemberList extends DataType {
 	public ArrayList<Member> getMsl() {
 		return msl;
 	}
-
-
 	public void setMembershipList(ArrayList<Member> msl) {
 		this.msl = msl;
 	}
 
+	/**
+	 * This method is used to get the last number of this memberlist
+	 * @param list the member list
+	 * @return the last number for number list
+	 */
 	public static int getFinalNumber(ArrayList<Member> list){
 		int temp;
 		int max = 0;
@@ -49,6 +53,12 @@ public class MemberList extends DataType {
 		return max;
 	}
 
+	/**
+	 * Check the format for user's input.
+	 * @param mode 0 represent check name, 1 represent check telephone, 2 represent check the email/
+	 * @param information the input of user
+	 * @return the boolean value whether this format is right or not.
+	 */
 	public static boolean checkFormat(int mode, String information){
 
 		if(information == null){
@@ -78,6 +88,14 @@ public class MemberList extends DataType {
 		return mat.find();
 	}
 
+	/**
+	 * Check the register is whether validation
+	 * @param firstName the firstName of user
+	 * @param lastName the last Name of user
+	 * @param telephone the telephone of user
+	 * @param eMail the email of user
+	 * @return whether this information is valid
+	 */
 	public static boolean checkValidation(String firstName, String lastName, String telephone, String eMail){
 
 		boolean validation = false;
@@ -140,6 +158,14 @@ public class MemberList extends DataType {
 		return validation;
 	}
 
+	/**
+	 * This method take the input and generate a new member
+	 * @param firstName the firstName of user
+	 * @param lastName the last Name of user
+	 * @param telephone the telephone of user
+	 * @param eMail the email of user
+	 * @return the condition for this register
+	 */
 	public String createMember(String firstName, String lastName, String telephone, String eMail) {
 		fileChanged = true;
 		if((telephone==null)&&(eMail==null)){
@@ -195,6 +221,11 @@ public class MemberList extends DataType {
 		return "Error: Invalid data input.";
 	}
 
+	/**
+	 * Delete the number from this member list
+	 * @param id the id of member you want to delete
+	 * @return the boolean value whether delete successfully.
+	 */
 	public boolean deleteMember(String id) {
 		fileChanged = true;
 		for(Member ms :msl) {
@@ -206,10 +237,20 @@ public class MemberList extends DataType {
 		return false;
 	}
 
+	/**
+	 * Input the user's id and query whether we have such a user
+	 * @param str the id of the user you want to search
+	 * @return the boolean value whether exists such a user
+	 */
 	public boolean queryMember(String str) {
 		return this.getMember(str).getMembershipId() != null;
 	}
 
+	/**
+	 * get the user class according the input id
+	 * @param str the id of the user
+	 * @return Member class for the specific id
+	 */
 	public Member getMember(String str){
 		String keywords = null;
 		if(str == null) {
@@ -225,6 +266,14 @@ public class MemberList extends DataType {
 		return new Member();
 	}
 
+	/**
+	 * Change the information of one user
+	 * @param id the id of the user you want to change
+	 * @param fName the firstName you want to change
+	 * @param lName the lastName you want to change
+	 * @param tel the telephone number you want to change
+	 * @param eMail the email you want to change
+	 */
 	public void changeInfo(String id, String fName, String lName, String tel, String eMail){
 		fileChanged = true;
 		if(!checkValidation(fName, lName, tel, eMail)){
@@ -251,12 +300,18 @@ public class MemberList extends DataType {
 		}
 	}
 
+	/**
+	 * Save the information into the user database.
+	 */
 	public void saveMembershipCsv(){
 		UserData userData = new UserData();
 		userData.saveInfo(this);
 	}
 
-
+	/**
+	 * Print all the users' information
+	 * @return all the users' information String
+	 */
 	@Override
 	public String toString() {
 		StringBuilder content = new StringBuilder();
@@ -266,23 +321,4 @@ public class MemberList extends DataType {
 		return content.toString();
 	}
 
-	public static void main(String[] s) {
-		MemberList list = new MemberList();
-		Member m = new Member("00000001","Tian", "Huang", "15500043370", null,0, null);
-		list.msl.add(m);
-		list.createMember("Tssn", "Huang", "15500043371", null);
-		list.createMember("Hu", "Son", "18810009295", null);
-		//System.out.println("Create: "+list.createMember("Tssn", "Huang", "15500043371", "447243910@qq.com"));
-		Member x = list.getMember("00000001");
-		System.out.println("Allocation:");
-		System.out.println(x);
-		System.out.println(list.msl.get(list.msl.size()-1));
-		System.out.println("Change info:");
-		list.changeInfo("00000001","gao","son",null,null);
-		x = list.getMember("00000001");
-
-		for(Member ms:list.msl){
-			System.out.println(ms);
-		}
-	}
 }

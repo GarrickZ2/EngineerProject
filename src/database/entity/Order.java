@@ -1,36 +1,37 @@
 package database.entity;
 
-
+/**
+ * This is the Entity Class for Order. This class used to store the information about user's order.
+ * @author Zixuan Zhang
+ */
 public class Order extends DataType{
 
     private String orderId;
     private String date;
     private Cuisine cuisine;
-    //0 represents eat in, 1 represents take away
+    /**
+     *    0 represents eat in, 1 represents take away
+     */
     private int eatType;
     private double eatMoney;
+    private String payingMethod;
 
     private String membershipId;
     private double amountMoney;
     private String billId;
     final private double outMoney = 1.0;
 
-    public String getPayingMethod() {
-        return payingMethod;
-    }
-
-    public void setPayingMethod(String payingMethod) {
-        this.payingMethod = payingMethod;
-    }
-
-    private String payingMethod;
-
-    public Order(Cuisine cuisine, int eatType, String membershipId) {
-        this.cuisine = cuisine;
-        this.eatType = eatType;
-        this.membershipId = membershipId;
-    }
-
+    /**
+     * The first constructor used to read information from database and store it into an initialization
+     * @param orderId the id for this order
+     * @param date the order finishing date
+     * @param cuisine the cuisine class
+     * @param eatType the eat type for user
+     * @param membershipId the id for member
+     * @param amountMoney the total money cost
+     * @param billId the bill id for this order
+     * @param payingMethod the paying method for user
+     */
     public Order(String orderId, String date, Cuisine cuisine, int eatType, String membershipId,
                  double amountMoney, String billId, String payingMethod) {
         this.orderId = orderId;
@@ -44,6 +45,15 @@ public class Order extends DataType{
         this.payingMethod = payingMethod;
     }
 
+    /**
+     * This constructor used when person finishing one order. To initialize a totally new order.
+     *@param orderId the id for this order
+     * @param date the order finishing date
+     * @param cuisine the cuisine class
+     * @param eatType the eat type for user
+     * @param membershipId the id for member
+     * @param billId the bill id for this order
+     */
     public Order(String orderId, String date, Cuisine cuisine, int eatType, String membershipId,
                  String billId) {
         this.orderId = orderId;
@@ -57,6 +67,13 @@ public class Order extends DataType{
         this.payingMethod = null;
     }
 
+    public String getPayingMethod() {
+        return payingMethod;
+    }
+
+    public void setPayingMethod(String payingMethod) {
+        this.payingMethod = payingMethod;
+    }
 
     public String getOrderId() {
         return orderId;
@@ -114,6 +131,10 @@ public class Order extends DataType{
         this.billId = billId;
     }
 
+    /**
+     * Arrange the information into a csv format.
+     * @return the string of csv format
+     */
     @Override
     public String toString() {
         return orderId + "," + date + "," + cuisine + "," + eatType + "," + membershipId + "," + amountMoney + "," +
