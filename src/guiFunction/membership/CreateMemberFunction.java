@@ -26,8 +26,8 @@ public class CreateMemberFunction extends JPanel {
         createMember.create.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String lNameContent= createMember.lNameText.getText();
                 String fNameContent= createMember.fNameText.getText();
+                String lNameContent= createMember.lNameText.getText();
                 String phone= createMember.telText.getText();
                 String emailContent = createMember.emailText.getText();
                 if("".equals(lNameContent)) {
@@ -44,6 +44,7 @@ public class CreateMemberFunction extends JPanel {
                 }
                 UserData userData = new UserData();
                 MemberList memberlist = userData.loadInfo();
+                System.out.println("lNameContent in CMF:"+lNameContent);
                 String response = memberlist.createMember(fNameContent, lNameContent, phone, emailContent);
                 switch (response) {
                     case "Error: Invalid data input.":
