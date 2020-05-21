@@ -19,6 +19,8 @@ import java.util.Date;
 import java.util.Locale;
 
 /**
+ * This class is used to implement the method of DataAnalysis JPanel
+ * A type of JPanel
  * @author Zixuan Zhang
  */
 public class DataAnalysisFunction extends JPanel implements ActionListener {
@@ -26,6 +28,11 @@ public class DataAnalysisFunction extends JPanel implements ActionListener {
     CardLayout card;
     JPanel graphics;
     Statistics statistics;
+
+    /**
+     * This is the constructor for DataAnalysisFunction
+     * Used to set the function of JPanel.
+     */
     public DataAnalysisFunction(){
         dataAnalysis = new DataAnalysis();
         statistics = new Statistics();
@@ -75,6 +82,11 @@ public class DataAnalysisFunction extends JPanel implements ActionListener {
         this.add(dataAnalysis);
     }
 
+    /**
+     * This method is used to draw picture of statistic
+     * @param type which type of picture you want to generated
+     * @return JPanel with the picture
+     */
     public JPanel drawData(String type){
         int[] dataList;
         switch (type){
@@ -130,18 +142,10 @@ public class DataAnalysisFunction extends JPanel implements ActionListener {
     }
 
 
-
-    public static void main(String[] args) throws Exception{
-        JFrame frame = new JFrame();
-        DataAnalysisFunction dataAnalysisFunction = new DataAnalysisFunction();
-        JPanel panel = dataAnalysisFunction.drawData("Income");
-        frame.add(panel);
-
-        frame.setSize(500,500);
-        frame.setVisible(true);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
-
+    /**
+     * This method is used to add the function to change the card
+     * @param e ignored action event.
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         JToggleButton button = (JToggleButton)e.getSource();

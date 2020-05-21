@@ -56,6 +56,11 @@ public class OrderGuiFunction extends JPanel{
     public String payingMethod;
     public boolean login = false;
     public boolean usingCoupon = false;
+
+    /**
+     * The constructor for OrderGuiFunction.
+     * @param layoutManager layoutManager used to decorate this class.
+     */
     public OrderGuiFunction(LayoutManager layoutManager){
 
         super(layoutManager);
@@ -227,6 +232,11 @@ public class OrderGuiFunction extends JPanel{
         this.add(middle, BorderLayout.CENTER);
     }
 
+    /**
+     * Get the selected button from a buttonGroup. And ge the text of that button.
+     * @param buttonGroup buttonGroup Component.
+     * @return the text of selected button.
+     */
     public static String getSelectedText(ButtonGroup buttonGroup){
         Enumeration<AbstractButton> buttons = buttonGroup.getElements();
         while (buttons.hasMoreElements()) {
@@ -237,8 +247,15 @@ public class OrderGuiFunction extends JPanel{
         }
         return "Error nothing has been selected";
     }
-    private class NumberChangeListener implements ChangeListener{
 
+    /**
+     * A inner class implements ChangeListener, used to generate a function to help change the state of the Order GUI
+     */
+    private class NumberChangeListener implements ChangeListener{
+        /**
+         * Used to change the state of the Order
+         * @param e ignored action
+         */
         @Override
         public void stateChanged(ChangeEvent e) {
             double optionalPrice = (int)orderMenu.chashuNumber.getValue()* menu.getChashu()
@@ -249,6 +266,12 @@ public class OrderGuiFunction extends JPanel{
             orderMenu.totalPrice.setText("" + (optionalPrice + menu.getNoodle()));
         }
     }
+
+    /**
+     * change the string to boolean value
+     * @param str input String value
+     * @return the output boolean value
+     */
     public static boolean getSelectedBoolean(String str){
         if("Yes".equals(str)){
             return true;
@@ -262,6 +285,9 @@ public class OrderGuiFunction extends JPanel{
         }
     }
 
+    /**
+     * Clear all the order information when necessary
+     */
     public void clearOrder(){
         {
            orderMenu.soup1.setSelected(true);
@@ -292,6 +318,9 @@ public class OrderGuiFunction extends JPanel{
         card.show(middle, "order");
     }
 
+    /**
+     * set the menu with the newest information.
+     */
     public void setMenu(){
         MenuData menuData = new MenuData();
         menu = menuData.loadInfo();
@@ -333,18 +362,4 @@ public class OrderGuiFunction extends JPanel{
 
     }
 
-    public static void main(String[] args) throws Exception{
-        UIManager.setLookAndFeel ( NimbusLookAndFeel.class.getCanonicalName () );
-        WebLookAndFeel.initializeManagers ();
-
-        JFrame test = new JFrame("Test");
-
-        OrderGuiFunction order = new OrderGuiFunction(new BorderLayout());
-        test.add(order);
-
-
-        test.pack();
-        test.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        test.setVisible(true);
-    }
 }

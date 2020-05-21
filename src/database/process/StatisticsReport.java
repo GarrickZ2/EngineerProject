@@ -11,17 +11,27 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+/**
+ * This Class is used to generate the Statistics Report weekly
+ */
 public class StatisticsReport {
     Statistics statistics = new Statistics();
     PopularityData popularityData = new PopularityData(this.getLastSunday(),7);
     UserData userData = new UserData();
 
+    /**
+     * Empty Constructor throws the IOException from PopularityData
+     * @throws Exception
+     */
     public StatisticsReport() throws Exception {
 
     }
 
-
-    public String generateReceipt(){
+    /**
+     * Generate the statistic format report.
+     * @return statistic format string
+     */
+    public String generateStat(){
         statistics.loadData(this.getLastSunday());
 
         userData.loadInfo();
@@ -33,83 +43,67 @@ public class StatisticsReport {
         String monday = format.format(this.getLastMonday());
         String sunday = format.format(this.getLastSunday());
 
-        String receiptContent = "";
-        for(int i=0; i<35; i++){
-            receiptContent = receiptContent + " ";
-        }
-        receiptContent = receiptContent + "Statistics Report" + "\n";
-        for(int i = 0; i<5;i++){
-            receiptContent = receiptContent + "* * * * * * * * * * ";
-        }
-        receiptContent = receiptContent +"\n" ;
-        for(int i=0; i<35; i++){
-            receiptContent = receiptContent + " ";
-        }
-        receiptContent = receiptContent + "Weekly Crazy Members" + "\n";
+        StringBuilder receiptContent = new StringBuilder();
+        receiptContent.append(" ".repeat(35));
+        receiptContent.append("Statistics Report").append("\n");
+        receiptContent.append("* * * * * * * * * * ".repeat(5));
+        receiptContent.append("\n");
+        receiptContent.append(" ".repeat(35));
+        receiptContent.append("Weekly Crazy Members").append("\n");
 
-        receiptContent = receiptContent + statisticsLineFormat("Member cost most:" + popularityData.getPopularMemberByMoney(),1) + statisticsLineFormat("Member orders most:" + popularityData.getPopularMemberByTimes(),1) + "\n";
-        receiptContent = receiptContent + statisticsLineFormat("Name:" + MCM.getFirstName() + " " + MCM.getLastName(),1) + statisticsLineFormat("Name:" + MOM.getFirstName() + " " + MOM.getLastName(),1) +"\n";
-        receiptContent = receiptContent + statisticsLineFormat("Telephone/E-mail:" + MCM.getTelephone() +"/" +MCM.geteMail(),1) + statisticsLineFormat("Telephone/E-mail:" + MOM.getTelephone() + "/" + MOM.geteMail(),1) +"\n";
-        for(int i = 0; i<5;i++){
-            receiptContent = receiptContent + "* * * * * * * * * * ";
-        }
-        receiptContent = receiptContent +"\n";
-        for(int i=0; i<35; i++){
-            receiptContent = receiptContent + " ";
-        }
-        receiptContent = receiptContent + "The Most Popular";
-        receiptContent = receiptContent +"\n";
-        receiptContent = receiptContent + statisticsLineFormat("The Most Popular Soup:" + popularityData.getPopularSoup(),2) + "\n";
-        receiptContent = receiptContent + statisticsLineFormat("The Most Popular Garnish:" + popularityData.getPopularDish(),2) + "\n";
-        receiptContent = receiptContent + statisticsLineFormat("The Most Popular Spiciness:" + popularityData.getPopularSpicy(),2) + "\n";
-        for(int i = 0; i<5;i++){
-            receiptContent = receiptContent + "* * * * * * * * * * ";
-        }
-        receiptContent = receiptContent + "\n";
-        for(int i=0; i<35; i++){
-            receiptContent = receiptContent + " ";
-        }
-        receiptContent = receiptContent + "Weekly Statistics";
-        receiptContent = receiptContent + "\n";
-        receiptContent = receiptContent + statisticsLineFormat("Statistic range:" + monday + " To " + sunday ,2) + "\n";
-        receiptContent = receiptContent + statisticsLineFormat("Weekly income:" + statistics.getSumInt(statistics.getIncome()),2) + "\n";
-        receiptContent = receiptContent + statisticsLineFormat("Orders number:" + statistics.getSumInt(statistics.getOrders()),2) + "\n";
-        receiptContent = receiptContent + "Details number: " + "\n";
-        for(int i=0; i<15; i++){
-            receiptContent = receiptContent + " ";
-        }
-        receiptContent = receiptContent + statisticsLineFormat("Tonkotsu:" + statistics.getSumInt(statistics.getSoup1()),3) + statisticsLineFormat("Shoyo:" + statistics.getSumInt(statistics.getSoup2()),3) + "\n";
-        for(int i=0; i<15; i++){
-            receiptContent = receiptContent + " ";
-        }
-        receiptContent = receiptContent + statisticsLineFormat("Shio:" + statistics.getSumInt(statistics.getSoup3()),3) + statisticsLineFormat("Nori:" + statistics.getSumInt(statistics.getNori()),3) + "\n";
-        for(int i=0; i<15; i++){
-            receiptContent = receiptContent + " ";
-        }
-        receiptContent = receiptContent + statisticsLineFormat("Chashu:" +statistics.getSumInt(statistics.getChashu()),3) +statisticsLineFormat("Egg:" + statistics.getSumInt(statistics.getEgg()),3)+ "\n";
-        for(int i=0; i<15; i++){
-            receiptContent = receiptContent + " ";
-        }
-        receiptContent = receiptContent + statisticsLineFormat("Shoot:" + statistics.getSumInt(statistics.getShoot()),3)+ "\n";
+        receiptContent.append(statisticsLineFormat("Member cost most:" + popularityData.getPopularMemberByMoney(), 1)).append(statisticsLineFormat("Member orders most:" + popularityData.getPopularMemberByTimes(), 1)).append("\n");
+        receiptContent.append(statisticsLineFormat("Name:" + MCM.getFirstName() + " " + MCM.getLastName(), 1)).append(statisticsLineFormat("Name:" + MOM.getFirstName() + " " + MOM.getLastName(), 1)).append("\n");
+        receiptContent.append(statisticsLineFormat("Telephone/E-mail:" + MCM.getTelephone() + "/" + MCM.geteMail(), 1)).append(statisticsLineFormat("Telephone/E-mail:" + MOM.getTelephone() + "/" + MOM.geteMail(), 1)).append("\n");
+        receiptContent.append("* * * * * * * * * * ".repeat(5));
+        receiptContent.append("\n");
+        receiptContent.append(" ".repeat(35));
+        receiptContent.append("The Most Popular");
+        receiptContent.append("\n");
+        receiptContent.append(statisticsLineFormat("The Most Popular Soup:" + popularityData.getPopularSoup(), 2)).append("\n");
+        receiptContent.append(statisticsLineFormat("The Most Popular Garnish:" + popularityData.getPopularDish(), 2)).append("\n");
+        receiptContent.append(statisticsLineFormat("The Most Popular Spiciness:" + popularityData.getPopularSpicy(), 2)).append("\n");
+        receiptContent.append("* * * * * * * * * * ".repeat(5));
+        receiptContent.append("\n");
+        receiptContent.append(" ".repeat(35));
+        receiptContent.append("Weekly Statistics");
+        receiptContent.append("\n");
+        receiptContent.append(statisticsLineFormat("Statistic range:" + monday + " To " + sunday, 2)).append("\n");
+        receiptContent.append(statisticsLineFormat("Weekly income:" + statistics.getSumInt(statistics.getIncome()), 2)).append("\n");
+        receiptContent.append(statisticsLineFormat("Orders number:" + statistics.getSumInt(statistics.getOrders()), 2)).append("\n");
+        receiptContent.append("Details number: ").append("\n");
+        receiptContent.append(" ".repeat(15));
+        receiptContent.append(statisticsLineFormat("Tonkotsu:" + statistics.getSumInt(statistics.getSoup1()), 3)).append(statisticsLineFormat("Shoyo:" + statistics.getSumInt(statistics.getSoup2()), 3)).append("\n");
+        receiptContent.append(" ".repeat(15));
+        receiptContent.append(statisticsLineFormat("Shio:" + statistics.getSumInt(statistics.getSoup3()), 3)).append(statisticsLineFormat("Nori:" + statistics.getSumInt(statistics.getNori()), 3)).append("\n");
+        receiptContent.append(" ".repeat(15));
+        receiptContent.append(statisticsLineFormat("Chashu:" + statistics.getSumInt(statistics.getChashu()), 3)).append(statisticsLineFormat("Egg:" + statistics.getSumInt(statistics.getEgg()), 3)).append("\n");
+        receiptContent.append(" ".repeat(15));
+        receiptContent.append(statisticsLineFormat("Shoot:" + statistics.getSumInt(statistics.getShoot()), 3)).append("\n");
 
-        return receiptContent;
+        return receiptContent.toString();
     }
 
-    public String generateReceipt(boolean file){
+    /**
+     * Generate the statistic report into the file
+     * @param file whether to generate the file
+     * @return the statistic format String
+     */
+    public String generateStat(boolean file){
         SimpleDateFormat format = new SimpleDateFormat("yyyyMMddkkmmss");
         String name = format.format(new Date());
         if(file){
             File f = new File("data/recipients/"+ name +".txt");
             try {
                 BufferedWriter bw = new BufferedWriter(new FileWriter(f, true));
-                bw.write(generateReceipt());
+                bw.write(generateStat());
                 bw.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
-        return generateReceipt();
+        return generateStat();
     }
+
 
     public String statisticsLineFormat(String line , int type){
         int nameLength = 54;
@@ -139,6 +133,10 @@ public class StatisticsReport {
         return content.toString();
     }
 
+    /**
+     * Get the last week's monday Date
+     * @return the Date of last week's monday
+     */
     public Date getLastMonday(){
         Calendar calendar = Calendar.getInstance();
         calendar.set(calendar.get(Calendar.YEAR),calendar.get(Calendar.MONDAY), calendar.get(Calendar.DAY_OF_MONTH), 0, 0,0);
@@ -147,6 +145,10 @@ public class StatisticsReport {
         return calendar.getTime();
     }
 
+    /**
+     * get the last week's sunday
+     * @return the Date of the last week's sunday
+     */
     public Date getLastSunday(){
         Calendar calendar = Calendar.getInstance();
         calendar.set(calendar.get(Calendar.YEAR),calendar.get(Calendar.MONDAY), calendar.get(Calendar.DAY_OF_MONTH), 23, 59,59);
@@ -158,6 +160,6 @@ public class StatisticsReport {
 
     public static void main(String[] args) throws Exception {
         StatisticsReport s = new StatisticsReport();
-        s.generateReceipt(true);
+        s.generateStat(true);
     }
 }

@@ -12,6 +12,10 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * The Class used to get information and format them into a receipt format and store them in the directory.
+ * @author Yanzhao Chen
+ */
 public class Receipt {
 
     public Order order;
@@ -31,8 +35,8 @@ public class Receipt {
     }
 
     /**
-     *
-     * @param order
+     * Constructor get the order input and store them in the relevant attributes.
+     * @param order Order Class with relevant information.
      */
     public  Receipt(Order order){
         this.order = order;
@@ -41,6 +45,10 @@ public class Receipt {
         payingMethod = order.getPayingMethod();
     }
 
+    /**
+     * Format the information into receipt format
+     * @return String type of the receipt format
+     */
     public String generateReceipt(){
         String receiptContent = "";
         receiptContent = "<Receipt>" + "\n" + "Serial Number:" + order.getOrderId() + "\n" + "Time:" + order.getDate()
@@ -82,6 +90,11 @@ public class Receipt {
         return receiptContent;
     }
 
+    /**
+     * Invoke the generateReceipt() and store them into the file
+     * @param file decide wheter to save them into the file.
+     * @return The Receipt format information.
+     */
     public String generateReceipt(boolean file){
         if(file){
             File f = new File("data/recipients/"+order.getBillId()+".txt");
@@ -96,7 +109,7 @@ public class Receipt {
         return generateReceipt();
     }
 
-    //0 - name 1 - number
+
     public String receiptLineFormat(String line , int type){
         int nameLength = 45;
         int numberLength = 12;

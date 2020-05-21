@@ -16,6 +16,9 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 /**
+ * This is the class used to implement the method of MembershipOperation Class
+ * A type of JPanel
+ * Implement ActionListener
  * @author Zixuan Zhang
  */
 public class MembershipOperationFunction extends JPanel implements ActionListener {
@@ -25,6 +28,10 @@ public class MembershipOperationFunction extends JPanel implements ActionListene
     RecipientReader recipientReader = null;
     MemberList memberList;
     ArrayList<Order> orderList;
+
+    /**
+     * This is the constructor for MembershipOperationFunction Class
+     */
     public MembershipOperationFunction(){
         membershipOperation = new MembershipOperation();
 
@@ -103,6 +110,9 @@ public class MembershipOperationFunction extends JPanel implements ActionListene
 
     }
 
+    /**
+     * This method is used to initialize all the information on the JPanel
+     */
     public void initialize(){
         UserData userData = new UserData();
         this.memberList = userData.loadInfo();
@@ -127,6 +137,9 @@ public class MembershipOperationFunction extends JPanel implements ActionListene
 
     }
 
+    /**
+     * This method is used to set the information of membershipList
+     */
     private void setMemberList(){
         String[] users = new String[memberList.getMsl().size()];
         if(memberList.getMsl().size() == 0){
@@ -145,6 +158,9 @@ public class MembershipOperationFunction extends JPanel implements ActionListene
         membershipOperation.membershipList.setListData(users);
     }
 
+    /**
+     * This method is used to set the information of orderList
+     */
     private void setOrderList(){
         String[] orders = new String[orderList.size()];
         for(int i = 0; i <orders.length; i++){
@@ -156,6 +172,11 @@ public class MembershipOperationFunction extends JPanel implements ActionListene
         membershipOperation.consumpList.setListData(orders);
     }
 
+    /**
+     * This method is used to get all the orders of user
+     * @param membershipId the id of the user you want to search
+     * @return ArrayList of all the orders of that user
+     */
     private ArrayList<Order> getOrders(String membershipId){
         OrderData orderData = new OrderData();
         OrderList orderList = orderData.loadInfo();
@@ -168,6 +189,9 @@ public class MembershipOperationFunction extends JPanel implements ActionListene
         return orders;
     }
 
+    /**
+     * Set the information of the user
+     */
     public void setUserInfo(){
         membershipOperation.addStamps_plus1.setEnabled(member.getStamps() != 0);
         membershipOperation.membeshipNumber.setText(member.getMembershipId());
@@ -177,6 +201,9 @@ public class MembershipOperationFunction extends JPanel implements ActionListene
         membershipOperation.stamps.setText("" + member.getStamps());
     }
 
+    /**
+     * Set the information of the order
+     */
     public void setOrderInfo(){
         try {
             recipientReader = new RecipientReader(order.getBillId());
@@ -241,6 +268,9 @@ public class MembershipOperationFunction extends JPanel implements ActionListene
         }
     }
 
+    /**
+     * Clear the information of order
+     */
     private void clearOrder(){
         membershipOperation.noodleNumber.setText("");
         membershipOperation.useCoupon.setText("");
@@ -277,6 +307,10 @@ public class MembershipOperationFunction extends JPanel implements ActionListene
         membershipOperation.useCoupon.setText("");
     }
 
+    /**
+     * Overrider Method used to change the stamps number of one user.
+     * @param e ignored action event
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton button = (JButton)e.getSource();

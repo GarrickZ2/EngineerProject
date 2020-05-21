@@ -14,7 +14,7 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- *
+ * The Class implemented the function of Index Class
  * @author Zixuan Zhang
  */
 public class IndexFunction extends JFrame {
@@ -27,7 +27,7 @@ public class IndexFunction extends JFrame {
     ManagementIndex managementIndex;
 
     /**
-     * 
+     * IndexFunction's constructor used to add function of Index
      * @throws Exception
      */
     public IndexFunction() throws Exception{

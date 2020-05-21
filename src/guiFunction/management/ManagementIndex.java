@@ -15,6 +15,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
+ * This is the Class to implement the methods to MenuOperation and MembershipOperation and connected them together
+ * And connect the DataAnalysis and Popularity Class.
  * @author Huang
  */
 public class ManagementIndex extends JPanel {
@@ -28,7 +30,10 @@ public class ManagementIndex extends JPanel {
     public DataAnalysisFunction dataDataAnalysisFunction;
     CardLayout innerCard;
 
-
+    /**
+     * This is the constructor for ManagementIndex
+     * @throws Exception The Exception of SimpleFormat's parse()
+     */
     public ManagementIndex() throws Exception{
         menu = menuData.loadInfo();
         card = new CardLayout();
@@ -162,11 +167,6 @@ public class ManagementIndex extends JPanel {
 
                 if(noodle<=0||nori<=0||egg<=0||chashu<=0||shoot<=0){
                     System.out.println("Each value must larger than 0.");
-//                    try {
-//                        new AlertWindow("The price can not be lower than 0.");
-//                    } catch (InterruptedException ex) {
-//                        ex.printStackTrace();
-//                    }
                 }
                 else {
                     menu.setNori(nori);
@@ -267,6 +267,9 @@ public class ManagementIndex extends JPanel {
         this.add(main);
     }
 
+    /**
+     * This method is used to set the original information of menu
+     */
     public void setMenuSuggest(){
         menuOperation.sugPrice_noodle.setText("£" + menu.getNoodle());
         menuOperation.sugPrice_nori.setText("£" + menu.getNori());
@@ -294,6 +297,10 @@ public class ManagementIndex extends JPanel {
             menuOperation.sugAvailable_egg.setText("Unavailable");
         }
     }
+
+    /**
+     * This method is used to change the information of menu and save it to the database.
+     */
     public void setMenuChange(){
         menuOperation.inputPrice_noodle.setText("" + menu.getNoodle());
         menuOperation.inputPrice_nori.setText("" + menu.getNori());
@@ -322,25 +329,44 @@ public class ManagementIndex extends JPanel {
         }
     }
 
-
+    /**
+     * This method is used to change the menu's information and change the cardLayout
+     * @param e ignored mouse event
+     */
     private void menuOperationPanelMouseClicked(MouseEvent e) {
         setMenuSuggest();
         setMenuChange();
         card.show(main,"menuOperation");
     }
 
+    /**
+     * This method is used to change the cardlayout
+     * @param e ignored mouse event
+     */
     private void dataAnalysisPanelMouseClicked(MouseEvent e) {
         card.show(main,"dataDataAnalysisFunction");
     }
 
+    /**
+     * This method is used to change the cardLayout
+     * @param e ignored mouse event
+     */
     private void membershipOperationPanelMouseClicked(MouseEvent e) {
         card.show(main,"membershipOperation");
     }
 
+    /**
+     * This method is used to change the cardLayout
+     * @param e ignored mouse event
+     */
     private void popularityPanelMouseClicked(MouseEvent e) {
         card.show(main,"managerPassword");
     }
 
+    /**
+     * This method is used to change the cardLayout and try to add the new picture on the panel
+     * @param e ignored mouse event
+     */
     private void soupCardClicked(MouseEvent e) {
         innerCard.show(popularity.popularity.popularList_cardPanel,"soupCard");
         try {
@@ -349,6 +375,11 @@ public class ManagementIndex extends JPanel {
             ex.printStackTrace();
         }
     }
+
+    /**
+     * This method is used to change the cardLayout and try to add the new picture on the panel
+     * @param e ignored mouse event
+     */
     private void garnishCardClicked(MouseEvent e) {
         innerCard.show(popularity.popularity.popularList_cardPanel,"gCard");
         try {
@@ -357,6 +388,11 @@ public class ManagementIndex extends JPanel {
             ex.printStackTrace();
         }
     }
+
+    /**
+     * This method is used to change the cardLayout and try to add the new picture on the panel
+     * @param e ignored mouse event
+     */
     private void spicinessCardClicked(MouseEvent e) {
         innerCard.show(popularity.popularity.popularList_cardPanel,"spiCard");
         try {
@@ -366,12 +402,23 @@ public class ManagementIndex extends JPanel {
         }
     }
 
+    /**
+     * To judge whether all the information is formulated by number
+     * @param information the string you want to check
+     * @return boolean value whether this is constructed by number
+     */
     public static boolean isNumber(String information){
         String format = "^[0-9]+(.[0-9]+)?$";
         Pattern pattern = Pattern.compile(format);
         Matcher mat = pattern.matcher(information);
         return mat.find();
     }
+
+    /**
+     * Input the whole list and judge whether the whole list is constructed by number
+     * @param list the ArrayList you want to check
+     * @return boolean value whether the whole list is constructed by number
+     */
     public static boolean isNumber(ArrayList<String> list){
         boolean result = true;
         for(String str : list){

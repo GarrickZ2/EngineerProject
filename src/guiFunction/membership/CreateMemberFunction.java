@@ -10,7 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * sdfjdkjfdkjfksdjfkjksdjfk
+ * This Class is used to implement the function of createMember GUI
  * @author Zixuan Zhang
  * @version 1.0
  */
@@ -18,7 +18,7 @@ public class CreateMemberFunction extends JPanel {
     public CreateMember createMember;
 
     /**
-     *
+     * This is the construct for CreateMemberFunction
      */
     public CreateMemberFunction(){
 

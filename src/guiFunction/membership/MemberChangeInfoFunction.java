@@ -11,9 +11,17 @@ import gui.membership.MemberChangeInfo;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * This class is used to implement the function of memberChangeInfo.
+ * @author Zixuan Zhang
+ */
 public class MemberChangeInfoFunction extends JPanel {
     public MemberChangeInfo memberChangeInfo;
     public Member member;
+
+    /**
+     * This is the constructor for this class.
+     */
     public MemberChangeInfoFunction(){
         memberChangeInfo = new MemberChangeInfo();
         memberChangeInfo.saveAndChangeButton.addActionListener(e -> {
@@ -44,7 +52,7 @@ public class MemberChangeInfoFunction extends JPanel {
     }
 
     /**
-     *
+     * This method is used to set message for user's information
      */
     public void setMessage(){
         memberChangeInfo.sug_fName.setText(member.getFirstName());

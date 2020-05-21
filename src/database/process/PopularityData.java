@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * The Class used to obtain the popularity data including member, dish, soup, etc.
  * @author zzx
  */
 public class PopularityData {
@@ -73,10 +74,21 @@ public class PopularityData {
 
     int days = 7;
 
+    /**
+     * A constructor invoke the (Date, int) one, used the current time.
+     * @param days the duration you want to calculate
+     * @throws Exception Exception from simple format's parse
+     */
     public PopularityData(int days) throws Exception{
         this(new Date(), days);
     }
 
+    /**
+     * Generate all the popularity data.
+     * @param today the date where the end
+     * @param days the duration you want to calculate
+     * @throws Exception Exception from the SimpleFormat's parse()
+     */
     public PopularityData(Date today, int days) throws Exception{
         OrderData orderData = new OrderData();
         OrderList list = orderData.loadInfo();
@@ -168,6 +180,10 @@ public class PopularityData {
         popularMemberByTimes = getBestMember(memberByTimes);
     }
 
+    /**
+     * Default Constructor, used days =7, and new Date() as default parameters.
+     * @throws Exception The exception came from SimpleFormat's parse()
+     */
     public PopularityData() throws Exception{
         this(7);
     }
@@ -184,6 +200,13 @@ public class PopularityData {
         return type;
     }
 
+    /**
+     * Input a hash map and get the member with the highest value of V
+     * @param map the hash map stored the information of member
+     * @param <K> the member id String
+     * @param <V> Integer value or Double value, store the money spent by the user, or orders ordered by user.
+     * @return the best user's id.
+     */
     public <K, V> String getBestMember(HashMap<K, V> map){
         String bestMember = null;
         double maxNumber = 0.0;
@@ -196,6 +219,10 @@ public class PopularityData {
         return bestMember;
     }
 
+    /**
+     * Override the toString() method, print the information for all the popularity data.
+     * @return the String type popularity data.
+     */
     @Override
     public String toString() {
         return "PopularityData{" +
@@ -209,8 +236,4 @@ public class PopularityData {
                 '}';
     }
 
-    public static void main(String[] args) throws Exception{
-        PopularityData popularityData = new PopularityData();
-        System.out.println(popularityData);
-    }
 }

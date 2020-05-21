@@ -9,6 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
+ * A class used to collect data over a period of time
  * @author Zixuan Zhang
  */
 public class Statistics {
@@ -79,11 +80,18 @@ public class Statistics {
         shoot = new int[days];
     }
 
+    /**
+     * Invoke the constructor (today)
+     */
     public void loadData(){
         Date today = new Date();
         loadData(today);
     }
 
+    /**
+     * Collect the data in the 7 days durations from Date.
+     * @param today the Date you want to collect data end with.
+     */
     public void loadData(Date today){
         OrderData orderData = new OrderData();
         OrderList list = orderData.loadInfo();
@@ -113,20 +121,22 @@ public class Statistics {
             }
         }
     }
-    public static int differentDays(Date date1, Date date2)
-    {
+
+    /**
+     * the days different between date1 and date2
+     * @param date1 the former day
+     * @param date2 the latter day
+     * @return the difference between date1 and date2
+     */
+    public static int differentDays(Date date1, Date date2) {
         return (int) ((date2.getTime() - date1.getTime()) / (1000*3600*24));
     }
 
-    public double getSumIncome(){
-        double sum = 0.0;
-        for (double each: getIncome()
-             ) {
-            sum += each;
-        }
-        return sum;
-    }
-
+    /**
+     * Calculate the sum of the list
+     * @param list int[] type list
+     * @return the sum of the list
+     */
     public int getSumInt(int[] list){
         int sum = 0;
         for(int each: list){

@@ -15,11 +15,17 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * @author zzx
+ * This method is used to implement the method of Popularity JPanel
+ * @author Zixuan Zhang
  */
 public class PopularityFunction extends JPanel {
     public Popularity popularity;
 
+    /**
+     * This is the constructor of this class.
+     * Set the information of Popularity JPanel
+     * @throws Exception used to throws the exception of setInformation
+     */
     public PopularityFunction() throws Exception{
         popularity = new Popularity();
 
@@ -29,6 +35,10 @@ public class PopularityFunction extends JPanel {
         this.add(popularity);
     }
 
+    /**
+     * This method is used to set the information of JPanel
+     * @throws Exception This Exception is throws by PopularityData
+     */
     public void setInformation() throws Exception{
         PopularityData data = new PopularityData();
         try {
@@ -53,6 +63,12 @@ public class PopularityFunction extends JPanel {
         popularity.mp_spiciness.setText("" + data.getPopularSpicy());
     }
 
+    /**
+     * This method is used to generate the popularity picture
+     * @param type which type of popularity you want to generate
+     * @return A JPanel contains the picture
+     * @throws Exception Catch the Exception throws by PopularityData.
+     */
     public JPanel drawPopular(String type) throws Exception{
         PopularityData popularityData = new PopularityData();
         int[] dataList;
@@ -84,8 +100,4 @@ public class PopularityFunction extends JPanel {
         return panel;
     }
 
-    public static void main(String[] args) throws Exception{
-        PopularityFunction popularityFunction = new PopularityFunction();
-        popularityFunction.drawPopular("Sodup");
-    }
 }
