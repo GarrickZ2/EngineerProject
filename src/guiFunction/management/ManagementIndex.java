@@ -342,14 +342,28 @@ public class ManagementIndex extends JPanel {
     }
 
     private void soupCardClicked(MouseEvent e) {
-
         innerCard.show(popularity.popularity.popularList_cardPanel,"soupCard");
+        try {
+            popularity.popularity.popular_imageCardPanel.add(popularity.drawPopular("Soup"));
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
     private void garnishCardClicked(MouseEvent e) {
         innerCard.show(popularity.popularity.popularList_cardPanel,"gCard");
+        try {
+            popularity.popularity.popular_imageCardPanel.add(popularity.drawPopular("Garnish"));
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
     private void spicinessCardClicked(MouseEvent e) {
         innerCard.show(popularity.popularity.popularList_cardPanel,"spiCard");
+        try {
+            popularity.popularity.popular_imageCardPanel.add(popularity.drawPopular("Spiciness"));
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 
     public static boolean isNumber(String information){

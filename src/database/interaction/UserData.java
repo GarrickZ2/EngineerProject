@@ -50,6 +50,7 @@ public class UserData extends BaseData{
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(addr));
             for(Member member :memberList.getMsl()){
+                System.out.println(String.valueOf(member));
                 writer.write(String.valueOf(member));
                 writer.newLine();
             }

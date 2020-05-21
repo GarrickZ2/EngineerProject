@@ -159,7 +159,6 @@ public class MemberList extends DataType {
 				ms.seteMail(eMail);
 				ms.setStamps(5);
 				ms.setRegistrationDate(new Date());
-				ms.setLastName(null);
 
 				//Get the lastest membershipID
 				if(msl.size()==0) {
