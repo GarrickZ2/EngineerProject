@@ -95,6 +95,20 @@ public class Menu extends DataType{
         this.chashuAvailable = chashuAvailable;
     }
 
+    @Override
+    public String toString() {
+        return "Menu{" +
+                "noodle=" + noodle +
+                ", nori=" + nori +
+                ", egg=" + egg +
+                ", shoot=" + shoot +
+                ", chashu=" + chashu +
+                ", noriAvailable=" + noriAvailable +
+                ", eggAvailable=" + eggAvailable +
+                ", shootAvailable=" + shootAvailable +
+                ", chashuAvailable=" + chashuAvailable +
+                '}';
+    }
 
     /**
      * Save information for Menu Class

@@ -9,15 +9,19 @@ import javax.swing.*;
 import javax.swing.border.*;
 
 /**
- * @author Brainrain
+ * This is the frame of our payment graphic user interface
+ * This page is used to let customers finish their payment
+ * @author H
  */
 public class Payment extends JPanel {
+    /**
+     * Use constructor to create the frame
+     */
     public Payment() {
         initComponents();
     }
 
     private void initComponents() {
-        // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         panel2 = new JPanel();
         panel3 = new JPanel();
         panel4 = new JPanel();
@@ -716,10 +720,8 @@ public class Payment extends JPanel {
         //---- payingMethod ----
         payingMethod.add(cash);
         payingMethod.add(visa);
-        // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
-    // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
     private JPanel panel2;
     private JPanel panel3;
     private JPanel panel4;
@@ -818,5 +820,4 @@ public class Payment extends JPanel {
     private JPanel panel6;
     public ButtonGroup diningMethod;
     public ButtonGroup payingMethod;
-    // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

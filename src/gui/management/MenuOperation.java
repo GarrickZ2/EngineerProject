@@ -9,17 +9,22 @@ import javax.swing.*;
 import javax.swing.border.*;
 
 /**
- * @author Brainrain
+ * This is the frame of our menu operation graphic user interface
+ * This page is used to check and change menu information which are suggested to customers
+ * @author H
  */
 public class MenuOperation extends JPanel {
+    /**
+     * Use constructor to create the frame
+     */
     public MenuOperation() {
         initComponents();
     }
-
-
-
+    /**
+     * Initialize all components, consist and decorate.
+     */
     private void initComponents() {
-        // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
+
         boardPanel = new JPanel();
         titlePanel = new JPanel();
         logo = new JLabel();
@@ -748,10 +753,8 @@ public class MenuOperation extends JPanel {
         //---- available_shootGroup ----
         available_shootGroup.add(inputAvailable_shoot);
         available_shootGroup.add(inputUnavailable_shoot);
-        // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
-    // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
     private JPanel boardPanel;
     private JPanel titlePanel;
     private JLabel logo;
@@ -857,5 +860,4 @@ public class MenuOperation extends JPanel {
     public ButtonGroup available_chashuGroup;
     public ButtonGroup available_eggGroup;
     public ButtonGroup available_shootGroup;
-    // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

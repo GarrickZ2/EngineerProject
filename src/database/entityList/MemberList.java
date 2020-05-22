@@ -29,6 +29,11 @@ public class MemberList extends DataType {
 		this.msl = msl;
 	}
 
+	public MemberList() {
+		msl = new ArrayList<>();
+
+	}
+
 	public ArrayList<Member> getMsl() {
 		return msl;
 	}

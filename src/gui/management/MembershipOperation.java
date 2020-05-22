@@ -8,15 +8,21 @@ import java.awt.*;
 import javax.swing.*;
 
 /**
- * @author Brainrain
+ * This is the frame of our membership operation graphic user interface
+ * This page is used to change and check members' information, by manager
+ * @author H
  */
 public class MembershipOperation extends JPanel {
+    /**
+     * Use constructor to create the frame
+     */
     public MembershipOperation() {
         initComponents();
     }
-
+    /**
+     * Initialize all components, consist and decorate.
+     */
     private void initComponents() {
-        // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         boardPanel = new JPanel();
         titlePanel = new JPanel();
         logo = new JLabel();
@@ -881,10 +887,8 @@ public class MembershipOperation extends JPanel {
                 new Insets(0, 0, 0, 0), 0, 0));
         }
         add(boardPanel, BorderLayout.CENTER);
-        // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
-    // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
     private JPanel boardPanel;
     private JPanel titlePanel;
     private JLabel logo;
@@ -1000,5 +1004,4 @@ public class MembershipOperation extends JPanel {
     private JLabel storeName;
     private JLabel storeAddress;
     private JLabel storeTelphone;
-    // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

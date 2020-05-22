@@ -10,15 +10,19 @@ import javax.swing.border.*;
 import net.miginfocom.swing.*;
 
 /**
- * @author Brainrain
+ * This is the frame of our order menu graphic user interface
+ * This page is used to let customers to order food
+ * @author H
  */
 public class OrderMenu extends JPanel {
+    /**
+     * Use constructor to create the frame
+     */
     public OrderMenu() {
         initComponents();
     }
 
     private void initComponents() {
-        // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         panelBoard = new JPanel();
         title = new JPanel();
         title_innerPanel = new JPanel();
@@ -713,10 +717,8 @@ public class OrderMenu extends JPanel {
         spicinessGroup.add(spice3);
         spicinessGroup.add(spice4);
         spicinessGroup.add(spice5);
-        // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
-    // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
     private JPanel panelBoard;
     private JPanel title;
     private JPanel title_innerPanel;
@@ -814,5 +816,4 @@ public class OrderMenu extends JPanel {
     public ButtonGroup chashuGroup;
     public ButtonGroup eggGroup;
     public ButtonGroup spicinessGroup;
-    // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

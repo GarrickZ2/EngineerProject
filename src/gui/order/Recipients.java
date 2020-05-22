@@ -8,13 +8,17 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
 /**
- * @author Yanzhao Chen
+ * This is the frame of recipients window
+ * This window is to let customers check their orders
+ * @author H
  */
 public class Recipients extends JFrame implements Runnable{
     JButton confirm;
     String re;
     JPanel main;
-
+    /**
+     * Use constructor to create the frame
+     */
     public Recipients(String re) {
         this.re = re;
         main = new JPanel();

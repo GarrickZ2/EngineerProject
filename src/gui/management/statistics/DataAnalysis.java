@@ -9,15 +9,23 @@ import javax.swing.*;
 import javax.swing.border.*;
 
 /**
- * @author Brainrain
+ * This is the frame of our data analysis graphic user interface
+ * This page is used to check weekly analysis of each items
+ * @author H
  */
 public class DataAnalysis extends JPanel {
+    /**
+     * Use constructor to create the frame
+     */
     public DataAnalysis() {
         initComponents();
     }
 
+    /**
+     * Initialize all components, consist and decorate.
+     */
     private void initComponents() {
-        // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
+
         boardPanel = new JPanel();
         titlePanel = new JPanel();
         logo = new JLabel();
@@ -513,10 +521,9 @@ public class DataAnalysis extends JPanel {
         statisticsContentGroup.add(button_chashu);
         statisticsContentGroup.add(button_egg);
         statisticsContentGroup.add(button_shoot);
-        // JFormDesigner - End of component initialization  //GEN-END:initComponents
+
     }
 
-    // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
     private JPanel boardPanel;
     private JPanel titlePanel;
     private JLabel logo;
@@ -580,5 +587,5 @@ public class DataAnalysis extends JPanel {
     private JLabel storeName;
     private JLabel storeAddress;
     private JLabel storeTelphone;
-    // JFormDesigner - End of variables declaration  //GEN-END:variables
+
 }

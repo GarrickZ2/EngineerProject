@@ -9,15 +9,21 @@ import javax.swing.*;
 import javax.swing.border.*;
 
 /**
- * @author Brainrain
+ * This is the frame of our member change information graphic user interface
+ * This page is used to let users to change their information store in the database
+ * @author H
  */
 public class MemberChangeInfo extends JPanel {
+    /**
+     * Use constructor to create the frame
+     */
     public MemberChangeInfo() {
         initComponents();
     }
-
+    /**
+     * Initialize all components, consist and decorate.
+     */
     private void initComponents() {
-        // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         boardPanel = new JPanel();
         titlePanel = new JPanel();
         logo = new JLabel();
@@ -393,10 +399,8 @@ public class MemberChangeInfo extends JPanel {
                 new Insets(0, 0, 0, 0), 0, 0));
         }
         add(boardPanel, BorderLayout.CENTER);
-        // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
-    // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
     private JPanel boardPanel;
     private JPanel titlePanel;
     private JLabel logo;
@@ -448,5 +452,4 @@ public class MemberChangeInfo extends JPanel {
     private JLabel storeName;
     private JLabel storeAddress;
     private JLabel storeTelphone;
-    // JFormDesigner - End of variables declaration  //GEN-END:variables
 }
