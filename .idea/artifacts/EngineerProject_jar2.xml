@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact name="EngineerProject:jar2">
+    <output-path>$PROJECT_DIR$/out/artifacts/EngineerProject_jar2</output-path>
+    <root id="root">
+      <element id="archive" name="EngineerProject.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/lib/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="EngineerProject" />
+      </element>
+      <element id="library" level="project" name="JGoodies Forms" />
+      <element id="library" level="project" name="TableLayout" />
+      <element id="library" level="project" name="MigLayout" />
+      <element id="library" level="application" name="R Skeletons" />
+      <element id="file-copy" path="$PROJECT_DIR$/resource/jar/jfreechart-1.5.0.jar" />
+      <element id="library" level="project" name="R User Library" />
+      <element id="library" level="project" name="weblaf-core-1.2.12" />
+    </root>
+  </artifact>
+</component>

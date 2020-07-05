@@ -28,7 +28,7 @@ public class IndexFunction extends JFrame {
 
     /**
      * IndexFunction's constructor used to add function of Index
-     * @throws Exception
+     * @throws Exception exception
      */
     public IndexFunction() throws Exception{
         card = new CardLayout();
@@ -139,7 +139,7 @@ public class IndexFunction extends JFrame {
         this.add(content);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.pack();
-
+        this.setResizable(false);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setSize(1040, 680);
         this.setLocation((dim.width - this.getWidth()) / 2, (dim.height - this.getHeight()) / 3);

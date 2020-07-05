@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Main-Class: Main
+Class-Path: jgoodies-forms.jar jgoodies-common.jar TableLayout.jar migla
+ yout-swing.jar miglayout-core.jar jfreechart-1.5.0.jar weblaf-core-1.2.
+ 12.jar weblaf-ui-1.2.12.jar jericho-html-3.3.jar rsyntaxtextarea-2.6.1.
+ jar slf4j-api-1.7.27.jar slf4j-simple-1.7.27.jar svg-salamander-1.1.2.2
+ .jar java-image-scaling-0.8.6.jar hamcrest-core-1.3.jar xstream-1.4.9.j
+ ar junit-4.12.jar weblaf-demo-1.2.12.jar
+

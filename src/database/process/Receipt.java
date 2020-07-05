@@ -59,26 +59,26 @@ public class Receipt {
         receiptContent = receiptContent +"\n" + receiptLineFormat("Menu" , 0) + receiptLineFormat("Number" , 1)
                 + receiptLineFormat("Single" ,1) + receiptLineFormat(" Price", 1) + "\n"
                 + receiptLineFormat("Noodle(" + cuisine.getSoupType() + ", "+ cuisine.getNoodleType() +", " + cuisine.getOnionType() +")",0);
-        receiptContent = receiptContent + receiptLineFormat("  1",1) + receiptLineFormat("￡" + menu.getNoodle(),1)
-                + receiptLineFormat("￡" + menu.getNoodle(),1) + "\n";
+        receiptContent = receiptContent + receiptLineFormat("  1",1) + receiptLineFormat("$" + menu.getNoodle(),1)
+                + receiptLineFormat("$" + menu.getNoodle(),1) + "\n";
 
         receiptContent = receiptContent + receiptLineFormat("Nori",0) + receiptLineFormat("  " + cuisine.getExtraNori(),1)
-                + receiptLineFormat("￡" + menu.getNori(), 1) + receiptLineFormat("￡" + menu.getNori()*cuisine.getExtraNori(),1) + "\n";
+                + receiptLineFormat("$" + menu.getNori(), 1) + receiptLineFormat("$" + menu.getNori()*cuisine.getExtraNori(),1) + "\n";
 
         receiptContent = receiptContent + receiptLineFormat("Egg",0) + receiptLineFormat("  " + cuisine.getExtraEgg(),1)
-                + receiptLineFormat("￡" + menu.getEgg(), 1) + receiptLineFormat("￡" + menu.getEgg()*cuisine.getExtraEgg(),1) + "\n";
+                + receiptLineFormat("$" + menu.getEgg(), 1) + receiptLineFormat("$" + menu.getEgg()*cuisine.getExtraEgg(),1) + "\n";
 
         receiptContent = receiptContent + receiptLineFormat("Shoot",0) + receiptLineFormat("  " + cuisine.getExtraShoot(),1)
-                + receiptLineFormat("￡" + menu.getShoot(), 1) + receiptLineFormat("￡" + menu.getShoot()*cuisine.getExtraShoot(),1) + "\n";
+                + receiptLineFormat("$" + menu.getShoot(), 1) + receiptLineFormat("$" + menu.getShoot()*cuisine.getExtraShoot(),1) + "\n";
 
 
         receiptContent = receiptContent + receiptLineFormat("Chashu",0) + receiptLineFormat("  " + cuisine.getExtraChashu(),1)
-                + receiptLineFormat("￡" + menu.getChashu(), 1) + receiptLineFormat("￡" + menu.getChashu()*cuisine.getExtraChashu(),1) + "\n";
+                + receiptLineFormat("$" + menu.getChashu(), 1) + receiptLineFormat("$" + menu.getChashu()*cuisine.getExtraChashu(),1) + "\n";
         for(int i = 0; i<15;i++){
             receiptContent = receiptContent + "-----";
         }
         receiptContent = receiptContent + "\n" + receiptLineFormat("Total",0) + receiptLineFormat("",1)
-                + receiptLineFormat("",1) + receiptLineFormat(" ￡" + order.getAmountMoney(),1) + "\n"
+                + receiptLineFormat("",1) + receiptLineFormat(" $" + order.getAmountMoney(),1) + "\n"
                 + receiptLineFormat("Paying Method:",0) + receiptLineFormat("",1)
                 + receiptLineFormat("",1) + receiptLineFormat(" " + payingMethod, 1) + "\n";
         for(int i = 0; i<15;i++){

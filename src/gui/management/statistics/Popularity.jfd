@@ -568,6 +568,9 @@ new FormModel {
 								add( new FormComponent( "javax.swing.JButton" ) {
 									name: "printButton"
 									"text": "Print report"
+									auxiliary() {
+										"JavaCodeGenerator.variableModifiers": 1
+									}
 								} )
 							}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 								"gridy": 6

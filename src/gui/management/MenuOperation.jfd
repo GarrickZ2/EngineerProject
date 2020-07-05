@@ -320,7 +320,7 @@ new FormModel {
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "sugPrice_noodle"
-									"text": "￡9.99"
+									"text": "$9.99"
 									auxiliary() {
 										"JavaCodeGenerator.variableModifiers": 1
 									}
@@ -338,7 +338,7 @@ new FormModel {
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "sugPrice_nori"
-									"text": "￡1"
+									"text": "$1"
 									auxiliary() {
 										"JavaCodeGenerator.variableModifiers": 1
 									}
@@ -357,7 +357,7 @@ new FormModel {
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "sugPrice_chashu"
-									"text": "￡2"
+									"text": "$2"
 									auxiliary() {
 										"JavaCodeGenerator.variableModifiers": 1
 									}
@@ -376,7 +376,7 @@ new FormModel {
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "sugPrice_egg"
-									"text": "￡1"
+									"text": "$1"
 									auxiliary() {
 										"JavaCodeGenerator.variableModifiers": 1
 									}
@@ -395,7 +395,7 @@ new FormModel {
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "sugPrice_shoot"
-									"text": "￡1"
+									"text": "$1"
 									auxiliary() {
 										"JavaCodeGenerator.variableModifiers": 1
 									}

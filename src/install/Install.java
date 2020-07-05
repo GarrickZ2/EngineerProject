@@ -10,77 +10,59 @@ import java.util.ArrayList;
  * @version 1.2
  */
 public class Install {
-	public static final String ROOT = "data";
+	
+	public static final String root = "data";
 	ArrayList<String> dirname = new ArrayList<String>();
 	ArrayList<String> filename = new ArrayList<String>();
+	
+	public void Default_folder() {
 
-
-	/**
-	 * Create default folders
-	 */
-	public void defaultFolder() {
-
-		dirname.add(ROOT);
-		dirname.add(ROOT+"\\recipients");
-		dirname.add(ROOT+"\\dataprocess");
+		dirname.add(root);
+		dirname.add(root+"\\recipients");
+		dirname.add(root+"\\dataprocess");
+		dirname.add(root+"\\report");
 	}
+	
+	public void Default_file() {
 
-	/**
-	 * Create default files
-	 */
-	public void defaultFile() {
-
-		filename.add(ROOT+"\\menu.csv");
-		filename.add(ROOT+"\\order.csv");
-		filename.add(ROOT+"\\member.csv");
+		filename.add(root+"\\menu.csv");
+		filename.add(root+"\\order.csv");
+		filename.add(root+"\\member.csv");
 	}
-
-	/**
-	 * For future use, if needs to add new folder
-	 * @param s new folder name
-	 */
-	public void addNewDir(String s) {
-
-		dirname.add(s);
-	}
-
-	/**
-	 * For future use, if needs to add new files
-	 * @param s new file name
-	 */
-	public void addNewFile(String s) {
+	
+	public void Add_new_dir(String s) {
 
 		filename.add(s);
 	}
+	
+	public void Add_new_file(String s) {
 
-	/**
-	 * Generate folders as path
-	 */
-	public void folderGeneration() {
+		filename.add(s);
+	}
+	
+	public void Folder_generation() {
 
-		this.defaultFolder();
-		for (String s : dirname) {
-			File f = new File(s);
-			if (!f.exists()) {
+		this.Default_folder();
+		for(int i=0;i<dirname.size();i++) {
+			File f = new File(dirname.get(i));
+			if(!f.exists()) {
 				f.mkdirs();
-				System.out.println("Folder " + s + " create Success.");
-			} else {
+				System.out.println("Folder "+dirname.get(i)+" create Success.");
+			}
+			else {
 				return;
 			}
 		}
 	}
+	
+	public void File_generation() {
 
-	/**
-	 * Generate files
-	 */
-	public void fileGeneration() {
-
-		this.defaultFile();
-		for (String s : filename) {
+		this.Default_file();
+		for(int i=0;i<filename.size();i++) {
 			try {
-				File f = new File(s);
-				if (f.createNewFile()) {
-					System.out.println("File " + s + " create Success.");
+				File f = new File(filename.get(i));
+				if(f.createNewFile()) {
+					System.out.println("File "+filename.get(i)+" create Success.");
 				} else {
 					System.out.println("File Exist.");
 				}
@@ -90,25 +72,17 @@ public class Install {
 		}
 	}
 
-	/**
-	 * Generate complete path
-	 */
-	public void dirGeneration() {
-		this.folderGeneration();
-		this.fileGeneration();
+	public void Dir_generation() {
+		this.Folder_generation();
+		this.File_generation();
 	}
 
-	/**
-	 * Delete all files
-	 * @param dir uninstall path
-	 */
 	public static void uninstall(String dir) {
 		File f = new File(dir);
 		File[] files;
 		if(f.exists()) {
 			if(f.isDirectory()) {
 				files = f.listFiles();
-				assert files != null;
 				for(File fi : files) {
 					uninstall(fi.getPath());
 				}
@@ -116,9 +90,7 @@ public class Install {
 			f.delete();	
 		}
 	}
-	/**
-	 * Write default data to menu
-	 */
+
 	public static void generalDefaultMenu(){
 		try {
 			File csv = new File("data/menu.csv");
@@ -138,28 +110,23 @@ public class Install {
 			e.printStackTrace();
 		}
 	}
-
-	/**
-	 * Constructor, use different mode to do different install work
-	 * @param mode mode0 generate missing files and folders, mode-1 uninstall,
-	 *                other modes generate all files and folders, if exists, it will be delete
-	 */
+	
 	public Install(int mode) {
 		//Repair, install missing files
 		if(mode == 0) {
-			this.dirGeneration();
+			this.Dir_generation();
 			System.out.println("Repair success");
 		}
 		else {
 			//Uninstall
 			if(mode == -1) {
-				uninstall(ROOT);
+				uninstall(root);
 				System.out.println("Uninstall success");
 			}
 			//Forced reinstall, default install mode
 			else {
-				uninstall(ROOT);
-				this.dirGeneration();
+				uninstall(root);
+				this.Dir_generation();
 				generalDefaultMenu();
 				System.out.println("Install success");
 			}
@@ -168,7 +135,7 @@ public class Install {
 
 	public static void main(String[] args) {
 		if(args.length == 0) {
-			Install is = new Install(1);
+			new Install(1);
 			return;
 		}
 		switch (args[0]) {

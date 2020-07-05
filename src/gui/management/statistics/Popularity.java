@@ -213,7 +213,7 @@ public class Popularity extends JPanel {
                         membershipOperationPanel.setLayout(new GridLayout());
 
                         //---- indexLabel_membershipOperation ----
-                        indexLabel_membershipOperation.setText("Member operation");
+                        indexLabel_membershipOperation.setText("Membership operation");
                         indexLabel_membershipOperation.setHorizontalAlignment(SwingConstants.CENTER);
                         indexLabel_membershipOperation.setBackground(new Color(242, 242, 242, 0));
                         membershipOperationPanel.add(indexLabel_membershipOperation);
@@ -400,7 +400,7 @@ public class Popularity extends JPanel {
                         ((GridBagLayout)body_rightPanel.getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0E-4};
 
                         //---- label_mostPopular ----
-                        label_mostPopular.setText("Most PopularityFunction");
+                        label_mostPopular.setText("Most Popular");
                         label_mostPopular.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 16));
                         label_mostPopular.setHorizontalAlignment(SwingConstants.CENTER);
                         body_rightPanel.add(label_mostPopular, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
@@ -413,7 +413,7 @@ public class Popularity extends JPanel {
                             popularTablePanel.setLayout(new GridLayout(3, 2));
 
                             //---- label_mp_soup ----
-                            label_mp_soup.setText("Most PopularityFunction Soup:");
+                            label_mp_soup.setText("Most Popular Soup:");
                             popularTablePanel.add(label_mp_soup);
 
                             //---- mp_soup ----
@@ -421,7 +421,7 @@ public class Popularity extends JPanel {
                             popularTablePanel.add(mp_soup);
 
                             //---- label_mp_garnish ----
-                            label_mp_garnish.setText("Most PopularityFunction Garnish:");
+                            label_mp_garnish.setText("Most Popular Garnish:");
                             popularTablePanel.add(label_mp_garnish);
 
                             //---- mp_garnish ----
@@ -429,7 +429,7 @@ public class Popularity extends JPanel {
                             popularTablePanel.add(mp_garnish);
 
                             //---- label_mp_spiciness ----
-                            label_mp_spiciness.setText("Most PopularityFunction Spiciness:");
+                            label_mp_spiciness.setText("Most Popular Spiciness:");
                             popularTablePanel.add(label_mp_spiciness);
 
                             //---- mp_spiciness ----
@@ -763,7 +763,7 @@ public class Popularity extends JPanel {
     private JPanel buttonPanel;
     public JButton returnButton;
     private JButton refreshButton;
-    private JButton printButton;
+    public JButton printButton;
     private JPanel bottomPanel;
     private JPanel bottom_innerPanel;
     private JLabel storeName;

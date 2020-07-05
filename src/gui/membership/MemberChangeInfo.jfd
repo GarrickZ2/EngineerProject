@@ -175,7 +175,7 @@ new FormModel {
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "consumptionCost"
-									"text": "￡11.9"
+									"text": "$11.9"
 									auxiliary() {
 										"JavaCodeGenerator.variableModifiers": 1
 									}

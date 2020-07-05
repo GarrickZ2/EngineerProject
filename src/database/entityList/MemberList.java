@@ -34,7 +34,11 @@ public class MemberList extends DataType {
 
 	}
 
-	public ArrayList<Member> getMsl() {
+    public MemberList() {
+
+    }
+
+    public ArrayList<Member> getMsl() {
 		return msl;
 	}
 	public void setMembershipList(ArrayList<Member> msl) {

@@ -7,6 +7,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -19,11 +20,19 @@ public class StatisticsReport {
     PopularityData popularityData = new PopularityData(this.getLastSunday(),7);
     UserData userData = new UserData();
 
+    public Date getRecent() {
+        return recent;
+    }
+
+    public void setRecent(Date recent) {
+        this.recent = recent;
+    }
+
+    private Date recent;
     /**
      * Empty Constructor throws the IOException from PopularityData
-     * @throws Exception
      */
-    public StatisticsReport() throws Exception {
+    public StatisticsReport(){
 
     }
 
@@ -89,10 +98,10 @@ public class StatisticsReport {
      * @return the statistic format String
      */
     public String generateStat(boolean file){
-        SimpleDateFormat format = new SimpleDateFormat("yyyyMMddkkmmss");
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd-kkmmss");
         String name = format.format(new Date());
         if(file){
-            File f = new File("data/recipients/"+ name +".txt");
+            File f = new File("data/report/"+ name +"_Report.txt");
             try {
                 BufferedWriter bw = new BufferedWriter(new FileWriter(f, true));
                 bw.write(generateStat());
@@ -157,6 +166,46 @@ public class StatisticsReport {
         return calendar.getTime();
     }
 
+    public boolean withInWeek(){
+        if (recent == null){
+            return false;
+        }
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(calendar.get(Calendar.YEAR),calendar.get(Calendar.MONDAY), calendar.get(Calendar.DAY_OF_MONTH), 23, 59,59);
+        Date monday = calendar.getTime();
+        return !monday.before(recent);
+    }
+
+    public void setRecentDate(){
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd-kkmmss");
+        File directory = new File("data/report");
+        File[] files = directory.listFiles();
+        if(files == null || files.length == 0){
+            recent = null;
+        }else {
+            Date dateRecent = null;
+            for (File file : files) {
+                String dateName = file.getName().split("_")[0];
+                Date one = null;
+                try {
+                    one = format.parse(dateName);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                if (dateRecent == null) {
+                    dateRecent = one;
+                } else {
+                    if (one == null) {
+                        return;
+                    }
+                    if (one.after(dateRecent)) {
+                        dateRecent = one;
+                    }
+                }
+            }
+        }
+
+    }
 
     public static void main(String[] args) throws Exception {
         StatisticsReport s = new StatisticsReport();

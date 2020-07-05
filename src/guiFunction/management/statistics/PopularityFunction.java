@@ -4,6 +4,7 @@ import database.interaction.UserData;
 import database.entityList.MemberList;
 import database.entity.Member;
 import database.process.PopularityData;
+import database.process.StatisticsReport;
 import gui.management.statistics.Popularity;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
@@ -30,7 +31,11 @@ public class PopularityFunction extends JPanel {
         popularity = new Popularity();
 
         setInformation();
-
+        popularity.printButton.addActionListener(e -> {
+            StatisticsReport report = new StatisticsReport();
+            report.generateStat(true);
+            JOptionPane.showMessageDialog(null, "The report is generated successfully");
+        });
         this.setLayout(new BorderLayout());
         this.add(popularity);
     }

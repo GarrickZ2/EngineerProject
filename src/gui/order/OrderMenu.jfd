@@ -426,7 +426,7 @@ new FormModel {
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "noriPrice"
-									"text": "￡1"
+									"text": "$1"
 									"font": #SwingDerivedFont0
 									auxiliary() {
 										"JavaCodeGenerator.variableModifiers": 1
@@ -457,7 +457,7 @@ new FormModel {
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "chashuPrice"
-									"text": "￡2"
+									"text": "$2"
 									"font": #SwingDerivedFont0
 									auxiliary() {
 										"JavaCodeGenerator.variableModifiers": 1
@@ -488,7 +488,7 @@ new FormModel {
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "eggPrice"
-									"text": "￡1"
+									"text": "$1"
 									"font": #SwingDerivedFont0
 									auxiliary() {
 										"JavaCodeGenerator.variableModifiers": 1
@@ -519,7 +519,7 @@ new FormModel {
 								} )
 								add( new FormComponent( "javax.swing.JLabel" ) {
 									name: "shootPrice"
-									"text": "￡1"
+									"text": "$1"
 									"font": #SwingDerivedFont0
 									auxiliary() {
 										"JavaCodeGenerator.variableModifiers": 1
@@ -559,7 +559,7 @@ new FormModel {
 									} )
 									add( new FormComponent( "javax.swing.JLabel" ) {
 										name: "label_pound0"
-										"text": "￡"
+										"text": "$"
 										"horizontalAlignment": 11
 										"font": #SwingDerivedFont0
 									} )
@@ -578,7 +578,7 @@ new FormModel {
 									} )
 									add( new FormComponent( "javax.swing.JLabel" ) {
 										name: "label_pound1"
-										"text": "￡"
+										"text": "$"
 										"horizontalAlignment": 11
 										"font": #SwingDerivedFont0
 									} )
@@ -605,7 +605,7 @@ new FormModel {
 									} )
 									add( new FormComponent( "javax.swing.JLabel" ) {
 										name: "label_pound2"
-										"text": "￡"
+										"text": "$"
 										"horizontalAlignment": 11
 										"font": #SwingDerivedFont0
 									} )

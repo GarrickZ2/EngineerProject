@@ -538,7 +538,7 @@ new FormModel {
 									} )
 									add( new FormComponent( "javax.swing.JLabel" ) {
 										name: "noodlePrice"
-										"text": "￡"
+										"text": "$"
 										auxiliary() {
 											"JavaCodeGenerator.variableModifiers": 1
 										}
@@ -549,7 +549,7 @@ new FormModel {
 									} )
 									add( new FormComponent( "javax.swing.JLabel" ) {
 										name: "extraPrice"
-										"text": "￡"
+										"text": "$"
 										auxiliary() {
 											"JavaCodeGenerator.variableModifiers": 1
 										}
@@ -560,7 +560,7 @@ new FormModel {
 									} )
 									add( new FormComponent( "javax.swing.JLabel" ) {
 										name: "packingPrice"
-										"text": "￡"
+										"text": "$"
 										auxiliary() {
 											"JavaCodeGenerator.variableModifiers": 1
 										}
@@ -571,7 +571,7 @@ new FormModel {
 									} )
 									add( new FormComponent( "javax.swing.JLabel" ) {
 										name: "totalPrice"
-										"text": "￡"
+										"text": "$"
 										auxiliary() {
 											"JavaCodeGenerator.variableModifiers": 1
 										}

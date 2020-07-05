@@ -4,6 +4,7 @@ import database.interaction.OrderData;
 import database.entity.Order;
 import database.entityList.OrderList;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -77,9 +78,8 @@ public class PopularityData {
     /**
      * A constructor invoke the (Date, int) one, used the current time.
      * @param days the duration you want to calculate
-     * @throws Exception Exception from simple format's parse
      */
-    public PopularityData(int days) throws Exception{
+    public PopularityData(int days){
         this(new Date(), days);
     }
 
@@ -87,9 +87,8 @@ public class PopularityData {
      * Generate all the popularity data.
      * @param today the date where the end
      * @param days the duration you want to calculate
-     * @throws Exception Exception from the SimpleFormat's parse()
      */
-    public PopularityData(Date today, int days) throws Exception{
+    public PopularityData(Date today, int days){
         OrderData orderData = new OrderData();
         OrderList list = orderData.loadInfo();
 
@@ -99,7 +98,12 @@ public class PopularityData {
 
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         for (Order each: list.getOrders()){
-            int diffDay = Statistics.differentDays(format.parse(each.getDate()), today);
+            int diffDay = 0;
+            try {
+                diffDay = Statistics.differentDays(format.parse(each.getDate()), today);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
             if(diffDay <= days & diffDay >= 0){
                 switch (each.getCuisine().getSoupType()){
                     case "Tonkotsu":
@@ -182,9 +186,8 @@ public class PopularityData {
 
     /**
      * Default Constructor, used days =7, and new Date() as default parameters.
-     * @throws Exception The exception came from SimpleFormat's parse()
      */
-    public PopularityData() throws Exception{
+    public PopularityData(){
         this(7);
     }
 

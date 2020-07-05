@@ -110,7 +110,7 @@ public class OrderGuiFunction extends JPanel{
                 }
 
                 payment.soup.setText(cuisine.getSoupType());
-    //            payment.food.setText("￡"+menu.getNoodle());
+    //            payment.food.setText("$"+menu.getNoodle());
                 payment.noodle.setText(cuisine.getNoodleType());
                 payment.onion.setText(cuisine.getOnionType());
                 payment.onion.setText(""+cuisine.getSpiciness());
@@ -143,10 +143,10 @@ public class OrderGuiFunction extends JPanel{
 
                 payment.extraChashu.setText(""+cuisine.getExtraChashu());
 
-                payment.noodlePrice.setText("￡"+menu.getNoodle());
-                payment.extraPrice.setText("￡"+ ( cuisine.calculate() - menu.getNoodle() ) );
-                payment.packingPrice.setText("￡0");
-                payment.totalPrice.setText("￡" + cuisine.calculate());
+                payment.noodlePrice.setText("$"+menu.getNoodle());
+                payment.extraPrice.setText("$"+ ( cuisine.calculate() - menu.getNoodle() ) );
+                payment.packingPrice.setText("$0");
+                payment.totalPrice.setText("$" + cuisine.calculate());
                 payment.eatIn.setSelected(true);
                 payment.cash.setSelected(true);
                 card.show(middle, "payment");
@@ -157,13 +157,13 @@ public class OrderGuiFunction extends JPanel{
 
         payment.takeAway.addActionListener(e ->{
             eatType = 1;
-            payment.packingPrice.setText("￡1");
-            payment.totalPrice.setText("￡" + (cuisine.calculate() + 1));
+            payment.packingPrice.setText("$1");
+            payment.totalPrice.setText("$" + (cuisine.calculate() + 1));
         });
         payment.eatIn.addActionListener(e ->{
             eatType = 0;
-            payment.packingPrice.setText("￡0");
-            payment.totalPrice.setText("￡"+cuisine.calculate());
+            payment.packingPrice.setText("$0");
+            payment.totalPrice.setText("$"+cuisine.calculate());
         });
         payment.cash.addActionListener(e ->{
             payingMethod = "Cash";
@@ -331,7 +331,7 @@ public class OrderGuiFunction extends JPanel{
             orderMenu.noriAvailable.setText("Available");
             orderMenu.noriNumber.setEnabled(true);
         }
-        orderMenu.noriPrice.setText("￡" + menu.getNori());
+        orderMenu.noriPrice.setText("$" + menu.getNori());
 
         if(!menu.isEggAvailable()){
             orderMenu.eggAvailable.setText("Unavailable");
@@ -340,7 +340,7 @@ public class OrderGuiFunction extends JPanel{
             orderMenu.eggAvailable.setText("Available");
             orderMenu.eggNumber.setEnabled(true);
         }
-        orderMenu.eggPrice.setText("￡" + menu.getEgg());
+        orderMenu.eggPrice.setText("$" + menu.getEgg());
 
         if(!menu.isChashuAvailable()){
             orderMenu.chashuAvailable.setText("Unavailable");
@@ -349,7 +349,7 @@ public class OrderGuiFunction extends JPanel{
             orderMenu.chashuAvailable.setText("Available");
             orderMenu.chashuNumber.setEnabled(true);
         }
-        orderMenu.chashuPrice.setText("￡" + menu.getChashu());
+        orderMenu.chashuPrice.setText("$" + menu.getChashu());
 
         if(!menu.isShootAvailable()){
             orderMenu.shootAvailable.setText("Unavailable");
@@ -358,7 +358,7 @@ public class OrderGuiFunction extends JPanel{
             orderMenu.shootAvailable.setText("Available");
             orderMenu.shootNumber.setEnabled(true);
         }
-        orderMenu.shootPrice.setText("￡" + menu.getShoot());
+        orderMenu.shootPrice.setText("$" + menu.getShoot());
 
     }
 

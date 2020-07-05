@@ -1,7 +1,9 @@
 package guiFunction;
 
+import database.process.StatisticsReport;
 import gui.Index;
 
+import javax.swing.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -12,8 +14,11 @@ import java.util.Date;
  */
 public class Clock extends Thread{
     Index index;
+    StatisticsReport report;
     public Clock(Index index){
         this.index = index;
+        report = new StatisticsReport();
+        report.setRecentDate();
     }
 
     /**
@@ -69,6 +74,12 @@ public class Clock extends Thread{
             }
             index.time2.setText(time[3]);
             index.date2.setText(time[2] + "/" + month + "/" + time[0]);
+
+            if(!report.withInWeek()){
+                report.generateStat(true);
+                report.setRecent(new Date());
+                JOptionPane.showMessageDialog(null, "This week's report is generated in data/report");
+            }
         }
     }
 }
